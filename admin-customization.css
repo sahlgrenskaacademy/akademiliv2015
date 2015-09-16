@@ -1,0 +1,16 @@
+
+/* admin-customization.css */
+
+.acf_postbox {
+	background: #eefee6;
+	border: 1px solid #eee;
+}
+
+.acf_postbox > .hndle {
+	background: #d0FEd0;
+}
+
+.acf_postbox > .inside > .field {
+	background: #eefee6;
+	border-top: 1px solid rgba(0,0,0,0.08);
+}
