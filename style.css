@@ -2515,7 +2515,7 @@ body.page-template .sidebar {
 
 .site-header,
 .header-image .site-header {
-  background-color: white; }
+  /*	background-color: $c-white;*/ }
   .site-header .logo-area,
   .header-image .site-header .logo-area {
     padding-right: 20px;
