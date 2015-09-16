@@ -2,7 +2,7 @@
 *.esproj/
 
 # Codekit
-.codekit
+config.codekit
 config.rb
 
 # SASS
