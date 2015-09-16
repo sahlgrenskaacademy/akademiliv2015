@@ -1,6 +1,7 @@
 // _layout.scss
 
 
+/************************************************************************************************/
 /* Override defaults */
 
 .nav-primary {
@@ -33,15 +34,13 @@
 .featured-content	.entry img {
 	float: left;}
 	
-
-
-
+/************************************************************************************************/
 /* Susy */
 
 $susy: (
-  /* Tells Susy to use 8 columns */
-  columns: 8,
-  /* Tells Susy that the container has a max-width of 1120px */
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of "site-width" */
   container: $site-width,
   /* Tells Susy to use border-box */
 /*  global-box-sizing: border-box ,*/
@@ -58,7 +57,64 @@ $susy: (
 .footer-widgets .wrap {
   @include container; }
 
-.content { /* main col */
+
+
+
+
+/************************************************************************************************/
+/* Box model */
+
+
+.home-latest,
+.home-featured .entry,
+.home-second-row .entry,
+.home-middle .widget,
+.category-wrapper	.category-utbildning,
+.category-wrapper .category-bidrag,
+.category-wrapper .category-education,
+.category-wrapper .category-grants {
+
+	@media only screen and (min-width: 640px) {
+		height: $box-height;
+	}
+	
+	@media only screen and (max-width: 639px) {
+		height: auto;
+	}	
+	
+}	
+	
+.category-wrapper	.category-seminars,
+.category-wrapper	.category-seminarier {
+
+	@media only screen and (min-width: 640px) {
+		height: $seminar-box-height;
+	}
+	
+	@media only screen and (max-width: 639px) {
+		height: auto;
+	}	
+	
+}
+
+.home-second-row img,
+.home-featured img,
+.home-second-row .img-wrapper,
+.home-featured .img-wrapper,
+.home-news img,
+aside img {
+
+	@media only screen and (max-width: 639px) {
+		display: none;
+	}	
+
+}
+			
+
+
+/************************************************************************************************/
+/* Content ie. not header, sidebar, footer */
+.content {
 
 	
 /*	@media only screen and (max-width: 1139px) { }	
@@ -69,126 +125,158 @@ $susy: (
 
 	@media only screen and (max-width: 480px) { }*/
 	
-	
-	/* 6+2 col layout at 1024px and larger */
-	@media only screen and (min-width: 1024px) {
 
-	  @include span(6); 
+	@media only screen and (min-width: 1024px) {
+	  @include span(9); 
+	}
+	@media only screen and (max-width: 1023px) and (min-width: 640px) {	
+	  @include span(12); 
+	}
 	
-		/* front page */
+	@media only screen and (min-width: 640px) {
+	
 		.home-latest {
-			@include span(2 of 6); }
+			@include span(3 of 9); }
 	
 		.home-featured {
-			@include span(4 of 6 last); 
+			@include span(6 of 9 last); 
 			.post {
-				@include span(2 of 4);}}
+				@include span(3 of 6);}}
 	
 		.home-second-row {
-			@include span(6 of 6); 
+			@include span(9 of 9); 
 			.post {
-				@include span(2 of 6);}}
+				@include span(3 of 9);}}
 	
 		.home-middle {
-			@include span(6 of 6);
+			@include span(9 of 9);
 			.widget {
-				@include span(2 of 6);}}
+				@include span(3 of 9);}}
 	
 		.home-news, 
 		.archive-wrapper {
-			@include span(6 of 6);
+			@include span(9 of 9);
 			.post {
-			 	@include span(6 of 6);}}
+			 	@include span(9 of 9);}}
 
-		/* common */
+		.news-area {
+			@include span(9);
+			.post {
+			 	@include span(9 of 9);}}
+
 		.pagination {
-			@include span(6 of 6);}
+			@include span(9 of 9);}
 
-		/* category pages */
 		.category-wrapper {
-			@include span(6 of 6);			
+			@include span(9 of 9);			
 
 			.category-utbildning,
 			.category-education,
 			.category-seminars,
 			.category-seminarier {
-				@include span(3 of 6);}	
+				@include span(6 of 9);}	
 
 			.category-bidrag,
 			.category-grants {
-				@include span(2 of 6);}	
-
-			
-		}
-
+				@include span(3 of 9);}}
 
 	} 
 	
-	/* 6 col layout at 1023px to 640px */
-	@media only screen and (max-width: 1023px) and (min-width: 640px) {
 	
-	  @include span(8); 
 	
-		/* front page */
-		.home-latest {
-			@include span(2 of 6); }
+	/* mobile */
+	@media only screen and (max-width: 639px)  {
+	}	  
+
+} 
+
+
+/************************************************************************************************/
+/* Single wrapper */
+
+.single-wrapper {
 	
-		.home-featured {
-			@include span(4 of 6 last); 
-			.post {
-				@include span(2 of 4);}}
-	
-		.home-second-row {
-			@include span(6 of 6); 
-			.post {
-				@include span(2 of 6);}}
-	
-		.home-middle {
-			@include span(6 of 6);
-			.widget {
-				@include span(2 of 6);}}
-	
-		.home-top .post { /* borde verkligen vara home-bottom! */
-			@include span(6 of 6);}
+	@media only screen and (max-width: 768px) {
+
+		.wp-caption.alignnone {
+			margin: .4em 0 $img-padding/2 0;}
+
+
+		.entry-content {
+			img.featured-image {
+				max-width: 720px;
+				margin-left: 0;}
+			p,
+			h2, h3, h4,
+			ul, ol,
+			blockquote {
+				padding: $single-paragraph-padding-mobile;}}
+
+
+		.entry-header h1.entry-title,
+		.entry-meta,
+		.entry-footer,
+		.entry-comments,
+		.comment-respond {
+			padding: $single-paragraph-padding-mobile;}		
+
 
 	}
 	
-	
-	/* landscape on iphone */
-	@media only screen and (max-width: 639px) and (min-width: 480px) {
-
-	}	
-
-} /* .content end */
+}
 
 
-.news-area {
-	@include span(6);
-	.post {
-	 	@include span(6 of 6);}}
+
+/************************************************************************************************/
+/* Sidebar */
+
+.sidebar {
 
 
-.sidebar { /*right col*/
 
 	@media only screen and (min-width: 1024px) {
-	  @include span(2 last); 
+
+	  @include span(3 last); 
 	  @include prefix($box-gutter); 
+	  
+	  aside {
+	  	@include span(3 of 3);
+	  }
+	  
 	}
 
-	@media only screen and (max-width: 1023px) {
-  	@include span(8); 
+	@media only screen and (max-width: 1023px) and (min-width: 640px) {
+	
+  	@include span(12); 
+
+	  aside {
+	  	@include span(4 of 12);
+			@include gutters($box-gutter);
+
+	  }  	
+  	
+	}
+
+	@media only screen and (max-width: 639px)  {
+
+
 	}
 
 }
+
+
+
+/************************************************************************************************/
+/* Header */
   
   
 .site-header .wrap {
   	
 	.title-area {
-		@include span(4 of 8);}
+		@include span(6 of 12);}
 
 	.header-widget-area {
-		@include span(3 of 8);
+		@include span(4 of 12);
 		.widget{
 			@include span(100%);
 			clear: both;
@@ -197,12 +285,44 @@ $susy: (
 
 	.logo-area {
 		min-width: 147px;
-		@include span(1 of 8 last);}
+		@include span(2 of 12 last);}
 	
+}
+
+/************************************************************************************************/
+/* Navigation */
+
+.nav-primary {
+
+	color: $c-black;
+
+	@media only screen and (max-width: 768px) {
+	
+		.genesis-nav-menu > .right {
+			float: none;}
+
+	}
+
 }
   
   
-/* layout inside category box = all screen sizes */  
+/************************************************************************************************/
+/* Footer */  
+
+.footer-widgets .wrap {
+	
+	@include span(12);
+	
+	.widget-area {
+		@include span(4 of 12);
+	}
+	
+	
+}
+  
+/************************************************************************************************/
+/* Inside category boxes */  
+  
 .category-wrapper .category-seminars,
 .category-wrapper .category-seminarier {
 	position: relative;
@@ -241,19 +361,8 @@ $susy: (
 
 
 
-
-
-
-/*
-			@include with-layout(6 clean);
-			.entry-title {
-				@include span(5 of 6);}
-			.start-date {
-				@include span(1 of 6);}
-
-
-*/  
   
+/************************************************************************************************/
 /* More layout */
 
 
@@ -261,34 +370,8 @@ $susy: (
 	.entry-header {
 	clear: both; }}
 
-/*.home-featured .post,
-.home-second-row .post {
-	h3, .entry-meta {
-		padding: 0 $box-padding;}}*/
-
-.home-latest,
-.home-featured .entry,
-.home-second-row .entry,
-.home-middle .widget {
-	height: $box-height;}
-
-
-.category-wrapper {
-	.category-seminars,
-	.category-seminarier {
-			height: $seminar-box-height;}
-
-	.category-utbildning,
-	.category-bidrag,
-	.category-education,
-	.category-grants {
-			height: $box-height;}
-	
-}	
-
 .site-inner::after {
-	clear: both;
-}
+	clear: both;}
 
 .archive-wrapper,
 .home-news,
@@ -299,13 +382,5 @@ $susy: (
 	margin-bottom: $box-gutter;}
 	
 	
-
-/* Hide images on small screens */
-@media only screen and (max-width: 640px) {
-
-	.home-top img { /* .home-bottom */
-		display: none;}
-
-}
 
 

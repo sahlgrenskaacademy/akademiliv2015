@@ -134,6 +134,11 @@ body.page-template .sidebar {
 	margin-top: 46px;
 }
 
+.site-inner,
+.footer-widgets {
+	padding-left: $mobile-margin;
+	padding-right: $mobile-margin;}
+
 .entry-header {
 	margin-bottom: $heading-margin; }
 
@@ -215,15 +220,16 @@ body.page-template .sidebar {
 		margin-bottom: 0;}}
 
 
-#{$image-boxes} {
+.home-featured, 
+.home-second-row {
 	.entry-header {
 		padding: $image-box-padding;}
 	img {
 /*		@include filter( hue-rotate(270deg) sepia(50%)  );*/
-		max-height: 200px;
-		height: initial!important;
+		height: auto!important;
 		width: 100%!important;
     mix-blend-mode: screen;
+    min-width: $box-image-width;
     &:hover{
     	mix-blend-mode: normal;}}
 	.img-wrapper {
@@ -360,6 +366,9 @@ body.page-template .sidebar {
 	margin-bottom: (2*$box-gutter);
   background-color: $c-white;
 
+	.genesis-nav-menu {
+		width: 86%;}
+
 	.genesis-nav-menu .current-menu-item > a {
 		&:before, &:after {
 	    content: " ";
@@ -420,10 +429,13 @@ body.page-template .sidebar {
 	margin-bottom: $box-gutter;
 	padding: $image-box-padding;
 	background-color: $c-secondary-1-3;
+/*	width: $box-width;
+	float: left;*/
 	&.has-post-thumbnail {
 		background: $c-secondary-1-4;
 		padding: 0;
 		.aligncenter {
+			width: 100%;
 			margin: 0;}
 		.entry-wrapper {
 			padding: $image-box-padding;
@@ -454,6 +466,13 @@ img.alignright,
 	margin: .4em 0 $img-padding/2 $img-padding;
 	.wp-caption-text {
 		padding-right: .5em;}}
+
+a.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter {
+	margin: .4em auto $img-padding/2 auto;
+	.wp-caption-text {
+		padding-left: .5em;}}
 
 a.alignnone,
 img.alignnone {

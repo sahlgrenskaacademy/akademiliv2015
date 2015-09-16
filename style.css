@@ -555,11 +555,6 @@ a.aligncenter img {
   display: block;
   margin: 0 auto; }
 
-img.centered,
-.aligncenter {
-  display: block;
-  margin: 0 auto 24px; }
-
 img.alignnone {
   margin-bottom: 12px; }
 
@@ -1276,21 +1271,6 @@ Footer Widgets
   font-size: 14px;
   padding: 60px 0 20px; }
 
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-  width: 360px; }
-
-.footer-widgets-1 {
-  margin-right: 30px; }
-
-.footer-widgets-1,
-.footer-widgets-2 {
-  float: left; }
-
-.footer-widgets-3 {
-  float: right; }
-
 .footer-widgets a {
   color: #fff;
   font-weight: 300; }
@@ -1489,6 +1469,119 @@ Color Styles
 .magazine-pro-orange .button:hover {
   color: #fff; }
 
+@media only screen and (max-width: 768px) {
+  .footer-widgets,
+  .nav-secondary,
+  .site-footer,
+  .site-header,
+  .site-inner {
+    padding-left: 5%;
+    padding-right: 5%; }
+
+  .genesis-nav-menu > .first > a {
+    padding-left: 20px; }
+
+  .genesis-nav-menu.responsive-menu > .menu-item > .sub-menu,
+  .genesis-nav-menu.responsive-menu {
+    display: none; }
+
+  .genesis-nav-menu.responsive-menu .menu-item,
+  .responsive-menu-icon {
+    display: block; }
+
+  .genesis-nav-menu.responsive-menu .menu-item {
+    margin: 0; }
+
+  .genesis-nav-menu.responsive-menu .menu-item:hover {
+    position: static; }
+
+  .genesis-nav-menu a {
+    line-height: 1;
+    padding: 18px 20px; }
+
+  .genesis-nav-menu.responsive-menu .menu-item-has-children {
+    cursor: pointer; }
+
+  .genesis-nav-menu.responsive-menu .menu-item-has-children > a {
+    margin-right: 60px; }
+
+  .genesis-nav-menu.responsive-menu > .menu-item-has-children:before {
+    content: "\f347";
+    float: right;
+    font: normal 16px/1 'dashicons';
+    height: 16px;
+    padding: 16px 20px;
+    right: 0;
+    text-align: right;
+    z-index: 9999; }
+
+  .genesis-nav-menu.responsive-menu .menu-open.menu-item-has-children:before {
+    content: "\f343"; }
+
+  .nav-primary .genesis-nav-menu.responsive-menu > .menu-item-has-children:before {
+    color: #fff; }
+
+  .genesis-nav-menu.responsive-menu .sub-menu {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    left: auto;
+    opacity: 1;
+    position: relative;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+    width: 100%;
+    z-index: 99; }
+
+  .genesis-nav-menu.responsive-menu .sub-menu .sub-menu {
+    background-color: transparent;
+    margin: 0;
+    padding-left: 25px; }
+
+  .genesis-nav-menu.responsive-menu .sub-menu li a,
+  .genesis-nav-menu.responsive-menu .sub-menu li a:hover {
+    background: none;
+    border: none;
+    padding: 14px 20px;
+    position: relative;
+    width: 100%; }
+
+  /*
+  	.home-bottom .featured-content .entry,
+  	.home-middle .featured-content .entry {
+  		padding-bottom: 20px;
+  	}
+  
+  	.archive-pagination li a {
+  		margin-bottom: 4px;
+  	}
+  
+  	.five-sixths,
+  	.four-sixths,
+  	.one-fourth,
+  	.one-half,
+  	.one-sixth,
+  	.one-third,
+  	.three-fourths,
+  	.three-sixths,
+  	.two-fourths,
+  	.two-sixths,
+  	.two-thirds {
+  		margin: 0;
+  		width: 100%;
+  	}
+  
+  	.magazine-home .content .genesis_responsive_slider h2,
+  	.magazine-home .content .genesis_responsive_slider h2 a {
+  		font-size: 20px;
+  		line-height: 1.2;
+  	}
+  	
+  	.magazine-home .content .genesis_responsive_slider .slide-excerpt-border p {
+  		display: none;
+  	}*/ }
 /* Layout */
 /*@include at-breakpoint($desktop) {
 	@include span-columns(13, $desktop);
@@ -1502,317 +1595,6 @@ Color Styles
 /* Grays */
 /* Flare */
 /* Typography */
-/* Override defaults */
-.nav-primary {
-  position: relative;
-  z-index: 0; }
-
-.admin-bar .nav-primary {
-  top: 0; }
-
-.primary-nav .site-header {
-  padding-top: 0px; }
-
-.site-header .wrap {
-  border: 0; }
-
-.content .home-bottom .featured-content .entry {
-  border-bottom: 0; }
-
-.sidebar .featured-content .entry {
-  border-bottom: 0; }
-
-.archive .content .entry,
-.home .content .entry,
-.page-template-page_blog-php .content .entry {
-  border-bottom: 0; }
-
-.featured-content .entry img {
-  float: left; }
-
-/* Susy */
-/* Makes border-box properties */
-/*@include border-box-sizing;*/
-.site-inner,
-.site-header .wrap,
-.nav-primary .wrap,
-.footer-widgets .wrap {
-  max-width: 1230px;
-  margin-left: auto;
-  margin-right: auto; }
-  .site-inner:after,
-  .site-header .wrap:after,
-  .nav-primary .wrap:after,
-  .footer-widgets .wrap:after {
-    content: " ";
-    display: block;
-    clear: both; }
-
-.content {
-  /* main col */
-  /*	@media only screen and (max-width: 1139px) { }	
-  	
-  	@media only screen and (max-width: 1023px) { }
-  
-  	@media only screen and (max-width: 768px) { }
-  
-  	@media only screen and (max-width: 480px) { }*/
-  /* 6+2 col layout at 1024px and larger */
-  /* 6 col layout at 1023px to 640px */
-  /* landscape on iphone */ }
-  @media only screen and (min-width: 1024px) {
-    .content {
-      width: 75%;
-      float: left;
-      /* front page */
-      /* common */
-      /* category pages */ }
-      .content .home-latest {
-        width: 33.33333%;
-        float: left; }
-      .content .home-featured {
-        width: 66.66667%;
-        float: right;
-        margin-right: 0; }
-        .content .home-featured .post {
-          width: 50%;
-          float: left; }
-      .content .home-second-row {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-        .content .home-second-row .post {
-          width: 33.33333%;
-          float: left; }
-      .content .home-middle {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-        .content .home-middle .widget {
-          width: 33.33333%;
-          float: left; }
-      .content .home-news,
-      .content .archive-wrapper {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-        .content .home-news .post ,
-        .content .archive-wrapper .post  {
-          width: 100%;
-          float: left;
-          margin-left: 0;
-          margin-right: 0; }
-      .content .pagination {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-      .content .category-wrapper {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-        .content .category-wrapper .category-utbildning,
-        .content .category-wrapper .category-education,
-        .content .category-wrapper .category-seminars,
-        .content .category-wrapper .category-seminarier {
-          width: 50%;
-          float: left; }
-        .content .category-wrapper .category-bidrag,
-        .content .category-wrapper .category-grants {
-          width: 33.33333%;
-          float: left; } }
-  @media only screen and (max-width: 1023px) and (min-width: 640px) {
-    .content {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      /* front page */ }
-      .content .home-latest {
-        width: 33.33333%;
-        float: left; }
-      .content .home-featured {
-        width: 66.66667%;
-        float: right;
-        margin-right: 0; }
-        .content .home-featured .post {
-          width: 50%;
-          float: left; }
-      .content .home-second-row {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-        .content .home-second-row .post {
-          width: 33.33333%;
-          float: left; }
-      .content .home-middle {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
-        .content .home-middle .widget {
-          width: 33.33333%;
-          float: left; }
-      .content .home-top .post {
-        /* borde verkligen vara home-bottom! */
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; } }
-
-/* .content end */
-.news-area {
-  width: 75%;
-  float: left; }
-  .news-area .post  {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
-
-.sidebar {
-  /*right col*/ }
-  @media only screen and (min-width: 1024px) {
-    .sidebar {
-      width: 25%;
-      float: right;
-      margin-right: 0;
-      padding-left: 20px; } }
-  @media only screen and (max-width: 1023px) {
-    .sidebar {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0; } }
-
-.site-header .wrap .title-area {
-  width: 50%;
-  float: left; }
-.site-header .wrap .header-widget-area {
-  width: 37.5%;
-  float: left; }
-  .site-header .wrap .header-widget-area .widget {
-    width: 100%;
-    float: left;
-    clear: both; }
-    .site-header .wrap .header-widget-area .widget .widget-wrap {
-      float: right; }
-.site-header .wrap .logo-area {
-  min-width: 147px;
-  width: 12.5%;
-  float: right;
-  margin-right: 0; }
-
-/* layout inside category box = all screen sizes */
-.category-wrapper .category-seminars,
-.category-wrapper .category-seminarier {
-  position: relative; }
-  .category-wrapper .category-seminars .entry-header,
-  .category-wrapper .category-seminarier .entry-header {
-    width: 100%;
-    float: left; }
-    .category-wrapper .category-seminars .entry-header .entry-title,
-    .category-wrapper .category-seminarier .entry-header .entry-title {
-      width: 83%;
-      float: right;
-      margin-right: 0; }
-  .category-wrapper .category-seminars .entry-content,
-  .category-wrapper .category-seminars .entry-details,
-  .category-wrapper .category-seminars .entry-link,
-  .category-wrapper .category-seminarier .entry-content,
-  .category-wrapper .category-seminarier .entry-details,
-  .category-wrapper .category-seminarier .entry-link {
-    width: 83%;
-    float: right;
-    margin-right: 0; }
-  .category-wrapper .category-seminars .entry-startdate,
-  .category-wrapper .category-seminarier .entry-startdate {
-    width: 16%;
-    float: left;
-    position: absolute;
-    left: 3%; }
-
-.category-wrapper .category-bidrag,
-.category-wrapper .category-grants {
-  position: relative; }
-  .category-wrapper .category-bidrag .entry-header,
-  .category-wrapper .category-grants .entry-header {
-    width: 100%;
-    float: left; }
-    .category-wrapper .category-bidrag .entry-header .entry-title,
-    .category-wrapper .category-grants .entry-header .entry-title {
-      width: 80%;
-      float: right;
-      margin-right: 0; }
-  .category-wrapper .category-bidrag .entry-content,
-  .category-wrapper .category-bidrag .entry-details,
-  .category-wrapper .category-bidrag .entry-link,
-  .category-wrapper .category-grants .entry-content,
-  .category-wrapper .category-grants .entry-details,
-  .category-wrapper .category-grants .entry-link {
-    width: 80%;
-    float: right;
-    margin-right: 0; }
-  .category-wrapper .category-bidrag .entry-startdate,
-  .category-wrapper .category-grants .entry-startdate {
-    width: 19%;
-    float: left;
-    position: absolute;
-    left: 3%; }
-
-/*
-			@include with-layout(6 clean);
-			.entry-title {
-				@include span(5 of 6);}
-			.start-date {
-				@include span(1 of 6);}
-
-
-*/
-/* More layout */
-.home-featured .entry-header, .home-second-row .entry-header {
-  clear: both; }
-
-/*.home-featured .post,
-.home-second-row .post {
-	h3, .entry-meta {
-		padding: 0 $box-padding;}}*/
-.home-latest,
-.home-featured .entry,
-.home-second-row .entry,
-.home-middle .widget {
-  height: 400px; }
-
-.category-wrapper .category-seminars,
-.category-wrapper .category-seminarier {
-  height: 250px; }
-.category-wrapper .category-utbildning,
-.category-wrapper .category-bidrag,
-.category-wrapper .category-education,
-.category-wrapper .category-grants {
-  height: 400px; }
-
-.site-inner::after {
-  clear: both; }
-
-.archive-wrapper,
-.home-news,
-.news-area {
-  margin-bottom: 5em; }
-
-.category-intro-text {
-  margin-bottom: 20px; }
-
-/* Hide images on small screens */
-@media only screen and (max-width: 640px) {
-  .home-top img {
-    /* .home-bottom */
-    display: none; } }
 /* Overrides */
 .entry-title {
   font-size: inherit;
@@ -2380,6 +2162,11 @@ body.search-results .sidebar,
 body.page-template .sidebar {
   margin-top: 46px; }
 
+.site-inner,
+.footer-widgets {
+  padding-left: 10px;
+  padding-right: 10px; }
+
 .entry-header {
   margin-bottom: 0.6em; }
 
@@ -2447,17 +2234,21 @@ body.page-template .sidebar {
   .category-intro-text  p {
     margin-bottom: 0; }
 
-.home-featured .entry-header, .home-second-row .entry-header {
+.home-featured .entry-header,
+.home-second-row .entry-header {
   padding: 24px 20px; }
-.home-featured img, .home-second-row img {
+.home-featured img,
+.home-second-row img {
   /*		@include filter( hue-rotate(270deg) sepia(50%)  );*/
-  max-height: 200px;
-  height: initial !important;
+  height: auto !important;
   width: 100% !important;
-  mix-blend-mode: screen; }
-  .home-featured img:hover, .home-second-row img:hover {
+  mix-blend-mode: screen;
+  min-width: 306px; }
+  .home-featured img:hover,
+  .home-second-row img:hover {
     mix-blend-mode: normal; }
-.home-featured .img-wrapper, .home-second-row .img-wrapper {
+.home-featured .img-wrapper,
+.home-second-row .img-wrapper {
   height: 200px;
   overflow: hidden;
   background-color: black; }
@@ -2590,6 +2381,8 @@ body.page-template .sidebar {
   border-bottom: 1px solid #9b9699;
   margin-bottom: 40px;
   background-color: white; }
+  .nav-primary .genesis-nav-menu {
+    width: 86%; }
   .nav-primary .genesis-nav-menu .current-menu-item > a:before, .nav-primary .genesis-nav-menu .current-menu-item > a:after {
     content: " ";
     position: absolute;
@@ -2650,11 +2443,14 @@ body.page-template .sidebar {
 .sidebar aside {
   margin-bottom: 20px;
   padding: 24px 20px;
-  background-color: #ffedac; }
+  background-color: #ffedac;
+  /*	width: $box-width;
+  	float: left;*/ }
   .sidebar aside.has-post-thumbnail {
     background: #fff9e5;
     padding: 0; }
     .sidebar aside.has-post-thumbnail .aligncenter {
+      width: 100%;
       margin: 0; }
     .sidebar aside.has-post-thumbnail .entry-wrapper {
       padding: 24px 20px;
@@ -2679,6 +2475,15 @@ img.alignright,
   img.alignright .wp-caption-text,
   .wp-caption.alignright .wp-caption-text {
     padding-right: .5em; }
+
+a.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter {
+  margin: 0.4em auto 0.45em auto; }
+  a.aligncenter .wp-caption-text,
+  img.aligncenter .wp-caption-text,
+  .wp-caption.aligncenter .wp-caption-text {
+    padding-left: .5em; }
 
 a.alignnone,
 img.alignnone {
@@ -2742,3 +2547,338 @@ input:hover[type="submit"],
 
 .entry-content .button:hover {
   color: white; }
+
+/************************************************************************************************/
+/* Override defaults */
+.nav-primary {
+  position: relative;
+  z-index: 0; }
+
+.admin-bar .nav-primary {
+  top: 0; }
+
+.primary-nav .site-header {
+  padding-top: 0px; }
+
+.site-header .wrap {
+  border: 0; }
+
+.content .home-bottom .featured-content .entry {
+  border-bottom: 0; }
+
+.sidebar .featured-content .entry {
+  border-bottom: 0; }
+
+.archive .content .entry,
+.home .content .entry,
+.page-template-page_blog-php .content .entry {
+  border-bottom: 0; }
+
+.featured-content .entry img {
+  float: left; }
+
+/************************************************************************************************/
+/* Susy */
+/* Makes border-box properties */
+/*@include border-box-sizing;*/
+.site-inner,
+.site-header .wrap,
+.nav-primary .wrap,
+.footer-widgets .wrap {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto; }
+  .site-inner:after,
+  .site-header .wrap:after,
+  .nav-primary .wrap:after,
+  .footer-widgets .wrap:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/************************************************************************************************/
+/* Box model */
+@media only screen and (min-width: 640px) {
+  .home-latest,
+  .home-featured .entry,
+  .home-second-row .entry,
+  .home-middle .widget,
+  .category-wrapper .category-utbildning,
+  .category-wrapper .category-bidrag,
+  .category-wrapper .category-education,
+  .category-wrapper .category-grants {
+    height: 400px; } }
+@media only screen and (max-width: 639px) {
+  .home-latest,
+  .home-featured .entry,
+  .home-second-row .entry,
+  .home-middle .widget,
+  .category-wrapper .category-utbildning,
+  .category-wrapper .category-bidrag,
+  .category-wrapper .category-education,
+  .category-wrapper .category-grants {
+    height: auto; } }
+
+@media only screen and (min-width: 640px) {
+  .category-wrapper .category-seminars,
+  .category-wrapper .category-seminarier {
+    height: 250px; } }
+@media only screen and (max-width: 639px) {
+  .category-wrapper .category-seminars,
+  .category-wrapper .category-seminarier {
+    height: auto; } }
+
+@media only screen and (max-width: 639px) {
+  .home-second-row img,
+  .home-featured img,
+  .home-second-row .img-wrapper,
+  .home-featured .img-wrapper,
+  .home-news img,
+  aside img {
+    display: none; } }
+
+/************************************************************************************************/
+/* Content ie. not header, sidebar, footer */
+.content {
+  /*	@media only screen and (max-width: 1139px) { }	
+  	
+  	@media only screen and (max-width: 1023px) { }
+  
+  	@media only screen and (max-width: 768px) { }
+  
+  	@media only screen and (max-width: 480px) { }*/
+  /* mobile */ }
+  @media only screen and (min-width: 1024px) {
+    .content {
+      width: 75%;
+      float: left; } }
+  @media only screen and (max-width: 1023px) and (min-width: 640px) {
+    .content {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (min-width: 640px) {
+    .content .home-latest {
+      width: 33.33333%;
+      float: left; }
+    .content .home-featured {
+      width: 66.66667%;
+      float: right;
+      margin-right: 0; }
+      .content .home-featured .post {
+        width: 50%;
+        float: left; }
+    .content .home-second-row {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      .content .home-second-row .post {
+        width: 33.33333%;
+        float: left; }
+    .content .home-middle {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      .content .home-middle .widget {
+        width: 33.33333%;
+        float: left; }
+    .content .home-news,
+    .content .archive-wrapper {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      .content .home-news .post ,
+      .content .archive-wrapper .post  {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0; }
+    .content .news-area {
+      width: 75%;
+      float: left; }
+      .content .news-area .post  {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0; }
+    .content .pagination {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+    .content .category-wrapper {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      .content .category-wrapper .category-utbildning,
+      .content .category-wrapper .category-education,
+      .content .category-wrapper .category-seminars,
+      .content .category-wrapper .category-seminarier {
+        width: 66.66667%;
+        float: left; }
+      .content .category-wrapper .category-bidrag,
+      .content .category-wrapper .category-grants {
+        width: 33.33333%;
+        float: left; } }
+
+/************************************************************************************************/
+/* Single wrapper */
+@media only screen and (max-width: 768px) {
+  .single-wrapper .wp-caption.alignnone {
+    margin: 0.4em 0 0.45em 0; }
+  .single-wrapper .entry-content img.featured-image {
+    max-width: 720px;
+    margin-left: 0; }
+  .single-wrapper .entry-content p,
+  .single-wrapper .entry-content h2, .single-wrapper .entry-content h3, .single-wrapper .entry-content h4,
+  .single-wrapper .entry-content ul, .single-wrapper .entry-content ol,
+  .single-wrapper .entry-content blockquote {
+    padding: 0 20px; }
+  .single-wrapper .entry-header h1.entry-title,
+  .single-wrapper .entry-meta,
+  .single-wrapper .entry-footer,
+  .single-wrapper .entry-comments,
+  .single-wrapper .comment-respond {
+    padding: 0 20px; } }
+
+/************************************************************************************************/
+/* Sidebar */
+@media only screen and (min-width: 1024px) {
+  .sidebar {
+    width: 25%;
+    float: right;
+    margin-right: 0;
+    padding-left: 20px; }
+    .sidebar aside {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+@media only screen and (max-width: 1023px) and (min-width: 640px) {
+  .sidebar {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .sidebar aside {
+      width: 33.33333%;
+      float: left;
+      margin-right: 20px; } }
+
+/************************************************************************************************/
+/* Header */
+.site-header .wrap .title-area {
+  width: 50%;
+  float: left; }
+.site-header .wrap .header-widget-area {
+  width: 33.33333%;
+  float: left; }
+  .site-header .wrap .header-widget-area .widget {
+    width: 100%;
+    float: left;
+    clear: both; }
+    .site-header .wrap .header-widget-area .widget .widget-wrap {
+      float: right; }
+.site-header .wrap .logo-area {
+  min-width: 147px;
+  width: 16.66667%;
+  float: right;
+  margin-right: 0; }
+
+/************************************************************************************************/
+/* Navigation */
+.nav-primary {
+  color: black; }
+  @media only screen and (max-width: 768px) {
+    .nav-primary .genesis-nav-menu > .right {
+      float: none; } }
+
+/************************************************************************************************/
+/* Footer */
+.footer-widgets .wrap {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+  .footer-widgets .wrap .widget-area {
+    width: 33.33333%;
+    float: left; }
+
+/************************************************************************************************/
+/* Inside category boxes */
+.category-wrapper .category-seminars,
+.category-wrapper .category-seminarier {
+  position: relative; }
+  .category-wrapper .category-seminars .entry-header,
+  .category-wrapper .category-seminarier .entry-header {
+    width: 100%;
+    float: left; }
+    .category-wrapper .category-seminars .entry-header .entry-title,
+    .category-wrapper .category-seminarier .entry-header .entry-title {
+      width: 83%;
+      float: right;
+      margin-right: 0; }
+  .category-wrapper .category-seminars .entry-content,
+  .category-wrapper .category-seminars .entry-details,
+  .category-wrapper .category-seminars .entry-link,
+  .category-wrapper .category-seminarier .entry-content,
+  .category-wrapper .category-seminarier .entry-details,
+  .category-wrapper .category-seminarier .entry-link {
+    width: 83%;
+    float: right;
+    margin-right: 0; }
+  .category-wrapper .category-seminars .entry-startdate,
+  .category-wrapper .category-seminarier .entry-startdate {
+    width: 16%;
+    float: left;
+    position: absolute;
+    left: 3%; }
+
+.category-wrapper .category-bidrag,
+.category-wrapper .category-grants {
+  position: relative; }
+  .category-wrapper .category-bidrag .entry-header,
+  .category-wrapper .category-grants .entry-header {
+    width: 100%;
+    float: left; }
+    .category-wrapper .category-bidrag .entry-header .entry-title,
+    .category-wrapper .category-grants .entry-header .entry-title {
+      width: 80%;
+      float: right;
+      margin-right: 0; }
+  .category-wrapper .category-bidrag .entry-content,
+  .category-wrapper .category-bidrag .entry-details,
+  .category-wrapper .category-bidrag .entry-link,
+  .category-wrapper .category-grants .entry-content,
+  .category-wrapper .category-grants .entry-details,
+  .category-wrapper .category-grants .entry-link {
+    width: 80%;
+    float: right;
+    margin-right: 0; }
+  .category-wrapper .category-bidrag .entry-startdate,
+  .category-wrapper .category-grants .entry-startdate {
+    width: 19%;
+    float: left;
+    position: absolute;
+    left: 3%; }
+
+/************************************************************************************************/
+/* More layout */
+.home-featured .entry-header, .home-second-row .entry-header {
+  clear: both; }
+
+.site-inner::after {
+  clear: both; }
+
+.archive-wrapper,
+.home-news,
+.news-area {
+  margin-bottom: 5em; }
+
+.category-intro-text {
+  margin-bottom: 20px; }

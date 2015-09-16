@@ -483,12 +483,6 @@ a.aligncenter img {
 	margin: 0 auto;
 }
 
-img.centered,
-.aligncenter {
-	display: block;
-	margin: 0 auto 24px;
-}
-
 img.alignnone {
 	margin-bottom: 12px;
 }
@@ -1389,24 +1383,6 @@ Footer Widgets
 	padding: 60px 0 20px;
 }
 
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-	width: 360px;
-}
-
-.footer-widgets-1 {
-	margin-right: 30px;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-	float: left;
-}
-
-.footer-widgets-3 {
-	float: right;
-}
 
 .footer-widgets a {
 	color: #fff;
