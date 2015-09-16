@@ -1,0 +1,129 @@
+
+/* Featured Content
+--------------------------------------------- */
+
+.featured-content {
+	clear: both;
+	overflow: hidden;
+}
+
+.home-middle .featured-content a,
+.home-top .featured-content a {
+	position: relative;
+}
+
+.featured-content .entry {
+ 	margin-bottom: 30px;
+}
+
+.content .home-middle .featured-content .entry,
+.content .home-top .featured-content .entry {
+	border: none;
+	float: left;
+	max-width: 100%;
+}
+
+.home-middle .featured-content .entry {
+	width: 360px;
+}
+
+.content .home-bottom .featured-content .entry,
+.sidebar .featured-content .entry {
+	border-bottom: 2px solid #eee;
+}
+
+.sidebar .featured-content .entry:last-child {
+	border-bottom: none;
+}
+
+.home-middle .featured-content .entry-content p:last-child,
+.home-top .featured-content .entry-content p:last-child,
+.sidebar .featured-content .entry:last-child {
+	margin-bottom: 0;
+}
+
+.home-middle .featured-content .entry:nth-of-type(2n+1) {
+	clear: left;
+	margin-right: 30px;
+}
+
+.featured-content .entry-title {
+	border: none;
+	font-size: 24px;
+	line-height: 1.2;
+}
+
+.sidebar .featured-content .entry-title {
+	font-size: 20px;
+}
+
+.featured-content .entry-title a {
+	border: none;
+}
+
+.featured-content a.alignnone {
+	display: inline-block;
+	margin-bottom: 20px;
+	max-width: 100%
+}
+
+.featured-content .entry-header .entry-meta {
+	margin-bottom: 10px;
+}
+
+.js .content .home-middle a .entry-time, 
+.js .content .home-top a .entry-time {
+	background-color: #e8554e;
+	bottom: 24px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 300;
+	padding: 5px 10px;
+	position: absolute;
+	right: 0;
+}
+
+.js .home-middle a.alignleft,
+.js .home-top a.alignleft {
+	margin: 0 24px 24px 0;
+}
+
+.js .home-middle a.alignright,
+.js .home-top a.alignright {
+	margin: 0 0 24px 24px;
+}
+
+.js .home-middle a.alignleft img,
+.js .home-middle a.alignright img,
+.js .home-top a.alignleft img,
+.js .home-top a.alignright img {
+	margin: 0;
+}
+
+.home-middle a.more-link,
+.home-top a.more-link {
+	background-color: #eee;
+	clear: both;
+	color: #222;
+	display: block;
+	font-size: 14px;
+	margin-top: 20px;
+	padding: 8px 10px;
+	text-align: center;
+}
+
+.home-middle a.more-link:hover,
+.home-top a.more-link:hover {
+	background-color: #e8554e;
+	color: #fff;
+}
+
+.featured-content ul {
+	clear: both;
+	margin-bottom: 30px;
+}
+
+.featured-content li {
+	list-style-type: none;
+}
+

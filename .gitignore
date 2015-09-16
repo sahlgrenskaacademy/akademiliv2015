@@ -5,9 +5,6 @@
 config.codekit
 config.rb
 
-# SASS
-sass/
-
 # OS generated files
 .DS_Store
 .DS_Store?

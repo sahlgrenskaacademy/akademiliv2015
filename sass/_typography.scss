@@ -1,0 +1,320 @@
+// _typography.scss 
+
+
+/* Overrides */
+
+.entry-title {
+	font-size: inherit;
+	line-height: 1em;}
+
+
+
+
+body {
+	color: $text-color;
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight; 
+	line-height: $base-font-line-height;}
+	
+
+/* Links */ 
+
+a,
+.entry-content a {
+	background-color: inherit;
+	color: $text-link-color;
+	text-decoration: underline;}
+
+
+
+.home-featured, .home-second-row,
+.home-latest, .home-middle,
+.home-news, .news-area, .archive-wrapper {
+	.post a {
+		text-decoration: none;	
+		color: inherit; }}
+
+a:hover,
+.entry-title a:hover,
+.sidebar-title a:hover,
+.entry-content a:hover {
+	color: $text-link-active-color;
+}
+
+
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+	-webkit-transition: none; /* all 0.1s ease-in-out */
+	-moz-transition:    none; 
+	-ms-transition:     none;
+	-o-transition:      none;
+	transition:         none;
+}
+
+
+
+/* Navigation */
+
+.nav-primary .genesis-nav-menu {
+	line-height: $base-font-line-height*1;
+	a {
+		font-family: $heading-font-family;
+		font-weight: normal;
+		font-size:  $base-font-size*1.2;
+		color:  $heading-color; 
+		text-decoration: none;
+		&:hover, &:focus, &:active {
+			text-decoration: underline;
+			color:  $heading-color; }}
+	.current-menu-item > a {
+		color:  $heading-color;
+		font-weight: 900;}}
+
+
+
+
+/* Titles */		
+
+.site-title,
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font-family;	
+	font-weight: $heading-font-weight; 
+	letter-spacing: $heading-tracking;
+	margin: 0; }
+	
+
+.site-title a,
+.site-title a:hover,
+.entry-title a {
+	background-color: inherit;
+	color: $heading-color;
+	text-decoration: none;
+	font-weight: $heading-font-weight; 
+	font-size: $heading-base-size;
+}
+
+.site-header {
+	.description {
+		line-height: 2em;
+		font-size: 1.4em;}
+	.wrap {
+		padding: 0; }}
+				
+.news-area,
+.content,
+.magazine-home .content {
+	.widget-title {
+		text-transform: none;
+		background-color: transparent;
+		color: $heading-color;
+		padding: 0;}}
+ 
+.sidebar {
+	.widget-title {
+		text-transform: none;
+		background-color: transparent;
+		color: $heading-color;
+		padding: 0;}}
+
+.entry-footer {
+	.widget-title {
+		text-transform: none;
+		background-color: transparent;
+		color: $heading-color;
+		padding: 0;}}
+
+#{$text-boxes}{
+	.widget-title {
+		font-size: $list-widget-heading-font-size;
+		font-weight: $list-heading-font-weight;}
+	.entry-title a {
+		line-height: .9em;
+		font-size: $list-heading-font-size; 
+		font-family: $base-font-family;
+		font-weight: $list-heading-font-weight; }}
+
+#{$image-boxes} {
+	.entry-title a {
+		line-height: 1.2em;
+		font-size: 1.7em; 
+		font-family: $heading-font-family;
+		font-weight: $heading-font-weight; }}
+
+#{$news-boxes} {
+	.widget_text_icl .widget-title,
+	.widget_text .widget-title {
+		line-height: 1em;
+		font-weight: 900;
+		font-size: $news-widget-font-size;
+		margin-bottom: $box-gutter/2;
+		color: $news-widget-color;}	
+	.entry-title a {
+		line-height: 1em;
+		font-size: $news-heading-font-size; 
+		font-family: $heading-font-family; }}
+
+.archive-description, .author-box {
+	margin: 0;
+	padding: 0;}
+
+.archive-title,
+.category-title {
+	line-height: 1em;
+	font-weight: 900;
+	font-size: $news-widget-font-size;
+	margin-bottom: $box-gutter/2;
+	color: $news-widget-color;}
+	
+.archive-pre-title {
+	color: $c-gray-0;
+	margin-bottom: 1em;}
+
+.single-wrapper h1.entry-title {
+	font-weight: 900;
+	font-size: 2.4em;
+	margin-bottom: 0;
+	color: $heading-color;}
+
+
+.category-wrapper .category-seminarier,
+.category-wrapper .category-seminars,
+.category-wrapper .category-utbildning,
+.category-wrapper .category-education,
+.category-wrapper .category-bidrag,
+.category-wrapper .category-grants {
+	padding: $category-box-padding;
+	.entry-title {
+		line-height: 1.2em;
+		font-size: $heading-base-size;
+		margin-bottom: .5em;}
+	.entry-content {
+		font-size: .9em;}
+	.entry-details {
+		text-transform: none;
+		line-height: 1.2em;
+		margin-bottom: .6em;
+		font-size: 1em;
+		.plats {
+			font-weight: normal;	}	}
+	.entry-link a {
+		font-size: .8em;
+		font-weight: bold;}	
+}
+
+
+.category-wrapper .category-bidrag,
+.category-wrapper .category-grants,
+.category-wrapper .category-seminarier,
+.category-wrapper .category-seminars {
+	.entry-startdate {
+		text-align: center;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-family: $heading-font-family;
+		.day {
+			margin-left: .05em;
+			line-height: 1.2em;
+			font-size: $heading-base-size*1.55;}
+		.month {
+			font-size: $heading-base-size*.75;}
+		.year {
+			font-size: $heading-base-size*.7;
+			font-weight: normal;}
+	}
+}
+
+.category-wrapper .category-utbildning,
+.category-wrapper .category-education {
+	.entry-title {
+		font-weight: 900;
+		margin-bottom: 0!important;}
+	.entry-deadline {
+		font-weight: 900;
+		font-family: $heading-font-family;
+		margin-bottom: .5em;
+		.label {
+			font-weight: normal;}
+	}
+}
+
+
+.single-wrapper	.entry-content {
+	p,
+	ol,	ul {
+		font-size: $base-font-size*1.215;
+		line-height: 1.7em;}}
+
+
+.sidebar aside {
+	h2 {
+		line-height: 1.2em;
+		font-size: $list-widget-heading-font-size*1; 
+		font-family: $heading-font-family;
+		font-weight: normal; 
+		margin-bottom: 1em;}
+	.widget-wrap,
+	.sidebar-content {
+		p {
+			margin-bottom: 1em;	}
+	}
+}		
+
+.category-wrapper .category-utbildning,
+.category-wrapper .category-education,
+.category-wrapper .category-bidrag,
+.category-wrapper .category-seminarier,
+.category-wrapper .category-grants,
+.category-wrapper .category-seminars {
+	.entry-startdate,
+	.entry-deadline {
+		&.month1 {color: $category-month-color1;}
+		&.month2 {color: $category-month-color2;}
+		&.month3 {color: $category-month-color3;}
+		&.month4 {color: $category-month-color4;}
+		&.month5 {color: $category-month-color5;}
+		&.month6 {color: $category-month-color6;}
+		&.month7 {color: $category-month-color7;}
+		&.month8 {color: $category-month-color8;}
+		&.month9 {color: $category-month-color9;}
+		&.month10 {color: $category-month-color10;}
+		&.month11 {color: $category-month-color11;}
+		&.month12 {color: $category-month-color12;}
+	}
+}
+
+
+/* Meta */
+
+.home-featured, .home-second-row,
+.home-latest, .home-middle,
+.home-news, .news-area, .archive-wrapper,
+.category-wrapper,
+.single-wrapper .entry-header {
+	.entry-meta,
+	.entry-details,
+	.entry-time {
+		line-height: 1em;
+		font-size: .9em;
+		color: $c-gray-0;
+		text-transform: uppercase;
+		font-weight: normal; }}
+		
+		
+		
+.single-wrapper {
+	.entry-header .entry-meta {
+			margin-top: .7em;
+			margin-bottom: 2em;}}
+		
+		
+		
+		
+		

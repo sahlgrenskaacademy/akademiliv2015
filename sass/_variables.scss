@@ -1,0 +1,126 @@
+// _variables.scss 
+
+/* Layout */
+$site-width: 			1230px;
+
+$image-boxes: 		".home-featured, .home-second-row";
+$text-boxes: 			".home-latest, .home-middle";
+$news-boxes: 			".home-news, .news-area, .archive-wrapper";
+$category-boxes: 	".category-wrapper";
+
+$box-height: 						400px;
+$seminar-box-height: 		250px;
+
+$susy-mobile: 		2;
+$susy-tablet: 		6;
+$susy-desktop: 		8;
+
+$box-gutter: 					20px;
+$box-padding: 				34px;
+$single-padding: 			100px;
+$news-box-gutter: 		30px;
+$img-padding:					.9em;
+
+$breakpoint-mobile: 	700px;
+
+
+/*@include at-breakpoint($desktop) {
+	@include span-columns(13, $desktop);
+	@include prefix(3, $desktop);
+}*/
+
+
+
+/* Color Scheme */
+/* http://paletton.com/#uid=33s0E0kg4z5nDdpkGoZaoPV3e+l */
+
+$c-primary-0: rgba( 89,144,170,1);	/* Main Primary color */
+$c-primary-1: rgba( 20, 52, 68,1);
+$c-primary-2: rgba( 49,101,126,1);
+$c-primary-3: rgba(154,200,223,1);
+$c-primary-4: rgba(229,245,253,1);
+
+$c-secondary-1-0: rgba(255,227,127,1);	/* Main Secondary color (1) */
+$c-secondary-1-1: rgba(107, 89, 28,1);
+$c-secondary-1-2: rgba(199,171, 70,1);
+$c-secondary-1-3: rgba(255,237,172,1);
+$c-secondary-1-4: rgba(255,249,229,1);
+
+$c-secondary-2-0: rgba(253,126,129,1);	/* Main Secondary color (2) */
+$c-secondary-2-1: rgba(106, 28, 30,1);
+$c-secondary-2-2: rgba(197, 70, 73,1);
+$c-secondary-2-3: rgba(254,172,174,1);
+$c-secondary-2-4: rgba(255,229,230,1);
+
+/* Grays */
+
+$c-gray-0:		 		rgb(160, 159, 155);
+$c-gray-1: 				rgb(235,235,235);
+$c-gray-2: 				rgb(245,245,245);
+$c-gray-3:				rgb(254,253,254);
+$c-gray-4:				rgb(155,150,153);
+
+$c-white:			 		white;
+$c-black:					black;
+
+/* Flare */
+
+$accent-color: 				orange;
+
+$sidebar-bg-color:		rgb(242,255,242);
+
+
+
+$heading-margin: 						.6em;
+
+$text-box-padding: 					$box-padding 28px;
+$image-box-padding: 				24px 20px;
+$news-box-padding: 					29px;
+$category-box-padding: 			20px;
+$single-box-padding:				0 0 $box-padding 0;
+
+$single-paragraph-padding: 	0 $single-padding;
+
+$box-border-color: 				$c-gray-1;
+$image-overlay-color:			black;
+
+$category-month-color1: 	rgb(0,209,0);
+$category-month-color2: 	rgb(0,113,209);
+$category-month-color3: 	rgb(209,113,0);
+$category-month-color4: 	rgb(0,209,0);
+$category-month-color5: 	rgb(0,113,209);
+$category-month-color6: 	rgb(209,113,0);
+$category-month-color7: 	rgb(0,209,0);
+$category-month-color8: 	rgb(0,113,209);
+$category-month-color9: 	rgb(209,113,0);
+$category-month-color10: 	rgb(0,209,0);
+$category-month-color11: 	rgb(113,113,209);
+$category-month-color12: 	rgb(209,209,209);
+
+/* Typography */
+
+$text-color: 							#484848;
+$text-link-color: 				#025DA6;
+$text-link-active-color: 	$c-secondary-2-2;
+
+$base-font-size: 				14px;
+$base-font-family: 			"HelveticaNeue", Helvetica, Arial, sans-serif;
+$base-font-weight: 			400;
+$base-font-line-height: 1.3em;
+
+
+$heading-font-family: 	"Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+$heading-font-weight: 	normal;
+$heading-color: 				black;
+$heading-base-size: 		1.5em;
+$heading-tracking: 			.4px;
+
+$list-widget-heading-font-size: 	1.8em;
+$list-heading-font-size: 					.9em;
+$list-heading-font-weight: 				900;
+
+$news-heading-font-size: 			1.6em;
+
+$news-widget-font-size: 			2.5em;
+$news-widget-color: 					rgb(93, 93, 93);
+
