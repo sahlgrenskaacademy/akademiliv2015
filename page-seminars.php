@@ -39,13 +39,13 @@ function psu_custom_fields_aftercontent() {
     
 	printf('<div class="entry-details">');
 		if ( $cf_tid != '')
-			printf('<span class="tid">%s </span>', $cf_tid );
+			printf('<div class="label">%s</div><div class="tid">%s</div>', __('Time', 'magazine'), $cf_tid );
 		if ( $cf_plats != '')
-			printf('<span class="plats">@ %s</span>', $cf_plats );
+			printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $cf_plats );
 	printf('</div>');
 
 	if ( $cf_webb != '')
-		printf('<div class="entry-link"><a href="%s">Mer information på %s</a></div>', $cf_webb, $cf_domain );
+		printf('<div class="entry-link"><a href="%s">%s %s</a></div>', $cf_webb, __('More information on', 'magazine'), $cf_domain );	
 
 }
 
