@@ -396,6 +396,8 @@ body.page-template .sidebar {
 	.genesis-nav-menu li.search {
 		padding: 0;
 		padding-top: 4px;
+		z-index: 20;
+		position: relative;
 		input[type="search"] {
 			@include border-radius(3px 0 0 3px);
 			height: 30px;
