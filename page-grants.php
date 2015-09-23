@@ -33,7 +33,8 @@ function psu_custom_fields_aftercontent() {
 		if ( strpos( $cf_webb, 'http://' ) === false ) {
 	    $cf_webb = 'http://'.$cf_webb;
 	  }	  
-	 $cf_domain = ltrim( parse_url($cf_webb)['host'], 'www.' );
+	  $cf_url = parse_url($cf_webb);
+	  $cf_domain = ltrim( $cf_url['host'], 'www.' );
  	}
     
 	printf('<div class="entry-details">');
