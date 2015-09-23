@@ -134,6 +134,7 @@ body.page-template .sidebar {
 	margin-top: 46px;
 }
 
+.site-header .wrap,
 .site-inner,
 .footer-widgets {
 	padding-left: $mobile-margin;
@@ -299,13 +300,14 @@ body.page-template .sidebar {
 		}	
 	}
 
-	.header-widget-area {
+	#switch-language {
 		
 		padding-right: $box-gutter;
 		padding-top: $box-gutter;
 
 		.widget_text_icl,
-		.widget_text {
+		.widget_text,
+		.widget-wrap {
 			text-transform: uppercase;
 			font-family: $heading-font-family;
 			a {
