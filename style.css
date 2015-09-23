@@ -2830,14 +2830,9 @@ input:hover[type="submit"],
 
 /************************************************************************************************/
 /* Footer */
-.footer-widgets .wrap {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0; }
-  .footer-widgets .wrap .widget-area {
-    width: 33.33333%;
-    float: left; }
+.footer-widgets .wrap .widget-area {
+  width: 33.33333%;
+  float: left; }
 
 /************************************************************************************************/
 /* Inside category boxes */

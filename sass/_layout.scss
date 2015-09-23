@@ -351,8 +351,6 @@ aside img {
 
 .footer-widgets .wrap {
 	
-	@include span(12);
-	
 	.widget-area {
 		@include span(4 of 12);
 	}
