@@ -36,13 +36,6 @@ function psu_custom_fields_aftercontent() {
 	  $cf_url = parse_url($cf_webb);
 	  $cf_domain = ltrim( $cf_url['host'], 'www.' );
  	}
-    
-	printf('<div class="entry-details">');
-		if ( $cf_tid != '')
-			printf('<span class="tid">%s </span>', $cf_tid );
-		if ( $cf_plats != '')
-			printf('<span class="plats">@ %s</span>', $cf_plats );
-	printf('</div>');
 
 	if ( $cf_webb != '')
 		printf('<div class="entry-link"><a href="%s">Mer information på %s</a></div>', $cf_webb, $cf_domain );

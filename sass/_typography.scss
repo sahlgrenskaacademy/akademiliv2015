@@ -198,15 +198,17 @@ h1, h2, h3, h4, h5, h6 {
 	.entry-content {
 		font-size: .9em;}
 	.entry-details {
-		text-transform: none;
 		line-height: 1.2em;
 		margin-bottom: .6em;
-		font-size: 1em;
-		.plats {
-			font-weight: normal;	}	}
-	.entry-link a {
-		font-size: .8em;
-		font-weight: bold;}	
+		font-size: .9em;
+		font-weight: 900;
+		.plats .label {
+			margin-top: .7em;}}
+	.entry-link {
+		line-height: 1em;
+		a {
+			font-size: .8em;
+			font-weight: bold;}}
 }
 
 
@@ -235,10 +237,9 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-education {
 	.entry-title {
 		font-weight: 900;
-		margin-bottom: 0!important;}
+/*		margin-bottom: 0!important;*/}
 	.entry-deadline {
 		font-weight: 900;
-		font-family: $heading-font-family;
 		margin-bottom: .5em;
 		.label {
 			font-weight: normal;}
@@ -299,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper,
 .single-wrapper .entry-header {
 	.entry-meta,
-	.entry-details,
+	.entry-details .label,
 	.entry-time {
 		line-height: 1em;
 		font-size: .9em;

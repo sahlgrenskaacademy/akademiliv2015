@@ -35,14 +35,15 @@ function psu_custom_fields_aftercontent() {
     
 	printf('<div class="entry-details">');
 
-
-		printf('<div class="startdate"><span class="day">%s</span> <span class="month">%s</span> <span class="year">%s</span></div>', date('j', $cf_startdate), psu_month_string( date('n', $cf_startdate) ), date('Y', $cf_startdate) );
-
-
 		if ( $cf_tid != '')
-			printf('<span class="tid">%s </span>', $cf_tid );
+			$time_str = sprintf('<span class="tid">%s %s</span>', __(', ', 'magazine'), $cf_tid );
+		else
+		  $time_str = '';
+
+		printf('<div class="startdate"><div class="label">%s</div><span class="day">%s</span> <span class="month">%s</span> <span class="year">%s</span>%s</div>', __('Date & time', 'magazine'), date('j', $cf_startdate), psu_month_string( date('n', $cf_startdate) ), date('Y', $cf_startdate), $time_str);
+
 		if ( $cf_plats != '')
-			printf('<span class="plats">@ %s</span>', $cf_plats );
+			printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $cf_plats );
 			
 	printf('</div>');
 
