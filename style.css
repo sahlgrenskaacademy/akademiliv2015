@@ -1807,6 +1807,11 @@ h1, h2, h3, h4, h5, h6 {
       font-size: .8em;
       font-weight: bold; }
 
+.category-wrapper .category-bidrag .entry-title,
+.category-wrapper .category-grants .entry-title,
+.category-wrapper .category-seminarier .entry-title,
+.category-wrapper .category-seminars .entry-title {
+  margin-bottom: 0 !important; }
 .category-wrapper .category-bidrag .entry-startdate,
 .category-wrapper .category-grants .entry-startdate,
 .category-wrapper .category-seminarier .entry-startdate,
@@ -2418,7 +2423,9 @@ body.page-template .sidebar {
     bottom: -2px; }
   .nav-primary .genesis-nav-menu li.search {
     padding: 0;
-    padding-top: 4px; }
+    padding-top: 4px;
+    z-index: 20;
+    position: relative; }
     .nav-primary .genesis-nav-menu li.search input[type="search"] {
       -moz-border-radius: 3px 0 0 3px;
       -webkit-border-radius: 3px;
@@ -2565,7 +2572,7 @@ input:hover[type="submit"],
 /* Override defaults */
 .nav-primary {
   position: relative;
-  z-index: 0; }
+  z-index: inherit; }
 
 .admin-bar .nav-primary {
   top: 0; }
@@ -2808,7 +2815,7 @@ input:hover[type="submit"],
     right: 0;
     top: 0;
     text-align: right;
-    z-index: 999;
+    z-index: 10;
     width: 33.33333%; }
     .site-header .wrap .logo-area #switch-language {
       width: 55%;
