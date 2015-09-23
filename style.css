@@ -2704,14 +2704,6 @@ input:hover[type="submit"],
         float: left;
         margin-left: 0;
         margin-right: 0; }
-    .content .news-area {
-      width: 75%;
-      float: left; }
-      .content .news-area .post  {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; }
     .content .pagination {
       width: 100%;
       float: left;
@@ -2724,14 +2716,25 @@ input:hover[type="submit"],
       margin-right: 0; }
       .content .category-wrapper .category-utbildning,
       .content .category-wrapper .category-education,
-      .content .category-wrapper .category-seminars,
-      .content .category-wrapper .category-seminarier {
-        width: 66.66667%;
-        float: left; }
       .content .category-wrapper .category-bidrag,
       .content .category-wrapper .category-grants {
         width: 33.33333%;
+        float: left; }
+      .content .category-wrapper .category-seminars,
+      .content .category-wrapper .category-seminarier {
+        width: 50%;
         float: left; } }
+
+/************************************************************************************************/
+/* News area */
+.news-area {
+  width: 75%;
+  float: left; }
+  .news-area .post  {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
 
 /************************************************************************************************/
 /* Single wrapper */

@@ -28,7 +28,7 @@ function magazine_enqueue_scripts() {
 	wp_enqueue_script( 'magazine-entry-date', get_bloginfo( 'stylesheet_directory' ) . '/js/entry-date.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_script( 'magazine-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,500,900', array(), CHILD_THEME_VERSION );
+//	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,500,900', array(), CHILD_THEME_VERSION );
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,11 +40,11 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for additional color styles
-add_theme_support( 'genesis-style-selector', array(
-	'magazine-pro-blue'   => __( 'Magazine Pro Blue', 'magazine' ),
-	'magazine-pro-green'  => __( 'Magazine Pro Green', 'magazine' ),
-	'magazine-pro-orange' => __( 'Magazine Pro Orange', 'magazine' ),
-) );
+//add_theme_support( 'genesis-style-selector', array(
+//	'magazine-pro-blue'   => __( 'Magazine Pro Blue', 'magazine' ),
+//	'magazine-pro-green'  => __( 'Magazine Pro Green', 'magazine' ),
+//	'magazine-pro-orange' => __( 'Magazine Pro Orange', 'magazine' ),
+//) );
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add support for custom header
