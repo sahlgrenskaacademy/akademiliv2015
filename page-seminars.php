@@ -41,7 +41,7 @@ function psu_custom_fields_aftercontent() {
 		if ( $cf_tid != '')
 			printf('<div class="label">%s</div><div class="tid">%s</div>', __('Time', 'magazine'), $cf_tid );
 		if ( $cf_plats != '')
-			printf('<div class="label">%s</div><div class="plats"> %s</div>', __('Venue', 'magazine'), $cf_plats );
+			printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $cf_plats );
 	printf('</div>');
 
 	if ( $cf_webb != '')
