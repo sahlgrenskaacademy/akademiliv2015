@@ -38,7 +38,7 @@ function psu_custom_fields_aftercontent() {
  	}
 
 	if ( $cf_webb != '')
-		printf('<div class="entry-link"><a href="%s">Mer information på %s</a></div>', $cf_webb, $cf_domain );
+		printf('<div class="entry-link"><a href="%s">%s %s</a></div>', $cf_webb, __('More information on', 'magazine'), $cf_domain );
 
 }
 
