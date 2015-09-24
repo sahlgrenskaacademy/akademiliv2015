@@ -428,11 +428,11 @@ function psu_logo_shortcode(){
 	
 	$str['sv']['url'] = 		'http://gu.se';
 	$str['sv']['title'] = 	'Göteborgs universitet';
-	$str['sv']['img'] = 		'http://gu.se/digitalAssets/1498/1498142_ny_logo_sv_normal.png';
+	$str['sv']['img'] = 		'http://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
 	$str['sv']['alt'] = 		'Göteborgs universitets logotyp';
 	$str['en']['url'] = 		'http://gu.se/english';
 	$str['en']['title'] = 	'University of Gothenburg';
-	$str['en']['img'] = 		'http://gu.se/digitalAssets/1498/1498140_ny_logo_en_normal.png';
+	$str['en']['img'] = 		'http://gu.se/digitalAssets/1498/1498144_ny_logo_en_normal.png';
 	$str['en']['alt'] = 		'University of Gothenburg Logotype';
 
 	printf('<a href="%s" title="%s"><img src="%s" alt="%s"></a>', $str[$l]['url'], $str[$l]['title'], $str[$l]['img'], $str[$l]['alt'] );
@@ -902,7 +902,7 @@ function magazine_remove_comment_form_allowed_tags( $defaults ) {
 //* Modify comments title text in comments
 add_filter( 'genesis_title_comments', 'psu_genesis_title_comments' );
 function psu_genesis_title_comments() {
-	$title = sprintf('<h2>%s</h2>', __('Feedback', 'magazine') );
+	$title = sprintf('<h2>%s</h2>', __('Comments', 'magazine') );
 	return $title;
 }
 
@@ -910,7 +910,7 @@ function psu_genesis_title_comments() {
 //* Modify the speak your mind title in comments
 add_filter( 'comment_form_defaults', 'psu_comment_form_defaults' );
 function psu_comment_form_defaults( $defaults ) { 
-	$defaults['title_reply'] = __( 'Give feedback', 'magazine' );
+	$defaults['title_reply'] = __( 'Leave a Comment', 'magazine' );
 	return $defaults;
 }
 
