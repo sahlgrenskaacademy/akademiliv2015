@@ -211,8 +211,19 @@ body.page-template .sidebar {
 		.entry-content p,
 		.entry-title {
 			margin-bottom: .5em;}}
-			
-			
+
+
+	&.category-wrapper-bidrag,
+	&.category-wrapper-grants {
+		.category-subtitle {
+			margin-bottom: $box-gutter/4;
+			font-size: $news-widget-font-size*.75;
+			padding-top: $box-gutter*1.5;}
+		.loop-2 {
+			.category-bidrag,
+			.category-bidrag {
+				background: $c-secondary-2-4;}}}
+
 }
 
 .category-intro-text {

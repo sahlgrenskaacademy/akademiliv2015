@@ -178,7 +178,12 @@ aside img {
 
 			.category-seminars,
 			.category-seminarier {
-				@include span(4.5 of 9);}}
+				@include span(4.5 of 9);}
+				
+			&.category-wrapper-bidrag,
+			&.category-wrapper-grants {
+				.category-subtitle {
+					clear: both;}}}
 
 	} 
 	
@@ -397,6 +402,7 @@ aside img {
 		.entry-title {
 			@include span(80% last);}
 	}
+	
 	.entry-content,
 	.entry-details,
 	.entry-link {
@@ -405,9 +411,19 @@ aside img {
 		@include span(19% first);
 		position: absolute;
 		left: 3%;}
+
 }
 
-
+.category-wrapper-bidrag,
+.category-wrapper-grants {
+	.loop-2 {
+		.entry-header {
+			.entry-title {
+				@include span(100%);}}
+		.entry-content,
+		.entry-details,
+		.entry-link {
+		 	@include span(100% last);}}}
 
   
 /************************************************************************************************/
