@@ -17,7 +17,7 @@ load_child_theme_textdomain( 'magazine', apply_filters( 'child_theme_textdomain'
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', __( 'AL Mag 2015', 'magazine' ) );
+define( 'CHILD_THEME_NAME', 'AL Mag 2015' );
 define( 'CHILD_THEME_URL', 'http://www.akademiliv.se' );
 define( 'CHILD_THEME_VERSION', '0.1' );
 
@@ -989,12 +989,15 @@ function psu_al_sidebar() {
 				post_class( 'al_sidebar_post' );
 			printf('>');		
 
+			if ($cf_webb !== false) {
+				$link_start 	= sprintf('<a href="%s">', $cf_webb);
+				$link_end 		= '</a>';
+			} else {
+				$link_start 	= '';
+				$link_end 		= '';			
+			}
+
 			if ( has_post_thumbnail() ) {
-			
-				if ($cf_webb !== false) {
-					$link_start 	= sprintf('<a href="%s">', $cf_webb);
-					$link_end 		= '</a>';
-				}
 			
 				echo $link_start;
 				the_post_thumbnail( 'al-sidebar', array(
