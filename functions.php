@@ -1044,13 +1044,13 @@ function psu_al_sidebar_logic() {
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Remove Genesis Page Templates
+add_filter( 'theme_page_templates', 'psu_remove_genesis_page_templates' );
 function psu_remove_genesis_page_templates( $page_templates ) {
 //	unset( $page_templates['page_archive.php'] );
 //	unset( $page_templates['page_blog.php'] );
 	unset( $page_templates['page_landing.php'] );
 	return $page_templates;
 }
-add_filter( 'theme_page_templates', 'psu_remove_genesis_page_templates' );
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -1063,11 +1063,39 @@ remove_theme_support( 'genesis-inpost-layouts' );
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add admin css
+add_action('admin_enqueue_scripts', 'pontus_admin_theme_style');
 function pontus_admin_theme_style() {
   wp_enqueue_style('admin-customization', get_bloginfo( 'stylesheet_directory' )  . '/admin-customization.css');
 }
-add_action('admin_enqueue_scripts', 'pontus_admin_theme_style');
 
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Modifying TinyMCE editor to remove unused items.
+//* https://codex.wordpress.org/TinyMCE
+add_filter( 'tiny_mce_before_init', 'psu_customize_tinymce' );
+function psu_customize_tinymce( $in ) {
+//	$in['remove_linebreaks'] = false;
+//	$in['gecko_spellcheck'] = false;
+//	$in['keep_styles'] = true;
+//	$in['accessibility_focus'] = true;
+//	$in['tabfocus_elements'] = 'major-publishing-actions';
+//	$in['media_strict'] = false;
+//	$in['paste_remove_styles'] = false;
+//	$in['paste_remove_spans'] = false;
+//	$in['paste_strip_class_attributes'] = 'none';
+//	$in['paste_text_use_dialog'] = true;
+//	$in['wpeditimage_disable_captions'] = true;
+//	$in['plugins'] = 'tabfocus,paste,media,fullscreen,wordpress,wpeditimage,wpgallery,wplink,wpdialogs,wpfullscreen';
+//	$in['content_css'] = get_template_directory_uri() . "/editor-style.css";
+//	$in['wpautop'] = true;
+//	$in['apply_source_formatting'] = false;
+  $in['block_formats'] = "Paragraph=p; Heading 2=h2; Heading 3=h3";
+//	$in['toolbar1'] = 'bold,italic,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,wp_fullscreen,wp_adv ';
+	$in['toolbar1'] = 'bold,italic,strikethrough,bullist,numlist,blockquote,link,unlink,wp_fullscreen,wp_adv';
+//	$in['toolbar2'] = 'formatselect,underline,alignjustify,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help ';
+	$in['toolbar2'] = 'formatselect,pastetext,removeformat,undo,redo';
+//	$in['toolbar3'] = '';
+//	$in['toolbar4'] = '';
+	return $in;
+}
 
