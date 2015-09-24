@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $heading-font-weight; 
 	letter-spacing: $heading-tracking;
 	margin: 0; }
-	
+
 
 .site-title a,
 .site-title a:hover,
@@ -177,12 +177,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: $c-gray-0;
 	margin-bottom: 1em;}
 
-.single-wrapper h1.entry-title {
-	font-weight: 900;
-	font-size: 2.4em;
-	margin-bottom: 0;
-	color: $heading-color;}
-
 
 .category-wrapper .category-seminarier,
 .category-wrapper .category-seminars,
@@ -248,13 +242,27 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.single-wrapper {
+	h1.entry-title {
+		font-weight: 900;
+		font-size: 2.4em;
+		margin-bottom: 0;
+		color: $heading-color;}}
 
 .single-wrapper	.entry-content {
+
+	h2 {
+		font-weight: 900;
+		font-size: $heading-base-size*1.1;}
+	h3 {
+		font-weight: 900;
+		font-family: $base-font-family;
+		margin-top: .8em;}
 	p,
+	h3,
 	ol,	ul {
 		font-size: $base-font-size*1.215;
 		line-height: 1.7em;}}
-
 
 .sidebar aside {
 	h2 {
