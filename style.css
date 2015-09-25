@@ -2514,12 +2514,10 @@ img.alignright,
 
 a.aligncenter,
 img.aligncenter,
-.wp-caption img.aligncenter,
 .wp-caption.aligncenter {
   margin: 0.4em auto 0.45em auto; }
   a.aligncenter .wp-caption-text,
   img.aligncenter .wp-caption-text,
-  .wp-caption img.aligncenter .wp-caption-text,
   .wp-caption.aligncenter .wp-caption-text {
     padding-left: .5em; }
 
@@ -2548,6 +2546,13 @@ img.aligncenter,
 .single-wrapper a.aligncenter,
 .single-wrapper img.aligncenter {
   display: block; }
+
+.single-wrapper .featured-figure {
+  margin: 0.4em auto 0.45em auto; }
+  .single-wrapper .featured-figure img.featured-image {
+    margin: 0; }
+  .single-wrapper .featured-figure .wp-caption-text {
+    padding-left: .5em; }
 
 /* Forms
 --------------------------------------------- */

@@ -483,7 +483,6 @@ img.alignright,
 
 a.aligncenter,
 img.aligncenter,
-.wp-caption img.aligncenter,
 .wp-caption.aligncenter {
 	margin: .4em auto $img-padding/2 auto;
 	.wp-caption-text {
@@ -518,8 +517,14 @@ img.aligncenter,
 	
 	a.aligncenter,
 	img.aligncenter {
-		display: block;}	
-}
+		display: block;}}
+
+.single-wrapper .featured-figure {
+	margin: .4em auto $img-padding/2 auto;
+	img.featured-image {
+		margin: 0;}
+	.wp-caption-text {
+		padding-left: .5em;}}
 
 
 

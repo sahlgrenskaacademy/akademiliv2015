@@ -697,12 +697,12 @@ function psu_output_single_post_featured_image() {
 
 	$thumb = psu_get_thumbnail_max_size();	
 	if ( $thumb['size'] !== false ) {
-	
+
 		$img_id = get_post_thumbnail_id();
 		$img = genesis_get_image( array( 
 			'format' => 'html', 
 			'size' => $thumb['size'], 
-			'attr' => array( 'class' => 'featured-image aligncenter size-'. $thumb['size'] ) 
+			'attr' => array( 'class' => 'featured-image size-'. $thumb['size'] ) 
 		));
 		
 		$caption = get_post($img_id)->post_excerpt;
@@ -711,7 +711,9 @@ function psu_output_single_post_featured_image() {
 		} else {
 			$figcaption = '';
 		}
-		printf( '<figure id="attachment_%s" style="width: 920px;" class="wp-caption">%s%s</figure>', $img_id, $img, $figcaption );
+		
+		$img_size = psu_get_defined_sizes( $thumb['size'] );
+		printf( '<figure id="attachment_%s" style="width: %spx;" class="wp-caption featured-figure">%s%s</figure>', $img_id, $img_size['width'], $img, $figcaption );
 	
 	}
 	
@@ -734,7 +736,6 @@ function psu_get_thumbnail_max_size() {
 	$full 				= psu_get_defined_sizes( 'post-full' );
 	$center 			= psu_get_defined_sizes( 'post-center' );
 	$medium 			= psu_get_defined_sizes( 'post-medium' );
-echo "eh".$center['width']	;
 	if ( $img_width >= $full['width']) {
 		$r = $full;
 		$r['size'] = 'post-full';
