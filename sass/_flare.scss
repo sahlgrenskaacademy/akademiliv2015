@@ -501,11 +501,6 @@ img.aligncenter,
   line-height: 1.2em;	
 }
 
-.wp-caption img.aligncenter,
-.wp-caption img.aligncenter .wp-caption-text {
-	margin: .4em auto $img-padding/2 auto;}
-
-
 .single-wrapper {
 	a.alignnone,
 	img.alignnone {
@@ -523,6 +518,13 @@ img.aligncenter,
 	a.aligncenter,
 	img.aligncenter {
 		display: block;}}
+
+.single-wrapper .featured-figure {
+	margin: .4em auto $img-padding/2 auto;
+	img.featured-image {
+		margin: 0;}
+	.wp-caption-text {
+		padding-left: .5em;}}
 
 
 
