@@ -696,7 +696,7 @@ function psu_single_add_entry_header() {
 function psu_output_single_post_featured_image() {
 
 	$thumb = psu_get_thumbnail_max_size();	
-	if ( $thumb['size'] !== false ) {
+	if ( $thumb['size'] !== false && $thumb['size'] != 'post-medium' ) {
 
 		$img_id = get_post_thumbnail_id();
 		$img = genesis_get_image( array( 

@@ -2279,7 +2279,7 @@ body.page-template .sidebar {
 .home-second-row .img-wrapper {
   height: 200px;
   overflow: hidden;
-  background-color: white; }
+  background-color: black; }
 
 .home-middle .entry-header {
   margin-bottom: 1.2em; }
