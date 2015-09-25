@@ -702,7 +702,7 @@ function psu_output_single_post_featured_image() {
 		$img = genesis_get_image( array( 
 			'format' => 'html', 
 			'size' => $thumb['size'], 
-			'attr' => array( 'class' => 'featured-image size-'. $thumb['size'] ) 
+			'attr' => array( 'class' => 'featured-image aligncenter size-'. $thumb['size'] ) 
 		));
 		
 		$caption = get_post($img_id)->post_excerpt;
@@ -734,6 +734,7 @@ function psu_get_thumbnail_max_size() {
 	$full 				= psu_get_defined_sizes( 'post-full' );
 	$center 			= psu_get_defined_sizes( 'post-center' );
 	$medium 			= psu_get_defined_sizes( 'post-medium' );
+echo "eh".$center['width']	;
 	if ( $img_width >= $full['width']) {
 		$r = $full;
 		$r['size'] = 'post-full';
@@ -767,6 +768,7 @@ add_image_size( 'post-center', 	   	720, 405, array('center','center') );
 add_image_size( 'post-medium',   		360, 360, false );
 add_image_size( 'post-small',   		180, 180, false );
 add_image_size( 'al-sidebar', 	   	286, 286, array('center','center') );
+add_image_size( 'admin-col', 				100, 67, array('center','center') );
 
 //add_image_size( 'sidebar-thumbnail', 100, 100, true );
 //add_image_size( 'home-middle', 360, 200, true );

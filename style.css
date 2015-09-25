@@ -2279,7 +2279,7 @@ body.page-template .sidebar {
 .home-second-row .img-wrapper {
   height: 200px;
   overflow: hidden;
-  background-color: black; }
+  background-color: white; }
 
 .home-middle .entry-header {
   margin-bottom: 1.2em; }
@@ -2514,10 +2514,12 @@ img.alignright,
 
 a.aligncenter,
 img.aligncenter,
+.wp-caption img.aligncenter,
 .wp-caption.aligncenter {
   margin: 0.4em auto 0.45em auto; }
   a.aligncenter .wp-caption-text,
   img.aligncenter .wp-caption-text,
+  .wp-caption img.aligncenter .wp-caption-text,
   .wp-caption.aligncenter .wp-caption-text {
     padding-left: .5em; }
 
@@ -2533,21 +2535,18 @@ img.aligncenter,
   font-size: .9em;
   line-height: 1.2em; }
 
-a.alignnone,
-img.alignnone {
+.single-wrapper a.alignnone,
+.single-wrapper img.alignnone {
   display: block;
   margin: 0; }
-
-a.alignleft,
-img.alignleft {
+.single-wrapper a.alignleft,
+.single-wrapper img.alignleft {
   margin-left: -100px; }
-
-a.alignright,
-img.alignright {
+.single-wrapper a.alignright,
+.single-wrapper img.alignright {
   margin-right: -100px; }
-
-a.aligncenter,
-img.aligncenter {
+.single-wrapper a.aligncenter,
+.single-wrapper img.aligncenter {
   display: block; }
 
 /* Forms
