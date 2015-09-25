@@ -702,7 +702,7 @@ function psu_output_single_post_featured_image() {
 		$img = genesis_get_image( array( 
 			'format' => 'html', 
 			'size' => $thumb['size'], 
-			'attr' => array( 'class' => 'featured-image size-'. $thumb['size'] ) 
+			'attr' => array( 'class' => 'featured-image aligncenter size-'. $thumb['size'] ) 
 		));
 		
 		$caption = get_post($img_id)->post_excerpt;
@@ -734,6 +734,7 @@ function psu_get_thumbnail_max_size() {
 	$full 				= psu_get_defined_sizes( 'post-full' );
 	$center 			= psu_get_defined_sizes( 'post-center' );
 	$medium 			= psu_get_defined_sizes( 'post-medium' );
+echo "eh".$center['width']	;
 	if ( $img_width >= $full['width']) {
 		$r = $full;
 		$r['size'] = 'post-full';

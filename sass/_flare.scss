@@ -483,6 +483,7 @@ img.alignright,
 
 a.aligncenter,
 img.aligncenter,
+.wp-caption img.aligncenter,
 .wp-caption.aligncenter {
 	margin: .4em auto $img-padding/2 auto;
 	.wp-caption-text {
@@ -501,22 +502,26 @@ img.aligncenter,
   line-height: 1.2em;	
 }
 
-a.alignnone,
-img.alignnone {
-	display: block;
-	margin: 0;}
+.single-wrapper {
+	a.alignnone,
+	img.alignnone {
+		display: block;
+		margin: 0;}
+		
+	a.alignleft,
+	img.alignleft {
+		margin-left: -$single-padding;}
 	
-a.alignleft,
-img.alignleft {
-	margin-left: -$single-padding;}
+	a.alignright,
+	img.alignright {
+		margin-right: -$single-padding;}
+	
+	a.aligncenter,
+	img.aligncenter {
+		display: block;}	
+}
 
-a.alignright,
-img.alignright {
-	margin-right: -$single-padding;}
 
-a.aligncenter,
-img.aligncenter {
-	display: block;}
 
 
 /* Forms
