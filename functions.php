@@ -698,14 +698,14 @@ function psu_output_single_post_featured_image() {
 	$thumb = psu_get_thumbnail_max_size();	
 	if ( $thumb['size'] !== false ) {
 	
-		$img_id = genesis_get_image_id();
-	
+		$img_id = get_post_thumbnail_id();
 		$img = genesis_get_image( array( 
 			'format' => 'html', 
 			'size' => $thumb['size'], 
 			'attr' => array( 'class' => 'featured-image size-'. $thumb['size'] ) 
 		));
-$caption = get_post($img_id)->post_excerpt;
+		
+		$caption = get_post($img_id)->post_excerpt;
 		if ( $caption != '' ) {
 			$figcaption = sprintf('<figcaption class="wp-caption-text">%s</figcaption>', $caption);
 		} else {
@@ -1102,3 +1102,15 @@ function psu_customize_tinymce( $in ) {
 	return $in;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Remove meta boxes
+add_action('admin_menu','remove_my_post_metaboxes');
+function remove_my_post_metaboxes() {
+//	remove_meta_box( 'authordiv','post','normal' ); // Author Metabox
+	remove_meta_box( 'formatdiv','post','normal' ); // Formats
+	remove_meta_box( 'postcustom','post','normal' ); // Custom Fields Metabox
+	remove_meta_box( 'postexcerpt','post','normal' ); // Excerpt Metabox
+	remove_meta_box( 'revisionsdiv','post','normal' ); // Revisions Metabox
+	remove_meta_box( 'slugdiv','post','normal' ); // Slug Metabox
+	remove_meta_box( 'trackbacksdiv','post','normal' ); // Trackback Metabox
+}
