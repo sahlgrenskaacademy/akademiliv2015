@@ -767,6 +767,7 @@ add_image_size( 'post-center', 	   	720, 405, array('center','center') );
 add_image_size( 'post-medium',   		360, 360, false );
 add_image_size( 'post-small',   		180, 180, false );
 add_image_size( 'al-sidebar', 	   	286, 286, array('center','center') );
+add_image_size( 'admin-col', 				100, 67, array('center','center') );
 
 //add_image_size( 'sidebar-thumbnail', 100, 100, true );
 //add_image_size( 'home-middle', 360, 200, true );
