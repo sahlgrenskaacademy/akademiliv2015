@@ -483,7 +483,6 @@ img.alignright,
 
 a.aligncenter,
 img.aligncenter,
-.wp-caption img.aligncenter,
 .wp-caption.aligncenter {
 	margin: .4em auto $img-padding/2 auto;
 	.wp-caption-text {
@@ -502,6 +501,11 @@ img.aligncenter,
   line-height: 1.2em;	
 }
 
+.wp-caption img.aligncenter,
+.wp-caption img.aligncenter .wp-caption-text {
+	margin: .4em auto $img-padding/2 auto;}
+
+
 .single-wrapper {
 	a.alignnone,
 	img.alignnone {
@@ -518,8 +522,7 @@ img.aligncenter,
 	
 	a.aligncenter,
 	img.aligncenter {
-		display: block;}	
-}
+		display: block;}}
 
 
 

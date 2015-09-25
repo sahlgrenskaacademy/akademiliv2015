@@ -734,7 +734,6 @@ function psu_get_thumbnail_max_size() {
 	$full 				= psu_get_defined_sizes( 'post-full' );
 	$center 			= psu_get_defined_sizes( 'post-center' );
 	$medium 			= psu_get_defined_sizes( 'post-medium' );
-echo "eh".$center['width']	;
 	if ( $img_width >= $full['width']) {
 		$r = $full;
 		$r['size'] = 'post-full';
