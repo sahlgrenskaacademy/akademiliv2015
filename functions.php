@@ -52,8 +52,8 @@ add_theme_support( 'custom-header', array(
 	'default-text-color'     => '000000',
 	'header-selector'        => '.site-title a',
 	'header-text'            => false,
-	'height'                 => 90,
-	'width'                  => 380,
+	'height'                 => 180,
+	'width'                  => 760,
 ) );
 
 
