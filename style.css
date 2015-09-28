@@ -1594,6 +1594,10 @@ Color Styles
 /* Main Secondary color (2) */
 /* Grays */
 /* Flare */
+/* $c-secondary-2-1 */
+/* $c-secondary-2-1 */
+/* $c-secondary-2-1 */
+/* $c-secondary-2-1 */
 /* Typography */
 /* Overrides */
 .entry-title {
@@ -1886,7 +1890,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month1,
 .category-wrapper .category-seminars .entry-startdate.month1,
 .category-wrapper .category-seminars .entry-deadline.month1 {
-  color: #6a1c1e; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month2,
 .category-wrapper .category-utbildning .entry-deadline.month2,
 .category-wrapper .category-education .entry-startdate.month2,
@@ -1925,7 +1929,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month4,
 .category-wrapper .category-seminars .entry-startdate.month4,
 .category-wrapper .category-seminars .entry-deadline.month4 {
-  color: #6a1c1e; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month5,
 .category-wrapper .category-utbildning .entry-deadline.month5,
 .category-wrapper .category-education .entry-startdate.month5,
@@ -1964,7 +1968,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month7,
 .category-wrapper .category-seminars .entry-startdate.month7,
 .category-wrapper .category-seminars .entry-deadline.month7 {
-  color: #6a1c1e; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month8,
 .category-wrapper .category-utbildning .entry-deadline.month8,
 .category-wrapper .category-education .entry-startdate.month8,
@@ -2003,7 +2007,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month10,
 .category-wrapper .category-seminars .entry-startdate.month10,
 .category-wrapper .category-seminars .entry-deadline.month10 {
-  color: #6a1c1e; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month11,
 .category-wrapper .category-utbildning .entry-deadline.month11,
 .category-wrapper .category-education .entry-startdate.month11,
