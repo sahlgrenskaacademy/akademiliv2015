@@ -1594,6 +1594,10 @@ Color Styles
 /* Main Secondary color (2) */
 /* Grays */
 /* Flare */
+/* $c-secondary-2-1 */
+/* $c-secondary-2-1 */
+/* $c-secondary-2-1 */
+/* $c-secondary-2-1 */
 /* Typography */
 /* Overrides */
 .entry-title {
@@ -1886,7 +1890,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month1,
 .category-wrapper .category-seminars .entry-startdate.month1,
 .category-wrapper .category-seminars .entry-deadline.month1 {
-  color: #00d100; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month2,
 .category-wrapper .category-utbildning .entry-deadline.month2,
 .category-wrapper .category-education .entry-startdate.month2,
@@ -1899,7 +1903,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month2,
 .category-wrapper .category-seminars .entry-startdate.month2,
 .category-wrapper .category-seminars .entry-deadline.month2 {
-  color: #0071d1; }
+  color: #c54649; }
 .category-wrapper .category-utbildning .entry-startdate.month3,
 .category-wrapper .category-utbildning .entry-deadline.month3,
 .category-wrapper .category-education .entry-startdate.month3,
@@ -1912,7 +1916,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month3,
 .category-wrapper .category-seminars .entry-startdate.month3,
 .category-wrapper .category-seminars .entry-deadline.month3 {
-  color: #d17100; }
+  color: #fd7e81; }
 .category-wrapper .category-utbildning .entry-startdate.month4,
 .category-wrapper .category-utbildning .entry-deadline.month4,
 .category-wrapper .category-education .entry-startdate.month4,
@@ -1925,7 +1929,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month4,
 .category-wrapper .category-seminars .entry-startdate.month4,
 .category-wrapper .category-seminars .entry-deadline.month4 {
-  color: #00d100; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month5,
 .category-wrapper .category-utbildning .entry-deadline.month5,
 .category-wrapper .category-education .entry-startdate.month5,
@@ -1938,7 +1942,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month5,
 .category-wrapper .category-seminars .entry-startdate.month5,
 .category-wrapper .category-seminars .entry-deadline.month5 {
-  color: #0071d1; }
+  color: #c54649; }
 .category-wrapper .category-utbildning .entry-startdate.month6,
 .category-wrapper .category-utbildning .entry-deadline.month6,
 .category-wrapper .category-education .entry-startdate.month6,
@@ -1951,7 +1955,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month6,
 .category-wrapper .category-seminars .entry-startdate.month6,
 .category-wrapper .category-seminars .entry-deadline.month6 {
-  color: #d17100; }
+  color: #fd7e81; }
 .category-wrapper .category-utbildning .entry-startdate.month7,
 .category-wrapper .category-utbildning .entry-deadline.month7,
 .category-wrapper .category-education .entry-startdate.month7,
@@ -1964,7 +1968,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month7,
 .category-wrapper .category-seminars .entry-startdate.month7,
 .category-wrapper .category-seminars .entry-deadline.month7 {
-  color: #00d100; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month8,
 .category-wrapper .category-utbildning .entry-deadline.month8,
 .category-wrapper .category-education .entry-startdate.month8,
@@ -1977,7 +1981,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month8,
 .category-wrapper .category-seminars .entry-startdate.month8,
 .category-wrapper .category-seminars .entry-deadline.month8 {
-  color: #0071d1; }
+  color: #c54649; }
 .category-wrapper .category-utbildning .entry-startdate.month9,
 .category-wrapper .category-utbildning .entry-deadline.month9,
 .category-wrapper .category-education .entry-startdate.month9,
@@ -1990,7 +1994,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month9,
 .category-wrapper .category-seminars .entry-startdate.month9,
 .category-wrapper .category-seminars .entry-deadline.month9 {
-  color: #d17100; }
+  color: #fd7e81; }
 .category-wrapper .category-utbildning .entry-startdate.month10,
 .category-wrapper .category-utbildning .entry-deadline.month10,
 .category-wrapper .category-education .entry-startdate.month10,
@@ -2003,7 +2007,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month10,
 .category-wrapper .category-seminars .entry-startdate.month10,
 .category-wrapper .category-seminars .entry-deadline.month10 {
-  color: #00d100; }
+  color: #822124; }
 .category-wrapper .category-utbildning .entry-startdate.month11,
 .category-wrapper .category-utbildning .entry-deadline.month11,
 .category-wrapper .category-education .entry-startdate.month11,
@@ -2016,7 +2020,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month11,
 .category-wrapper .category-seminars .entry-startdate.month11,
 .category-wrapper .category-seminars .entry-deadline.month11 {
-  color: #7171d1; }
+  color: #c54649; }
 .category-wrapper .category-utbildning .entry-startdate.month12,
 .category-wrapper .category-utbildning .entry-deadline.month12,
 .category-wrapper .category-education .entry-startdate.month12,
@@ -2029,7 +2033,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-grants .entry-deadline.month12,
 .category-wrapper .category-seminars .entry-startdate.month12,
 .category-wrapper .category-seminars .entry-deadline.month12 {
-  color: #d1d1d1; }
+  color: #fd7e81; }
 
 /* Meta */
 .home-featured .entry-meta,
@@ -2186,6 +2190,9 @@ body.page-template .sidebar {
 .footer-widgets {
   padding-left: 10px;
   padding-right: 10px; }
+
+.footer-widgets {
+  background: #143444; }
 
 .entry-header {
   margin-bottom: 0.6em; }
