@@ -100,6 +100,20 @@ function psu_do_default_sidebar() {
 }
 
 
+//* Modify itle tag
+
+remove_filter( 'wp_title', 'genesis_default_title', 10, 3 ); //Default title
+//remove_action( 'genesis_site_title', 'genesis_seo_site_title' ); //Genesis Extra Stuff
+//remove_action( 'genesis_site_description', 'genesis_seo_site_description' ); //Genesis Extra Stuff
+add_filter( 'wp_title', 'psu_title_tag', 10, 3 );
+function psu_title_tag($title) {
+	$standard = get_bloginfo('name') .', '. __( "Sahlgrenska Academy's news site", 'magazine' );
+	if ( is_front_page() )
+		return  $standard;
+	else
+		return get_the_title() .' - '. $standard;
+}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* HELPER FUNCTIONS

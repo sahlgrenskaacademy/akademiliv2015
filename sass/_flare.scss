@@ -161,6 +161,8 @@ body.page-template .sidebar {
 		padding-bottom: $box-padding;	}
 
 	.entry-header {
+		.featured-figure {
+			margin-bottom: $box-padding*.75;}
 		img.size-post-full {
 			margin-top: -$box-padding*1.5;}
 
@@ -177,10 +179,16 @@ body.page-template .sidebar {
 	}		
 
 	.entry-content {
+	
+		.single-wrapper .featured-figure {
+			margin: .4em auto $img-padding/2 auto;}
+		
 		img.featured-image {
 			max-width: (720px+$single-padding);
 			margin-left: $single-padding;
-			margin-bottom: 1em;}
+			margin-bottom: 1em;
+			.wp-caption-text {
+				padding-left: .5em;}}
 	
 		hr {
 			width: 70%;}
@@ -199,6 +207,12 @@ body.page-template .sidebar {
 		}}
 
 }
+
+
+
+/*	img.featured-image {
+		margin: 0;}
+	}*/
 
 
 
@@ -521,13 +535,6 @@ img.aligncenter,
 	a.aligncenter,
 	img.aligncenter {
 		display: block;}}
-
-.single-wrapper .featured-figure {
-	margin: .4em auto $img-padding/2 auto;
-	img.featured-image {
-		margin: 0;}
-	.wp-caption-text {
-		padding-left: .5em;}}
 
 
 
