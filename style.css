@@ -2563,6 +2563,15 @@ img.aligncenter,
 .single-wrapper img.aligncenter {
   display: block; }
 
+a.size-full.alignleft,
+img.size-full.alignleft,
+.wp-caption.size-full.alignleft {
+  margin: 0.4em auto 0.45em auto; }
+  a.size-full.alignleft .wp-caption-text,
+  img.size-full.alignleft .wp-caption-text,
+  .wp-caption.size-full.alignleft .wp-caption-text {
+    padding-left: .5em; }
+
 /* Forms
 --------------------------------------------- */
 input,

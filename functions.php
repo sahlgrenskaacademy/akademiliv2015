@@ -798,7 +798,7 @@ update_option('image_default_link_type','none');
 add_filter( 'image_size_names_choose', 'psu_custom_sizes_admin' );
 function psu_custom_sizes_admin( $sizes ) {
 	unset( $sizes['thumbnail'] );
-	unset( $sizes['full'] );
+//	unset( $sizes['full'] );
 	unset( $sizes['medium'] );
 	unset( $sizes['large'] );
   return array_merge( $sizes, array(

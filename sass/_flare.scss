@@ -536,7 +536,12 @@ img.aligncenter,
 	img.aligncenter {
 		display: block;}}
 
-
+a.size-full.alignleft,
+img.size-full.alignleft,
+.wp-caption.size-full.alignleft {
+	margin: .4em auto $img-padding/2 auto;
+	.wp-caption-text {
+		padding-left: .5em;}}
 
 
 /* Forms
