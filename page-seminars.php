@@ -6,48 +6,15 @@
 //* what category to show, also used in functions.php
 $cat_id = ( ICL_LANGUAGE_CODE == 'en' )? 12 : 7;
 
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields before content
-add_action( 'genesis_entry_header', 'psu_custom_fields_header' );
-function psu_custom_fields_header() {
-	$cf_startdate = psu_get_date_field('startdate');
-
-	printf('<div class="entry-startdate date-color month%s" title="%s">', date('n', $cf_startdate), date('Y-m-d', $cf_startdate));
-	printf('<span class="day">%s</span><br /><span class="month">%s</span>', date('j', $cf_startdate), psu_month_3l( date('n', $cf_startdate) ) );
-
-	if ( date('Y') != date('Y', $cf_startdate) )
-		printf('<br /><span class="year">%s</span>', date('Y', $cf_startdate) );
-
-	printf('</div>');
-}
+add_action( 'genesis_entry_header', 'psu_seminars_custom_fields_header' );
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields after content
-add_action( 'genesis_entry_footer', 'psu_custom_fields_aftercontent' );
-function psu_custom_fields_aftercontent() {
-	$cf_tid = trim( genesis_get_custom_field('tid') );
-	$cf_plats = trim( rtrim( genesis_get_custom_field('plats'), '.' ) );
-	$cf_webb = trim( genesis_get_custom_field('webb')  );
-	
-	if ( $cf_webb != '' ) {
-		if ( strpos( $cf_webb, 'http://' ) === false ) {
-	    $cf_webb = 'http://'.$cf_webb;
-	  }	  
-	  $cf_url = parse_url($cf_webb);
-	  $cf_domain = ltrim( $cf_url['host'], 'www.' );
- 	}
-    
-	printf('<div class="entry-details">');
-		if ( $cf_tid != '')
-			printf('<div class="label">%s</div><div class="tid">%s</div>', __('Time', 'magazine'), $cf_tid );
-		if ( $cf_plats != '')
-			printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $cf_plats );
-	printf('</div>');
+add_action( 'genesis_entry_footer', 'psu_seminars_custom_fields_aftercontent' );
 
-	if ( $cf_webb != '')
-		printf('<div class="entry-link"><a href="%s">%s %s</a></div>', $cf_webb, __('More information on', 'magazine'), $cf_domain );	
-
-}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Replace the standard loop with our custom loop
