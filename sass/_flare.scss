@@ -152,7 +152,8 @@ body.page-template .sidebar {
 	.entry-meta,
 	.entry-footer,
 	.entry-comments,
-	.comment-respond {
+	.comment-respond,
+	.entry-header.category-details-box {
 		padding: $single-paragraph-padding;}
 
 	.entry-comments,
@@ -161,6 +162,14 @@ body.page-template .sidebar {
 		padding-bottom: $box-padding;	}
 
 	.entry-header {
+	
+		&.category-details-box {
+			.box-inner {
+				background: $c-gray-2;
+				padding: $box-gutter $box-gutter $box-gutter 0;
+				margin-top: $box-gutter;
+				margin-bottom: $box-gutter*1.5;}}
+		
 		.featured-figure {
 			margin-bottom: $box-padding*.75;}
 		img.size-post-full {
@@ -177,6 +186,15 @@ body.page-template .sidebar {
 				color: $c-white;}}		
 			
 	}		
+
+	.category-education,
+	.category-utbildning {
+		.entry-header {
+		&.category-details-box {
+			.box-inner {
+				padding: $box-gutter;
+				.entry-deadline{
+					margin-bottom: .6em;}}}}}
 
 	.entry-content {
 	

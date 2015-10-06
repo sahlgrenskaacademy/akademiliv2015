@@ -377,7 +377,9 @@ aside img {
 /* Inside category boxes */  
   
 .category-wrapper .category-seminars,
-.category-wrapper .category-seminarier {
+.category-wrapper .category-seminarier,
+.single-wrapper .category-seminars .entry-header.category-details-box .box-inner,
+.single-wrapper .category-seminarier .entry-header.category-details-box .box-inner {
 	position: relative;
 	.entry-header {
 		@include span(100%);
@@ -395,7 +397,9 @@ aside img {
 }
 
 .category-wrapper .category-bidrag,
-.category-wrapper .category-grants {
+.category-wrapper .category-grants,
+.single-wrapper .category-bidrag .entry-header.category-details-box .box-inner,
+.single-wrapper .category-grants .entry-header.category-details-box .box-inner {
 	position: relative;
 	.entry-header {
 		@include span(100%);
@@ -413,7 +417,16 @@ aside img {
 		left: 3%;}
 
 }
+.single-wrapper .category-seminars,
+.single-wrapper .category-seminarier,
+.single-wrapper .category-bidrag,
+.single-wrapper .category-grants {
+	.entry-header.category-details-box .box-inner .entry-startdate {
+		position: inherit;
+		left: 0;}}
 
+
+	
 .category-wrapper-bidrag,
 .category-wrapper-grants {
 	.loop-2 {

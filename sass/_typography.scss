@@ -183,9 +183,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning,
 .category-wrapper .category-education,
 .category-wrapper .category-bidrag,
-.category-wrapper .category-grants {
+.category-wrapper .category-grants,
+.single-wrapper .entry-header.category-details-box .box-inner {
 	padding: $category-box-padding;
-	.entry-title {
+	.entry-title a {
 		line-height: 1.2em;
 		font-size: $heading-base-size;
 		margin-bottom: .5em;}
@@ -209,7 +210,8 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
 .category-wrapper .category-seminarier,
-.category-wrapper .category-seminars {
+.category-wrapper .category-seminars,
+.single-wrapper .entry-header.category-details-box .box-inner {
 	.entry-title {
 		margin-bottom: 0!important;}
 	.entry-startdate {
@@ -283,7 +285,8 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-bidrag,
 .category-wrapper .category-seminarier,
 .category-wrapper .category-grants,
-.category-wrapper .category-seminars {
+.category-wrapper .category-seminars,
+.single-wrapper .entry-header.category-details-box .box-inner {
 	.entry-startdate,
 	.entry-deadline {
 		&.month1 {color: $category-month-color1;}
