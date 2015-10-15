@@ -27,7 +27,7 @@ function psu_seminars_custom_fields_aftercontent() {
 	$cf_webb = trim( genesis_get_custom_field('webb')  );
 	
 	if ( $cf_webb != '' ) {
-		if ( strpos( $cf_webb, 'http://' ) === false ) {
+		if ( strpos( $cf_webb, 'http' ) === false ) {
 	    $cf_webb = 'http://'.$cf_webb;
 	  }	  
 	  $cf_url = parse_url($cf_webb);
@@ -80,7 +80,7 @@ function psu_grants_custom_fields_aftercontent() {
 	$cf_webb = trim( genesis_get_custom_field('webb')  );
 	
 	if ( $cf_webb != '' ) {
-		if ( strpos( $cf_webb, 'http://' ) === false ) {
+		if ( strpos( $cf_webb, 'http' ) === false ) {
 	    $cf_webb = 'http://'.$cf_webb;
 	  }	  
 	  $cf_url = parse_url($cf_webb);
@@ -119,7 +119,7 @@ function psu_education_custom_fields_aftercontent() {
 	$cf_startdate = psu_get_date_field('startdate');
 	
 	if ( $cf_webb != '' ) {
-		if ( strpos( $cf_webb, 'http://' ) === false ) {
+		if ( strpos( $cf_webb, 'http' ) === false ) {
 	    $cf_webb = 'http://'.$cf_webb;
 	  }	  
 	$cf_url = parse_url($cf_webb);

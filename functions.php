@@ -218,7 +218,7 @@ function is_akademiliv_single_cat() {
 //* Get and reformat date field value
 function psu_get_date_field( $field ) {
 	$date = genesis_get_custom_field( $field )/1000;
-	$date += 2 * 60*60; // compensate for timezone since jQuery datepicker seems to be aware of that
+	$date += 2 * 60*60; // compensate for timezone since jQuery datepicker seems to be unaware of that
 	return $date;
 }
 
