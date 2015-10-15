@@ -25,14 +25,14 @@ function psu_do_custom_loop() {
 	global $cat_id;
 	
 	// http://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
-	$now = new DateTime(current_time('mysql'));
+//	$now = new DateTime(current_time('mysql'));
 	$args = array(
 		'cat' => $cat_id, /* shows all posts and child posts from category id */
 		'meta_query'				=> array( 
 			'relation'					=> 'AND',
 			array(
 				'key'							=> 'startdate',
-				'value'						=> (int)$now->getTimestamp()*1000,
+				'value'						=> strtotime('yesterday 10pm')*1000,
 				'compare'					=> '>=',
 				'type'						=> 'NUMERIC',
 			),
