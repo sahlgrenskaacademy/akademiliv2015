@@ -32,7 +32,7 @@ function psu_do_custom_loop() {
 		'cat' => $cat_id, /* shows all posts and child posts from category id */
 		'meta_query'				=> array( array(
 			'key'							=> 'startdate',
-			'value'						=> (strtotime('yesterday 10pm')*1000,
+			'value'						=> strtotime('yesterday 10pm')*1000,
 			'compare'					=> '>=',
 			'type'						=> 'NUMERIC',
 		)),
