@@ -864,7 +864,7 @@ function psu_al_sidebar() {
 		
 			$cf_webb = trim( genesis_get_custom_field('webb')  );
 			if ( $cf_webb != '' ) {
-				if ( strpos( $cf_webb, 'http://' ) === false )
+				if ( strpos( $cf_webb, 'http' ) === false )
 			    $cf_webb = 'http://'.$cf_webb;
 			} else {
 		  	$cf_webb = false;
