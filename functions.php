@@ -646,7 +646,7 @@ function psu_cat_post_meta_filter($post_meta) {
 add_image_size( 'home-box', 				300, 200, array('center','center') );
 add_image_size( 'home-box-dubble', 	600, 200, array('center','center') );
 add_image_size( 'news-listing', 		200, 133, array('center','center') );
-add_image_size( 'post-full', 				920, 350, array('center','center') );
+add_image_size( 'post-full', 				920, 400, array('center','center') );
 add_image_size( 'post-center', 	   	720, 405, array('center','center') );
 add_image_size( 'post-medium',   		360, 360, false );
 add_image_size( 'post-small',   		180, 180, false );
@@ -809,6 +809,17 @@ function psu_disable_comment_url($fields) {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+// Removes comment form from category posts
+add_action('genesis_before_loop', 'remove_comment_support', 100);	
+function remove_comment_support() {
+	if ( is_akademiliv_single_cat() ) {
+    remove_post_type_support( 'post', 'comments' );
+  }
+  remove_post_type_support( 'page', 'comments' );
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 //* AL_SIDBAR CUSTOM POST TYPE
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -851,9 +862,10 @@ function psu_create_al_sidebar_post_type() {
 function psu_al_sidebar() {
      
 	$args = array( 
-		'post_type' => 'al_sidebar_post',
-		'orderby'		=> 'menu_order',
-		'order'			=> 'ASC',
+		'post_type' 			=> 'al_sidebar_post',
+		'orderby'					=> 'menu_order',
+		'order'						=> 'ASC',
+		'posts_per_page' 	=> -1,
 	);
 	 
 	$query = new WP_query ( $args );
