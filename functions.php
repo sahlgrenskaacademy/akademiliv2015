@@ -646,7 +646,7 @@ function psu_cat_post_meta_filter($post_meta) {
 add_image_size( 'home-box', 				300, 200, array('center','center') );
 add_image_size( 'home-box-dubble', 	600, 200, array('center','center') );
 add_image_size( 'news-listing', 		200, 133, array('center','center') );
-add_image_size( 'post-full', 				920, 350, array('center','center') );
+add_image_size( 'post-full', 				920, 400, array('center','center') );
 add_image_size( 'post-center', 	   	720, 405, array('center','center') );
 add_image_size( 'post-medium',   		360, 360, false );
 add_image_size( 'post-small',   		180, 180, false );
