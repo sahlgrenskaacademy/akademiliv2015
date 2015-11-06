@@ -851,9 +851,10 @@ function psu_create_al_sidebar_post_type() {
 function psu_al_sidebar() {
      
 	$args = array( 
-		'post_type' => 'al_sidebar_post',
-		'orderby'		=> 'menu_order',
-		'order'			=> 'ASC',
+		'post_type' 			=> 'al_sidebar_post',
+		'orderby'					=> 'menu_order',
+		'order'						=> 'ASC',
+		'posts_per_page' 	=> -1,
 	);
 	 
 	$query = new WP_query ( $args );
