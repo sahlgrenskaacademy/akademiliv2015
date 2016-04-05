@@ -253,8 +253,6 @@ function psu_logo_shortcode(){
 	printf('<a href="%s" title="%s"><img src="%s" alt="%s"></a>', $str[$l]['url'], $str[$l]['title'], $str[$l]['img'], $str[$l]['alt'] );
 }
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add shortcode for other language(s)
 add_shortcode('switch-language', 'psu_post_languages');
@@ -275,7 +273,30 @@ function psu_post_languages(){
 
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Add shortcode for Ungapped form
+add_shortcode('newsletter-form', 'psu_newsletter_form');
+function psu_newsletter_form( $atts ) {
 
+	$l = $atts['lang'] == 'en'? 'en': 'sv';
+	$newsletter_form['sv']['success'] = 'http://www.akademiliv.se/nyhetsbrev-anmald';
+	$newsletter_form['sv']['error'] 	= 'http://www.akademiliv.se/nyhetsbrev-fel';
+	$newsletter_form['en']['success'] = 'http://www.akademiliv.se/en/subscribed-newsletter';
+	$newsletter_form['en']['error'] 	= 'http://www.akademiliv.se/en/registration-error';
+
+  return sprintf('
+		<form class="newsletter-form" method="post" action="http://ui.mdlnk.se/Api/Subscriptions/fb1c1a7f-6451-41ba-9685-576ff658d962">
+			<input type="hidden" name="ListIds" value="9d1ba155-88b9-4595-bd5c-84c243c769a9"> 
+			<input type="hidden" name="SubscriptionConfirmedUrl" value="%s">
+			<input type="hidden" name="SubscriptionFailedUrl" value="%s">
+			<input type="email" name="Contact[Email]" required placeholder="%s"><input type="submit" value=" %s ">
+		</form>',
+		$newsletter_form[$l]['success'], // success url
+		$newsletter_form[$l]['error'], // error url
+    __('Your e-mail'), // email placeholder
+    __('Sign up') // submit text  
+  );
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
