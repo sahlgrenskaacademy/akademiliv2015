@@ -1876,7 +1876,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: .8em; }
 .single-wrapper .entry-content p,
 .single-wrapper .entry-content h3,
-.single-wrapper .entry-content ol, .single-wrapper .entry-content ul {
+.single-wrapper .entry-content ol, .single-wrapper .entry-content ul,
+.single-wrapper .entry-content .gform_confirmation_message,
+.single-wrapper .entry-content .gform_description {
   font-size: 17.01px;
   line-height: 1.7em; }
 
@@ -2282,7 +2284,8 @@ body.page-template .sidebar {
 .single-wrapper .entry-content h2, .single-wrapper .entry-content h3, .single-wrapper .entry-content h4,
 .single-wrapper .entry-content ul, .single-wrapper .entry-content ol,
 .single-wrapper .entry-content blockquote,
-.single-wrapper .entry-content form {
+.single-wrapper .entry-content form,
+.single-wrapper .entry-content .gform_confirmation_wrapper {
   padding: 0 100px; }
 .single-wrapper .entry-content blockquote p {
   font-weight: 900;
@@ -2713,6 +2716,67 @@ input:hover[type="submit"],
 .entry .newsletter-form input[type="submit"] {
   width: 20%; }
 
+/* gravity forms overrides */
+.gform_wrapper h3.gform_title {
+  padding: 0; }
+.gform_wrapper .top_label .gfield_label {
+  margin: 1em 0 0 0 !important;
+  line-height: normal !important;
+  font-size: .9em !important; }
+.gform_wrapper label.gfield_label + div.ginput_container {
+  margin-top: .2em !important; }
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_wrapper .gform_footer input[type=submit] {
+  font-weight: 900; }
+.gform_wrapper input[type=email],
+.gform_wrapper input[type=number],
+.gform_wrapper input[type=password],
+.gform_wrapper input[type=tel],
+.gform_wrapper input[type=text],
+.gform_wrapper input[type=url],
+.gform_wrapper textarea {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 14px !important;
+  padding: .5em !important; }
+  .gform_wrapper input[type=email]:-moz-placeholder,
+  .gform_wrapper input[type=number]:-moz-placeholder,
+  .gform_wrapper input[type=password]:-moz-placeholder,
+  .gform_wrapper input[type=tel]:-moz-placeholder,
+  .gform_wrapper input[type=text]:-moz-placeholder,
+  .gform_wrapper input[type=url]:-moz-placeholder,
+  .gform_wrapper textarea:-moz-placeholder {
+    color: #a09f9b; }
+  .gform_wrapper input[type=email]::-moz-placeholder,
+  .gform_wrapper input[type=number]::-moz-placeholder,
+  .gform_wrapper input[type=password]::-moz-placeholder,
+  .gform_wrapper input[type=tel]::-moz-placeholder,
+  .gform_wrapper input[type=text]::-moz-placeholder,
+  .gform_wrapper input[type=url]::-moz-placeholder,
+  .gform_wrapper textarea::-moz-placeholder {
+    color: #a09f9b; }
+  .gform_wrapper input[type=email]:-ms-input-placeholder,
+  .gform_wrapper input[type=number]:-ms-input-placeholder,
+  .gform_wrapper input[type=password]:-ms-input-placeholder,
+  .gform_wrapper input[type=tel]:-ms-input-placeholder,
+  .gform_wrapper input[type=text]:-ms-input-placeholder,
+  .gform_wrapper input[type=url]:-ms-input-placeholder,
+  .gform_wrapper textarea:-ms-input-placeholder {
+    color: #a09f9b; }
+  .gform_wrapper input[type=email]::-webkit-input-placeholder,
+  .gform_wrapper input[type=number]::-webkit-input-placeholder,
+  .gform_wrapper input[type=password]::-webkit-input-placeholder,
+  .gform_wrapper input[type=tel]::-webkit-input-placeholder,
+  .gform_wrapper input[type=text]::-webkit-input-placeholder,
+  .gform_wrapper input[type=url]::-webkit-input-placeholder,
+  .gform_wrapper textarea::-webkit-input-placeholder {
+    color: #a09f9b; }
+.gform_wrapper input[type=submit] {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
 /************************************************************************************************/
 /* Override defaults */
 .nav-primary {
@@ -2908,7 +2972,8 @@ input:hover[type="submit"],
   .single-wrapper .entry-content h2, .single-wrapper .entry-content h3, .single-wrapper .entry-content h4,
   .single-wrapper .entry-content ul, .single-wrapper .entry-content ol,
   .single-wrapper .entry-content blockquote,
-  .single-wrapper .entry-content form {
+  .single-wrapper .entry-content form,
+  .single-wrapper .entry-content .gform_confirmation_wrapper {
     padding: 0 20px; }
   .single-wrapper .entry-header h1.entry-title,
   .single-wrapper .entry-meta,

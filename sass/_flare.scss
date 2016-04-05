@@ -215,7 +215,8 @@ body.page-template .sidebar {
 		h2, h3, h4,
 		ul, ol,
 		blockquote,
-		form {
+		form,
+		.gform_confirmation_wrapper {
 			padding: $single-paragraph-padding;}
 			
 		blockquote p {
@@ -473,9 +474,6 @@ body.page-template .sidebar {
 }
 
 
-
-
-
 .sidebar aside {
 	margin-bottom: $box-gutter;
 	padding: $image-box-padding;
@@ -659,4 +657,43 @@ input:hover[type="submit"],
       width: 20%;}}
     
 }
+
+ /* gravity forms overrides */
+ 
+.gform_wrapper {
+
+  h3.gform_title {
+    padding: 0;}
+
+  .top_label .gfield_label {
+    margin: 1em 0 0 0 !important;
+    line-height: normal !important;
+    font-size: .9em !important;}
+  
+  label.gfield_label+div.ginput_container {
+    margin-top: .2em !important;}
+
+
+  .gform_footer input.button, 
+  .gform_wrapper .gform_footer input[type=submit] {
+    font-weight: 900;}
+
+  input[type=email], 
+  input[type=number], 
+  input[type=password], 
+  input[type=tel], 
+  input[type=text], 
+  input[type=url],
+  textarea {
+	  @include input-placeholder {
+	    color: $c-gray-0;}			
+		@include border-radius(3px);	    
+    font-size: $base-font-size !important;
+    padding: .5em !important;}
+
+  input[type=submit] {
+  	@include border-radius(3px);}
+    
+}
+
     

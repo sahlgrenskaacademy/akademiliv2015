@@ -225,7 +225,8 @@ aside img {
 			h2, h3, h4,
 			ul, ol,
 			blockquote,
-			form {
+			form,
+			.gform_confirmation_wrapper {
 				padding: $single-paragraph-padding-mobile;}}
 
 
