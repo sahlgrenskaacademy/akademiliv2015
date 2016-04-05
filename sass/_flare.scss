@@ -474,9 +474,6 @@ body.page-template .sidebar {
 }
 
 
-
-
-
 .sidebar aside {
 	margin-bottom: $box-gutter;
 	padding: $image-box-padding;
@@ -688,9 +685,14 @@ input:hover[type="submit"],
   input[type=text], 
   input[type=url],
   textarea {
+	  @include input-placeholder {
+	    color: $c-gray-0;}			
+		@include border-radius(3px);	    
     font-size: $base-font-size !important;
     padding: .5em !important;}
 
+  input[type=submit] {
+  	@include border-radius(3px);}
     
 }
 

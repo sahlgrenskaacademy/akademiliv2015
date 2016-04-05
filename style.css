@@ -2734,8 +2734,47 @@ input:hover[type="submit"],
 .gform_wrapper input[type=text],
 .gform_wrapper input[type=url],
 .gform_wrapper textarea {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   font-size: 14px !important;
   padding: .5em !important; }
+  .gform_wrapper input[type=email]:-moz-placeholder,
+  .gform_wrapper input[type=number]:-moz-placeholder,
+  .gform_wrapper input[type=password]:-moz-placeholder,
+  .gform_wrapper input[type=tel]:-moz-placeholder,
+  .gform_wrapper input[type=text]:-moz-placeholder,
+  .gform_wrapper input[type=url]:-moz-placeholder,
+  .gform_wrapper textarea:-moz-placeholder {
+    color: #a09f9b; }
+  .gform_wrapper input[type=email]::-moz-placeholder,
+  .gform_wrapper input[type=number]::-moz-placeholder,
+  .gform_wrapper input[type=password]::-moz-placeholder,
+  .gform_wrapper input[type=tel]::-moz-placeholder,
+  .gform_wrapper input[type=text]::-moz-placeholder,
+  .gform_wrapper input[type=url]::-moz-placeholder,
+  .gform_wrapper textarea::-moz-placeholder {
+    color: #a09f9b; }
+  .gform_wrapper input[type=email]:-ms-input-placeholder,
+  .gform_wrapper input[type=number]:-ms-input-placeholder,
+  .gform_wrapper input[type=password]:-ms-input-placeholder,
+  .gform_wrapper input[type=tel]:-ms-input-placeholder,
+  .gform_wrapper input[type=text]:-ms-input-placeholder,
+  .gform_wrapper input[type=url]:-ms-input-placeholder,
+  .gform_wrapper textarea:-ms-input-placeholder {
+    color: #a09f9b; }
+  .gform_wrapper input[type=email]::-webkit-input-placeholder,
+  .gform_wrapper input[type=number]::-webkit-input-placeholder,
+  .gform_wrapper input[type=password]::-webkit-input-placeholder,
+  .gform_wrapper input[type=tel]::-webkit-input-placeholder,
+  .gform_wrapper input[type=text]::-webkit-input-placeholder,
+  .gform_wrapper input[type=url]::-webkit-input-placeholder,
+  .gform_wrapper textarea::-webkit-input-placeholder {
+    color: #a09f9b; }
+.gform_wrapper input[type=submit] {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
 
 /************************************************************************************************/
 /* Override defaults */
