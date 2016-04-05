@@ -293,8 +293,8 @@ function psu_newsletter_form( $atts ) {
 		</form>',
 		$newsletter_form[$l]['success'], // success url
 		$newsletter_form[$l]['error'], // error url
-    __('Your e-mail'), // email placeholder
-    __('Sign up') // submit text  
+    __('Your e-mail', 'magazine'), // email placeholder
+    __('Sign up', 'magazine') // submit text  
   );
 }
 
