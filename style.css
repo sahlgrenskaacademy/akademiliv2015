@@ -2667,6 +2667,45 @@ input:hover[type="submit"],
 .entry-content .button:hover {
   color: white; }
 
+.newsletter-form {
+  margin-top: .5em; }
+  .newsletter-form input[type="email"] {
+    width: 60%;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px 0 0 3px;
+    height: 30px;
+    background-color: whitesmoke;
+    border: none;
+    color: #484848;
+    text-transform: none; }
+    .newsletter-form input[type="email"]:-moz-placeholder {
+      color: #484848; }
+    .newsletter-form input[type="email"]::-moz-placeholder {
+      color: #484848; }
+    .newsletter-form input[type="email"]:-ms-input-placeholder {
+      color: #484848; }
+    .newsletter-form input[type="email"]::-webkit-input-placeholder {
+      color: #484848; }
+    .newsletter-form input[type="email"]:focus {
+      color: black;
+      background-color: #fff9e5; }
+  .newsletter-form input[type="submit"] {
+    width: 20%;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 5px 5px 0;
+    background-color: #fd7e81;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    padding: .5em 1em;
+    text-transform: uppercase; }
+    .newsletter-form input[type="submit"]:hover, .newsletter-form input[type="submit"]:focus {
+      color: white;
+      background-color: black; }
+
 /************************************************************************************************/
 /* Override defaults */
 .nav-primary {
