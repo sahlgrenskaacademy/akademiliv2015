@@ -224,7 +224,8 @@ aside img {
 			p,
 			h2, h3, h4,
 			ul, ol,
-			blockquote {
+			blockquote,
+			form {
 				padding: $single-paragraph-padding-mobile;}}
 
 
@@ -235,8 +236,18 @@ aside img {
 		.comment-respond {
 			padding: $single-paragraph-padding-mobile;}		
 
+	}
+
+	@media only screen and (max-width: 639px)  {
+	
+    .newsletter-form {
+      input[type="email"] {
+        width: 70%;}
+      input[type="submit"] {
+        width: 30%;}}
 
 	}
+
 	
 }
 
@@ -339,7 +350,7 @@ aside img {
 		.logo-area {
 			#switch-language {
 				display: none;}}
-				
+
 	}
 	
 }
@@ -367,9 +378,26 @@ aside img {
 .footer-widgets .wrap {
 	
 	.widget-area {
-		@include span(4 of 12);
-	}
+		@include span(4 of 12);}
 	
+	@media only screen and (max-width: 768px)  {
+  
+  	.widget-area {
+  		@include span(12 of 12);}
+
+  }
+
+	
+	@media only screen and (max-width: 639px)  {
+	
+    .newsletter-form {
+      input[type="email"] {
+        width: 60%;}
+      input[type="submit"] {
+        width: 25%;}}
+
+	}
+
 	
 }
   
