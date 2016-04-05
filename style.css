@@ -1877,7 +1877,8 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-content p,
 .single-wrapper .entry-content h3,
 .single-wrapper .entry-content ol, .single-wrapper .entry-content ul,
-.single-wrapper .entry-content .gform_confirmation_message {
+.single-wrapper .entry-content .gform_confirmation_message,
+.single-wrapper .entry-content .gform_description {
   font-size: 17.01px;
   line-height: 1.7em; }
 
