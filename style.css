@@ -2725,6 +2725,10 @@ input:hover[type="submit"],
   font-size: .9em !important; }
 .gform_wrapper label.gfield_label + div.ginput_container {
   margin-top: .2em !important; }
+.gform_wrapper .top_label .gfield_description {
+  padding: 0; }
+.gform_wrapper .gfield_description {
+  font-size: .8em; }
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_wrapper .gform_footer input[type=submit] {
   font-weight: 900; }
