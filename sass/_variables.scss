@@ -114,11 +114,12 @@ $base-font-weight: 			400;
 $base-font-line-height: 1.3em;
 
 
-$heading-font-family: 	"Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+$heading-font-family: 	"Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
 $heading-font-weight: 	normal;
 $heading-color: 				black;
 $heading-base-size: 		1.5em;
 $heading-tracking: 			0; //.4px;
+$heading-title-font-weight: 400;
 
 $list-widget-heading-font-size: 	1.8em;
 $list-heading-font-size: 					.9em;
