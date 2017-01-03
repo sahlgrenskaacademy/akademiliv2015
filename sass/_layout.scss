@@ -101,6 +101,7 @@ $susy: (
 .home-featured img,
 .home-second-row .img-wrapper,
 .home-featured .img-wrapper,
+.news-area .img-wrapper,
 .home-news img,
 aside img {
 
@@ -190,7 +191,7 @@ aside img {
 	
 	
 	/* mobile */
-	@media only screen and (max-width: 639px)  {
+	@media only screen and (max-width: 640px)  {
 	}	  
 
 } 
@@ -203,7 +204,15 @@ aside img {
 	
 	.post {
 	 	@include span(9 of 9);}
-	 	
+
+	@media only screen and (max-width: 640px)  {
+
+	  @include span(12);
+  	.post {
+  	 	@include span(6 of 12);}
+
+	}	  
+		 	
 }
 
 /************************************************************************************************/

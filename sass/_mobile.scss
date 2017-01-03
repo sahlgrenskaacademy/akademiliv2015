@@ -1,0 +1,44 @@
+
+/* Mobile */
+
+/* vars */
+
+$mobile-box-padding: 10px 15px;
+$mobile-margin:      15px;
+
+
+@media only screen and (max-width: 640px)  {
+
+  /* box padding */
+  
+  .site-inner {
+  	padding-left: 0;
+  	padding-right: 0;}
+  	
+  .archive-wrapper,
+  .home-latest,
+  .home-middle .widget-wrap {
+  	padding: $mobile-box-padding;}
+  	
+  .home-featured, 
+  .home-second-row {
+  	.entry-header {
+  		padding: $mobile-box-padding;}}
+
+  .home-news, 
+  .news-area, 
+  .archive-wrapper {
+  	.widget-wrap {
+  		padding: $mobile-box-padding;}}
+
+
+  #{$news-boxes} {
+  	.widget_text_icl .widget-title,
+  	.widget_text .widget-title {
+      margin-left: $mobile-margin;}}
+
+  .nav-primary .genesis-nav-menu li.search {
+    padding: $mobile-margin;}
+  		
+}	  
+		
