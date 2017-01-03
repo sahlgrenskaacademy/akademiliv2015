@@ -246,8 +246,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-wrapper {
 	h1.entry-title {
-		font-weight: 900;
-		font-size: 2.4em;
+		font-weight: $heading-title-font-weight;
+		font-size: 2.6em;
 		margin-bottom: 0;
 		color: $heading-color;}}
 

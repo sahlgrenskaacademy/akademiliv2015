@@ -1649,7 +1649,7 @@ textarea:focus,
 .nav-primary .genesis-nav-menu {
   line-height: 1.3em; }
   .nav-primary .genesis-nav-menu a {
-    font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 16.8px;
     color: black;
@@ -1664,7 +1664,7 @@ textarea:focus,
 /* Titles */
 .site-title,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   letter-spacing: 0;
   margin: 0; }
@@ -1716,7 +1716,7 @@ h1, h2, h3, h4, h5, h6 {
 .home-featured .entry-title a, .home-second-row .entry-title a {
   line-height: 1.2em;
   font-size: 1.7em;
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
 
 .home-news .widget_text_icl .widget-title,
@@ -1731,7 +1731,7 @@ h1, h2, h3, h4, h5, h6 {
 .home-news .entry-title a, .news-area .entry-title a, .archive-wrapper .entry-title a {
   line-height: 1em;
   font-size: 1.6em;
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif; }
 
 .archive-description, .author-box {
   margin: 0;
@@ -1826,7 +1826,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif; }
   .category-wrapper .category-bidrag .entry-startdate .day,
   .category-wrapper .category-grants .entry-startdate .day,
   .category-wrapper .category-seminarier .entry-startdate .day,
@@ -1863,7 +1863,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-wrapper h1.entry-title {
   font-weight: 900;
-  font-size: 2.4em;
+  font-size: 2.6em;
   margin-bottom: 0;
   color: black; }
 
@@ -1885,7 +1885,7 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar aside h2 {
   line-height: 1.2em;
   font-size: 1.8em;
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   margin-bottom: 1em; }
 .sidebar aside .widget-wrap p,
@@ -2274,10 +2274,9 @@ body.page-template .sidebar {
   margin: 0.4em auto 0.45em auto; }
 .single-wrapper .entry-content img.featured-image {
   max-width: 820px;
-  margin-left: 100px;
-  margin-bottom: 1em; }
-  .single-wrapper .entry-content img.featured-image .wp-caption-text {
-    padding-left: .5em; }
+  margin-left: 100px; }
+.single-wrapper .entry-content .featured-figure > .wp-caption-text {
+  margin: 0 0 1em 100px; }
 .single-wrapper .entry-content hr {
   width: 70%; }
 .single-wrapper .entry-content p,
@@ -2458,7 +2457,7 @@ body.page-template .sidebar {
     .header-image .site-header #switch-language .widget_text,
     .header-image .site-header #switch-language .widget-wrap {
       text-transform: uppercase;
-      font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif; }
+      font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif; }
       .site-header #switch-language .widget_text_icl a,
       .site-header #switch-language .widget_text a,
       .site-header #switch-language .widget-wrap a,
@@ -2538,7 +2537,7 @@ body.page-template .sidebar {
       border: none;
       color: white;
       cursor: pointer;
-      font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+      font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
       padding: .5em 1em;
       text-transform: uppercase; }
       .nav-primary .genesis-nav-menu li.search input[type="submit"]:hover, .nav-primary .genesis-nav-menu li.search input[type="submit"]:focus {
@@ -2569,7 +2568,7 @@ img.alignleft,
   a.alignleft .wp-caption-text,
   img.alignleft .wp-caption-text,
   .wp-caption.alignleft .wp-caption-text {
-    padding-left: .5em; }
+    padding-left: 0em; }
 
 a.alignright,
 img.alignright,
@@ -2578,7 +2577,7 @@ img.alignright,
   a.alignright .wp-caption-text,
   img.alignright .wp-caption-text,
   .wp-caption.alignright .wp-caption-text {
-    padding-right: .5em; }
+    padding-right: 0em; }
 
 a.aligncenter,
 img.aligncenter,
@@ -2587,12 +2586,12 @@ img.aligncenter,
   a.aligncenter .wp-caption-text,
   img.aligncenter .wp-caption-text,
   .wp-caption.aligncenter .wp-caption-text {
-    padding-left: .5em; }
+    padding-left: 0em; }
 
 .wp-caption.alignnone {
   margin: 0.4em 0 0.45em 100px; }
   .wp-caption.alignnone .wp-caption-text {
-    padding-right: .5em; }
+    padding-right: 0em; }
 
 .entry-content .wp-caption-text {
   text-align: left;
@@ -2654,7 +2653,7 @@ input[type="submit"],
   border: none;
   color: white;
   cursor: pointer;
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
   padding: .5em 1em;
   text-transform: uppercase;
   width: auto; }
@@ -2699,7 +2698,7 @@ input:hover[type="submit"],
   border: none;
   color: white;
   cursor: pointer;
-  font-family: "Arial Narrow", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif;
   padding: .5em;
   text-transform: uppercase; }
   .newsletter-form input[type="submit"]:hover, .newsletter-form input[type="submit"]:focus {
