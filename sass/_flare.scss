@@ -490,7 +490,7 @@ body.page-template .sidebar {
 			margin: 0;}
 		.entry-wrapper {
 			padding: $image-box-padding;
-			padding-top: $box-gutter;}}
+			padding-top: ($box-padding/3);}}
 }
 
 
