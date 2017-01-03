@@ -1861,6 +1861,7 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-education .entry-deadline .label {
     font-weight: normal; }
 
+.content-sidebar-wrap h1.entry-title,
 .single-wrapper h1.entry-title {
   font-weight: 900;
   font-size: 2.6em;
@@ -2557,7 +2558,7 @@ body.page-template .sidebar {
       margin: 0; }
     .sidebar aside.has-post-thumbnail .entry-wrapper {
       padding: 24px 20px;
-      padding-top: 20px; }
+      padding-top: 11.33333px; }
 
 /* Images
 --------------------------------------------- */
@@ -2780,6 +2781,14 @@ input:hover[type="submit"],
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
+/* 404 */
+.page-404 h1.entry-title {
+  margin-bottom: .5em; }
+.page-404 input[type="search"] {
+  width: 60%; }
+.page-404 input[type="submit"] {
+  width: 20%; }
+
 /************************************************************************************************/
 /* Override defaults */
 .nav-primary {
@@ -2865,6 +2874,7 @@ input:hover[type="submit"],
   .home-featured img,
   .home-second-row .img-wrapper,
   .home-featured .img-wrapper,
+  .news-area .img-wrapper,
   .home-news img,
   aside img {
     display: none; } }
@@ -2962,6 +2972,15 @@ input:hover[type="submit"],
     float: left;
     margin-left: 0;
     margin-right: 0; }
+  @media only screen and (max-width: 640px) {
+    .news-area {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      .news-area .post  {
+        width: 50%;
+        float: left; } }
 
 /************************************************************************************************/
 /* Single wrapper */
@@ -3204,3 +3223,34 @@ input:hover[type="submit"],
 
 .category-intro-text {
   margin-bottom: 20px; }
+
+/* Mobile */
+/* vars */
+@media only screen and (max-width: 640px) {
+  /* box padding */
+  .site-inner {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .archive-wrapper,
+  .home-latest,
+  .home-middle .widget-wrap {
+    padding: 10px 15px; }
+
+  .home-featured .entry-header,
+  .home-second-row .entry-header {
+    padding: 10px 15px; }
+
+  .home-news .widget-wrap,
+  .news-area .widget-wrap,
+  .archive-wrapper .widget-wrap {
+    padding: 10px 15px; }
+
+  .home-news .widget_text_icl .widget-title,
+  .home-news .widget_text .widget-title, .news-area .widget_text_icl .widget-title,
+  .news-area .widget_text .widget-title, .archive-wrapper .widget_text_icl .widget-title,
+  .archive-wrapper .widget_text .widget-title {
+    margin-left: 15px; }
+
+  .nav-primary .genesis-nav-menu li.search {
+    padding: 15px; } }

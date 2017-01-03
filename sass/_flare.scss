@@ -137,8 +137,8 @@ body.page-template .sidebar {
 .site-header .wrap,
 .site-inner,
 .footer-widgets {
-	padding-left: $mobile-margin;
-	padding-right: $mobile-margin;}
+	padding-left: $some-margin;
+	padding-right: $some-margin;}
 
 .footer-widgets {
 	background: $c-primary-1;}
@@ -490,7 +490,7 @@ body.page-template .sidebar {
 			margin: 0;}
 		.entry-wrapper {
 			padding: $image-box-padding;
-			padding-top: $box-gutter;}}
+			padding-top: ($box-padding/3);}}
 }
 
 
@@ -703,4 +703,16 @@ input:hover[type="submit"],
     
 }
 
+
+/* 404 */
+
+.page-404 {
+  h1.entry-title{
+    margin-bottom: .5em;} 
+
+  input[type="search"] {
+    width: 60%;}
+  input[type="submit"] {
+    width: 20%;}
+}
     
