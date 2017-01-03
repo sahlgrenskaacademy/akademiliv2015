@@ -1861,6 +1861,7 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-education .entry-deadline .label {
     font-weight: normal; }
 
+.content-sidebar-wrap h1.entry-title,
 .single-wrapper h1.entry-title {
   font-weight: 900;
   font-size: 2.6em;
@@ -2779,6 +2780,14 @@ input:hover[type="submit"],
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
+
+/* 404 */
+.page-404 h1.entry-title {
+  margin-bottom: .5em; }
+.page-404 input[type="search"] {
+  width: 60%; }
+.page-404 input[type="submit"] {
+  width: 20%; }
 
 /************************************************************************************************/
 /* Override defaults */
