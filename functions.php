@@ -172,7 +172,39 @@ function psu_month_string($m_n) {
 	);
 	return $m_t[ $m_n-1 ];
 }
-
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* get the translated equivalent of an array of ids
+function psu_lang_object_ids($ids_array, $type) {
+ if(function_exists('icl_object_id')) {
+  $res = array();
+  foreach ($ids_array as $id) {
+   $xlat = icl_object_id($id,$type,false);
+   if(!is_null($xlat)) $res[] = $xlat;
+  }
+  return $res;
+ } else {
+  return $ids_array;
+ }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* get ids and translated ids from a list of categories
+function psu_get_cat_ids($cat_names) {
+  global $sitepress;
+  // get current and default language to be able to switch between the two
+  $current_language = $sitepress->get_current_language();
+  $default_language = $sitepress->get_default_language();
+  $sitepress->switch_lang($default_language);
+  // get ids for categories 
+  $cat_ids = array();
+  foreach ($cat_names as $value) {
+    $cat_ids[] = get_cat_ID($value);
+  }
+  // switch back
+  $sitepress->switch_lang($current_language);
+  // append with the other language id
+  $cat_ids = array_merge( $cat_ids, psu_lang_object_ids( $cat_ids, 'category' ) );
+  return $cat_ids;
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Returns true if is Akademiliv category template page
@@ -202,17 +234,18 @@ function is_akademiliv_default() {
 	return false;
 }
 function is_akademiliv_single_cat() {
-  if ( 
-  	in_category(12) || in_category(7) || 		// seminars: 12, 7
-		in_category(14) || in_category(13) || 	// grants: 14, 13
-		in_category(10) || in_category(9)   		// education: 10, 9
-	) {
-		return true;
-	} else {
-		return false;
-	}
+  $cat_names = array(
+    'seminars',
+    'grants',
+    'education',
+    'announcement'
+  );
+  $cat_ids = psu_get_cat_ids( $cat_names );
+  foreach ($cat_ids as $value) {
+    if ( in_category( $value ) ) return true;
+  }  
+  return false;
 }
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Get and reformat date field value
@@ -997,9 +1030,9 @@ remove_theme_support( 'genesis-inpost-layouts' );
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add admin css
-add_action('admin_enqueue_scripts', 'pontus_admin_theme_style');
-function pontus_admin_theme_style() {
-  wp_enqueue_style('admin-customization', get_bloginfo( 'stylesheet_directory' )  . '/admin-customization.css');
+add_action('admin_enqueue_scripts', 'psu_admin_theme_style');
+function psu_admin_theme_style() {
+  wp_enqueue_style('admin-customization', get_bloginfo( 'stylesheet_directory' )  . '/admin-customization.css?'.time());
 }
 
 
