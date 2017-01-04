@@ -59,12 +59,16 @@ function magazine_homepage_widgets() {
 		'before' => '<div class="home-featured widget-area">',
 		'after'  => '</div>',
 	) );
-	genesis_widget_area( 'home-latest', array(
-		'before' => '<div class="home-latest widget-area">',
+	genesis_widget_area( 'home-announcement', array(
+		'before' => '<div class="home-announcement widget-area">',
 		'after'  => '</div>',
 	) );
 	genesis_widget_area( 'home-second-row', array(
 		'before' => '<div class="home-second-row widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'home-latest', array(
+		'before' => '<div class="home-latest widget-area">',
 		'after'  => '</div>',
 	) );
 	genesis_widget_area( 'home-middle', array(
