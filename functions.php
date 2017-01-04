@@ -64,7 +64,6 @@ remove_theme_support( 'genesis-inpost-layouts' );
 //* Unregister primary and secondary sidebar
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
-unregister_sidebar( 'sidebar-secondary' );
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
