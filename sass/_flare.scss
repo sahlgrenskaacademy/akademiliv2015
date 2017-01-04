@@ -295,16 +295,13 @@ body.page-template .sidebar {
 	.entry-header {
 		margin-bottom: $heading-margin*2; }
 
-	#featured-post-13,
-	#featured-post-6 {
+  section:nth-child(1) {
 		background: $c-primary-4; }   
 	
-	#featured-post-14,
-	#featured-post-7 {
+	section:nth-child(2) {
 		background: $c-gray-1; }   
 	  
-	#featured-post-15,
-	#featured-post-8 {
+	section:nth-child(3) {
 		background: $c-primary-1; 
 	.widget-title {
 		color: $c-white;}
