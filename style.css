@@ -2351,23 +2351,17 @@ body.page-template .sidebar {
 
 .home-middle .entry-header {
   margin-bottom: 1.2em; }
-.home-middle #featured-post-13,
-.home-middle #featured-post-6 {
+.home-middle section:nth-child(1) {
   background: #e5f5fd; }
-.home-middle #featured-post-14,
-.home-middle #featured-post-7 {
+.home-middle section:nth-child(2) {
   background: #ebebeb; }
-.home-middle #featured-post-15,
-.home-middle #featured-post-8 {
+.home-middle section:nth-child(3) {
   background: #143444; }
-  .home-middle #featured-post-15 .widget-title,
-  .home-middle #featured-post-8 .widget-title {
+  .home-middle section:nth-child(3) .widget-title {
     color: white; }
-  .home-middle #featured-post-15 .entry-title a,
-  .home-middle #featured-post-8 .entry-title a {
+  .home-middle section:nth-child(3) .entry-title a {
     color: white; }
-    .home-middle #featured-post-15 .entry-title a:hover,
-    .home-middle #featured-post-8 .entry-title a:hover {
+    .home-middle section:nth-child(3) .entry-title a:hover {
       color: #c54649; }
 
 .home-news .post,
