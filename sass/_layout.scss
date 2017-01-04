@@ -66,6 +66,7 @@ $susy: (
 
 
 .home-latest,
+.home-announcement,
 .home-featured .entry,
 .home-second-row .entry,
 .home-middle .widget,
@@ -140,15 +141,18 @@ aside img {
 	@media only screen and (min-width: 640px) {
 	
 		.home-latest {
+			@include span(3 of 9 last); }
+
+		.home-announcement {
 			@include span(3 of 9); }
 	
 		.home-featured {
-			@include span(6 of 9 last); 
+			@include span(6 of 9); 
 			.post {
 				@include span(3 of 6);}}
 	
 		.home-second-row {
-			@include span(9 of 9); 
+			@include span(6 of 9); 
 			.post {
 				@include span(3 of 9);}}
 	

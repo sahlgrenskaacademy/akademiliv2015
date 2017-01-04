@@ -1618,9 +1618,14 @@ a,
   color: #025DA6;
   text-decoration: underline; }
 
-.home-featured .post a, .home-second-row .post a,
-.home-latest .post a, .home-middle .post a,
-.home-news .post a, .news-area .post a, .archive-wrapper .post a {
+.home-featured .post a,
+.home-second-row .post a,
+.home-latest .post a,
+.home-announcement .post a,
+.home-middle .post a,
+.home-news .post a,
+.news-area .post a,
+.archive-wrapper .post a {
   text-decoration: none;
   color: inherit; }
 
@@ -1704,10 +1709,10 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   padding: 0; }
 
-.home-latest .widget-title, .home-middle .widget-title {
+.home-latest .widget-title, .home-middle .widget-title, .home-announcement .widget-title {
   font-size: 1.8em;
   font-weight: 900; }
-.home-latest .entry-title a, .home-middle .entry-title a {
+.home-latest .entry-title a, .home-middle .entry-title a, .home-announcement .entry-title a {
   line-height: .9em;
   font-size: 0.9em;
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
@@ -2077,19 +2082,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Meta */
 .home-featured .entry-meta,
 .home-featured .entry-details .label,
-.home-featured .entry-time, .home-second-row .entry-meta,
+.home-featured .entry-time,
+.home-second-row .entry-meta,
 .home-second-row .entry-details .label,
 .home-second-row .entry-time,
 .home-latest .entry-meta,
 .home-latest .entry-details .label,
-.home-latest .entry-time, .home-middle .entry-meta,
+.home-latest .entry-time,
+.home-announcement .entry-meta,
+.home-announcement .entry-details .label,
+.home-announcement .entry-time,
+.home-middle .entry-meta,
 .home-middle .entry-details .label,
 .home-middle .entry-time,
 .home-news .entry-meta,
 .home-news .entry-details .label,
-.home-news .entry-time, .news-area .entry-meta,
+.home-news .entry-time,
+.news-area .entry-meta,
 .news-area .entry-details .label,
-.news-area .entry-time, .archive-wrapper .entry-meta,
+.news-area .entry-time,
+.archive-wrapper .entry-meta,
 .archive-wrapper .entry-details .label,
 .archive-wrapper .entry-time,
 .category-wrapper .entry-meta,
@@ -2099,6 +2111,7 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header .entry-details .label,
 .single-wrapper .entry-header .entry-time {
   line-height: 1em;
+  margin-top: 3px;
   font-size: .9em;
   color: #a09f9b;
   text-transform: uppercase;
@@ -2170,6 +2183,7 @@ li.comment {
 
 /* the box look */
 .home-latest,
+.home-announcement,
 .home-featured .entry,
 .home-second-row .entry,
 .home-middle .widget,
@@ -2209,6 +2223,7 @@ body.page .category-utbildning {
 .single-wrapper .entry,
 .archive-wrapper,
 .home-latest,
+.home-announcement,
 .home-middle .widget-wrap {
   padding: 34px 28px; }
 
@@ -2841,6 +2856,7 @@ input:hover[type="submit"],
 /* Box model */
 @media only screen and (min-width: 640px) {
   .home-latest,
+  .home-announcement,
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
@@ -2851,6 +2867,7 @@ input:hover[type="submit"],
     height: 400px; } }
 @media only screen and (max-width: 639px) {
   .home-latest,
+  .home-announcement,
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
@@ -2903,19 +2920,20 @@ input:hover[type="submit"],
   @media only screen and (min-width: 640px) {
     .content .home-latest {
       width: 33.33333%;
+      float: right;
+      margin-right: 0; }
+    .content .home-announcement {
+      width: 33.33333%;
       float: left; }
     .content .home-featured {
       width: 66.66667%;
-      float: right;
-      margin-right: 0; }
+      float: left; }
       .content .home-featured .post {
         width: 50%;
         float: left; }
     .content .home-second-row {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0; }
+      width: 66.66667%;
+      float: left; }
       .content .home-second-row .post {
         width: 33.33333%;
         float: left; }

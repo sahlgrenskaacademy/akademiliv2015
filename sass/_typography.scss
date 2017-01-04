@@ -28,9 +28,14 @@ a,
 
 
 
-.home-featured, .home-second-row,
-.home-latest, .home-middle,
-.home-news, .news-area, .archive-wrapper {
+.home-featured,
+.home-second-row,
+.home-latest,
+.home-announcement,
+.home-middle,
+.home-news,
+.news-area,
+.archive-wrapper {
 	.post a {
 		text-decoration: none;	
 		color: inherit; }}
@@ -310,15 +315,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Meta */
 
-.home-featured, .home-second-row,
-.home-latest, .home-middle,
-.home-news, .news-area, .archive-wrapper,
+.home-featured, 
+.home-second-row,
+.home-latest,
+.home-announcement,
+.home-middle,
+.home-news, 
+.news-area, 
+.archive-wrapper,
 .category-wrapper,
 .single-wrapper .entry-header {
 	.entry-meta,
 	.entry-details .label,
 	.entry-time {
 		line-height: 1em;
+		margin-top: 3px;
 		font-size: .9em;
 		color: $c-gray-0;
 		text-transform: uppercase;
