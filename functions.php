@@ -275,8 +275,8 @@ function psu_post_languages(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add shortcode for Ungapped form
-add_shortcode('newsletter-form', 'psu_newsletter_form');
-function psu_newsletter_form( $atts ) {
+add_shortcode('newsletter-form', 'psu_gan_newsletter_form');
+function psu_ungapped_newsletter_form( $atts ) {
 
 	$l = $atts['lang'] == 'en'? 'en': 'sv';
 	$newsletter_form['sv']['success'] = 'http://www.akademiliv.se/nyhetsbrev-anmald';
@@ -293,6 +293,18 @@ function psu_newsletter_form( $atts ) {
 		</form>',
 		$newsletter_form[$l]['success'], // success url
 		$newsletter_form[$l]['error'], // error url
+    __('Your e-mail', 'magazine'), // email placeholder
+    __('Sign up', 'magazine') // submit text  
+  );
+}
+
+function psu_gan_newsletter_form( $atts ) {
+  return sprintf('
+		<form class="newsletter-form" method="POST" action="http://gansub.com/s/5rMKyY/">
+      <input type="hidden" name="gan_repeat_email" />
+      <input type="email" id="email" name="email" required placeholder="%s" />
+      <input type="submit" value=" %s " />
+    </form>',
     __('Your e-mail', 'magazine'), // email placeholder
     __('Sign up', 'magazine') // submit text  
   );
