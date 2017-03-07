@@ -71,8 +71,10 @@ $susy: (
 .home-second-row .entry,
 .home-middle .widget,
 .category-wrapper	.category-utbildning,
+.category-wrapper	.category-meddelande,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-education,
+.category-wrapper .category-announcement,
 .category-wrapper .category-grants {
 
 	@media only screen and (min-width: 640px) {
@@ -182,6 +184,8 @@ aside img {
 				@include span(3 of 9);}
 
 			.category-seminars,
+			.category-meddelande,
+			.category-announcement,
 			.category-seminarier {
 				@include span(4.5 of 9);}
 				

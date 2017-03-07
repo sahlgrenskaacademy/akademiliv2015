@@ -208,10 +208,14 @@ function psu_get_cat_ids($cat_names) {
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Returns true if is Akademiliv category template page
-function is_akademiliv_category_page() {
+function is_akademiliv_category_page($page = '') {
 	global $wp_query;
-	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') ) {
-		return true;
+	if ( $page == '' ) { // if page is not set, try every page template
+  	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-announcement.php') )
+  		return true;
+	} else { // if $page is set try that page template
+  	if ( isset($wp_query) && is_page_template('page-'.$page.'.php') )
+  		return true;
 	}
 	return false;
 }
@@ -233,12 +237,12 @@ function is_akademiliv_default() {
 	}
 	return false;
 }
-function is_akademiliv_single_cat() {
+function is_akademiliv_single_cat() { // exclude "announcement" to present it more like news (comments, metadata)
   $cat_names = array(
     'seminars',
     'grants',
     'education',
-    'announcement'
+//    'announcement'
   );
   $cat_ids = psu_get_cat_ids( $cat_names );
   foreach ($cat_ids as $value) {
@@ -376,6 +380,14 @@ function psu_category_customization() {
 		//* Remove Read more link
 		add_filter( 'get_the_content_more_link', 'psu_child_read_more_link' ); 
 		
+		//* Custom content archive limit
+		//fortsätt här! 
+		
+	}
+	
+	if ( is_akademiliv_category_page('announcement') ) {
+		//* Special case post meta for cateogry announcement
+		add_filter( 'genesis_post_info', 'psu_category_announcement_info_filter' );	
 	}
 	
 }
@@ -432,6 +444,15 @@ function psu_category_info_filter($post_info) {
 	$post_info = '';
 	return $post_info;
 }
+ 
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Special case for meta info on category announcement
+function psu_category_announcement_info_filter($post_info) {
+//	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
+	$post_info = '[post_date]';
+	return $post_info;
+} 
+ 
  
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Remove Read more link
@@ -563,7 +584,7 @@ function psu_single_add_entry_header() {
 
 		psu_output_single_post_featured_image();
 		genesis_do_post_title();
-		if (!is_akademiliv_single_cat()) psu_do_post_info();
+		if (!is_akademiliv_single_cat() ) psu_do_post_info(); // XXX
 		genesis_entry_header_markup_close();
 
 
@@ -653,13 +674,13 @@ function psu_get_thumbnail_max_size() {
 add_action('genesis_before', 'psu_single_cat_customization');
 function psu_single_cat_customization() {
 		
-	if ( is_akademiliv_single_cat() ) { 
+	if ( is_akademiliv_single_cat() ) {  // XXX
 	
 		//* Add custom fields to the end of every post page.
 		add_filter( 'the_content', 'psu_single_custom_fields', 20 );
-
+		
 		//* Customize the entry meta in the entry footer
-		add_filter( 'genesis_post_meta', 'psu_cat_post_meta_filter' );	
+		add_filter( 'genesis_post_meta', 'psu_cat_post_meta_filter' );		
 		
 	}
 
@@ -694,9 +715,6 @@ function psu_single_custom_fields( $content ) {
 function psu_cat_post_meta_filter($post_meta) {
 	return '';
 }
-
-
-
 
 
 

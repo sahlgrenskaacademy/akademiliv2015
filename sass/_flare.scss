@@ -82,9 +82,11 @@ li.comment {
 .single-wrapper .entry,
 body.page .category-seminarier,
 body.page .category-utbildning,
+body.page .category-meddelande,
 body.page .category-bidrag,
 body.page .category-seminars,
 body.page .category-education,
+body.page .category-announcement,
 body.page .category-grants,
 .entry-comments,
 .comment-respond,
@@ -244,9 +246,11 @@ body.page-template .sidebar {
 .category-wrapper {
 	.category-seminarier,
 	.category-utbildning,
+	.category-meddelande,
 	.category-bidrag,
 	.category-seminars,
 	.category-education,
+	.category-announcement,
 	.category-grants {
 		padding: $category-box-padding;	
 		.entry-content p,
@@ -311,7 +315,10 @@ body.page-template .sidebar {
 			color: $text-link-active-color;}}}
 			
 } 
-	
+
+.home-announcement {
+  background: $c-secondary-2-4;}
+
 			
 .home-news, 
 .news-area, 

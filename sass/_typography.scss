@@ -26,8 +26,6 @@ a,
 	color: $text-link-color;
 	text-decoration: underline;}
 
-
-
 .home-featured,
 .home-second-row,
 .home-latest,
@@ -38,7 +36,9 @@ a,
 .archive-wrapper {
 	.post a {
 		text-decoration: none;	
-		color: inherit; }}
+		color: inherit; }
+  a.featured-title {
+    text-decoration: none;}}
 
 a:hover,
 .entry-title a:hover,
@@ -46,8 +46,6 @@ a:hover,
 .entry-content a:hover {
 	color: $text-link-active-color;
 }
-
-
 
 a,
 button,
@@ -141,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: $list-widget-heading-font-size;
 		font-weight: $list-heading-font-weight;}
 	.entry-title a {
-		line-height: .9em;
+		line-height: 1em;
 		font-size: $list-heading-font-size; 
 		font-family: $base-font-family;
 		font-weight: $list-heading-font-weight; }}
@@ -186,7 +184,9 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-seminarier,
 .category-wrapper .category-seminars,
 .category-wrapper .category-utbildning,
+.category-wrapper .category-meddelande,
 .category-wrapper .category-education,
+.category-wrapper .category-announcement,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
 .single-wrapper .entry-header.category-details-box .box-inner {
@@ -237,7 +237,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-wrapper .category-utbildning,
-.category-wrapper .category-education {
+.category-wrapper .category-education,
+.category-wrapper .category-meddelande,
+.category-wrapper .category-announcement {
 	.entry-title {
 		font-weight: 900;
 /*		margin-bottom: 0!important;*/}
@@ -290,6 +292,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-wrapper .category-utbildning,
 .category-wrapper .category-education,
+.category-wrapper .category-meddelande,
+.category-wrapper .category-announcement,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-seminarier,
 .category-wrapper .category-grants,

@@ -29,29 +29,32 @@
 
 
 /*seminarier*/
-.wp-list-table.posts tr.category-seminarier:nth-child(even)>:first-child,
+
+/*.wp-list-table.posts tr.category-seminarier:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-seminars:nth-child(even)>:first-child {
   background-color: #E8FFE0 !important;}
 .wp-list-table.posts tr.category-seminarier:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-seminars:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}
-  
+  */
 /*utbildning*/
+/*
 .wp-list-table.posts tr.category-utbildning:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-education:nth-child(even)>:first-child {
   background-color: #E8FFE0 !important;}
 .wp-list-table.posts tr.category-utbildning:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-education:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}
-  
+  */
 /*bidrag*/
+/*
 .wp-list-table.posts tr.category-bidrag:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-grants:nth-child(even)>:first-child {
   background-color: #E8FFE0 !important;}
 .wp-list-table.posts tr.category-bidrag:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-grants:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}    
-
+*/
 /*meddelande*/
 .wp-list-table.posts tr.category-meddelande:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-announcement:nth-child(even)>:first-child {
@@ -61,14 +64,13 @@
   background-color: #FFF5BA !important;}
 
 /*nyhet*/
-/*
-.wp-list-table.posts tr.category-nyhet:nth-child(even)>:first-child,
+.wp-list-table.posts tr.category-nyheter:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-news:nth-child(even)>:first-child {
   background-color: #DDE8FF !important;}
-.wp-list-table.posts tr.category-nyhet:nth-child(odd)>:first-child,
+.wp-list-table.posts tr.category-nyheter:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-news:nth-child(odd)>:first-child {
   background-color: #CCDCFF !important;}
-*/
+
 /*toppnyhet*/
 .wp-list-table.posts tr.category-toppnyhet:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-top-news:nth-child(even)>:first-child {
