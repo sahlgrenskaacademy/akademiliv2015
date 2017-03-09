@@ -379,16 +379,22 @@ function psu_category_customization() {
 
 		//* Remove Read more link
 		add_filter( 'get_the_content_more_link', 'psu_child_read_more_link' ); 
-		
-		//* Custom content archive limit
-		//fortsätt här! 
-		
+		 		
+ 		
 	}
 	
 	if ( is_akademiliv_category_page('announcement') ) {
 		//* Special case post meta for cateogry announcement
 		add_filter( 'genesis_post_info', 'psu_category_announcement_info_filter' );	
 	}
+
+  // not in the if bc apply to news archive page also (in the future: change news archive to category page)
+
+	//* Change dots
+  add_filter('excerpt_more', 'psu_excerpt_more'); 		
+
+  //* Custom content archive limit
+  add_filter( 'excerpt_length', 'psu_category_excerpt_length' );
 	
 }
 
@@ -461,6 +467,47 @@ function psu_child_read_more_link() {
 }
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Set archive excrept length based on category
+function psu_category_excerpt_length($length) {
+
+  global $cat_id;
+  switch ( $cat_id ) {
+
+    // announcement
+    case 1021: 
+    case 1022:
+      return 160;
+
+    // education
+    case 9:
+    case 10:
+      return 55;
+      
+    // grants
+    case 13:
+    case 14:
+      return 60;
+      
+    // seminars
+    case 7:
+    case 12:
+      return 50;
+      
+    // news
+    default:
+      return 70;
+    
+  }
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Remove dots
+function psu_excerpt_more( $more ) {
+	return '…';
+}
 
 
 
@@ -520,7 +567,6 @@ function psu_post_info_filter($post_info) {
 	$post_info = '[post_date] [post_edit]';
 	return $post_info;
 }
-
 
 
 
