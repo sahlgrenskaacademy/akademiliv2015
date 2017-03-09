@@ -1766,8 +1766,8 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-seminarier,
 .category-wrapper .category-seminars,
 .category-wrapper .category-utbildning,
-.category-wrapper .category-meddelande,
 .category-wrapper .category-education,
+.category-wrapper .category-meddelande,
 .category-wrapper .category-announcement,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
@@ -1776,8 +1776,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminarier .entry-title a,
   .category-wrapper .category-seminars .entry-title a,
   .category-wrapper .category-utbildning .entry-title a,
-  .category-wrapper .category-meddelande .entry-title a,
   .category-wrapper .category-education .entry-title a,
+  .category-wrapper .category-meddelande .entry-title a,
   .category-wrapper .category-announcement .entry-title a,
   .category-wrapper .category-bidrag .entry-title a,
   .category-wrapper .category-grants .entry-title a,
@@ -1788,8 +1788,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminarier .entry-content,
   .category-wrapper .category-seminars .entry-content,
   .category-wrapper .category-utbildning .entry-content,
-  .category-wrapper .category-meddelande .entry-content,
   .category-wrapper .category-education .entry-content,
+  .category-wrapper .category-meddelande .entry-content,
   .category-wrapper .category-announcement .entry-content,
   .category-wrapper .category-bidrag .entry-content,
   .category-wrapper .category-grants .entry-content,
@@ -1798,8 +1798,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminarier .entry-details,
   .category-wrapper .category-seminars .entry-details,
   .category-wrapper .category-utbildning .entry-details,
-  .category-wrapper .category-meddelande .entry-details,
   .category-wrapper .category-education .entry-details,
+  .category-wrapper .category-meddelande .entry-details,
   .category-wrapper .category-announcement .entry-details,
   .category-wrapper .category-bidrag .entry-details,
   .category-wrapper .category-grants .entry-details,
@@ -1811,8 +1811,8 @@ h1, h2, h3, h4, h5, h6 {
     .category-wrapper .category-seminarier .entry-details .plats .label,
     .category-wrapper .category-seminars .entry-details .plats .label,
     .category-wrapper .category-utbildning .entry-details .plats .label,
-    .category-wrapper .category-meddelande .entry-details .plats .label,
     .category-wrapper .category-education .entry-details .plats .label,
+    .category-wrapper .category-meddelande .entry-details .plats .label,
     .category-wrapper .category-announcement .entry-details .plats .label,
     .category-wrapper .category-bidrag .entry-details .plats .label,
     .category-wrapper .category-grants .entry-details .plats .label,
@@ -1821,8 +1821,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminarier .entry-link,
   .category-wrapper .category-seminars .entry-link,
   .category-wrapper .category-utbildning .entry-link,
-  .category-wrapper .category-meddelande .entry-link,
   .category-wrapper .category-education .entry-link,
+  .category-wrapper .category-meddelande .entry-link,
   .category-wrapper .category-announcement .entry-link,
   .category-wrapper .category-bidrag .entry-link,
   .category-wrapper .category-grants .entry-link,
@@ -1831,14 +1831,25 @@ h1, h2, h3, h4, h5, h6 {
     .category-wrapper .category-seminarier .entry-link a,
     .category-wrapper .category-seminars .entry-link a,
     .category-wrapper .category-utbildning .entry-link a,
-    .category-wrapper .category-meddelande .entry-link a,
     .category-wrapper .category-education .entry-link a,
+    .category-wrapper .category-meddelande .entry-link a,
     .category-wrapper .category-announcement .entry-link a,
     .category-wrapper .category-bidrag .entry-link a,
     .category-wrapper .category-grants .entry-link a,
     .single-wrapper .entry-header.category-details-box .box-inner .entry-link a {
       font-size: .8em;
       font-weight: bold; }
+
+.category-wrapper .category-meddelande .entry-title a,
+.category-wrapper .category-announcement .entry-title a {
+  line-height: 1.2em;
+  font-size: 1.8em;
+  font-weight: 900;
+  margin-bottom: .5em; }
+.category-wrapper .category-meddelande .entry-content,
+.category-wrapper .category-announcement .entry-content {
+  font-size: 1.1em;
+  line-height: 1.4em; }
 
 .category-wrapper .category-bidrag .entry-title,
 .category-wrapper .category-grants .entry-title,

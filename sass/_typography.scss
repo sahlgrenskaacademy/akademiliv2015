@@ -184,8 +184,8 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-seminarier,
 .category-wrapper .category-seminars,
 .category-wrapper .category-utbildning,
-.category-wrapper .category-meddelande,
 .category-wrapper .category-education,
+.category-wrapper .category-meddelande,
 .category-wrapper .category-announcement,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
@@ -209,6 +209,19 @@ h1, h2, h3, h4, h5, h6 {
 		a {
 			font-size: .8em;
 			font-weight: bold;}}
+}
+
+
+.category-wrapper .category-meddelande,
+.category-wrapper .category-announcement {
+	.entry-title a {
+		line-height: 1.2em;
+		font-size: $heading-base-size*1.2;
+		font-weight: 900;
+		margin-bottom: .5em;}
+	.entry-content {
+		font-size: 1.1em;
+		line-height: 1.4em;}  
 }
 
 

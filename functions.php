@@ -477,7 +477,7 @@ function psu_category_excerpt_length($length) {
     // announcement
     case 1021: 
     case 1022:
-      return 160;
+      return 100;
 
     // education
     case 9:
