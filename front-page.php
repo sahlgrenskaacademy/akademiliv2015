@@ -59,8 +59,8 @@ function magazine_homepage_widgets() {
 		'before' => '<div class="home-featured widget-area">',
 		'after'  => '</div>',
 	) );
-	genesis_widget_area( 'home-announcement', array(
-		'before' => '<div class="home-announcement widget-area">',
+	genesis_widget_area( 'home-notices', array(
+		'before' => '<div class="home-notices widget-area">',
 		'after'  => '</div>',
 	) );
 	genesis_widget_area( 'home-second-row', array(

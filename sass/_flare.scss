@@ -71,7 +71,7 @@ li.comment {
 /* the box look */
 
 .home-latest,
-.home-announcement,
+.home-notices,
 .home-featured .entry,
 .home-second-row .entry,
 .home-middle .widget,
@@ -82,11 +82,11 @@ li.comment {
 .single-wrapper .entry,
 body.page .category-seminarier,
 body.page .category-utbildning,
-body.page .category-meddelande,
+body.page .category-notiser,
 body.page .category-bidrag,
 body.page .category-seminars,
 body.page .category-education,
-body.page .category-announcement,
+body.page .category-notices,
 body.page .category-grants,
 .entry-comments,
 .comment-respond,
@@ -115,7 +115,7 @@ body.page .category-utbildning {
 .single-wrapper .entry,
 .archive-wrapper,
 .home-latest,
-.home-announcement,
+.home-notices,
 .home-middle .widget-wrap {
 	padding: $text-box-padding;}
 	
@@ -246,11 +246,11 @@ body.page-template .sidebar {
 .category-wrapper {
 	.category-seminarier,
 	.category-utbildning,
-	.category-meddelande,
+	.category-notiser,
 	.category-bidrag,
 	.category-seminars,
 	.category-education,
-	.category-announcement,
+	.category-notices,
 	.category-grants {
 		padding: $category-box-padding;	
 		.entry-content p,
@@ -316,7 +316,7 @@ body.page-template .sidebar {
 			
 } 
 
-.home-announcement {
+.home-notices {
   background: $c-secondary-2-4;}
 
 			

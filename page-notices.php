@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Meddelanden */
+/* Template Name: Notiser */
  
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* what category to show, also used in functions.php

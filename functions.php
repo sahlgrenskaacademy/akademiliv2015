@@ -193,7 +193,7 @@ function psu_get_cat_ids( $cat_names ) {
 function is_akademiliv_category_page($page = '') {
 	global $wp_query;
 	if ( $page == '' ) { // if page is not set, try every page template
-  	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-announcement.php') ) {
+  	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-notices.php') ) {
   		return true;
   	}
 	} else { // if $page is set try that page template
@@ -224,12 +224,12 @@ function is_akademiliv_default() {
 	}
 	return false;
 }
-function is_akademiliv_single_cat() { // exclude "announcement" to present it more like news (comments, metadata)
+function is_akademiliv_single_cat() { // exclude "notices" to present it more like news (comments, metadata)
   $cat_names = array(
     'seminars',
     'grants',
     'education',
-//    'announcement'
+//    'notices'
   );
   $cat_ids = psu_get_cat_ids( $cat_names );
   foreach ($cat_ids as $value) {
@@ -369,9 +369,9 @@ function psu_category_customization() {
  		
 	}
 	
-	if ( is_akademiliv_category_page('announcement') ) {
-		//* Special case post meta for cateogry announcement
-		add_filter( 'genesis_post_info', 'psu_category_announcement_info_filter' );	
+	if ( is_akademiliv_category_page('notices') ) {
+		//* Special case post meta for cateogry notices
+		add_filter( 'genesis_post_info', 'psu_category_notices_info_filter' );	
 	}
 
   // not in the if bc apply to news archive page also (in the future: change news archive to category page)
@@ -436,8 +436,8 @@ function psu_category_info_filter($post_info) {
 	return $post_info;
 }
  
-/// Special case for meta info on category announcement /////////////////////////////////////////
-function psu_category_announcement_info_filter($post_info) {
+/// Special case for meta info on category notices /////////////////////////////////////////
+function psu_category_notices_info_filter($post_info) {
 //	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
 	$post_info = '[post_date]';
 	return $post_info;
@@ -456,7 +456,7 @@ function psu_category_excerpt_length($length) {
   global $cat_id;
   switch ( $cat_id ) {
 
-    // announcement
+    // notices
     case 1021: 
     case 1022:
       return 100;
@@ -1055,7 +1055,7 @@ function psu_admin_theme_style() {
 
 /// Modifying TinyMCE editor to remove unused items. /////////////////////////////////////////
 // https://codex.wordpress.org/TinyMCE
-add_filter( 'tiny_mce_before_init', 'psu_customize_tinymce' );
+//add_filter( 'tiny_mce_before_init', 'psu_customize_tinymce' );
 function psu_customize_tinymce( $in ) {
 //	$in['remove_linebreaks'] = false;
 //	$in['gecko_spellcheck'] = false;

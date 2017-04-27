@@ -1621,7 +1621,7 @@ a,
 .home-featured .post a,
 .home-second-row .post a,
 .home-latest .post a,
-.home-announcement .post a,
+.home-notices .post a,
 .home-middle .post a,
 .home-news .post a,
 .news-area .post a,
@@ -1631,7 +1631,7 @@ a,
 .home-featured a.featured-title,
 .home-second-row a.featured-title,
 .home-latest a.featured-title,
-.home-announcement a.featured-title,
+.home-notices a.featured-title,
 .home-middle a.featured-title,
 .home-news a.featured-title,
 .news-area a.featured-title,
@@ -1718,10 +1718,10 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   padding: 0; }
 
-.home-latest .widget-title, .home-middle .widget-title, .home-announcement .widget-title {
+.home-latest .widget-title, .home-middle .widget-title, .home-notices .widget-title {
   font-size: 1.8em;
   font-weight: 900; }
-.home-latest .entry-title a, .home-middle .entry-title a, .home-announcement .entry-title a {
+.home-latest .entry-title a, .home-middle .entry-title a, .home-notices .entry-title a {
   line-height: 1em;
   font-size: 1.1em;
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
@@ -1767,8 +1767,8 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-seminars,
 .category-wrapper .category-utbildning,
 .category-wrapper .category-education,
-.category-wrapper .category-meddelande,
-.category-wrapper .category-announcement,
+.category-wrapper .category-notiser,
+.category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
 .single-wrapper .entry-header.category-details-box .box-inner {
@@ -1777,8 +1777,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminars .entry-title a,
   .category-wrapper .category-utbildning .entry-title a,
   .category-wrapper .category-education .entry-title a,
-  .category-wrapper .category-meddelande .entry-title a,
-  .category-wrapper .category-announcement .entry-title a,
+  .category-wrapper .category-notiser .entry-title a,
+  .category-wrapper .category-notices .entry-title a,
   .category-wrapper .category-bidrag .entry-title a,
   .category-wrapper .category-grants .entry-title a,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-title a {
@@ -1789,8 +1789,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminars .entry-content,
   .category-wrapper .category-utbildning .entry-content,
   .category-wrapper .category-education .entry-content,
-  .category-wrapper .category-meddelande .entry-content,
-  .category-wrapper .category-announcement .entry-content,
+  .category-wrapper .category-notiser .entry-content,
+  .category-wrapper .category-notices .entry-content,
   .category-wrapper .category-bidrag .entry-content,
   .category-wrapper .category-grants .entry-content,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-content {
@@ -1799,8 +1799,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminars .entry-details,
   .category-wrapper .category-utbildning .entry-details,
   .category-wrapper .category-education .entry-details,
-  .category-wrapper .category-meddelande .entry-details,
-  .category-wrapper .category-announcement .entry-details,
+  .category-wrapper .category-notiser .entry-details,
+  .category-wrapper .category-notices .entry-details,
   .category-wrapper .category-bidrag .entry-details,
   .category-wrapper .category-grants .entry-details,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-details {
@@ -1812,8 +1812,8 @@ h1, h2, h3, h4, h5, h6 {
     .category-wrapper .category-seminars .entry-details .plats .label,
     .category-wrapper .category-utbildning .entry-details .plats .label,
     .category-wrapper .category-education .entry-details .plats .label,
-    .category-wrapper .category-meddelande .entry-details .plats .label,
-    .category-wrapper .category-announcement .entry-details .plats .label,
+    .category-wrapper .category-notiser .entry-details .plats .label,
+    .category-wrapper .category-notices .entry-details .plats .label,
     .category-wrapper .category-bidrag .entry-details .plats .label,
     .category-wrapper .category-grants .entry-details .plats .label,
     .single-wrapper .entry-header.category-details-box .box-inner .entry-details .plats .label {
@@ -1822,8 +1822,8 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-seminars .entry-link,
   .category-wrapper .category-utbildning .entry-link,
   .category-wrapper .category-education .entry-link,
-  .category-wrapper .category-meddelande .entry-link,
-  .category-wrapper .category-announcement .entry-link,
+  .category-wrapper .category-notiser .entry-link,
+  .category-wrapper .category-notices .entry-link,
   .category-wrapper .category-bidrag .entry-link,
   .category-wrapper .category-grants .entry-link,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-link {
@@ -1832,22 +1832,22 @@ h1, h2, h3, h4, h5, h6 {
     .category-wrapper .category-seminars .entry-link a,
     .category-wrapper .category-utbildning .entry-link a,
     .category-wrapper .category-education .entry-link a,
-    .category-wrapper .category-meddelande .entry-link a,
-    .category-wrapper .category-announcement .entry-link a,
+    .category-wrapper .category-notiser .entry-link a,
+    .category-wrapper .category-notices .entry-link a,
     .category-wrapper .category-bidrag .entry-link a,
     .category-wrapper .category-grants .entry-link a,
     .single-wrapper .entry-header.category-details-box .box-inner .entry-link a {
       font-size: .8em;
       font-weight: bold; }
 
-.category-wrapper .category-meddelande .entry-title a,
-.category-wrapper .category-announcement .entry-title a {
+.category-wrapper .category-notiser .entry-title a,
+.category-wrapper .category-notices .entry-title a {
   line-height: 1.2em;
   font-size: 1.8em;
   font-weight: 900;
   margin-bottom: .5em; }
-.category-wrapper .category-meddelande .entry-content,
-.category-wrapper .category-announcement .entry-content {
+.category-wrapper .category-notiser .entry-content,
+.category-wrapper .category-notices .entry-content {
   font-size: 1.1em;
   line-height: 1.4em; }
 
@@ -1890,20 +1890,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-wrapper .category-utbildning .entry-title,
 .category-wrapper .category-education .entry-title,
-.category-wrapper .category-meddelande .entry-title,
-.category-wrapper .category-announcement .entry-title {
+.category-wrapper .category-notiser .entry-title,
+.category-wrapper .category-notices .entry-title {
   font-weight: 900;
   /*		margin-bottom: 0!important;*/ }
 .category-wrapper .category-utbildning .entry-deadline,
 .category-wrapper .category-education .entry-deadline,
-.category-wrapper .category-meddelande .entry-deadline,
-.category-wrapper .category-announcement .entry-deadline {
+.category-wrapper .category-notiser .entry-deadline,
+.category-wrapper .category-notices .entry-deadline {
   font-weight: 900;
   margin-bottom: .5em; }
   .category-wrapper .category-utbildning .entry-deadline .label,
   .category-wrapper .category-education .entry-deadline .label,
-  .category-wrapper .category-meddelande .entry-deadline .label,
-  .category-wrapper .category-announcement .entry-deadline .label {
+  .category-wrapper .category-notiser .entry-deadline .label,
+  .category-wrapper .category-notices .entry-deadline .label {
     font-weight: normal; }
 
 .content-sidebar-wrap h1.entry-title,
@@ -1942,10 +1942,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month1,
 .category-wrapper .category-education .entry-startdate.month1,
 .category-wrapper .category-education .entry-deadline.month1,
-.category-wrapper .category-meddelande .entry-startdate.month1,
-.category-wrapper .category-meddelande .entry-deadline.month1,
-.category-wrapper .category-announcement .entry-startdate.month1,
-.category-wrapper .category-announcement .entry-deadline.month1,
+.category-wrapper .category-notiser .entry-startdate.month1,
+.category-wrapper .category-notiser .entry-deadline.month1,
+.category-wrapper .category-notices .entry-startdate.month1,
+.category-wrapper .category-notices .entry-deadline.month1,
 .category-wrapper .category-bidrag .entry-startdate.month1,
 .category-wrapper .category-bidrag .entry-deadline.month1,
 .category-wrapper .category-seminarier .entry-startdate.month1,
@@ -1961,10 +1961,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month2,
 .category-wrapper .category-education .entry-startdate.month2,
 .category-wrapper .category-education .entry-deadline.month2,
-.category-wrapper .category-meddelande .entry-startdate.month2,
-.category-wrapper .category-meddelande .entry-deadline.month2,
-.category-wrapper .category-announcement .entry-startdate.month2,
-.category-wrapper .category-announcement .entry-deadline.month2,
+.category-wrapper .category-notiser .entry-startdate.month2,
+.category-wrapper .category-notiser .entry-deadline.month2,
+.category-wrapper .category-notices .entry-startdate.month2,
+.category-wrapper .category-notices .entry-deadline.month2,
 .category-wrapper .category-bidrag .entry-startdate.month2,
 .category-wrapper .category-bidrag .entry-deadline.month2,
 .category-wrapper .category-seminarier .entry-startdate.month2,
@@ -1980,10 +1980,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month3,
 .category-wrapper .category-education .entry-startdate.month3,
 .category-wrapper .category-education .entry-deadline.month3,
-.category-wrapper .category-meddelande .entry-startdate.month3,
-.category-wrapper .category-meddelande .entry-deadline.month3,
-.category-wrapper .category-announcement .entry-startdate.month3,
-.category-wrapper .category-announcement .entry-deadline.month3,
+.category-wrapper .category-notiser .entry-startdate.month3,
+.category-wrapper .category-notiser .entry-deadline.month3,
+.category-wrapper .category-notices .entry-startdate.month3,
+.category-wrapper .category-notices .entry-deadline.month3,
 .category-wrapper .category-bidrag .entry-startdate.month3,
 .category-wrapper .category-bidrag .entry-deadline.month3,
 .category-wrapper .category-seminarier .entry-startdate.month3,
@@ -1999,10 +1999,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month4,
 .category-wrapper .category-education .entry-startdate.month4,
 .category-wrapper .category-education .entry-deadline.month4,
-.category-wrapper .category-meddelande .entry-startdate.month4,
-.category-wrapper .category-meddelande .entry-deadline.month4,
-.category-wrapper .category-announcement .entry-startdate.month4,
-.category-wrapper .category-announcement .entry-deadline.month4,
+.category-wrapper .category-notiser .entry-startdate.month4,
+.category-wrapper .category-notiser .entry-deadline.month4,
+.category-wrapper .category-notices .entry-startdate.month4,
+.category-wrapper .category-notices .entry-deadline.month4,
 .category-wrapper .category-bidrag .entry-startdate.month4,
 .category-wrapper .category-bidrag .entry-deadline.month4,
 .category-wrapper .category-seminarier .entry-startdate.month4,
@@ -2018,10 +2018,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month5,
 .category-wrapper .category-education .entry-startdate.month5,
 .category-wrapper .category-education .entry-deadline.month5,
-.category-wrapper .category-meddelande .entry-startdate.month5,
-.category-wrapper .category-meddelande .entry-deadline.month5,
-.category-wrapper .category-announcement .entry-startdate.month5,
-.category-wrapper .category-announcement .entry-deadline.month5,
+.category-wrapper .category-notiser .entry-startdate.month5,
+.category-wrapper .category-notiser .entry-deadline.month5,
+.category-wrapper .category-notices .entry-startdate.month5,
+.category-wrapper .category-notices .entry-deadline.month5,
 .category-wrapper .category-bidrag .entry-startdate.month5,
 .category-wrapper .category-bidrag .entry-deadline.month5,
 .category-wrapper .category-seminarier .entry-startdate.month5,
@@ -2037,10 +2037,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month6,
 .category-wrapper .category-education .entry-startdate.month6,
 .category-wrapper .category-education .entry-deadline.month6,
-.category-wrapper .category-meddelande .entry-startdate.month6,
-.category-wrapper .category-meddelande .entry-deadline.month6,
-.category-wrapper .category-announcement .entry-startdate.month6,
-.category-wrapper .category-announcement .entry-deadline.month6,
+.category-wrapper .category-notiser .entry-startdate.month6,
+.category-wrapper .category-notiser .entry-deadline.month6,
+.category-wrapper .category-notices .entry-startdate.month6,
+.category-wrapper .category-notices .entry-deadline.month6,
 .category-wrapper .category-bidrag .entry-startdate.month6,
 .category-wrapper .category-bidrag .entry-deadline.month6,
 .category-wrapper .category-seminarier .entry-startdate.month6,
@@ -2056,10 +2056,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month7,
 .category-wrapper .category-education .entry-startdate.month7,
 .category-wrapper .category-education .entry-deadline.month7,
-.category-wrapper .category-meddelande .entry-startdate.month7,
-.category-wrapper .category-meddelande .entry-deadline.month7,
-.category-wrapper .category-announcement .entry-startdate.month7,
-.category-wrapper .category-announcement .entry-deadline.month7,
+.category-wrapper .category-notiser .entry-startdate.month7,
+.category-wrapper .category-notiser .entry-deadline.month7,
+.category-wrapper .category-notices .entry-startdate.month7,
+.category-wrapper .category-notices .entry-deadline.month7,
 .category-wrapper .category-bidrag .entry-startdate.month7,
 .category-wrapper .category-bidrag .entry-deadline.month7,
 .category-wrapper .category-seminarier .entry-startdate.month7,
@@ -2075,10 +2075,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month8,
 .category-wrapper .category-education .entry-startdate.month8,
 .category-wrapper .category-education .entry-deadline.month8,
-.category-wrapper .category-meddelande .entry-startdate.month8,
-.category-wrapper .category-meddelande .entry-deadline.month8,
-.category-wrapper .category-announcement .entry-startdate.month8,
-.category-wrapper .category-announcement .entry-deadline.month8,
+.category-wrapper .category-notiser .entry-startdate.month8,
+.category-wrapper .category-notiser .entry-deadline.month8,
+.category-wrapper .category-notices .entry-startdate.month8,
+.category-wrapper .category-notices .entry-deadline.month8,
 .category-wrapper .category-bidrag .entry-startdate.month8,
 .category-wrapper .category-bidrag .entry-deadline.month8,
 .category-wrapper .category-seminarier .entry-startdate.month8,
@@ -2094,10 +2094,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month9,
 .category-wrapper .category-education .entry-startdate.month9,
 .category-wrapper .category-education .entry-deadline.month9,
-.category-wrapper .category-meddelande .entry-startdate.month9,
-.category-wrapper .category-meddelande .entry-deadline.month9,
-.category-wrapper .category-announcement .entry-startdate.month9,
-.category-wrapper .category-announcement .entry-deadline.month9,
+.category-wrapper .category-notiser .entry-startdate.month9,
+.category-wrapper .category-notiser .entry-deadline.month9,
+.category-wrapper .category-notices .entry-startdate.month9,
+.category-wrapper .category-notices .entry-deadline.month9,
 .category-wrapper .category-bidrag .entry-startdate.month9,
 .category-wrapper .category-bidrag .entry-deadline.month9,
 .category-wrapper .category-seminarier .entry-startdate.month9,
@@ -2113,10 +2113,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month10,
 .category-wrapper .category-education .entry-startdate.month10,
 .category-wrapper .category-education .entry-deadline.month10,
-.category-wrapper .category-meddelande .entry-startdate.month10,
-.category-wrapper .category-meddelande .entry-deadline.month10,
-.category-wrapper .category-announcement .entry-startdate.month10,
-.category-wrapper .category-announcement .entry-deadline.month10,
+.category-wrapper .category-notiser .entry-startdate.month10,
+.category-wrapper .category-notiser .entry-deadline.month10,
+.category-wrapper .category-notices .entry-startdate.month10,
+.category-wrapper .category-notices .entry-deadline.month10,
 .category-wrapper .category-bidrag .entry-startdate.month10,
 .category-wrapper .category-bidrag .entry-deadline.month10,
 .category-wrapper .category-seminarier .entry-startdate.month10,
@@ -2132,10 +2132,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month11,
 .category-wrapper .category-education .entry-startdate.month11,
 .category-wrapper .category-education .entry-deadline.month11,
-.category-wrapper .category-meddelande .entry-startdate.month11,
-.category-wrapper .category-meddelande .entry-deadline.month11,
-.category-wrapper .category-announcement .entry-startdate.month11,
-.category-wrapper .category-announcement .entry-deadline.month11,
+.category-wrapper .category-notiser .entry-startdate.month11,
+.category-wrapper .category-notiser .entry-deadline.month11,
+.category-wrapper .category-notices .entry-startdate.month11,
+.category-wrapper .category-notices .entry-deadline.month11,
 .category-wrapper .category-bidrag .entry-startdate.month11,
 .category-wrapper .category-bidrag .entry-deadline.month11,
 .category-wrapper .category-seminarier .entry-startdate.month11,
@@ -2151,10 +2151,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-utbildning .entry-deadline.month12,
 .category-wrapper .category-education .entry-startdate.month12,
 .category-wrapper .category-education .entry-deadline.month12,
-.category-wrapper .category-meddelande .entry-startdate.month12,
-.category-wrapper .category-meddelande .entry-deadline.month12,
-.category-wrapper .category-announcement .entry-startdate.month12,
-.category-wrapper .category-announcement .entry-deadline.month12,
+.category-wrapper .category-notiser .entry-startdate.month12,
+.category-wrapper .category-notiser .entry-deadline.month12,
+.category-wrapper .category-notices .entry-startdate.month12,
+.category-wrapper .category-notices .entry-deadline.month12,
 .category-wrapper .category-bidrag .entry-startdate.month12,
 .category-wrapper .category-bidrag .entry-deadline.month12,
 .category-wrapper .category-seminarier .entry-startdate.month12,
@@ -2177,9 +2177,9 @@ h1, h2, h3, h4, h5, h6 {
 .home-latest .entry-meta,
 .home-latest .entry-details .label,
 .home-latest .entry-time,
-.home-announcement .entry-meta,
-.home-announcement .entry-details .label,
-.home-announcement .entry-time,
+.home-notices .entry-meta,
+.home-notices .entry-details .label,
+.home-notices .entry-time,
 .home-middle .entry-meta,
 .home-middle .entry-details .label,
 .home-middle .entry-time,
@@ -2271,7 +2271,7 @@ li.comment {
 
 /* the box look */
 .home-latest,
-.home-announcement,
+.home-notices,
 .home-featured .entry,
 .home-second-row .entry,
 .home-middle .widget,
@@ -2282,11 +2282,11 @@ li.comment {
 .single-wrapper .entry,
 body.page .category-seminarier,
 body.page .category-utbildning,
-body.page .category-meddelande,
+body.page .category-notiser,
 body.page .category-bidrag,
 body.page .category-seminars,
 body.page .category-education,
-body.page .category-announcement,
+body.page .category-notices,
 body.page .category-grants,
 .entry-comments,
 .comment-respond,
@@ -2313,7 +2313,7 @@ body.page .category-utbildning {
 .single-wrapper .entry,
 .archive-wrapper,
 .home-latest,
-.home-announcement,
+.home-notices,
 .home-middle .widget-wrap {
   padding: 34px 28px; }
 
@@ -2403,27 +2403,27 @@ body.page-template .sidebar {
 	}*/
 .category-wrapper .category-seminarier,
 .category-wrapper .category-utbildning,
-.category-wrapper .category-meddelande,
+.category-wrapper .category-notiser,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-seminars,
 .category-wrapper .category-education,
-.category-wrapper .category-announcement,
+.category-wrapper .category-notices,
 .category-wrapper .category-grants {
   padding: 20px; }
   .category-wrapper .category-seminarier .entry-content p,
   .category-wrapper .category-seminarier .entry-title,
   .category-wrapper .category-utbildning .entry-content p,
   .category-wrapper .category-utbildning .entry-title,
-  .category-wrapper .category-meddelande .entry-content p,
-  .category-wrapper .category-meddelande .entry-title,
+  .category-wrapper .category-notiser .entry-content p,
+  .category-wrapper .category-notiser .entry-title,
   .category-wrapper .category-bidrag .entry-content p,
   .category-wrapper .category-bidrag .entry-title,
   .category-wrapper .category-seminars .entry-content p,
   .category-wrapper .category-seminars .entry-title,
   .category-wrapper .category-education .entry-content p,
   .category-wrapper .category-education .entry-title,
-  .category-wrapper .category-announcement .entry-content p,
-  .category-wrapper .category-announcement .entry-title,
+  .category-wrapper .category-notices .entry-content p,
+  .category-wrapper .category-notices .entry-title,
   .category-wrapper .category-grants .entry-content p,
   .category-wrapper .category-grants .entry-title {
     margin-bottom: .5em; }
@@ -2475,7 +2475,7 @@ body.page-template .sidebar {
     .home-middle section:nth-child(3) .entry-title a:hover {
       color: #c54649; }
 
-.home-announcement {
+.home-notices {
   background: #ffe5e6; }
 
 .home-news .post,
@@ -2949,28 +2949,28 @@ input:hover[type="submit"],
 /* Box model */
 @media only screen and (min-width: 640px) {
   .home-latest,
-  .home-announcement,
+  .home-notices,
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
   .category-wrapper .category-utbildning,
-  .category-wrapper .category-meddelande,
+  .category-wrapper .category-notiser,
   .category-wrapper .category-bidrag,
   .category-wrapper .category-education,
-  .category-wrapper .category-announcement,
+  .category-wrapper .category-notices,
   .category-wrapper .category-grants {
     height: 400px; } }
 @media only screen and (max-width: 639px) {
   .home-latest,
-  .home-announcement,
+  .home-notices,
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
   .category-wrapper .category-utbildning,
-  .category-wrapper .category-meddelande,
+  .category-wrapper .category-notiser,
   .category-wrapper .category-bidrag,
   .category-wrapper .category-education,
-  .category-wrapper .category-announcement,
+  .category-wrapper .category-notices,
   .category-wrapper .category-grants {
     height: auto; } }
 
@@ -3019,7 +3019,7 @@ input:hover[type="submit"],
       width: 33.33333%;
       float: right;
       margin-right: 0; }
-    .content .home-announcement {
+    .content .home-notices {
       width: 33.33333%;
       float: left; }
     .content .home-featured {
@@ -3071,8 +3071,8 @@ input:hover[type="submit"],
         width: 33.33333%;
         float: left; }
       .content .category-wrapper .category-seminars,
-      .content .category-wrapper .category-meddelande,
-      .content .category-wrapper .category-announcement,
+      .content .category-wrapper .category-notiser,
+      .content .category-wrapper .category-notices,
       .content .category-wrapper .category-seminarier {
         width: 50%;
         float: left; }

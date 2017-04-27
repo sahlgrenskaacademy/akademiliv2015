@@ -18,9 +18,9 @@ genesis_register_sidebar( array(
 	'after_title' => "</h2>\n",
 ) );
 genesis_register_sidebar( array(
-	'id'          => 'home-announcement',
-	'name'        => __( 'Home - Announcement', 'magazine' ),
-	'description' => __( 'The top-right box, intended for a list of sannouncement.', 'magazine' ),
+	'id'          => 'home-notices',
+	'name'        => __( 'Home - Notices', 'magazine' ),
+	'description' => __( 'The top-right box, intended for a list of notices.', 'magazine' ),
 	'before_title'=> '<h2 class="widget-title widgettitle">',
 	'after_title' => "</h2>\n",
 ) );
