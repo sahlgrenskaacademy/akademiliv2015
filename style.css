@@ -1704,7 +1704,8 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
   background-color: transparent;
   color: black;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 15px; }
 
 .sidebar .widget-title {
   text-transform: none;
@@ -1720,12 +1721,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-latest .widget-title, .home-middle .widget-title, .home-notices .widget-title {
   font-size: 1.8em;
-  font-weight: 900; }
+  font-weight: 500; }
 .home-latest .entry-title a, .home-middle .entry-title a, .home-notices .entry-title a {
-  line-height: 1em;
-  font-size: 1.1em;
+  line-height: 1.25em;
+  font-size: 1em;
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 900; }
+  font-weight: 500; }
 
 .home-featured .entry-title a, .home-second-row .entry-title a {
   line-height: 1.2em;

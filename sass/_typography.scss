@@ -118,7 +118,8 @@ h1, h2, h3, h4, h5, h6 {
 		text-transform: none;
 		background-color: transparent;
 		color: $heading-color;
-		padding: 0;}}
+		padding: 0;
+		margin-bottom: 15px;}}
  
 .sidebar {
 	.widget-title {
@@ -139,10 +140,11 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: $list-widget-heading-font-size;
 		font-weight: $list-heading-font-weight;}
 	.entry-title a {
-		line-height: 1em;
+		line-height: $list-heading-line-height;
 		font-size: $list-heading-font-size; 
 		font-family: $base-font-family;
-		font-weight: $list-heading-font-weight; }}
+		font-weight: $list-heading-font-weight; 
+		}}
 
 #{$image-boxes} {
 	.entry-title a {
