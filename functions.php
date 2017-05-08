@@ -369,9 +369,11 @@ function psu_category_customization() {
  		
 	}
 	
+	// special handeling for notices
 	if ( is_akademiliv_category_page('notices') ) {
 		//* Special case post meta for cateogry notices
 		add_filter( 'genesis_post_info', 'psu_category_notices_info_filter' );	
+    add_action( 'genesis_before_loop', 'psu_notices_init_full_content' );
 	}
 
   // not in the if bc apply to news archive page also (in the future: change news archive to category page)
@@ -384,6 +386,13 @@ function psu_category_customization() {
 	
 }
 
+/// Init full article for notices
+function psu_notices_init_full_content() {
+	// remove_action( 'genesis_post_content', 'genesis_do_post_content' ); /* Pre-HTML5 */
+	remove_action( 'genesis_entry_content', 'genesis_do_post_content' ); /* HTML5 */
+	// add_action( 'genesis_post_content', 'sk_do_post_content' ); /* Pre-HTML5 */
+	add_action( 'genesis_entry_content', 'psu_notices_entry_content' ); /* HTML5 */
+}		
 
 /// Add genesis taxonomy title and description to category pages /////////////////////////////////
 function psu_do_taxonomy_title_description() {
@@ -443,12 +452,10 @@ function psu_category_notices_info_filter($post_info) {
 	return $post_info;
 } 
  
- 
 /// Remove Read more link ///////////////////////////////////////////////////////////////
 function psu_child_read_more_link() { 
 	return ''; 
 }
-
 
 /// Set archive excrept length based on category ///////////////////////////////////////////////////////////////
 function psu_category_excerpt_length($length) {
@@ -485,10 +492,44 @@ function psu_category_excerpt_length($length) {
 }
 
 
-/// Remove dots ///////////////////////////////////////////////////////////////
+/// Adjust excerpt dots ///////////////////////////////////////////////////////////////
 function psu_excerpt_more( $more ) {
 	return '…';
 }
+
+
+/// Full article for 'notices' ///////////////////////////////////////////////////////////////
+//  https://gist.github.com/About2git/b5d78dd2bce46bc152a6
+function psu_notices_entry_content() {
+
+	global $post;
+	the_content();
+
+/*
+	if ( is_singular() ) {
+		the_content();
+		if ( is_single() && 'open' === get_option( 'default_ping_status' ) && post_type_supports( $post->post_type, 'trackbacks' ) ) {
+			echo '<!--';
+			trackback_rdf();
+			echo '-->' . "\n";
+		}
+		if ( is_page() && apply_filters( 'genesis_edit_post_link', true ) )
+			edit_post_link( __( '(Edit)', 'genesis' ), '', '' );
+	}
+	elseif ( 'excerpts' === genesis_get_option( 'content_archive' ) && !is_category('notices') ) {
+	echo "då";
+		the_excerpt();
+	}
+	else {
+		if ( genesis_get_option( 'content_archive_limit' ) )
+			the_content_limit( (int) genesis_get_option( 'content_archive_limit' ), __( '[Read more...]', 'genesis' ) );
+		else
+			the_content( __( '[Read more...]', 'genesis' ) );
+	}
+	*/
+
+}
+
 
 
 

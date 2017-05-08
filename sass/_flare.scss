@@ -92,7 +92,8 @@ body.page .category-grants,
 .comment-respond,
 .sidebar aside {
 	background: $c-white;
-	border: 1px solid $box-border-color!important;}
+	border: 1px solid $box-border-color!important;
+	overflow: hidden;}
 	
 /*body.page .category-grants,
 body.page .category-bidrag {
