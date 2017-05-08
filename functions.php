@@ -455,8 +455,12 @@ function psu_category_excerpt_length($length) {
   switch ( $cat_id ) {
 
     // notices
-    case 1021: 
+    case 1021: //dev 
     case 1022:
+    case 1590: //stage
+    case 1591:
+    case 1852: //live 
+    case 1853:
       return 100;
 
     // education
