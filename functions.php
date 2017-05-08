@@ -298,25 +298,16 @@ function psu_post_languages(){
 
 }
 
-/// Add shortcode for Ungapped form ///////////////////////////////////////////////////////////////
-add_shortcode('newsletter-form', 'psu_newsletter_form');
-function psu_newsletter_form( $atts ) {
-
-	$l = $atts['lang'] == 'en'? 'en': 'sv';
-	$newsletter_form['sv']['success'] = 'http://www.akademiliv.se/nyhetsbrev-anmald';
-	$newsletter_form['sv']['error'] 	= 'http://www.akademiliv.se/nyhetsbrev-fel';
-	$newsletter_form['en']['success'] = 'http://www.akademiliv.se/en/subscribed-newsletter';
-	$newsletter_form['en']['error'] 	= 'http://www.akademiliv.se/en/registration-error';
-
+/////////////////////////////////////////////////////////////////////////////////////////////
+//* Add shortcode for GAN form
+add_shortcode('newsletter-form', 'psu_gan_newsletter_form');
+function psu_gan_newsletter_form( $atts ) {
   return sprintf('
-		<form class="newsletter-form" method="post" action="http://ui.mdlnk.se/Api/Subscriptions/fb1c1a7f-6451-41ba-9685-576ff658d962">
-			<input type="hidden" name="ListIds" value="9d1ba155-88b9-4595-bd5c-84c243c769a9"> 
-			<input type="hidden" name="SubscriptionConfirmedUrl" value="%s">
-			<input type="hidden" name="SubscriptionFailedUrl" value="%s">
-			<input type="email" name="Contact[Email]" required placeholder="%s"><input type="submit" value=" %s ">
-		</form>',
-		$newsletter_form[$l]['success'], // success url
-		$newsletter_form[$l]['error'], // error url
+		<form class="newsletter-form" method="POST" action="http://gansub.com/s/5rMKyY/">
+      <input type="hidden" name="gan_repeat_email" />
+      <input type="email" id="email" name="email" required placeholder="%s" />
+      <input type="submit" value=" %s " />
+    </form>',
     __('Your e-mail', 'magazine'), // email placeholder
     __('Sign up', 'magazine') // submit text  
   );

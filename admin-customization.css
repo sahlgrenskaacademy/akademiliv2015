@@ -29,7 +29,6 @@
 
 
 /*seminarier*/
-
 /*.wp-list-table.posts tr.category-seminarier:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-seminars:nth-child(even)>:first-child {
   background-color: #E8FFE0 !important;}
@@ -37,6 +36,7 @@
 .wp-list-table.posts tr.category-seminars:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}
   */
+
 /*utbildning*/
 /*
 .wp-list-table.posts tr.category-utbildning:nth-child(even)>:first-child,
@@ -46,6 +46,7 @@
 .wp-list-table.posts tr.category-education:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}
   */
+
 /*bidrag*/
 /*
 .wp-list-table.posts tr.category-bidrag:nth-child(even)>:first-child,
@@ -55,7 +56,8 @@
 .wp-list-table.posts tr.category-grants:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}    
 */
-/*meddelande*/
+
+/*notiser*/
 .wp-list-table.posts tr.category-notiser:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-notices:nth-child(even)>:first-child {
   background-color: #FFE5DD !important;}
@@ -78,4 +80,4 @@
 .wp-list-table.posts tr.category-toppnyhet:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-top-news:nth-child(odd)>:first-child {
   background-color: #d2ccfe !important;} /*mörk (gul: #FFF5BA)*/
-  
+
