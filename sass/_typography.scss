@@ -26,14 +26,19 @@ a,
 	color: $text-link-color;
 	text-decoration: underline;}
 
-
-
-.home-featured, .home-second-row,
-.home-latest, .home-middle,
-.home-news, .news-area, .archive-wrapper {
+.home-featured,
+.home-second-row,
+.home-latest,
+.home-notices,
+.home-middle,
+.home-news,
+.news-area,
+.archive-wrapper {
 	.post a {
 		text-decoration: none;	
-		color: inherit; }}
+		color: inherit; }
+  a.featured-title {
+    text-decoration: none;}}
 
 a:hover,
 .entry-title a:hover,
@@ -41,8 +46,6 @@ a:hover,
 .entry-content a:hover {
 	color: $text-link-active-color;
 }
-
-
 
 a,
 button,
@@ -136,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: $list-widget-heading-font-size;
 		font-weight: $list-heading-font-weight;}
 	.entry-title a {
-		line-height: .9em;
+		line-height: 1em;
 		font-size: $list-heading-font-size; 
 		font-family: $base-font-family;
 		font-weight: $list-heading-font-weight; }}
@@ -182,6 +185,8 @@ h1, h2, h3, h4, h5, h6 {
 .category-wrapper .category-seminars,
 .category-wrapper .category-utbildning,
 .category-wrapper .category-education,
+.category-wrapper .category-notiser,
+.category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
 .single-wrapper .entry-header.category-details-box .box-inner {
@@ -204,6 +209,19 @@ h1, h2, h3, h4, h5, h6 {
 		a {
 			font-size: .8em;
 			font-weight: bold;}}
+}
+
+
+.category-wrapper .category-notiser,
+.category-wrapper .category-notices {
+	.entry-title a {
+		line-height: 1.2em;
+		font-size: $heading-base-size*1.2;
+		font-weight: 900;
+		margin-bottom: .5em;}
+	.entry-content {
+		font-size: 1.1em;
+		line-height: 1.4em;}  
 }
 
 
@@ -232,7 +250,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-wrapper .category-utbildning,
-.category-wrapper .category-education {
+.category-wrapper .category-education,
+.category-wrapper .category-notiser,
+.category-wrapper .category-notices {
 	.entry-title {
 		font-weight: 900;
 /*		margin-bottom: 0!important;*/}
@@ -285,6 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-wrapper .category-utbildning,
 .category-wrapper .category-education,
+.category-wrapper .category-notiser,
+.category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-seminarier,
 .category-wrapper .category-grants,
@@ -310,15 +332,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Meta */
 
-.home-featured, .home-second-row,
-.home-latest, .home-middle,
-.home-news, .news-area, .archive-wrapper,
+.home-featured, 
+.home-second-row,
+.home-latest,
+.home-notices,
+.home-middle,
+.home-news, 
+.news-area, 
+.archive-wrapper,
 .category-wrapper,
 .single-wrapper .entry-header {
 	.entry-meta,
 	.entry-details .label,
 	.entry-time {
 		line-height: 1em;
+		margin-top: 3px;
 		font-size: .9em;
 		color: $c-gray-0;
 		text-transform: uppercase;

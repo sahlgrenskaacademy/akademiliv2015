@@ -9,13 +9,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Register widget areas
-genesis_register_sidebar( array(
-	'id'          => 'home-latest',
-	'name'        => __( 'Home - Latest', 'magazine' ),
-	'description' => __( 'The top-left box, intended for a list with the latest news.', 'magazine' ),
-	'before_title'=> '<h2 class="widget-title widgettitle">',
-	'after_title' => "</h2>\n",
-) );
+
 genesis_register_sidebar( array(
 	'id'          => 'home-featured',
 	'name'        => __( 'Home - Featured', 'magazine' ),
@@ -24,9 +18,23 @@ genesis_register_sidebar( array(
 	'after_title' => "</h2>\n",
 ) );
 genesis_register_sidebar( array(
+	'id'          => 'home-notices',
+	'name'        => __( 'Home - Notices', 'magazine' ),
+	'description' => __( 'The top-right box, intended for a list of notices.', 'magazine' ),
+	'before_title'=> '<h2 class="widget-title widgettitle">',
+	'after_title' => "</h2>\n",
+) );
+genesis_register_sidebar( array(
 	'id'          => 'home-second-row',
 	'name'        => __( 'Home - Second Row', 'magazine' ),
-	'description' => __( 'The three bottom boxes, intended for three of the latest news (auto).', 'magazine' ),
+	'description' => __( 'The two bottom boxes, intended for three of the latest news (auto).', 'magazine' ),
+	'before_title'=> '<h2 class="widget-title widgettitle">',
+	'after_title' => "</h2>\n",
+) );
+genesis_register_sidebar( array(
+	'id'          => 'home-latest',
+	'name'        => __( 'Home - Latest', 'magazine' ),
+	'description' => __( 'The third box, intended for a list with the latest news.', 'magazine' ),
 	'before_title'=> '<h2 class="widget-title widgettitle">',
 	'after_title' => "</h2>\n",
 ) );
