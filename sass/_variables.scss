@@ -77,7 +77,7 @@ $sidebar-bg-color:		rgb(242,255,242);
 
 $heading-margin: 						.6em;
 
-$text-box-padding: 					$box-padding 28px;
+$text-box-padding: 					($box-padding - 10) 28px;
 $image-box-padding: 				24px 20px;
 $news-box-padding: 					29px;
 $category-box-padding: 			20px;

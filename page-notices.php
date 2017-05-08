@@ -39,7 +39,7 @@ function psu_do_custom_loop() {
     'orderby' 					=> 'meta_value_num',
 		'order'         		=> 'DESC',
 		'paged'         		=> $paged, // respect pagination
-		'posts_per_page'		=> '20', // overrides posts per page in theme settings
+		'posts_per_page'		=> '10', // overrides posts per page in theme settings
 	);
 	
 	genesis_custom_loop( wp_parse_args($query_args, $args) ); 
