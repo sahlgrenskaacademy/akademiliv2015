@@ -1,27 +1,22 @@
 <?php
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* THEME 
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## THEME ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Start the engine & Setup Theme
+/// Start the engine & Setup Theme ///////////////////////////////////////////////////////////////
 include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Set Localization (do not remove)
+/// Set Localization (do not remove) ///////////////////////////////////////////////////////////////
 load_child_theme_textdomain( 'magazine', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'magazine' ) );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Child theme (do not remove)
+/// Child theme (do not remove) ///////////////////////////////////////////////////////////////
 define( 'CHILD_THEME_NAME', 'AL Mag 2015' );
 define( 'CHILD_THEME_URL', 'http://www.akademiliv.se' );
 define( 'CHILD_THEME_VERSION', '0.1' );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Enqueue Google Fonts and JS script
+/// Enqueue Google Fonts and JS script ///////////////////////////////////////////////////////////////
 add_action( 'wp_enqueue_scripts', 'magazine_enqueue_scripts' );
 function magazine_enqueue_scripts() {
 	wp_enqueue_script( 'magazine-entry-date', get_bloginfo( 'stylesheet_directory' ) . '/js/entry-date.js', array( 'jquery' ), '1.0.0' );
@@ -30,23 +25,21 @@ function magazine_enqueue_scripts() {
 //	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,500,900', array(), CHILD_THEME_VERSION );
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add HTML5 markup structure
+/// Add HTML5 markup structure ///////////////////////////////////////////////////////////////
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add viewport meta tag for mobile browsers
+
+/// Add viewport meta tag for mobile browsers ///////////////////////////////////////////////////////////////
 add_theme_support( 'genesis-responsive-viewport' );
 
-//* Add support for additional color styles
+/// Add support for additional color styles ///////////////////////////////////////////////////////////////
 //add_theme_support( 'genesis-style-selector', array(
 //	'magazine-pro-blue'   => __( 'Magazine Pro Blue', 'magazine' ),
 //	'magazine-pro-green'  => __( 'Magazine Pro Green', 'magazine' ),
 //	'magazine-pro-orange' => __( 'Magazine Pro Orange', 'magazine' ),
 //) );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add support for custom header
+/// Add support for custom header ///////////////////////////////////////////////////////////////
 add_theme_support( 'custom-header', array(
 	'default-text-color'     => '000000',
 	'header-selector'        => '.site-title a',
@@ -56,18 +49,15 @@ add_theme_support( 'custom-header', array(
 ) );
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove Genesis Layout Settings
+/// Remove Genesis Layout Settings ///////////////////////////////////////////////////////////////
 remove_theme_support( 'genesis-inpost-layouts' );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Unregister primary and secondary sidebar
+/// Unregister primary and secondary sidebar ///////////////////////////////////////////////////////////////
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Set post type to "post" for search page and show 20 posts on each page
+/// Set post type to "post" for search page and show 20 posts on each page ////////////////////////////////
 add_filter('pre_get_posts','psu_search_filter');
 function psu_search_filter($query) {
 	if ($query->is_search) {
@@ -77,8 +67,8 @@ function psu_search_filter($query) {
 	return $query;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Redirect category arhcives to pages
+
+/// Redirect category arhcives to pages ///////////////////////////////////////////////////////////////
 add_action( 'template_redirect', 'psu_category_template_redirect' );
 function psu_category_template_redirect( $url ) {
   if( is_category() ) {
@@ -88,8 +78,7 @@ function psu_category_template_redirect( $url ) {
   }
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove default sidebar text
+/// Remove default sidebar text ///////////////////////////////////////////////////////////////
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_sidebar', 'psu_do_default_sidebar' );
 function psu_do_default_sidebar() {
@@ -99,45 +88,39 @@ function psu_do_default_sidebar() {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Modify title tag
+/// Modify title tag ///////////////////////////////////////////////////////////////
 remove_filter( 'wp_title', 'genesis_default_title', 10, 3 ); //Default title
 add_filter( 'wp_title', 'psu_title_tag', 10, 3 );
 function psu_title_tag($title) {
 	$standard = get_bloginfo('name') .', '. __( "Sahlgrenska Academy's news site", 'magazine' );
-	if ( is_front_page() )
+	if ( is_front_page() ) {
 		return  $standard;
-	else
+	} else {
 		return get_the_title() .' - '. $standard;
+	}
 }
 
 
 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## INCLUDES ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* INCLUDES
-/////////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Include category pages functions 
+/// Include category pages functions  ///////////////////////////////////////////////////////////////
 require_once(get_stylesheet_directory() . '/functions-categories.php');
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Include layout changes
+/// Include layout changes ///////////////////////////////////////////////////////////////
 require_once(get_stylesheet_directory() . '/functions-layout.php');
 
 
 
+// //////////////////////////////////////////////////////////////////////////////////////////
+## HELPER FUNCTIONS ##
+// //////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* HELPER FUNCTIONS
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* return month as text
+/// return month as text ///////////////////////////////////////////////////////////////
 function psu_month_3l($m_n) {
 	$m_t = array(
 		'jan',
@@ -173,49 +156,91 @@ function psu_month_string($m_n) {
 	return $m_t[ $m_n-1 ];
 }
 
+/// get the translated equivalent of an array of ids ////////////////////////////////////////////
+function psu_lang_object_ids($ids_array, $type) {
+ if(function_exists('icl_object_id')) {
+  $res = array();
+  foreach ($ids_array as $id) {
+   $xlat = icl_object_id($id,$type,false);
+   if(!is_null($xlat)) { $res[] = $xlat; }
+  }
+  return $res;
+ } else {
+  return $ids_array;
+ }
+}
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Returns true if is Akademiliv category template page
-function is_akademiliv_category_page() {
+/// get ids and translated ids from a list of categories /////////////////////////////
+function psu_get_cat_ids( $cat_names ) {
+  global $sitepress;
+  // get current and default language to be able to switch between the two
+  $current_language = $sitepress->get_current_language();
+  $default_language = $sitepress->get_default_language();
+  $sitepress->switch_lang($default_language);
+  // get ids for categories 
+  $cat_ids = array();
+  foreach ($cat_names as $value) {
+    $cat_ids[] = get_cat_ID($value);
+  }
+  // switch back
+  $sitepress->switch_lang($current_language);
+  // append with the other language id
+  $cat_ids = array_merge( $cat_ids, psu_lang_object_ids( $cat_ids, 'category' ) );
+  return $cat_ids;
+}
+
+/// Returns true if is Akademiliv category template page ///////////////////////////////////////////////
+function is_akademiliv_category_page($page = '') {
 	global $wp_query;
-	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') ) {
-		return true;
+	if ( $page == '' ) { // if page is not set, try every page template
+  	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-notices.php') ) {
+  		return true;
+  	}
+	} else { // if $page is set try that page template
+  	if ( isset($wp_query) && is_page_template('page-'.$page.'.php') ) {
+  		return true;
+  	}
 	}
 	return false;
 }
 function is_akademiliv_archive() {
 	global $wp_query;
 	if ( isset($wp_query) ) {
-  	if ( is_page_template('page_blog.php') )  // page_blog.php defined in Genesis theme
+  	if ( is_page_template('page_blog.php') ) {  // page_blog.php defined in Genesis theme
 			return true;
-		if ( is_archive() || is_search() ) // auto pages for tags or categories
+		}
+		if ( is_archive() || is_search() ) { // auto pages for tags or categories
 			return true;  
+		}
 	}
 	return false;
 }
 function is_akademiliv_default() {
 	global $wp_query;
 	if ( isset($wp_query) ) {
-		if ( is_page() && !( is_akademiliv_category_page() || is_akademiliv_archive() ) )
+		if ( is_page() && !( is_akademiliv_category_page() || is_akademiliv_archive() ) ) {
 			return true;
+		}
 	}
 	return false;
 }
-function is_akademiliv_single_cat() {
-  if ( 
-  	in_category(12) || in_category(7) || 		// seminars: 12, 7
-		in_category(14) || in_category(13) || 	// grants: 14, 13
-		in_category(10) || in_category(9)   		// education: 10, 9
-	) {
-		return true;
-	} else {
-		return false;
-	}
+function is_akademiliv_single_cat() { // exclude "notices" to present it more like news (comments, metadata)
+  $cat_names = array(
+    'seminars',
+    'grants',
+    'education',
+//    'notices'
+  );
+  $cat_ids = psu_get_cat_ids( $cat_names );
+  foreach ($cat_ids as $value) {
+    if ( in_category( $value ) ) {
+      return true;
+    }
+  }  
+  return false;
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Get and reformat date field value
+/// Get and reformat date field value ///////////////////////////////////////////////////////////////
 function psu_get_date_field( $field ) {
 	$date = genesis_get_custom_field( $field )/1000;
 	$date += 2 * 60*60; // compensate for timezone since jQuery datepicker seems to be unaware of that
@@ -226,16 +251,16 @@ function psu_get_date_field( $field ) {
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* SHORT CODES
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## SHORT CODES ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* This will ensure that the text content of widgets is parsed for shortcodes and those shortcodes are ran.
+
+/// This will ensure that the text content of widgets is parsed for shortcodes and those shortcodes are ran.
 add_filter('widget_text', 'do_shortcode');
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add shortcode for GU logo
+
+/// Add shortcode for GU logo
 add_shortcode('logotype-gu', 'psu_logo_shortcode');
 function psu_logo_shortcode(){
 
@@ -253,20 +278,20 @@ function psu_logo_shortcode(){
 	printf('<a href="%s" title="%s"><img src="%s" alt="%s"></a>', $str[$l]['url'], $str[$l]['title'], $str[$l]['img'], $str[$l]['alt'] );
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add shortcode for other language(s)
+/// Add shortcode for other language(s)
 add_shortcode('switch-language', 'psu_post_languages');
 function psu_post_languages(){
 	$separator = ' | ';
 	$pre_lang = __('På ', 'magazine');
   $languages = icl_get_languages('skip_missing=1');
 
-	if( count($languages) > 1 ){
+	if( count($languages) > 1 ) {
 //    echo __('This post is also available in: ', 'magazine');
-    foreach($languages as $l){
-      if( !$l['active'] ) 
+    foreach($languages as $l) {
+      if( !$l['active'] ) {
       	$langs[] = sprintf('<a href="%s">%s%s</a>', $l['url'], $pre_lang, $l['native_name']); // or translated_name
 //      	$langs[] = '<a href="'.$l['url'].'">'. $l['translated_name']. '</a>';
+      }
 		}
     printf('<section id="switch-language" class="widget widget_text"><div class="widget-wrap">%s</div></section>', join($separator, $langs) );
   }
@@ -274,30 +299,8 @@ function psu_post_languages(){
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-//* Add shortcode for Ungapped form
+//* Add shortcode for GAN form
 add_shortcode('newsletter-form', 'psu_gan_newsletter_form');
-function psu_ungapped_newsletter_form( $atts ) {
-
-	$l = $atts['lang'] == 'en'? 'en': 'sv';
-	$newsletter_form['sv']['success'] = 'http://www.akademiliv.se/nyhetsbrev-anmald';
-	$newsletter_form['sv']['error'] 	= 'http://www.akademiliv.se/nyhetsbrev-fel';
-	$newsletter_form['en']['success'] = 'http://www.akademiliv.se/en/subscribed-newsletter';
-	$newsletter_form['en']['error'] 	= 'http://www.akademiliv.se/en/registration-error';
-
-  return sprintf('
-		<form class="newsletter-form" method="post" action="http://ui.mdlnk.se/Api/Subscriptions/fb1c1a7f-6451-41ba-9685-576ff658d962">
-			<input type="hidden" name="ListIds" value="9d1ba155-88b9-4595-bd5c-84c243c769a9"> 
-			<input type="hidden" name="SubscriptionConfirmedUrl" value="%s">
-			<input type="hidden" name="SubscriptionFailedUrl" value="%s">
-			<input type="email" name="Contact[Email]" required placeholder="%s"><input type="submit" value=" %s ">
-		</form>',
-		$newsletter_form[$l]['success'], // success url
-		$newsletter_form[$l]['error'], // error url
-    __('Your e-mail', 'magazine'), // email placeholder
-    __('Sign up', 'magazine') // submit text  
-  );
-}
-
 function psu_gan_newsletter_form( $atts ) {
   return sprintf('
 		<form class="newsletter-form" method="POST" action="http://gansub.com/s/5rMKyY/">
@@ -311,26 +314,25 @@ function psu_gan_newsletter_form( $atts ) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* GRAVITY FORMS
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## GRAVITY FORMS ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Change date format to unix timestamp "_2" = form ID, "_3" = field ID
+
+/// Change date format to unix timestamp "_2" = form ID, "_3" = field ID //////////////////////////
 add_filter( 'gform_save_field_value_2_3', 'psu_save_field_value', 10, 4 );
 function psu_save_field_value( $value, $entry, $field, $form ) {
   return strtotime( $value )*1000;
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* CATEGORY PAGES LAYOUT
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## CATEGORY PAGES LAYOUT ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* All category stuff inits here 
+/// All category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_category_customization');
 function psu_category_customization() {
 		
@@ -354,35 +356,59 @@ function psu_category_customization() {
 
 		//* Remove Read more link
 		add_filter( 'get_the_content_more_link', 'psu_child_read_more_link' ); 
-		
+		 		
+ 		
 	}
+	
+	// special handeling for notices
+	if ( is_akademiliv_category_page('notices') ) {
+		//* Special case post meta for cateogry notices
+		add_filter( 'genesis_post_info', 'psu_category_notices_info_filter' );	
+    add_action( 'genesis_before_loop', 'psu_notices_init_full_content' );
+	}
+
+  // not in the if bc apply to news archive page also (in the future: change news archive to category page)
+
+	//* Change dots
+  add_filter('excerpt_more', 'psu_excerpt_more'); 		
+
+  //* Custom content archive limit
+  add_filter( 'excerpt_length', 'psu_category_excerpt_length' );
 	
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add genesis taxonomy title and description to category pages
+/// Init full article for notices
+function psu_notices_init_full_content() {
+	// remove_action( 'genesis_post_content', 'genesis_do_post_content' ); /* Pre-HTML5 */
+	remove_action( 'genesis_entry_content', 'genesis_do_post_content' ); /* HTML5 */
+	// add_action( 'genesis_post_content', 'sk_do_post_content' ); /* Pre-HTML5 */
+	add_action( 'genesis_entry_content', 'psu_notices_entry_content' ); /* HTML5 */
+}		
+
+/// Add genesis taxonomy title and description to category pages /////////////////////////////////
 function psu_do_taxonomy_title_description() {
 
 	global $cat_id;
 
 	$term = get_term( $cat_id, 'category' );
-	if ( !$term || !isset( $term->meta ) )
+	if ( !$term || !isset( $term->meta ) ) {
 		return;
+	}
 
 	$headline = $intro_text = '';
 
-	if ( $term->meta['headline'] )
+	if ( $term->meta['headline'] ) {
 		$headline = sprintf( '<h1 class="category-title">%s</h1>', strip_tags( $term->meta['headline'] ) );
-	if ( $term->meta['intro_text'] )
+	}
+	if ( $term->meta['intro_text'] ) {
 		$intro_text = sprintf( '<div class="category-intro-text">%s</div>', apply_filters( 'genesis_term_intro_text_output', $term->meta['intro_text'] ) );
-
-	if ( $headline || $intro_text )
+  }
+	if ( $headline || $intro_text ) {
 		printf( $headline . $intro_text );
-
+  }
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Extra wrapper around category page loop
+/// Extra wrapper around category page loop ///////////////////////////////////////////////////////////////
 function psu_loop_wrapper_open() {
 	global $cat_id;
 	$term = get_term( $cat_id, 'category' );
@@ -392,8 +418,7 @@ function psu_loop_wrapper_close() {
 	printf('</div>');
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-// * Remove Links from Post Titles and set heading to H2 in Genesis
+/// Remove Links from Post Titles and set heading to H2 in Genesis //////////////////////////////////////
 function psu_custom_post_title( $title ) {
 	if( get_post_type( get_the_ID() ) == 'post' ) {
 		$post_title =	sprintf('<a href="%s" title="%s">%s</a>', get_permalink(), the_title_attribute('echo=0'), get_the_title()); // get_the_title( get_the_ID() );
@@ -404,31 +429,111 @@ function psu_custom_post_title( $title ) {
 	return $title;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Filter/remove post meta info
+/// Filter/remove post meta info ///////////////////////////////////////////////////////////////
 function psu_category_info_filter($post_info) {
 //	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
 	$post_info = '';
 	return $post_info;
 }
  
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove Read more link
+/// Special case for meta info on category notices /////////////////////////////////////////
+function psu_category_notices_info_filter($post_info) {
+//	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
+	$post_info = '[post_date]';
+	return $post_info;
+} 
+ 
+/// Remove Read more link ///////////////////////////////////////////////////////////////
 function psu_child_read_more_link() { 
 	return ''; 
+}
+
+/// Set archive excrept length based on category ///////////////////////////////////////////////////////////////
+function psu_category_excerpt_length($length) {
+
+  global $cat_id;
+  switch ( $cat_id ) {
+
+    // notices
+    case 1021: //dev 
+    case 1022:
+    case 1590: //stage
+    case 1591:
+    case 1852: //live 
+    case 1853:
+      return 100;
+
+    // education
+    case 9:
+    case 10:
+      return 55;
+      
+    // grants
+    case 13:
+    case 14:
+      return 60;
+      
+    // seminars
+    case 7:
+    case 12:
+      return 50;
+      
+    // news
+    default:
+      return 70;
+    
+  }
+
+}
+
+
+/// Adjust excerpt dots ///////////////////////////////////////////////////////////////
+function psu_excerpt_more( $more ) {
+	return '…';
+}
+
+
+/// Full article for 'notices' ///////////////////////////////////////////////////////////////
+//  https://gist.github.com/About2git/b5d78dd2bce46bc152a6
+function psu_notices_entry_content() {
+
+	global $post;
+	the_content();
+
+/*
+	if ( is_singular() ) {
+		the_content();
+		if ( is_single() && 'open' === get_option( 'default_ping_status' ) && post_type_supports( $post->post_type, 'trackbacks' ) ) {
+			echo '<!--';
+			trackback_rdf();
+			echo '-->' . "\n";
+		}
+		if ( is_page() && apply_filters( 'genesis_edit_post_link', true ) )
+			edit_post_link( __( '(Edit)', 'genesis' ), '', '' );
+	}
+	elseif ( 'excerpts' === genesis_get_option( 'content_archive' ) && !is_category('notices') ) {
+	echo "då";
+		the_excerpt();
+	}
+	else {
+		if ( genesis_get_option( 'content_archive_limit' ) )
+			the_content_limit( (int) genesis_get_option( 'content_archive_limit' ), __( '[Read more...]', 'genesis' ) );
+		else
+			the_content( __( '[Read more...]', 'genesis' ) );
+	}
+	*/
+
 }
 
 
 
 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## ARCHIVE LAYOUT ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* ARCHIVE LAYOUT
-/////////////////////////////////////////////////////////////////////////////////////////////
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* All category stuff inits here 
+/// All category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_archive_customization');
 function psu_archive_customization() {
 		
@@ -452,14 +557,12 @@ function psu_archive_customization() {
 	
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Extra wrapper around page loop
+/// Extra wrapper around page loop ///////////////////////////////////////////////////////////////
 function psu_loop_wrapper_archive_open() {
 	printf('<div class="archive-wrapper">');
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
 // * Set heading to H2 in Genesis
 function psu_post_title_h2( $title ) {
 	if( get_post_type( get_the_ID() ) == 'post'  && !is_single() ) {
@@ -471,8 +574,7 @@ function psu_post_title_h2( $title ) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Filter/remove post meta info
+/// Filter/remove post meta info ///////////////////////////////////////////////////////////////
 function psu_post_info_filter($post_info) {
 //	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
 	$post_info = '[post_date] [post_edit]';
@@ -483,15 +585,12 @@ function psu_post_info_filter($post_info) {
 
 
 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## SINGLE PAGE LAYOUT ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* SINGLE PAGE LAYOUT
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* All category stuff inits here 
+/// All category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_singlepage_customization');
 function psu_singlepage_customization() {
 		
@@ -516,14 +615,13 @@ function psu_singlepage_customization() {
 	
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Extra wrapper around page loop
+
+/// Extra wrapper around page loop ///////////////////////////////////////////////////////////////
 function psu_loop_wrapper_single_open() {
 	printf('<div class="single-wrapper">');
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Customize the entry meta in the entry footer
+/// Customize the entry meta in the entry footer ///////////////////////////////////////////////////////////////
 function psu_post_meta_filter($post_meta) {
 //	$post_meta = '[post_categories] [post_tags]';
 	$post_meta = sprintf('<div class="author-wrapper">%s [post_author_posts_link]</div>[post_tags]', __('By:', 'magazine') );
@@ -531,8 +629,8 @@ function psu_post_meta_filter($post_meta) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add the entry header markup and entry title togheter with featured image
+
+/// Add the entry header markup and entry title togheter with featured image /////////////////////////////////////
 function psu_single_add_entry_header() {
 
 	genesis_entry_header_markup_open();
@@ -542,13 +640,13 @@ function psu_single_add_entry_header() {
 
 		psu_output_single_post_featured_image();
 		genesis_do_post_title();
-		if (!is_akademiliv_single_cat()) psu_do_post_info();
+		if (!is_akademiliv_single_cat() ) { psu_do_post_info(); } // XXX
 		genesis_entry_header_markup_close();
 
 
 	} else {
 		genesis_do_post_title();
-		if (!is_akademiliv_single_cat()) psu_do_post_info();
+		if (!is_akademiliv_single_cat()) { psu_do_post_info(); }
 		genesis_entry_header_markup_close();
 		add_action( 'genesis_entry_content', 'psu_output_single_post_featured_image', 3);
 	}
@@ -556,9 +654,8 @@ function psu_single_add_entry_header() {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add features image on single post
-//* http://designsbynickthegeek.com/tutorials/genesis-explained-image-functions
+/// Add features image on single post ///////////////////////////////////////////////////////////////
+// http://designsbynickthegeek.com/tutorials/genesis-explained-image-functions
 function psu_output_single_post_featured_image() {
 
 	$thumb = psu_get_thumbnail_max_size();	
@@ -585,8 +682,7 @@ function psu_output_single_post_featured_image() {
 	
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Custom post info function (since it was removed and then manually outputed again
+/// Custom post info function (since it was removed and then manually outputed again //////////////////
 function psu_do_post_info() {
 	if ( !is_page() ) {
 		$post_info = '[post_date] [post_comments] [post_edit]';
@@ -594,8 +690,7 @@ function psu_do_post_info() {
 	}
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Return array with size, width, height and crop for thumbnail
+/// Return array with size, width, height and crop for thumbnail /////////////////////
 function psu_get_thumbnail_max_size() {
 	$img_width 	  = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); // full = original
 	$img_width		= $img_width[1];
@@ -623,30 +718,28 @@ function psu_get_thumbnail_max_size() {
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* SINGLE CATEGORY PAGE LAYOUT
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+/// SINGLE CATEGORY PAGE LAYOUT
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* All single page category stuff inits here 
+/// All single page category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_single_cat_customization');
 function psu_single_cat_customization() {
 		
-	if ( is_akademiliv_single_cat() ) { 
+	if ( is_akademiliv_single_cat() ) {  // XXX
 	
 		//* Add custom fields to the end of every post page.
 		add_filter( 'the_content', 'psu_single_custom_fields', 20 );
-
+		
 		//* Customize the entry meta in the entry footer
-		add_filter( 'genesis_post_meta', 'psu_cat_post_meta_filter' );	
+		add_filter( 'genesis_post_meta', 'psu_cat_post_meta_filter' );		
 		
 	}
 
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add custom fields to the end of every post page.
+/// Add custom fields to the end of every post page. //////////////////////////////////////
 function psu_single_custom_fields( $content ) {
 
 	echo '<header class="entry-header category-details-box"><div class="box-inner">';
@@ -668,8 +761,7 @@ function psu_single_custom_fields( $content ) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Customize the entry meta in the entry footer
+/// Customize the entry meta in the entry footer ///////////////////////////////////////////////////////////////
 function psu_cat_post_meta_filter($post_meta) {
 	return '';
 }
@@ -679,16 +771,13 @@ function psu_cat_post_meta_filter($post_meta) {
 
 
 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## IMAGE & VIDEO FUNCTIONS ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* IMAGE & VIDEO FUNCTIONS
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add new image sizes: width, height, crop(x_crop,y_crop)  x_crop: ‘left’ ‘center’, ‘right’ -- y_crop: ‘top’, ‘center’, ‘bottom’.
+/// Add new image sizes: width, height, crop(x_crop,y_crop)  x_crop: ‘left’ ‘center’, ‘right’ -- y_crop: ‘top’, ‘center’, ‘bottom’.
 add_image_size( 'home-box', 				300, 200, array('center','center') );
 add_image_size( 'home-box-dubble', 	600, 200, array('center','center') );
 add_image_size( 'news-listing', 		200, 133, array('center','center') );
@@ -705,12 +794,11 @@ add_image_size( 'admin-col', 				100, 67, array('center','center') );
 //add_image_size( 'sidebar-thumbnail', 100, 100, true );
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Default link images to 'none' (instead of 'file')
+/// Default link images to 'none' (instead of 'file') ///////////////////////////////////////////////
 update_option('image_default_link_type','none');
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Register the three useful image sizes for use in Add Media modal
+
+/// Register the three useful image sizes for use in Add Media modal /////////////////////////////
 add_filter( 'image_size_names_choose', 'psu_custom_sizes_admin' );
 function psu_custom_sizes_admin( $sizes ) {
 	unset( $sizes['thumbnail'] );
@@ -726,8 +814,7 @@ function psu_custom_sizes_admin( $sizes ) {
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* If no post thumb nail, get the old one from custom fields "thumbs"
+/// If no post thumb nail, get the old one from custom fields "thumbs"  ///////////////////////////
 add_filter ( 'genesis_pre_get_image', 'pontus_try_custom_thumb', 10, 3 );
 function pontus_try_custom_thumb( $output, $args, $post ) {
 	
@@ -753,18 +840,17 @@ function pontus_try_custom_thumb( $output, $args, $post ) {
 	$html .= ' />';
 	
 	//* Determine output
-	if ( 'html' === mb_strtolower( $args['format'] ) )
+	if ( 'html' === mb_strtolower( $args['format'] ) ) {
 		$output = $html;
-	elseif ( 'url' === mb_strtolower( $args['format'] ) )
+	} elseif ( 'url' === mb_strtolower( $args['format'] ) ) {
 		$output = $url;
-	else
+	} else {
 		$output = $src;
-
+  }
 	return $output;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Get sizes of custom image size definitions
+/// Get sizes of custom image size definitions ///////////////////////////////////////////////////////////////
 function psu_get_defined_sizes( $_size ) {
 	global $_wp_additional_image_sizes;
 	$sizes = array();
@@ -783,16 +869,16 @@ function psu_get_defined_sizes( $_size ) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Changes the default embed sizes based on site layout
+
+/// Changes the default embed sizes based on site layout /////////////////////////////////////////////////
 add_filter( 'embed_defaults', 'psu_embed_defaults' );
 function psu_embed_defaults( $defaults ) {  
 
-	if ( is_single() )
+	if ( is_single() ) {
 		return array( 'width'  => 720, 'height' => 405 );
-	else
+	} else {
 		return $defaults;
-
+  }
 }
 
 
@@ -801,61 +887,54 @@ function psu_embed_defaults( $defaults ) {
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* COMMENTS
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## COMMENTS ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Modify the size of the Gravatar in the author box
+
+/// Modify the size of the Gravatar in the author box /////////////////////////////////////////
 add_filter( 'genesis_author_box_gravatar_size', 'magazine_author_box_gravatar' );
 function magazine_author_box_gravatar( $size ) {
 	return 140;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Modify the size of the Gravatar in the entry comments
+/// Modify the size of the Gravatar in the entry comments /////////////////////////////////////////
 add_filter( 'genesis_comment_list_args', 'magazine_comments_gravatar' );
 function magazine_comments_gravatar( $args ) {
 	$args['avatar_size'] = 100;
 	return $args;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove comment form allowed tags
+/// Remove comment form allowed tags /////////////////////////////////////////
 add_filter( 'comment_form_defaults', 'magazine_remove_comment_form_allowed_tags' );
 function magazine_remove_comment_form_allowed_tags( $defaults ) {
 	$defaults['comment_notes_after'] = '';
 	return $defaults;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Modify comments title text in comments
+/// Modify comments title text in comments /////////////////////////////////////////
 add_filter( 'genesis_title_comments', 'psu_genesis_title_comments' );
 function psu_genesis_title_comments() {
 	$title = sprintf('<h2>%s</h2>', __('Comments', 'magazine') );
 	return $title;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Modify the speak your mind title in comments
+/// Modify the speak your mind title in comments /////////////////////////////////////////
 add_filter( 'comment_form_defaults', 'psu_comment_form_defaults' );
 function psu_comment_form_defaults( $defaults ) { 
 	$defaults['title_reply'] = __( 'Leave a Comment', 'magazine' );
 	return $defaults;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove URL text from WordPress comment form
+/// Remove URL text from WordPress comment form /////////////////////////////////////////
 add_filter('comment_form_default_fields','psu_disable_comment_url');
 function psu_disable_comment_url($fields) { 
 	unset($fields['url']);
 	return $fields;
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-// Removes comment form from category posts
+/// Removes comment form from category posts /////////////////////////////////////////
 add_action('genesis_before_loop', 'remove_comment_support', 100);	
 function remove_comment_support() {
 	if ( is_akademiliv_single_cat() ) {
@@ -865,12 +944,11 @@ function remove_comment_support() {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* AL_SIDBAR CUSTOM POST TYPE
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## AL_SIDBAR CUSTOM POST TYPE ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Define Custom Post Type "al_sidebar_post"
+/// Define Custom Post Type "al_sidebar_post" /////////////////////////////////////////
 add_action( 'init', 'psu_create_al_sidebar_post_type' );
 function psu_create_al_sidebar_post_type() {
 	$labels = array( 
@@ -902,9 +980,8 @@ function psu_create_al_sidebar_post_type() {
 	register_post_type( 'al_sidebar_post', $args );
 } 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Output sidebar posts loop
-//* http://code.tutsplus.com/tutorials/use-a-custom-post-type-for-your-sidebar-content--cms-23830
+/// Output sidebar posts loop /////////////////////////////////////////
+// http://code.tutsplus.com/tutorials/use-a-custom-post-type-for-your-sidebar-content--cms-23830
 function psu_al_sidebar() {
      
 	$args = array( 
@@ -965,14 +1042,14 @@ function psu_al_sidebar() {
 	}
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add the logo area sidebar
+/// Add the logo area sidebar /////////////////////////////////////////
 add_action( 'genesis_sidebar', 'psu_al_sidebar_logic' );
 function psu_al_sidebar_logic() {
 	genesis_structural_wrap( 'sidebar' );
 	do_action( 'genesis_before_sidebar_widget_area' );
-	if (is_active_sidebar( 'al-sidebar' ) )
+	if (is_active_sidebar( 'al-sidebar' ) ) {
 	 	genesis_widget_area( 'al-sidebar' ); 
+	}
 	psu_al_sidebar();
 	do_action( 'genesis_after_sidebar_widget_area' );
 	genesis_structural_wrap( 'sidebar', 'close' );
@@ -984,12 +1061,12 @@ function psu_al_sidebar_logic() {
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* ADMIN CHANGES
-/////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////
+## ADMIN CHANGES ##
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove Genesis Page Templates
+
+/// Remove Genesis Page Templates /////////////////////////////////////////
 add_filter( 'theme_page_templates', 'psu_remove_genesis_page_templates' );
 function psu_remove_genesis_page_templates( $page_templates ) {
 //	unset( $page_templates['page_archive.php'] );
@@ -999,26 +1076,22 @@ function psu_remove_genesis_page_templates( $page_templates ) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove Genesis in-post SEO Settings
+/// Remove Genesis in-post SEO Settings /////////////////////////////////////////
 remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove Genesis Layout Settings
+/// Remove Genesis Layout Settings /////////////////////////////////////////
 remove_theme_support( 'genesis-inpost-layouts' );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add admin css
-add_action('admin_enqueue_scripts', 'pontus_admin_theme_style');
-function pontus_admin_theme_style() {
-  wp_enqueue_style('admin-customization', get_bloginfo( 'stylesheet_directory' )  . '/admin-customization.css');
+/// Add admin css /////////////////////////////////////////
+add_action('admin_enqueue_scripts', 'psu_admin_theme_style');
+function psu_admin_theme_style() {
+  wp_enqueue_style('admin-customization', get_bloginfo( 'stylesheet_directory' )  . '/admin-customization.css?'.time());
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Modifying TinyMCE editor to remove unused items.
-//* https://codex.wordpress.org/TinyMCE
-add_filter( 'tiny_mce_before_init', 'psu_customize_tinymce' );
+/// Modifying TinyMCE editor to remove unused items. /////////////////////////////////////////
+// https://codex.wordpress.org/TinyMCE
+//add_filter( 'tiny_mce_before_init', 'psu_customize_tinymce' );
 function psu_customize_tinymce( $in ) {
 //	$in['remove_linebreaks'] = false;
 //	$in['gecko_spellcheck'] = false;
@@ -1045,8 +1118,7 @@ function psu_customize_tinymce( $in ) {
 	return $in;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Remove meta boxes
+/// Remove meta boxes /////////////////////////////////////////
 add_action('admin_menu','remove_my_post_metaboxes');
 function remove_my_post_metaboxes() {
 //	remove_meta_box( 'authordiv','post','normal' ); // Author Metabox

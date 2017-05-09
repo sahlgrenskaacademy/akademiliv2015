@@ -66,12 +66,15 @@ $susy: (
 
 
 .home-latest,
+.home-notices,
 .home-featured .entry,
 .home-second-row .entry,
 .home-middle .widget,
 .category-wrapper	.category-utbildning,
+.category-wrapper	.category-notiser,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-education,
+.category-wrapper .category-notices,
 .category-wrapper .category-grants {
 
 	@media only screen and (min-width: 640px) {
@@ -140,17 +143,20 @@ aside img {
 	@media only screen and (min-width: 640px) {
 	
 		.home-latest {
+			@include span(3 of 9 last); }
+
+		.home-notices {
 			@include span(3 of 9); }
 	
 		.home-featured {
-			@include span(6 of 9 last); 
+			@include span(6 of 9); 
 			.post {
 				@include span(3 of 6);}}
 	
 		.home-second-row {
-			@include span(9 of 9); 
+			@include span(6 of 9); 
 			.post {
-				@include span(3 of 9);}}
+				@include span(3 of 6);}}
 	
 		.home-middle {
 			@include span(9 of 9);
@@ -178,6 +184,8 @@ aside img {
 				@include span(3 of 9);}
 
 			.category-seminars,
+			.category-notiser,
+			.category-notices,
 			.category-seminarier {
 				@include span(4.5 of 9);}
 				

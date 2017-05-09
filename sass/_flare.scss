@@ -71,6 +71,7 @@ li.comment {
 /* the box look */
 
 .home-latest,
+.home-notices,
 .home-featured .entry,
 .home-second-row .entry,
 .home-middle .widget,
@@ -81,15 +82,18 @@ li.comment {
 .single-wrapper .entry,
 body.page .category-seminarier,
 body.page .category-utbildning,
+body.page .category-notiser,
 body.page .category-bidrag,
 body.page .category-seminars,
 body.page .category-education,
+body.page .category-notices,
 body.page .category-grants,
 .entry-comments,
 .comment-respond,
 .sidebar aside {
 	background: $c-white;
-	border: 1px solid $box-border-color!important;}
+	border: 1px solid $box-border-color!important;
+	overflow: hidden;}
 	
 /*body.page .category-grants,
 body.page .category-bidrag {
@@ -112,6 +116,7 @@ body.page .category-utbildning {
 .single-wrapper .entry,
 .archive-wrapper,
 .home-latest,
+.home-notices,
 .home-middle .widget-wrap {
 	padding: $text-box-padding;}
 	
@@ -242,9 +247,11 @@ body.page-template .sidebar {
 .category-wrapper {
 	.category-seminarier,
 	.category-utbildning,
+	.category-notiser,
 	.category-bidrag,
 	.category-seminars,
 	.category-education,
+	.category-notices,
 	.category-grants {
 		padding: $category-box-padding;	
 		.entry-content p,
@@ -309,7 +316,10 @@ body.page-template .sidebar {
 			color: $text-link-active-color;}}}
 			
 } 
-	
+
+.home-notices {
+  background: $c-secondary-2-4;}
+
 			
 .home-news, 
 .news-area, 
