@@ -177,7 +177,7 @@ function psu_get_cat_ids( $cat_names ) {
   $current_language = $sitepress->get_current_language();
   $default_language = $sitepress->get_default_language();
   $sitepress->switch_lang($default_language);
-  // get ids for categories 
+  // get ids for categories
   $cat_ids = array();
   foreach ($cat_names as $value) {
     $cat_ids[] = get_cat_ID($value);
@@ -210,7 +210,7 @@ function is_akademiliv_archive() {
 			return true;
 		}
 		if ( is_archive() || is_search() ) { // auto pages for tags or categories
-			return true;  
+			return true;
 		}
 	}
 	return false;
@@ -236,7 +236,7 @@ function is_akademiliv_single_cat() { // exclude "notices" to present it more li
     if ( in_category( $value ) ) {
       return true;
     }
-  }  
+  }
   return false;
 }
 
@@ -265,7 +265,7 @@ add_shortcode('logotype-gu', 'psu_logo_shortcode');
 function psu_logo_shortcode(){
 
 	$l = ICL_LANGUAGE_CODE == 'en'? 'en': 'sv';
-	
+
 	$str['sv']['url'] = 		'http://gu.se';
 	$str['sv']['title'] = 	'Göteborgs universitet';
 	$str['sv']['img'] = 		'http://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
@@ -309,7 +309,7 @@ function psu_gan_newsletter_form( $atts ) {
       <input type="submit" value=" %s " />
     </form>',
     __('Your e-mail', 'magazine'), // email placeholder
-    __('Sign up', 'magazine') // submit text  
+    __('Sign up', 'magazine') // submit text
   );
 }
 
@@ -335,46 +335,46 @@ function psu_save_field_value( $value, $entry, $field, $form ) {
 /// All category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_category_customization');
 function psu_category_customization() {
-		
-	if ( is_akademiliv_category_page() ) { 
-	
+
+	if ( is_akademiliv_category_page() ) {
+
 		//* Add genesis taxonomy title and description to category pages
 		add_action( 'genesis_before_loop', 'psu_do_taxonomy_title_description', 15 );
-	
+
 		//* Extra wrapper around category page loop
-		add_action( 'genesis_before_loop', 'psu_loop_wrapper_open'  ); 
-		add_action( 'genesis_after_loop', 'psu_loop_wrapper_close'  ); 
-	
+		add_action( 'genesis_before_loop', 'psu_loop_wrapper_open'  );
+		add_action( 'genesis_after_loop', 'psu_loop_wrapper_close'  );
+
 		// * Remove Links from Post Titles and set heading to H2 in Genesis
 		add_filter( 'genesis_post_title_output', 'psu_custom_post_title' );
-	
+
 		//* Filter/remove post meta info
 		add_filter( 'genesis_post_info', 'psu_category_info_filter' );
-	
+
 		//* Remove featured image
 		remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 
 		//* Remove Read more link
-		add_filter( 'get_the_content_more_link', 'psu_child_read_more_link' ); 
-		 		
- 		
+		add_filter( 'get_the_content_more_link', 'psu_child_read_more_link' );
+
+
 	}
-	
+
 	// special handeling for notices
 	if ( is_akademiliv_category_page('notices') ) {
 		//* Special case post meta for cateogry notices
-		add_filter( 'genesis_post_info', 'psu_category_notices_info_filter' );	
+		add_filter( 'genesis_post_info', 'psu_category_notices_info_filter' );
     add_action( 'genesis_before_loop', 'psu_notices_init_full_content' );
 	}
 
   // not in the if bc apply to news archive page also (in the future: change news archive to category page)
 
 	//* Change dots
-  add_filter('excerpt_more', 'psu_excerpt_more'); 		
+  add_filter('excerpt_more', 'psu_excerpt_more');
 
   //* Custom content archive limit
   add_filter( 'excerpt_length', 'psu_category_excerpt_length' );
-	
+
 }
 
 /// Init full article for notices
@@ -383,7 +383,7 @@ function psu_notices_init_full_content() {
 	remove_action( 'genesis_entry_content', 'genesis_do_post_content' ); /* HTML5 */
 	// add_action( 'genesis_post_content', 'sk_do_post_content' ); /* Pre-HTML5 */
 	add_action( 'genesis_entry_content', 'psu_notices_entry_content' ); /* HTML5 */
-}		
+}
 
 /// Add genesis taxonomy title and description to category pages /////////////////////////////////
 function psu_do_taxonomy_title_description() {
@@ -435,17 +435,17 @@ function psu_category_info_filter($post_info) {
 	$post_info = '';
 	return $post_info;
 }
- 
+
 /// Special case for meta info on category notices /////////////////////////////////////////
 function psu_category_notices_info_filter($post_info) {
 //	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
 	$post_info = '[post_date]';
 	return $post_info;
-} 
- 
+}
+
 /// Remove Read more link ///////////////////////////////////////////////////////////////
-function psu_child_read_more_link() { 
-	return ''; 
+function psu_child_read_more_link() {
+	return '';
 }
 
 /// Set archive excrept length based on category ///////////////////////////////////////////////////////////////
@@ -455,11 +455,11 @@ function psu_category_excerpt_length($length) {
   switch ( $cat_id ) {
 
     // notices
-    case 1021: //dev 
+    case 1021: //dev
     case 1022:
     case 1590: //stage
     case 1591:
-    case 1852: //live 
+    case 1852: //live
     case 1853:
       return 100;
 
@@ -467,21 +467,21 @@ function psu_category_excerpt_length($length) {
     case 9:
     case 10:
       return 55;
-      
+
     // grants
     case 13:
     case 14:
       return 60;
-      
+
     // seminars
     case 7:
     case 12:
       return 50;
-      
+
     // news
     default:
       return 70;
-    
+
   }
 
 }
@@ -536,25 +536,25 @@ function psu_notices_entry_content() {
 /// All category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_archive_customization');
 function psu_archive_customization() {
-		
-	if ( is_akademiliv_archive() ) { 
-	
+
+	if ( is_akademiliv_archive() ) {
+
 		//* Extra wrapper around category page loop
-		add_action( 'genesis_before_loop', 'psu_loop_wrapper_archive_open'  ); 
-		add_action( 'genesis_after_loop', 'psu_loop_wrapper_close'  ); 
-	
+		add_action( 'genesis_before_loop', 'psu_loop_wrapper_archive_open'  );
+		add_action( 'genesis_after_loop', 'psu_loop_wrapper_close'  );
+
 		// * Remove Links from Post Titles and set heading to H2 in Genesis
-		add_filter( 'genesis_post_title_output', 'psu_post_title_h2' );		
-		
+		add_filter( 'genesis_post_title_output', 'psu_post_title_h2' );
+
 		//* Filter/remove post meta info
-		add_filter( 'genesis_post_info', 'psu_post_info_filter' );		
+		add_filter( 'genesis_post_info', 'psu_post_info_filter' );
 
 		//* Change order of title and image in list
 		remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
-		add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );		
-	
+		add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
+
 	}
-	
+
 }
 
 /// Extra wrapper around page loop ///////////////////////////////////////////////////////////////
@@ -593,26 +593,26 @@ function psu_post_info_filter($post_info) {
 /// All category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_singlepage_customization');
 function psu_singlepage_customization() {
-		
-	if ( is_akademiliv_default() || is_single() ) { 
+
+	if ( is_akademiliv_default() || is_single() ) {
 
 		//* Extra wrapper around category page loop
-		add_action( 'genesis_before_loop', 'psu_loop_wrapper_single_open'  ); 
-		add_action( 'genesis_after_loop', 'psu_loop_wrapper_close'  ); 
-	
+		add_action( 'genesis_before_loop', 'psu_loop_wrapper_single_open'  );
+		add_action( 'genesis_after_loop', 'psu_loop_wrapper_close'  );
+
 		//* Customize the entry meta in the entry footer
-		add_filter( 'genesis_post_meta', 'psu_post_meta_filter' );	
-		
+		add_filter( 'genesis_post_meta', 'psu_post_meta_filter' );
+
 		//* Remove the entry header markup and entry title
 		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );		
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 
 		//* Add the entry header markup and entry title togheter with featured image and post info
 		add_action( 'genesis_entry_header', 'psu_single_add_entry_header' );
 	}
-	
+
 }
 
 
@@ -635,7 +635,7 @@ function psu_single_add_entry_header() {
 
 	genesis_entry_header_markup_open();
 
-	$thumb = psu_get_thumbnail_max_size();		
+	$thumb = psu_get_thumbnail_max_size();
 	if ( $thumb['size'] == 'post-full' ) {
 
 		psu_output_single_post_featured_image();
@@ -658,28 +658,28 @@ function psu_single_add_entry_header() {
 // http://designsbynickthegeek.com/tutorials/genesis-explained-image-functions
 function psu_output_single_post_featured_image() {
 
-	$thumb = psu_get_thumbnail_max_size();	
+	$thumb = psu_get_thumbnail_max_size();
 	if ( $thumb['size'] !== false && $thumb['size'] != 'post-medium' ) {
 
 		$img_id = get_post_thumbnail_id();
-		$img = genesis_get_image( array( 
-			'format' => 'html', 
-			'size' => $thumb['size'], 
-			'attr' => array( 'class' => 'featured-image size-'. $thumb['size'] ) 
+		$img = genesis_get_image( array(
+			'format' => 'html',
+			'size' => $thumb['size'],
+			'attr' => array( 'class' => 'featured-image size-'. $thumb['size'] )
 		));
-		
+
 		$caption = get_post($img_id)->post_excerpt;
 		if ( $caption != '' ) {
 			$figcaption = sprintf('<figcaption class="wp-caption-text">%s</figcaption>', $caption);
 		} else {
 			$figcaption = '';
 		}
-		
+
 		$img_size = psu_get_defined_sizes( $thumb['size'] );
 		printf( '<figure id="attachment_%s" style="width: %spx;" class="wp-caption featured-figure">%s%s</figure>', $img_id, $img_size['width'], $img, $figcaption );
-	
+
 	}
-	
+
 }
 
 /// Custom post info function (since it was removed and then manually outputed again //////////////////
@@ -702,14 +702,14 @@ function psu_get_thumbnail_max_size() {
 		$r['size'] = 'post-full';
 	} elseif ( $img_width >= $center['width']) {
 		$r = $center;
-		$r['size'] = 'post-center';	
+		$r['size'] = 'post-center';
 	} elseif ( $img_width >= $medium['width']) {
 		$r = $medium;
-		$r['size'] = 'post-medium';	
+		$r['size'] = 'post-medium';
 	} else {
 		$r = array('size' => false);
 	}
-	return $r;	
+	return $r;
 }
 
 
@@ -725,15 +725,15 @@ function psu_get_thumbnail_max_size() {
 /// All single page category stuff inits here  ///////////////////////////////////////////////////////////////
 add_action('genesis_before', 'psu_single_cat_customization');
 function psu_single_cat_customization() {
-		
+
 	if ( is_akademiliv_single_cat() ) {  // XXX
-	
+
 		//* Add custom fields to the end of every post page.
 		add_filter( 'the_content', 'psu_single_custom_fields', 20 );
-		
+
 		//* Customize the entry meta in the entry footer
-		add_filter( 'genesis_post_meta', 'psu_cat_post_meta_filter' );		
-		
+		add_filter( 'genesis_post_meta', 'psu_cat_post_meta_filter' );
+
 	}
 
 }
@@ -749,14 +749,14 @@ function psu_single_custom_fields( $content ) {
 		psu_seminars_custom_fields_aftercontent();
   } elseif ( in_category(14) || in_category(13) ) { // grants: 14, 13
 		psu_grants_custom_fields_header();
-		psu_grants_custom_fields_aftercontent();  
+		psu_grants_custom_fields_aftercontent();
   } elseif( in_category(10) || in_category(9) ) { // education: 10, 9
 		psu_education_custom_fields_header();
-		psu_education_custom_fields_aftercontent();  
+		psu_education_custom_fields_aftercontent();
   }
-    
+
 	echo '<div style="clear:both;"></div></div></header>';
-  
+
   return $custom_content . $content;
 }
 
@@ -817,7 +817,7 @@ function psu_custom_sizes_admin( $sizes ) {
 /// If no post thumb nail, get the old one from custom fields "thumbs"  ///////////////////////////
 add_filter ( 'genesis_pre_get_image', 'pontus_try_custom_thumb', 10, 3 );
 function pontus_try_custom_thumb( $output, $args, $post ) {
-	
+
 	$post_thumb = get_post_custom_values( 'thumbs', $post->ID );
 	if ( has_post_thumbnail( $post->ID ) || !is_array($post_thumb) ) {
 		//* return false = countiue genesis_get_image as usual
@@ -827,7 +827,7 @@ function pontus_try_custom_thumb( $output, $args, $post ) {
 	$url = $post_thumb[0];
 	//* Source path, relative to the root
 	$src = str_replace( home_url(), '', $url );
-	
+
 	//* Create the html output
 	$args['attr']['class'] = $args['attr']['class'] . ' old-thumb';
 	$attr = array_map( 'esc_attr', $args['attr'] );
@@ -838,7 +838,7 @@ function pontus_try_custom_thumb( $output, $args, $post ) {
 	$sizes = psu_get_defined_sizes( $args['size'] );
 	$html .= ' style="width: '. $sizes['width'] .'px; height: '. $sizes['height'] .'px;"';
 	$html .= ' />';
-	
+
 	//* Determine output
 	if ( 'html' === mb_strtolower( $args['format'] ) ) {
 		$output = $html;
@@ -859,12 +859,12 @@ function psu_get_defined_sizes( $_size ) {
 	  $sizes['height'] = get_option( $_size . '_size_h' );
 	  $sizes['crop'] = (bool) get_option( $_size . '_crop' );
 	} elseif ( isset( $_wp_additional_image_sizes[ $_size ] ) ) {
-	  $sizes = array( 
+	  $sizes = array(
 		  'width' => $_wp_additional_image_sizes[ $_size ]['width'],
 		  'height' => $_wp_additional_image_sizes[ $_size ]['height'],
 		  'crop' =>  $_wp_additional_image_sizes[ $_size ]['crop']
 		);
-	}	
+	}
 	return $sizes;
 }
 
@@ -872,7 +872,7 @@ function psu_get_defined_sizes( $_size ) {
 
 /// Changes the default embed sizes based on site layout /////////////////////////////////////////////////
 add_filter( 'embed_defaults', 'psu_embed_defaults' );
-function psu_embed_defaults( $defaults ) {  
+function psu_embed_defaults( $defaults ) {
 
 	if ( is_single() ) {
 		return array( 'width'  => 720, 'height' => 405 );
@@ -922,20 +922,20 @@ function psu_genesis_title_comments() {
 
 /// Modify the speak your mind title in comments /////////////////////////////////////////
 add_filter( 'comment_form_defaults', 'psu_comment_form_defaults' );
-function psu_comment_form_defaults( $defaults ) { 
+function psu_comment_form_defaults( $defaults ) {
 	$defaults['title_reply'] = __( 'Leave a Comment', 'magazine' );
 	return $defaults;
 }
 
 /// Remove URL text from WordPress comment form /////////////////////////////////////////
 add_filter('comment_form_default_fields','psu_disable_comment_url');
-function psu_disable_comment_url($fields) { 
+function psu_disable_comment_url($fields) {
 	unset($fields['url']);
 	return $fields;
 }
 
 /// Removes comment form from category posts /////////////////////////////////////////
-add_action('genesis_before_loop', 'remove_comment_support', 100);	
+add_action('genesis_before_loop', 'remove_comment_support', 100);
 function remove_comment_support() {
 	if ( is_akademiliv_single_cat() ) {
     remove_post_type_support( 'post', 'comments' );
@@ -951,7 +951,7 @@ function remove_comment_support() {
 /// Define Custom Post Type "al_sidebar_post" /////////////////////////////////////////
 add_action( 'init', 'psu_create_al_sidebar_post_type' );
 function psu_create_al_sidebar_post_type() {
-	$labels = array( 
+	$labels = array(
 	  'name' => __( 'Sidebars', 'magazine' ),
 	  'singular_name' => __( 'Sidebar', 'magazine' ),
 	  'add_new' => __( 'New Sidebar', 'magazine' ),
@@ -969,34 +969,34 @@ function psu_create_al_sidebar_post_type() {
 	  'public' => true,
 	  'hierarchical' => false,
 	  'supports' => array(
-	    'title', 
-	    'editor', 
-//	    'excerpt', 
-	    'custom-fields', 
+	    'title',
+	    'editor',
+//	    'excerpt',
+	    'custom-fields',
 	    'thumbnail',
 	    'page-attributes'
 	  ),
 	);
 	register_post_type( 'al_sidebar_post', $args );
-} 
+}
 
 /// Output sidebar posts loop /////////////////////////////////////////
 // http://code.tutsplus.com/tutorials/use-a-custom-post-type-for-your-sidebar-content--cms-23830
 function psu_al_sidebar() {
-     
-	$args = array( 
+
+	$args = array(
 		'post_type' 			=> 'al_sidebar_post',
 		'orderby'					=> 'menu_order',
 		'order'						=> 'ASC',
 		'posts_per_page' 	=> -1,
 	);
-	 
+
 	$query = new WP_query ( $args );
 	if ( $query->have_posts() ) {
 
 		/* start the loop */
-		while ( $query->have_posts() ) : $query->the_post(); 
-		
+		while ( $query->have_posts() ) : $query->the_post();
+
 			$cf_webb = trim( genesis_get_custom_field('webb')  );
 			if ( $cf_webb != '' ) {
 				if ( strpos( $cf_webb, 'http' ) === false )
@@ -1004,39 +1004,39 @@ function psu_al_sidebar() {
 			} else {
 		  	$cf_webb = false;
 		  }
-	
+
 			printf('<aside id="post-%s"', get_the_ID());
 				post_class( 'al_sidebar_post' );
-			printf('>');		
+			printf('>');
 
 			if ($cf_webb !== false) {
 				$link_start 	= sprintf('<a href="%s">', $cf_webb);
 				$link_end 		= '</a>';
 			} else {
 				$link_start 	= '';
-				$link_end 		= '';			
+				$link_end 		= '';
 			}
 
 			if ( has_post_thumbnail() ) {
-			
+
 				echo $link_start;
 				the_post_thumbnail( 'al-sidebar', array(
           'class' => 'aligncenter',
           'alt'   => trim(strip_tags( $wp_postmeta->_wp_attachment_image_alt ))
-	      ) );				
+	      ) );
 	      echo $link_end;
 
 			} // end thumbnail
-				
+
 			printf('<div class="entry-wrapper"><h2 class="sidebar-title">');
 			echo $link_start;
 			the_title();
       echo $link_end;
 
 			printf('</h2><section class="sidebar-content">');
-			the_content();		    
+			the_content();
 			printf('</section></div></aside>');
-	
+
 		endwhile; /* end the loop*/
 	  wp_reset_postdata();
 	}
@@ -1048,7 +1048,7 @@ function psu_al_sidebar_logic() {
 	genesis_structural_wrap( 'sidebar' );
 	do_action( 'genesis_before_sidebar_widget_area' );
 	if (is_active_sidebar( 'al-sidebar' ) ) {
-	 	genesis_widget_area( 'al-sidebar' ); 
+	 	genesis_widget_area( 'al-sidebar' );
 	}
 	psu_al_sidebar();
 	do_action( 'genesis_after_sidebar_widget_area' );
@@ -1124,7 +1124,7 @@ function remove_my_post_metaboxes() {
 //	remove_meta_box( 'authordiv','post','normal' ); // Author Metabox
 	remove_meta_box( 'formatdiv','post','normal' ); // Formats
 	remove_meta_box( 'postcustom','post','normal' ); // Custom Fields Metabox
-	remove_meta_box( 'postexcerpt','post','normal' ); // Excerpt Metabox
+	//remove_meta_box( 'postexcerpt','post','normal' ); // Excerpt Metabox
 	remove_meta_box( 'revisionsdiv','post','normal' ); // Revisions Metabox
 	remove_meta_box( 'slugdiv','post','normal' ); // Slug Metabox
 	remove_meta_box( 'trackbacksdiv','post','normal' ); // Trackback Metabox
