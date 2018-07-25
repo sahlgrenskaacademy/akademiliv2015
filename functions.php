@@ -108,10 +108,10 @@ function psu_title_tag($title) {
 
 
 /// Include category pages functions  ///////////////////////////////////////////////////////////////
-require_once(get_stylesheet_directory() . '/functions-categories.php');
+//require_once(get_stylesheet_directory() . '/functions-categories.php');
 
 /// Include layout changes ///////////////////////////////////////////////////////////////
-require_once(get_stylesheet_directory() . '/functions-layout.php');
+//require_once(get_stylesheet_directory() . '/functions-layout.php');
 
 
 
