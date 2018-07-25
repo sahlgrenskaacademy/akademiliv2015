@@ -100,6 +100,14 @@ function psu_title_tag($title) {
 	}
 }
 
+/// Allow origins ///////////////////////////////////////////////////////////////
+add_filter('allowed_http_origins', 'psu_add_allowed_origins');
+function psu_add_allowed_origins($origins) {
+    $origins[] = 'http://www.akademiliv.se';
+    return $origins;
+}
+
+
 
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
