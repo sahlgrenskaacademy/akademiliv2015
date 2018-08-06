@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*
-	Theme Name: AL Mag 2015
+	Theme Name: AL Mag 2015v18
 	Theme URI: http://www.akademiliv.se
 	Description: Akademiliv adaptation of Magazine Pro: A mobile responsive and HTML5 theme built for the Genesis Framework.
-	Author: Pontus Sundén
-	Author URI: http://www.psu.se
+	Author: Pontus Sundén/GU
+	Author URI: http://www.gu.se
 
-	Version: 0.1
+	Version: 1.1
 
 	Tags: black, white, one-column, responsive-layout, custom-background, custom-header, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
 
@@ -14,7 +14,7 @@
 	Template Version: 2.1
 
 	License: GPL-2.0+
-	License URI: http://www.opensource.org/licenses/gpl-license.php 
+	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 /* Table of Contents
 	- HTML5 Reset
@@ -1553,11 +1553,11 @@ Color Styles
   	.home-middle .featured-content .entry {
   		padding-bottom: 20px;
   	}
-  
+
   	.archive-pagination li a {
   		margin-bottom: 4px;
   	}
-  
+
   	.five-sixths,
   	.four-sixths,
   	.one-fourth,
@@ -1572,13 +1572,13 @@ Color Styles
   		margin: 0;
   		width: 100%;
   	}
-  
+
   	.magazine-home .content .genesis_responsive_slider h2,
   	.magazine-home .content .genesis_responsive_slider h2 a {
   		font-size: 20px;
   		line-height: 1.2;
   	}
-  	
+
   	.magazine-home .content .genesis_responsive_slider .slide-excerpt-border p {
   		display: none;
   	}*/ }
@@ -2527,11 +2527,11 @@ body.page-template .sidebar {
     padding-top: 20px;
     /*		.widget_search {
     				margin-top: 10px;
-    			
+
     				.search-form {
     					float: none;
     					margin-top: 0;}
-    	
+
     				input[type="search"],
     				input[type="submit"] {
     			    height: 30px;
@@ -2539,13 +2539,13 @@ body.page-template .sidebar {
     					box-shadow: none;
     			    box-sizing: border-box;
     			    color: $text-color;}
-    	
+
     				input[type="search"] {
     					@include border-radius(3px 0 0 3px);
     			    width: 200px;
     			    border: 1px solid $c-gray-4;
     			    -moz-box-sizing: border-box;}
-    			    
+
     				input[type="submit"] {
     					@include border-radius(0 5px 5px 0);
     					font-family: $heading-font-family;
@@ -2998,12 +2998,12 @@ input:hover[type="submit"],
 /************************************************************************************************/
 /* Content ie. not header, sidebar, footer */
 .content {
-  /*	@media only screen and (max-width: 1139px) { }	
-  	
+  /*	@media only screen and (max-width: 1139px) { }
+
   	@media only screen and (max-width: 1023px) { }
-  
+
   	@media only screen and (max-width: 768px) { }
-  
+
   	@media only screen and (max-width: 480px) { }*/
   /* mobile */ }
   @media only screen and (min-width: 1024px) {
