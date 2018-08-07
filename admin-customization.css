@@ -28,12 +28,12 @@
  */
 
 
-/*seminarier*/
-/*.wp-list-table.posts tr.category-seminarier:nth-child(even)>:first-child,
-.wp-list-table.posts tr.category-seminars:nth-child(even)>:first-child {
+/*kalendarium*/
+/*.wp-list-table.posts tr.category-kalendarium:nth-child(even)>:first-child,
+.wp-list-table.posts tr.category-calendar:nth-child(even)>:first-child {
   background-color: #E8FFE0 !important;}
-.wp-list-table.posts tr.category-seminarier:nth-child(odd)>:first-child,
-.wp-list-table.posts tr.category-seminars:nth-child(odd)>:first-child {
+.wp-list-table.posts tr.category-kalendarium:nth-child(odd)>:first-child,
+.wp-list-table.posts tr.category-calendar:nth-child(odd)>:first-child {
   background-color: #D6FFC9 !important;}
   */
 

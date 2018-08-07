@@ -87,11 +87,11 @@ $susy: (
 	
 }	
 	
-.category-wrapper	.category-seminars,
-.category-wrapper	.category-seminarier {
+.category-wrapper	.category-calendar,
+.category-wrapper	.category-kalendarium {
 
 	@media only screen and (min-width: 640px) {
-		height: $seminar-box-height;
+		height: $calendar-box-height;
 	}
 	
 	@media only screen and (max-width: 639px) {
@@ -183,10 +183,10 @@ aside img {
 			.category-grants {
 				@include span(3 of 9);}
 
-			.category-seminars,
+			.category-calendar,
 			.category-notiser,
 			.category-notices,
-			.category-seminarier {
+			.category-kalendarium {
 				@include span(4.5 of 9);}
 				
 			&.category-wrapper-bidrag,
@@ -422,10 +422,10 @@ aside img {
 /************************************************************************************************/
 /* Inside category boxes */  
   
-.category-wrapper .category-seminars,
-.category-wrapper .category-seminarier,
-.single-wrapper .category-seminars .entry-header.category-details-box .box-inner,
-.single-wrapper .category-seminarier .entry-header.category-details-box .box-inner {
+.category-wrapper .category-calendar,
+.category-wrapper .category-kalendarium,
+.single-wrapper .category-calendar .entry-header.category-details-box .box-inner,
+.single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner {
 	position: relative;
 	.entry-header {
 		@include span(100%);
@@ -463,8 +463,8 @@ aside img {
 		left: 3%;}
 
 }
-.single-wrapper .category-seminars,
-.single-wrapper .category-seminarier,
+.single-wrapper .category-calendar,
+.single-wrapper .category-kalendarium,
 .single-wrapper .category-bidrag,
 .single-wrapper .category-grants {
 	.entry-header.category-details-box .box-inner .entry-startdate {

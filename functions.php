@@ -192,7 +192,7 @@ function psu_get_cat_ids( $cat_names ) {
 function is_akademiliv_category_page($page = '') {
 	global $wp_query;
 	if ( $page == '' ) { // if page is not set, try every page template
-  	if ( isset($wp_query) && is_page_template('page-seminars.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-notices.php') ) {
+  	if ( isset($wp_query) && is_page_template('page-calendar.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-notices.php') ) {
   		return true;
   	}
 	} else { // if $page is set try that page template
@@ -225,7 +225,7 @@ function is_akademiliv_default() {
 }
 function is_akademiliv_single_cat() { // exclude "notices" to present it more like news (comments, metadata)
   $cat_names = array(
-    'seminars',
+    'calendar',
     'grants',
     'education',
 //    'notices'
@@ -472,7 +472,7 @@ function psu_category_excerpt_length($length) {
     case 14:
       return 60;
 
-    // seminars
+    // calendar
     case 7:
     case 12:
       return 50;
@@ -743,9 +743,9 @@ function psu_single_custom_fields( $content ) {
 
 	echo '<header class="entry-header category-details-box"><div class="box-inner">';
 
-  if ( in_category(12) || in_category(7) ){ // seminars: 12, 7
-		psu_seminars_custom_fields_header();
-		psu_seminars_custom_fields_aftercontent();
+  if ( in_category(12) || in_category(7) ){ // calenar: 12, 7
+		psu_calendar_custom_fields_header();
+		psu_calendar_custom_fields_aftercontent();
   } elseif ( in_category(14) || in_category(13) ) { // grants: 14, 13
 		psu_grants_custom_fields_header();
 		psu_grants_custom_fields_aftercontent();

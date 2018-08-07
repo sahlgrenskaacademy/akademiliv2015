@@ -1,7 +1,7 @@
 <?php
 
-/* Template Name: Seminarier */
- 
+/* Template Name: Kalendarium */
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* what category to show, also used in functions.php
 $cat_id = ( ICL_LANGUAGE_CODE == 'en' )? 12 : 7;
@@ -9,11 +9,11 @@ $cat_id = ( ICL_LANGUAGE_CODE == 'en' )? 12 : 7;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields before content
-add_action( 'genesis_entry_header', 'psu_seminars_custom_fields_header' );
+add_action( 'genesis_entry_header', 'psu_calendar_custom_fields_header' );
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields after content
-add_action( 'genesis_entry_footer', 'psu_seminars_custom_fields_aftercontent' );
+add_action( 'genesis_entry_footer', 'psu_calendar_custom_fields_aftercontent' );
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ function psu_do_custom_loop() {
 	global $paged; // current paginated page
 	global $query_args; // grab the current wp_query() args
 	global $cat_id;
-	
+
 	// http://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
 //	$now = new DateTime(current_time('mysql'));
 	$args = array(
@@ -41,13 +41,12 @@ function psu_do_custom_loop() {
 		'paged'         		=> $paged, // respect pagination
 		'posts_per_page'		=> '12', // overrides posts per page in theme settings
 	);
-	
-	genesis_custom_loop( wp_parse_args($query_args, $args) ); 
+
+	genesis_custom_loop( wp_parse_args($query_args, $args) );
 
 }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-//* Do the thing     
+//* Do the thing
 genesis();
-

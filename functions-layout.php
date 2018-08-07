@@ -41,7 +41,7 @@ genesis_register_sidebar( array(
 genesis_register_sidebar( array(
 	'id'          => 'home-middle',
 	'name'        => __( 'Home - Middle', 'magazine' ),
-	'description' => __( 'The middle section of the homepage, intended for list with "Seminarier", "Utbildning" och "Bidrag"', 'magazine' ),
+	'description' => __( 'The middle section of the homepage, intended for list with "Kalendarium", "Utbildning" och "Bidrag"', 'magazine' ),
 	'before_title'=> '<h2 class="widget-title widgettitle">',
 	'after_title' => "</h2>\n",
 ) );
