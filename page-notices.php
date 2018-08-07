@@ -6,16 +6,6 @@
 //* what category to show, also used in functions.php
 $cat_id = ( ICL_LANGUAGE_CODE == 'en' )? 1853 : 1852;
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add custom fields before content
-add_action( 'genesis_entry_header', 'psu_announcement_custom_fields_header' );
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//* Add custom fields after content
-add_action( 'genesis_entry_footer', 'psu_announcement_custom_fields_aftercontent' );
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Replace the standard loop with our custom loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
