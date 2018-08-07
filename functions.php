@@ -312,6 +312,8 @@ function psu_gan_newsletter_form( $atts ) {
 }
 
 
+
+
 // ///////////////////////////////////////////////////////////////////////////////////////////
 ## GRAVITY FORMS ##
 // ///////////////////////////////////////////////////////////////////////////////////////////
@@ -323,6 +325,8 @@ add_filter( 'gform_save_field_value_2_3', 'psu_save_field_value', 10, 4 );
 function psu_save_field_value( $value, $entry, $field, $form ) {
   return strtotime( $value )*1000;
 }
+
+
 
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
@@ -932,122 +936,6 @@ function remove_comment_support() {
   }
   remove_post_type_support( 'page', 'comments' );
 }
-
-
-// ///////////////////////////////////////////////////////////////////////////////////////////
-## AL_SIDBAR CUSTOM POST TYPE ##
-// ///////////////////////////////////////////////////////////////////////////////////////////
-
-/// Define Custom Post Type "al_sidebar_post" /////////////////////////////////////////
-add_action( 'init', 'psu_create_al_sidebar_post_type' );
-function psu_create_al_sidebar_post_type() {
-	$labels = array(
-	  'name' => __( 'Sidebars', 'magazine' ),
-	  'singular_name' => __( 'Sidebar', 'magazine' ),
-	  'add_new' => __( 'New Sidebar', 'magazine' ),
-	  'add_new_item' => __( 'Add New Sidebar', 'magazine' ),
-	  'edit_item' => __( 'Edit Sidebar', 'magazine' ),
-	  'new_item' => __( 'New Sidebar', 'magazine' ),
-	  'view_item' => __( 'View Sidebar', 'magazine' ),
-	  'search_items' => __( 'Search Sidebars', 'magazine' ),
-	  'not_found' =>  __( 'No Sidebars Found', 'magazine' ),
-	  'not_found_in_trash' => __( 'No Sidebars found in Trash', 'magazine' ),
-	);
-	$args = array(
-	  'labels' => $labels,
-	  'has_archive' => false,
-	  'public' => true,
-	  'hierarchical' => false,
-	  'supports' => array(
-	    'title',
-	    'editor',
-//	    'excerpt',
-	    'custom-fields',
-	    'thumbnail',
-	    'page-attributes'
-	  ),
-	);
-	register_post_type( 'al_sidebar_post', $args );
-}
-
-/// Output sidebar posts loop /////////////////////////////////////////
-// http://code.tutsplus.com/tutorials/use-a-custom-post-type-for-your-sidebar-content--cms-23830
-function psu_al_sidebar() {
-
-	$args = array(
-		'post_type' 			=> 'al_sidebar_post',
-		'orderby'					=> 'menu_order',
-		'order'						=> 'ASC',
-		'posts_per_page' 	=> -1,
-	);
-
-	$query = new WP_query ( $args );
-	if ( $query->have_posts() ) {
-
-		/* start the loop */
-		while ( $query->have_posts() ) : $query->the_post();
-
-			$cf_webb = trim( genesis_get_custom_field('webb')  );
-			if ( $cf_webb != '' ) {
-				if ( strpos( $cf_webb, 'http' ) === false )
-			    $cf_webb = 'http://'.$cf_webb;
-			} else {
-		  	$cf_webb = false;
-		  }
-
-			printf('<aside id="post-%s"', get_the_ID());
-				post_class( 'al_sidebar_post' );
-			printf('>');
-
-			if ($cf_webb !== false) {
-				$link_start 	= sprintf('<a href="%s">', $cf_webb);
-				$link_end 		= '</a>';
-			} else {
-				$link_start 	= '';
-				$link_end 		= '';
-			}
-
-			if ( has_post_thumbnail() ) {
-
-				echo $link_start;
-				the_post_thumbnail( 'al-sidebar', array(
-          'class' => 'aligncenter',
-          'alt'   => trim(strip_tags( $wp_postmeta->_wp_attachment_image_alt ))
-	      ) );
-	      echo $link_end;
-
-			} // end thumbnail
-
-			printf('<div class="entry-wrapper"><h2 class="sidebar-title">');
-			echo $link_start;
-			the_title();
-      echo $link_end;
-
-			printf('</h2><section class="sidebar-content">');
-			the_content();
-			printf('</section></div></aside>');
-
-		endwhile; /* end the loop*/
-	  wp_reset_postdata();
-	}
-}
-
-/// Add the logo area sidebar /////////////////////////////////////////
-add_action( 'genesis_sidebar', 'psu_al_sidebar_logic' );
-function psu_al_sidebar_logic() {
-	genesis_structural_wrap( 'sidebar' );
-	do_action( 'genesis_before_sidebar_widget_area' );
-	if (is_active_sidebar( 'al-sidebar' ) ) {
-	 	genesis_widget_area( 'al-sidebar' );
-	}
-	psu_al_sidebar();
-	do_action( 'genesis_after_sidebar_widget_area' );
-	genesis_structural_wrap( 'sidebar', 'close' );
-}
-
-
-
-
 
 
 
