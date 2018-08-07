@@ -24,7 +24,7 @@
 }
 
 /***************************************
- * Post List 
+ * Post List
  */
 
 
@@ -37,16 +37,6 @@
   background-color: #D6FFC9 !important;}
   */
 
-/*utbildning*/
-/*
-.wp-list-table.posts tr.category-utbildning:nth-child(even)>:first-child,
-.wp-list-table.posts tr.category-education:nth-child(even)>:first-child {
-  background-color: #E8FFE0 !important;}
-.wp-list-table.posts tr.category-utbildning:nth-child(odd)>:first-child,
-.wp-list-table.posts tr.category-education:nth-child(odd)>:first-child {
-  background-color: #D6FFC9 !important;}
-  */
-
 /*bidrag*/
 /*
 .wp-list-table.posts tr.category-bidrag:nth-child(even)>:first-child,
@@ -54,7 +44,7 @@
   background-color: #E8FFE0 !important;}
 .wp-list-table.posts tr.category-bidrag:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-grants:nth-child(odd)>:first-child {
-  background-color: #D6FFC9 !important;}    
+  background-color: #D6FFC9 !important;}
 */
 
 /*notiser*/
@@ -76,8 +66,7 @@
 /*toppnyhet*/
 .wp-list-table.posts tr.category-toppnyhet:nth-child(even)>:first-child,
 .wp-list-table.posts tr.category-top-news:nth-child(even)>:first-child {
-  background-color: #e1ddff !important;} /*ljus (gul: #FFF8D1) */ 
+  background-color: #e1ddff !important;} /*ljus (gul: #FFF8D1) */
 .wp-list-table.posts tr.category-toppnyhet:nth-child(odd)>:first-child,
 .wp-list-table.posts tr.category-top-news:nth-child(odd)>:first-child {
   background-color: #d2ccfe !important;} /*mörk (gul: #FFF5BA)*/
-

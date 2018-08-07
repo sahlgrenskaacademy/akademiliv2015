@@ -192,7 +192,7 @@ function psu_get_cat_ids( $cat_names ) {
 function is_akademiliv_category_page($page = '') {
 	global $wp_query;
 	if ( $page == '' ) { // if page is not set, try every page template
-  	if ( isset($wp_query) && is_page_template('page-calendar.php') || is_page_template('page-grants.php') || is_page_template('page-education.php') || is_page_template('page-notices.php') ) {
+  	if ( isset($wp_query) && is_page_template('page-calendar.php') || is_page_template('page-grants.php') || is_page_template('page-notices.php') ) {
   		return true;
   	}
 	} else { // if $page is set try that page template
@@ -227,7 +227,6 @@ function is_akademiliv_single_cat() { // exclude "notices" to present it more li
   $cat_names = array(
     'calendar',
     'grants',
-    'education',
 //    'notices'
   );
   $cat_ids = psu_get_cat_ids( $cat_names );
@@ -461,11 +460,6 @@ function psu_category_excerpt_length($length) {
     case 1852: //live
     case 1853:
       return 100;
-
-    // education
-    case 9:
-    case 10:
-      return 55;
 
     // grants
     case 13:
@@ -749,9 +743,6 @@ function psu_single_custom_fields( $content ) {
   } elseif ( in_category(14) || in_category(13) ) { // grants: 14, 13
 		psu_grants_custom_fields_header();
 		psu_grants_custom_fields_aftercontent();
-  } elseif( in_category(10) || in_category(9) ) { // education: 10, 9
-		psu_education_custom_fields_header();
-		psu_education_custom_fields_aftercontent();
   }
 
 	echo '<div style="clear:both;"></div></div></header>';

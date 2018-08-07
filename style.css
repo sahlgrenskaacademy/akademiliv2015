@@ -1766,8 +1766,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-wrapper .category-kalendarium,
 .category-wrapper .category-calendar,
-.category-wrapper .category-utbildning,
-.category-wrapper .category-education,
 .category-wrapper .category-notiser,
 .category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
@@ -1776,8 +1774,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px; }
   .category-wrapper .category-kalendarium .entry-title a,
   .category-wrapper .category-calendar .entry-title a,
-  .category-wrapper .category-utbildning .entry-title a,
-  .category-wrapper .category-education .entry-title a,
   .category-wrapper .category-notiser .entry-title a,
   .category-wrapper .category-notices .entry-title a,
   .category-wrapper .category-bidrag .entry-title a,
@@ -1788,8 +1784,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5em; }
   .category-wrapper .category-kalendarium .entry-content,
   .category-wrapper .category-calendar .entry-content,
-  .category-wrapper .category-utbildning .entry-content,
-  .category-wrapper .category-education .entry-content,
   .category-wrapper .category-notiser .entry-content,
   .category-wrapper .category-notices .entry-content,
   .category-wrapper .category-bidrag .entry-content,
@@ -1798,8 +1792,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .9em; }
   .category-wrapper .category-kalendarium .entry-details,
   .category-wrapper .category-calendar .entry-details,
-  .category-wrapper .category-utbildning .entry-details,
-  .category-wrapper .category-education .entry-details,
   .category-wrapper .category-notiser .entry-details,
   .category-wrapper .category-notices .entry-details,
   .category-wrapper .category-bidrag .entry-details,
@@ -1811,8 +1803,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900; }
     .category-wrapper .category-kalendarium .entry-details .plats .label,
     .category-wrapper .category-calendar .entry-details .plats .label,
-    .category-wrapper .category-utbildning .entry-details .plats .label,
-    .category-wrapper .category-education .entry-details .plats .label,
     .category-wrapper .category-notiser .entry-details .plats .label,
     .category-wrapper .category-notices .entry-details .plats .label,
     .category-wrapper .category-bidrag .entry-details .plats .label,
@@ -1821,8 +1811,6 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: .7em; }
   .category-wrapper .category-kalendarium .entry-link,
   .category-wrapper .category-calendar .entry-link,
-  .category-wrapper .category-utbildning .entry-link,
-  .category-wrapper .category-education .entry-link,
   .category-wrapper .category-notiser .entry-link,
   .category-wrapper .category-notices .entry-link,
   .category-wrapper .category-bidrag .entry-link,
@@ -1831,8 +1819,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1em; }
     .category-wrapper .category-kalendarium .entry-link a,
     .category-wrapper .category-calendar .entry-link a,
-    .category-wrapper .category-utbildning .entry-link a,
-    .category-wrapper .category-education .entry-link a,
     .category-wrapper .category-notiser .entry-link a,
     .category-wrapper .category-notices .entry-link a,
     .category-wrapper .category-bidrag .entry-link a,
@@ -1889,20 +1875,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.05em;
     font-weight: normal; }
 
-.category-wrapper .category-utbildning .entry-title,
-.category-wrapper .category-education .entry-title,
 .category-wrapper .category-notiser .entry-title,
 .category-wrapper .category-notices .entry-title {
   font-weight: 900;
   /*		margin-bottom: 0!important;*/ }
-.category-wrapper .category-utbildning .entry-deadline,
-.category-wrapper .category-education .entry-deadline,
 .category-wrapper .category-notiser .entry-deadline,
 .category-wrapper .category-notices .entry-deadline {
   font-weight: 900;
   margin-bottom: .5em; }
-  .category-wrapper .category-utbildning .entry-deadline .label,
-  .category-wrapper .category-education .entry-deadline .label,
   .category-wrapper .category-notiser .entry-deadline .label,
   .category-wrapper .category-notices .entry-deadline .label {
     font-weight: normal; }
@@ -1939,10 +1919,6 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar aside .sidebar-content p {
   margin-bottom: 1em; }
 
-.category-wrapper .category-utbildning .entry-startdate.month1,
-.category-wrapper .category-utbildning .entry-deadline.month1,
-.category-wrapper .category-education .entry-startdate.month1,
-.category-wrapper .category-education .entry-deadline.month1,
 .category-wrapper .category-notiser .entry-startdate.month1,
 .category-wrapper .category-notiser .entry-deadline.month1,
 .category-wrapper .category-notices .entry-startdate.month1,
@@ -1958,10 +1934,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month1,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month1 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month2,
-.category-wrapper .category-utbildning .entry-deadline.month2,
-.category-wrapper .category-education .entry-startdate.month2,
-.category-wrapper .category-education .entry-deadline.month2,
 .category-wrapper .category-notiser .entry-startdate.month2,
 .category-wrapper .category-notiser .entry-deadline.month2,
 .category-wrapper .category-notices .entry-startdate.month2,
@@ -1977,10 +1949,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month2,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month2 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month3,
-.category-wrapper .category-utbildning .entry-deadline.month3,
-.category-wrapper .category-education .entry-startdate.month3,
-.category-wrapper .category-education .entry-deadline.month3,
 .category-wrapper .category-notiser .entry-startdate.month3,
 .category-wrapper .category-notiser .entry-deadline.month3,
 .category-wrapper .category-notices .entry-startdate.month3,
@@ -1996,10 +1964,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month3,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month3 {
   color: #fd7e81; }
-.category-wrapper .category-utbildning .entry-startdate.month4,
-.category-wrapper .category-utbildning .entry-deadline.month4,
-.category-wrapper .category-education .entry-startdate.month4,
-.category-wrapper .category-education .entry-deadline.month4,
 .category-wrapper .category-notiser .entry-startdate.month4,
 .category-wrapper .category-notiser .entry-deadline.month4,
 .category-wrapper .category-notices .entry-startdate.month4,
@@ -2015,10 +1979,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month4,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month4 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month5,
-.category-wrapper .category-utbildning .entry-deadline.month5,
-.category-wrapper .category-education .entry-startdate.month5,
-.category-wrapper .category-education .entry-deadline.month5,
 .category-wrapper .category-notiser .entry-startdate.month5,
 .category-wrapper .category-notiser .entry-deadline.month5,
 .category-wrapper .category-notices .entry-startdate.month5,
@@ -2034,10 +1994,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month5,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month5 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month6,
-.category-wrapper .category-utbildning .entry-deadline.month6,
-.category-wrapper .category-education .entry-startdate.month6,
-.category-wrapper .category-education .entry-deadline.month6,
 .category-wrapper .category-notiser .entry-startdate.month6,
 .category-wrapper .category-notiser .entry-deadline.month6,
 .category-wrapper .category-notices .entry-startdate.month6,
@@ -2053,10 +2009,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month6,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month6 {
   color: #fd7e81; }
-.category-wrapper .category-utbildning .entry-startdate.month7,
-.category-wrapper .category-utbildning .entry-deadline.month7,
-.category-wrapper .category-education .entry-startdate.month7,
-.category-wrapper .category-education .entry-deadline.month7,
 .category-wrapper .category-notiser .entry-startdate.month7,
 .category-wrapper .category-notiser .entry-deadline.month7,
 .category-wrapper .category-notices .entry-startdate.month7,
@@ -2072,10 +2024,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month7,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month7 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month8,
-.category-wrapper .category-utbildning .entry-deadline.month8,
-.category-wrapper .category-education .entry-startdate.month8,
-.category-wrapper .category-education .entry-deadline.month8,
 .category-wrapper .category-notiser .entry-startdate.month8,
 .category-wrapper .category-notiser .entry-deadline.month8,
 .category-wrapper .category-notices .entry-startdate.month8,
@@ -2091,10 +2039,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month8,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month8 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month9,
-.category-wrapper .category-utbildning .entry-deadline.month9,
-.category-wrapper .category-education .entry-startdate.month9,
-.category-wrapper .category-education .entry-deadline.month9,
 .category-wrapper .category-notiser .entry-startdate.month9,
 .category-wrapper .category-notiser .entry-deadline.month9,
 .category-wrapper .category-notices .entry-startdate.month9,
@@ -2110,10 +2054,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month9,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month9 {
   color: #fd7e81; }
-.category-wrapper .category-utbildning .entry-startdate.month10,
-.category-wrapper .category-utbildning .entry-deadline.month10,
-.category-wrapper .category-education .entry-startdate.month10,
-.category-wrapper .category-education .entry-deadline.month10,
 .category-wrapper .category-notiser .entry-startdate.month10,
 .category-wrapper .category-notiser .entry-deadline.month10,
 .category-wrapper .category-notices .entry-startdate.month10,
@@ -2129,10 +2069,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month10,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month10 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month11,
-.category-wrapper .category-utbildning .entry-deadline.month11,
-.category-wrapper .category-education .entry-startdate.month11,
-.category-wrapper .category-education .entry-deadline.month11,
 .category-wrapper .category-notiser .entry-startdate.month11,
 .category-wrapper .category-notiser .entry-deadline.month11,
 .category-wrapper .category-notices .entry-startdate.month11,
@@ -2148,10 +2084,6 @@ h1, h2, h3, h4, h5, h6 {
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month11,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month11 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month12,
-.category-wrapper .category-utbildning .entry-deadline.month12,
-.category-wrapper .category-education .entry-startdate.month12,
-.category-wrapper .category-education .entry-deadline.month12,
 .category-wrapper .category-notiser .entry-startdate.month12,
 .category-wrapper .category-notiser .entry-deadline.month12,
 .category-wrapper .category-notices .entry-startdate.month12,
@@ -2282,11 +2214,9 @@ li.comment {
 .archive-wrapper,
 .single-wrapper .entry,
 body.page .category-kalendarium,
-body.page .category-utbildning,
 body.page .category-notiser,
 body.page .category-bidrag,
 body.page .category-calendar,
-body.page .category-education,
 body.page .category-notices,
 body.page .category-grants,
 .entry-comments,
@@ -2299,10 +2229,7 @@ body.page .category-grants,
 /*body.page .category-grants,
 body.page .category-bidrag {
 	background: rgb(255,248,250);}
-
-body.page .category-education,
-body.page .category-utbildning {
-	background: rgb(248,255,250);}*/
+*/
 .home-middle {
   margin-top: 20px; }
 
@@ -2372,12 +2299,6 @@ body.page-template .sidebar {
     padding: 5px 8px;
     background: rgba(0, 0, 0, 0.6);
     color: white; }
-.single-wrapper .category-education .entry-header.category-details-box .box-inner,
-.single-wrapper .category-utbildning .entry-header.category-details-box .box-inner {
-  padding: 20px; }
-  .single-wrapper .category-education .entry-header.category-details-box .box-inner .entry-deadline,
-  .single-wrapper .category-utbildning .entry-header.category-details-box .box-inner .entry-deadline {
-    margin-bottom: .6em; }
 .single-wrapper .entry-content .single-wrapper .featured-figure {
   margin: 0.4em auto 0.45em auto; }
 .single-wrapper .entry-content img.featured-image {
@@ -2404,26 +2325,20 @@ body.page-template .sidebar {
 		margin: 0;}
 	}*/
 .category-wrapper .category-kalendarium,
-.category-wrapper .category-utbildning,
 .category-wrapper .category-notiser,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-calendar,
-.category-wrapper .category-education,
 .category-wrapper .category-notices,
 .category-wrapper .category-grants {
   padding: 20px; }
   .category-wrapper .category-kalendarium .entry-content p,
   .category-wrapper .category-kalendarium .entry-title,
-  .category-wrapper .category-utbildning .entry-content p,
-  .category-wrapper .category-utbildning .entry-title,
   .category-wrapper .category-notiser .entry-content p,
   .category-wrapper .category-notiser .entry-title,
   .category-wrapper .category-bidrag .entry-content p,
   .category-wrapper .category-bidrag .entry-title,
   .category-wrapper .category-calendar .entry-content p,
   .category-wrapper .category-calendar .entry-title,
-  .category-wrapper .category-education .entry-content p,
-  .category-wrapper .category-education .entry-title,
   .category-wrapper .category-notices .entry-content p,
   .category-wrapper .category-notices .entry-title,
   .category-wrapper .category-grants .entry-content p,
@@ -2527,11 +2442,11 @@ body.page-template .sidebar {
     padding-top: 20px;
     /*		.widget_search {
     				margin-top: 10px;
-    			
+    
     				.search-form {
     					float: none;
     					margin-top: 0;}
-    	
+    
     				input[type="search"],
     				input[type="submit"] {
     			    height: 30px;
@@ -2539,13 +2454,13 @@ body.page-template .sidebar {
     					box-shadow: none;
     			    box-sizing: border-box;
     			    color: $text-color;}
-    	
+    
     				input[type="search"] {
     					@include border-radius(3px 0 0 3px);
     			    width: 200px;
     			    border: 1px solid $c-gray-4;
     			    -moz-box-sizing: border-box;}
-    			    
+    
     				input[type="submit"] {
     					@include border-radius(0 5px 5px 0);
     					font-family: $heading-font-family;
@@ -2955,10 +2870,8 @@ input:hover[type="submit"],
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
-  .category-wrapper .category-utbildning,
   .category-wrapper .category-notiser,
   .category-wrapper .category-bidrag,
-  .category-wrapper .category-education,
   .category-wrapper .category-notices,
   .category-wrapper .category-grants {
     height: 400px; } }
@@ -2968,10 +2881,8 @@ input:hover[type="submit"],
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
-  .category-wrapper .category-utbildning,
   .category-wrapper .category-notiser,
   .category-wrapper .category-bidrag,
-  .category-wrapper .category-education,
   .category-wrapper .category-notices,
   .category-wrapper .category-grants {
     height: auto; } }
@@ -2998,8 +2909,8 @@ input:hover[type="submit"],
 /************************************************************************************************/
 /* Content ie. not header, sidebar, footer */
 .content {
-  /*	@media only screen and (max-width: 1139px) { }	
-  	
+  /*	@media only screen and (max-width: 1139px) { }
+  
   	@media only screen and (max-width: 1023px) { }
   
   	@media only screen and (max-width: 768px) { }
@@ -3066,8 +2977,6 @@ input:hover[type="submit"],
       float: left;
       margin-left: 0;
       margin-right: 0; }
-      .content .category-wrapper .category-utbildning,
-      .content .category-wrapper .category-education,
       .content .category-wrapper .category-bidrag,
       .content .category-wrapper .category-grants {
         width: 33.33333%;
