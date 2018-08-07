@@ -25,16 +25,16 @@ define( 'CHILD_THEME_VERSION', '1.5' );
 include_once( get_stylesheet_directory() . '/includes/al15-init-genesis.php' ); // modifications related to Genesis parent theme
 include_once( get_stylesheet_directory() . '/includes/al15-init-helpers.php' ); // misc helper functions, date stuff etc.
 
-/// Changes to Worpress and Genesis functionality
-include_once( get_stylesheet_directory() . '/includes/al15-wp-shortcodes.php' ); // wordpress goes here shortcodes
-include_once( get_stylesheet_directory() . '/includes/al15-wp-images.php'); // image functions
-include_once( get_stylesheet_directory() . '/includes/al15-wp-comments.php'); // modification of comments
-
 /// Theme specific layouts, category pages, archive page and single post page
 include_once( get_stylesheet_directory() . '/includes/al15-mag-layout.php'); // layout changes mostly related to Genesis theme
 include_once( get_stylesheet_directory() . '/includes/al15-mag-categories.php'); // category pages functions
 include_once( get_stylesheet_directory() . '/includes/al15-mag-singlepost.php'); // single post page functions
 include_once( get_stylesheet_directory() . '/includes/al15-mag-archive.php'); // archive page functions
+
+/// Changes to Worpress and Genesis functionality
+include_once( get_stylesheet_directory() . '/includes/al15-wp-shortcodes.php' ); // wordpress goes here shortcodes
+include_once( get_stylesheet_directory() . '/includes/al15-wp-images.php'); // image functions
+include_once( get_stylesheet_directory() . '/includes/al15-wp-comments.php'); // modification of comments
 
 
 
