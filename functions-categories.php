@@ -33,7 +33,7 @@ function psu_seminars_custom_fields_aftercontent() {
 	$cf_address_room 				= ($cf_address_room != '')? $cf_address_room.', ': '';
 	$cf_address_building 		= ($cf_address_building != '')? $cf_address_building.', ': '';
 	$cf_address_streetname 	= ($cf_address_streetname != '')? $cf_address_streetname.', ': '';
-	$location_all = $cf_address_room . $cf_address_building . $cf_address_streetname . $cf_address_streetnumber;
+	$location_all = rtrim( $cf_address_room . $cf_address_building . $cf_address_streetname . $cf_address_streetnumber, ',' );
 
 	if ( $cf_webb != '' ) {
 		if ( strpos( $cf_webb, 'http' ) === false ) {
