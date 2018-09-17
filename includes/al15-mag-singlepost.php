@@ -154,16 +154,12 @@ function psu_calendar_custom_fields_header() {
 
 	// get custom fields
 	$cf_startdate = psu_get_date_field('startdate');
-	$cf_type			= trim( genesis_get_custom_field('type') );
 
 	// output date
 	printf('<div class="entry-startdate date-color month%s" title="%s">', date('n', $cf_startdate), date('Y-m-d', $cf_startdate));
 	printf('<span class="day">%s</span><br /><span class="month">%s</span>', date('j', $cf_startdate), psu_month_3l( date('n', $cf_startdate) ) );
 	if ( date('Y') != date('Y', $cf_startdate) ) printf('<br /><span class="year">%s</span>', date('Y', $cf_startdate) );
 	printf('</div>');
-
-	// output type
-	if ($cf_type != '') printf('<div class="kalendarium-typ">%s</div>', $cf_type );
 
 }
 
