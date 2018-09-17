@@ -128,18 +128,19 @@ function psu_single_cat_customization() {
 
 /// Add custom fields to the end of every post page. //////////////////////////////////////
 function psu_single_custom_fields( $content ) {
+	global $post;
 	echo '<header class="entry-header category-details-box"><div class="box-inner">';
 
   if ( in_category(12) || in_category(7) ){ // calendar: 12, 7
 		psu_calendar_custom_fields_header();
 		psu_calendar_custom_fields_aftercontent();
+		$custom_content = sprintf( '<p class="calendar-excerpt">%s</p>', get_the_excerpt() );
   } elseif ( in_category(14) || in_category(13) ) { // grants: 14, 13
 		psu_grants_custom_fields_header();
 		psu_grants_custom_fields_aftercontent();
   }
 
 	echo '<div style="clear:both;"></div></div></header>';
-
   return $custom_content . $content;
 }
 
@@ -165,7 +166,6 @@ function psu_calendar_custom_fields_header() {
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields after CALENDAR content
-add_action( 'genesis_entry_footer', 'psu_calendar_custom_fields_aftercontent' );
 function psu_calendar_custom_fields_aftercontent() {
 
 	// get custom fields
@@ -190,13 +190,14 @@ function psu_calendar_custom_fields_aftercontent() {
 	  $url = parse_url($cf_webb);
 	  $domain = ltrim( $url['host'], 'www.' );
  	}
+
 	$lang = ( $cf_language == 'sve' )? 'Swedish': 'English';
+	$venue = $cf_address_room.', '.$cf_address_building.', '.$cf_address_streetname.' '.$cf_address_streetnumber;
 
 	// print the custom fields aka. meta data, after post
 	printf('<div class="entry-details">');
 		if ($cf_tid != '') 									printf('<div class="tid"><div class="label">%s</div>%s</div>', __('Time', 'magazine'), $cf_tid );
-		if ($cf_address_room != '') 				printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $cf_address_room.', '.$cf_address_building );
-		if ($cf_address_streetname != '') 	printf('<div class="adress"><div class="label">%s</div>%s</div>', __('Address', 'magazine'), $cf_address_streetname.' '.$cf_address_streetnumber );
+		if ($venue != '') 				printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $venue);
 		if ($cf_organizer != '') 						printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
 		if ($cf_language != '') 						printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
 	printf('</div>');
@@ -211,7 +212,6 @@ function psu_calendar_custom_fields_aftercontent() {
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields before GRANTS content
-add_action( 'genesis_entry_header', 'psu_grants_custom_fields_header' );
 function psu_grants_custom_fields_header() {
 	$cf_startdate = psu_get_date_field('startdate');
 	$cf_lopande 	= genesis_get_custom_field('lopande');
@@ -230,10 +230,8 @@ function psu_grants_custom_fields_header() {
 
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields after GRANTS content
-add_action( 'genesis_entry_footer', 'psu_grants_custom_fields_aftercontent' );
 function psu_grants_custom_fields_aftercontent() {
 	$cf_webb = trim( genesis_get_custom_field('webb')  );
 
