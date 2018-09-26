@@ -35,16 +35,3 @@ include_once( get_stylesheet_directory() . '/includes/al15-mag-archive.php'); //
 include_once( get_stylesheet_directory() . '/includes/al15-wp-shortcodes.php' ); // wordpress goes here shortcodes
 include_once( get_stylesheet_directory() . '/includes/al15-wp-images.php'); // image functions
 include_once( get_stylesheet_directory() . '/includes/al15-wp-comments.php'); // modification of comments
-
-
-
-// ///////////////////////////////////////////////////////////////////////////////////////////
-## MISC MODS ##
-// ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-/// Gravity Forms, change date format to unix timestamp "_2" = form ID, "_3" = field ID //////////////////////////
-add_filter( 'gform_save_field_value_2_3', 'psu_save_field_value', 10, 4 );
-function psu_save_field_value( $value, $entry, $field, $form ) {
-  return strtotime( $value )*1000;
-}

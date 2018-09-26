@@ -149,6 +149,11 @@ function psu_cat_post_meta_filter($post_meta) {
 	return '';
 }
 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+/// CALENDAR
+// ///////////////////////////////////////////////////////////////////////////////////////////
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields before CALENDAR content
 function psu_calendar_custom_fields_header() {
@@ -196,10 +201,10 @@ function psu_calendar_custom_fields_aftercontent() {
 
 	// print the custom fields aka. meta data, after post
 	printf('<div class="entry-details">');
-		if ($cf_tid != '') 									printf('<div class="tid"><div class="label">%s</div>%s</div>', __('Time', 'magazine'), $cf_tid );
-		if ($venue != '') 				printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $venue);
-		if ($cf_organizer != '') 						printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
-		if ($cf_language != '') 						printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
+		if ($cf_tid != '')				printf('<div class="tid"><div class="label">%s</div>%s</div>', __('Time', 'magazine'), $cf_tid );
+		if ($venue != '')					printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $venue);
+		if ($cf_organizer != '')	printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
+		if ($cf_language != '')		printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
 	printf('</div>');
 
 	// "entry link" and "online" has it's own <div>
@@ -209,6 +214,48 @@ function psu_calendar_custom_fields_aftercontent() {
 	printf ('</div>');
 
 }
+
+
+/// Change date format to unix timestamp in gravity forms field "_2"=form_id, "_3"=field_id
+//add_filter( 'gform_save_field_value_2_3', 'psu_save_field_value', 10, 4 );
+function psu_save_field_value( $value, $entry, $field, $form ) {
+  return strtotime( $value )*1000;
+}
+
+/// Add English fields in gravity forms to English translation of post. Requires WPML "_2"=form_id
+// https://legacy.forums.gravityhelp.com/topic/adding-wpml-language-to-post
+// https://wpml.org/wpml-hook/wpml_admin_make_post_duplicates
+// https://docs.gravityforms.com/gform_after_create_post
+
+add_action( 'gform_after_create_post_2', 'psu_form_post_create' );
+function psu_form_post_create( $post_id, $entry, $form ) {
+
+	// fetch custom fields
+	$cf_startdate = 		genesis_get_custom_field('startdate', $post_id);
+	$cf_title_english = genesis_get_custom_field('title_english', $post_id);
+	$cf_desc_english = 	genesis_get_custom_field('desc_english', $post_id);
+
+	// Change date format to unix timestamp
+	update_field('startdate', strtotime($cf_startdate)*1000, $post_id);
+
+	// Create duplicate in English
+	$language_to = 'en';
+	do_action('wpml_admin_make_post_duplicates', $post_id);
+	$tr_post_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $language_to );
+	$_POST['icl_post_language'] = $language_to;
+	wp_update_post(array(
+	  'ID'           => $tr_post_id,
+	  'post_title'   => $cf_title_english.':'.$cf_startdate.':',
+	  'post_content' => $cf_desc_english,
+  ));
+
+}
+
+
+
+// ///////////////////////////////////////////////////////////////////////////////////////////
+/// GRANTS
+// ///////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Add custom fields before GRANTS content

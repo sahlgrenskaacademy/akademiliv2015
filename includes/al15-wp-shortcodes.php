@@ -86,7 +86,7 @@ function psu_calendar_query_string($atts=[]) {
 			if ( $field_content == '' ) continue;
 			$field = GFAPI::get_field( $entry['form_id'], $i );
 			$input_name = ( $field['inputName'] != '')? $field['inputName']: 'field_'.$i;
-			$querystring[ $input_name ] = urlencode($field_content);
+			$querystring[ $input_name ] = $field_content;
 		}
 		$url = $callback_url .'?'. http_build_query($querystring);
 		$text = __('Skapa en kopia av ditt arrangemang', 'magazine');
