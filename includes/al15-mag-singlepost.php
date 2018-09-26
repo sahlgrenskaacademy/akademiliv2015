@@ -226,6 +226,7 @@ function psu_save_field_value( $value, $entry, $field, $form ) {
 // https://wpml.org/wpml-hook/wpml_admin_make_post_duplicates
 // https://docs.gravityforms.com/gform_after_create_post
 
+add_action( 'gform_after_create_post_2', 'psu_form_post_create' );
 add_action( 'gform_after_create_post_3', 'psu_form_post_create' );
 function psu_form_post_create( $post_id, $entry, $form ) {
 
@@ -243,7 +244,7 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 	$tr_post_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $language_to );
 	wp_update_post(array(
 	  'ID'           => $tr_post_id,
-	  'post_title'   => $cf_title_english.':'.$cf_startdate.':',
+	  'post_title'   => $cf_title_english,
 	  'post_content' => $cf_desc_english,
   ));
 
