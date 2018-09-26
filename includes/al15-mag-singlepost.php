@@ -223,11 +223,10 @@ function psu_save_field_value( $value, $entry, $field, $form ) {
 }
 
 /// Add English fields in gravity forms to English translation of post. Requires WPML "_2"=form_id
-// https://legacy.forums.gravityhelp.com/topic/adding-wpml-language-to-post
 // https://wpml.org/wpml-hook/wpml_admin_make_post_duplicates
 // https://docs.gravityforms.com/gform_after_create_post
 
-add_action( 'gform_after_create_post_2', 'psu_form_post_create' );
+add_action( 'gform_after_create_post_3', 'psu_form_post_create' );
 function psu_form_post_create( $post_id, $entry, $form ) {
 
 	// fetch custom fields
@@ -242,7 +241,6 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 	$language_to = 'en';
 	do_action('wpml_admin_make_post_duplicates', $post_id);
 	$tr_post_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $language_to );
-	$_POST['icl_post_language'] = $language_to;
 	wp_update_post(array(
 	  'ID'           => $tr_post_id,
 	  'post_title'   => $cf_title_english.':'.$cf_startdate.':',
