@@ -66,26 +66,18 @@ function psu_gan_newsletter_form( $atts ) {
 
 /// Add shortcode for calendar form query string
 // https://docs.gravityforms.com/api-functions/
-add_shortcode('event-url','psu_calendar_query_string');
+add_shortcode('event-link','psu_calendar_query_string');
 function psu_calendar_query_string($atts=[]) {
 
-<<<<<<< HEAD
 	// check input params, requires gravity form confirmation page setup with
 	// redirect query string field as follows: post_id={post_id}&entry_id={entry_id}&callback_id={referer}
-=======
-	// check input params
->>>>>>> fa5994435a0966e8e9d946c536fe4b96fa968052
 	$entry_id 			= intval( $_GET['entry_id'] );
 	$event_id 			= intval( $_GET['event_id'] );
 	$callback_url 	= strtok( $_GET['callback_url'], '?' );
 	if ( $entry_id == 0 || $event_id == 0 || $callback_url == '' ) return;
 
 	$atts = array_change_key_case((array)$atts, CASE_LOWER);
-<<<<<<< HEAD
 	if ( $atts[0] == 'copy' ) {
-=======
-	if ( $atts[0] == 'form' ) {
->>>>>>> fa5994435a0966e8e9d946c536fe4b96fa968052
 
 		// fetch entry field values and create query string
 		$entry = GFAPI::get_entry( $entry_id );
@@ -99,11 +91,7 @@ function psu_calendar_query_string($atts=[]) {
 		$text = __('Skapa en kopia av ditt arrangemang', 'magazine');
 		return sprintf('<a href="%s">%s</a>', $url, $text);
 
-<<<<<<< HEAD
 	} elseif ( $atts[0] == 'view' ) {
-=======
-	} elseif ( $atts[0] == 'post' ) {
->>>>>>> fa5994435a0966e8e9d946c536fe4b96fa968052
 
 		$url = get_permalink($event_id);
 		$text = __('Länk till ditt nya arrangemang', 'magazine');
