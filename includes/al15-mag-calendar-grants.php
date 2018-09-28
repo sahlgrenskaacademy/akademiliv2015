@@ -237,9 +237,10 @@ add_action( 'gform_after_create_post_3', 'psu_form_post_create' );
 function psu_form_post_create( $post_id, $entry, $form ) {
 
 	// fetch custom fields
-	$cf_startdate = 		genesis_get_custom_field('startdate', $post_id);
-	$cf_title_english = genesis_get_custom_field('title_english', $post_id);
-	$cf_desc_english = 	genesis_get_custom_field('desc_english', $post_id);
+	$cf_startdate 			= genesis_get_custom_field('startdate', $post_id);
+	$cf_title_english 	= genesis_get_custom_field('title_english', $post_id);
+	$cf_excerpt_english = genesis_get_custom_field('excerpt_english', $post_id);
+	$cf_desc_english 		= genesis_get_custom_field('desc_english', $post_id);
 
 	// Change date format to unix timestamp
 	update_field('startdate', strtotime($cf_startdate)*1000, $post_id);
@@ -251,6 +252,7 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 	wp_update_post(array(
 	  'ID'           => $tr_post_id,
 	  'post_title'   => $cf_title_english,
+		'post_excerpt' => $cf_excerpt_english,
 	  'post_content' => $cf_desc_english,
   ));
 
