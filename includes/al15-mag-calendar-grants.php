@@ -203,7 +203,10 @@ function psu_calendar_custom_fields_aftercontent() {
 
 	// output
 
-	if ($cf_onlinemeeting == 'yes')	printf('<div class="entry-online">%s</div>', __('This is an online meeting.', 'magazine') );
+	if ($cf_onlinemeeting == 'yes')	{
+		printf('<div class="entry-online">%s</div>', __('This is an online meeting.', 'magazine') );
+		$venue = __('Online', 'magazine');
+	}
 
 	printf('<div class="entry-contact">');
 	if ($cf_organizer != '')	printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
