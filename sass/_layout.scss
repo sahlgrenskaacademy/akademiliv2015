@@ -429,8 +429,9 @@ aside img {
 			@include span(83% last);}
 	}
 	.entry-content,
-	.entry-details,
-	.entry-link {
+  .entry-details,
+  .entry-online,
+	.entry-contact {
 	 	@include span(83% last);}
 	.entry-startdate {
 		@include span(16% first);
@@ -450,8 +451,9 @@ aside img {
 	}
 
 	.entry-content,
-	.entry-details,
-	.entry-link {
+  .entry-details,
+  .entry-online,
+	.entry-contact {
 	 	@include span(80% last);}
 	.entry-startdate {
 		@include span(19% first);
@@ -477,7 +479,7 @@ aside img {
 				@include span(100%);}}
 		.entry-content,
 		.entry-details,
-		.entry-link {
+		.entry-contact {
 		 	@include span(100% last);}}}
 
 

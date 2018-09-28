@@ -198,22 +198,24 @@ function psu_calendar_custom_fields_aftercontent() {
  	}
 
 	$lang = ( $cf_language == 'sve' )? 'Swedish': 'English';
-	$venue = $cf_address_room.', '.$cf_address_building.', '.$cf_address_streetname.' '.$cf_address_streetnumber;
+	$cf_address_room = $cf_address_building!=''? $cf_address_room.',': $cf_address_room;
+	$venue = $cf_address_room.' '.$cf_address_building.', '.$cf_address_streetname.' '.$cf_address_streetnumber;
 
-	// print the custom fields aka. meta data, after post
-	printf('<div class="entry-details">');
-		if ($cf_tid != '')				printf('<div class="tid"><div class="label">%s</div>%s</div>', __('Time', 'magazine'), $cf_tid );
-		if ($venue != '')					printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $venue);
-		if ($cf_organizer != '')	printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
-		if ($cf_language != '')		printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
-	printf('</div>');
+	// output
 
-	// "entry link" and "online" has it's own <div>
-	printf ('<div class="entry-link">');
-		if ($cf_onlinemeeting == 'yes')	printf('<div class="online">%s</div>', __('This meeting will be held online.', 'magazine') );
-		if ($cf_webb != '') 						printf('<div class="more">%s <a href="%s">%s</a></div>', __('More information on', 'magazine'), $cf_webb, $domain );
-		if ($cf_email != '') 						printf('<div class="email">%s <a href="mailto:%s">%s</a></div>', __('Contact by mail', 'magazine'), $cf_email, $cf_email );
+	if ($cf_onlinemeeting == 'yes')	printf('<div class="entry-online">%s</div>', __('This is an online meeting.', 'magazine') );
+
+	printf ('<div class="entry-contact">');
+	if ($cf_organizer != '')	printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
+	if ($cf_email != '') 			printf('<div class="epost"><a href="mailto:%s">%s</a></div>', $cf_email, $cf_email );
+	if ($cf_webb != '')				printf('<div class="webb"><a href="%s">%s %s</a></div>', $cf_webb, __('Visit', 'magazine'), $domain );
 	printf ('</div>');
+
+	printf('<div class="entry-details">');
+	if ($cf_tid != '')				printf('<div class="tid"><div class="label">%s</div>%s</div>', __('Time', 'magazine'), $cf_tid );
+	if ($venue != '')					printf('<div class="plats"><div class="label">%s</div>%s</div>', __('Venue', 'magazine'), $venue);
+	if ($cf_language != '')		printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
+	printf('</div>');
 
 }
 

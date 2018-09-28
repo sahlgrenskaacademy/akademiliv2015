@@ -1790,42 +1790,46 @@ h1, h2, h3, h4, h5, h6 {
   .category-wrapper .category-grants .entry-content,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-content {
     font-size: .9em; }
+  .category-wrapper .category-kalendarium .entry-contact,
   .category-wrapper .category-kalendarium .entry-details,
+  .category-wrapper .category-calendar .entry-contact,
   .category-wrapper .category-calendar .entry-details,
+  .category-wrapper .category-notiser .entry-contact,
   .category-wrapper .category-notiser .entry-details,
+  .category-wrapper .category-notices .entry-contact,
   .category-wrapper .category-notices .entry-details,
+  .category-wrapper .category-bidrag .entry-contact,
   .category-wrapper .category-bidrag .entry-details,
+  .category-wrapper .category-grants .entry-contact,
   .category-wrapper .category-grants .entry-details,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-contact,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-details {
     line-height: 1.2em;
-    margin-bottom: .6em;
     font-size: .9em;
     font-weight: 900; }
-    .category-wrapper .category-kalendarium .entry-details .plats .label,
-    .category-wrapper .category-calendar .entry-details .plats .label,
-    .category-wrapper .category-notiser .entry-details .plats .label,
-    .category-wrapper .category-notices .entry-details .plats .label,
-    .category-wrapper .category-bidrag .entry-details .plats .label,
-    .category-wrapper .category-grants .entry-details .plats .label,
-    .single-wrapper .entry-header.category-details-box .box-inner .entry-details .plats .label {
-      margin-top: .7em; }
-  .category-wrapper .category-kalendarium .entry-link,
-  .category-wrapper .category-calendar .entry-link,
-  .category-wrapper .category-notiser .entry-link,
-  .category-wrapper .category-notices .entry-link,
-  .category-wrapper .category-bidrag .entry-link,
-  .category-wrapper .category-grants .entry-link,
-  .single-wrapper .entry-header.category-details-box .box-inner .entry-link {
-    line-height: 1em; }
-    .category-wrapper .category-kalendarium .entry-link a,
-    .category-wrapper .category-calendar .entry-link a,
-    .category-wrapper .category-notiser .entry-link a,
-    .category-wrapper .category-notices .entry-link a,
-    .category-wrapper .category-bidrag .entry-link a,
-    .category-wrapper .category-grants .entry-link a,
-    .single-wrapper .entry-header.category-details-box .box-inner .entry-link a {
-      font-size: .8em;
-      font-weight: bold; }
+  .category-wrapper .category-kalendarium .entry-contact .webb,
+  .category-wrapper .category-kalendarium .entry-contact .epost,
+  .category-wrapper .category-calendar .entry-contact .webb,
+  .category-wrapper .category-calendar .entry-contact .epost,
+  .category-wrapper .category-notiser .entry-contact .webb,
+  .category-wrapper .category-notiser .entry-contact .epost,
+  .category-wrapper .category-notices .entry-contact .webb,
+  .category-wrapper .category-notices .entry-contact .epost,
+  .category-wrapper .category-bidrag .entry-contact .webb,
+  .category-wrapper .category-bidrag .entry-contact .epost,
+  .category-wrapper .category-grants .entry-contact .webb,
+  .category-wrapper .category-grants .entry-contact .epost,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-contact .webb,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-contact .epost {
+    margin-top: .3em; }
+  .category-wrapper .category-kalendarium .entry-online,
+  .category-wrapper .category-calendar .entry-online,
+  .category-wrapper .category-notiser .entry-online,
+  .category-wrapper .category-notices .entry-online,
+  .category-wrapper .category-bidrag .entry-online,
+  .category-wrapper .category-grants .entry-online,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-online {
+    font-weight: 900; }
 
 .category-wrapper .category-notiser .entry-title a,
 .category-wrapper .category-notices .entry-title a {
@@ -2103,36 +2107,45 @@ h1, h2, h3, h4, h5, h6 {
 /* Meta */
 .home-featured .entry-meta,
 .home-featured .entry-details .label,
+.home-featured .entry-contact .label,
 .home-featured .entry-time,
 .home-second-row .entry-meta,
 .home-second-row .entry-details .label,
+.home-second-row .entry-contact .label,
 .home-second-row .entry-time,
 .home-latest .entry-meta,
 .home-latest .entry-details .label,
+.home-latest .entry-contact .label,
 .home-latest .entry-time,
 .home-notices .entry-meta,
 .home-notices .entry-details .label,
+.home-notices .entry-contact .label,
 .home-notices .entry-time,
 .home-middle .entry-meta,
 .home-middle .entry-details .label,
+.home-middle .entry-contact .label,
 .home-middle .entry-time,
 .home-news .entry-meta,
 .home-news .entry-details .label,
+.home-news .entry-contact .label,
 .home-news .entry-time,
 .news-area .entry-meta,
 .news-area .entry-details .label,
+.news-area .entry-contact .label,
 .news-area .entry-time,
 .archive-wrapper .entry-meta,
 .archive-wrapper .entry-details .label,
+.archive-wrapper .entry-contact .label,
 .archive-wrapper .entry-time,
 .category-wrapper .entry-meta,
 .category-wrapper .entry-details .label,
+.category-wrapper .entry-contact .label,
 .category-wrapper .entry-time,
 .single-wrapper .entry-header .entry-meta,
 .single-wrapper .entry-header .entry-details .label,
+.single-wrapper .entry-header .entry-contact .label,
 .single-wrapper .entry-header .entry-time {
-  line-height: 1em;
-  margin-top: 3px;
+  margin-top: 1em;
   font-size: .9em;
   color: #a09f9b;
   text-transform: uppercase;
@@ -3151,16 +3164,20 @@ input:hover[type="submit"],
       margin-right: 0; }
   .category-wrapper .category-calendar .entry-content,
   .category-wrapper .category-calendar .entry-details,
-  .category-wrapper .category-calendar .entry-link,
+  .category-wrapper .category-calendar .entry-online,
+  .category-wrapper .category-calendar .entry-contact,
   .category-wrapper .category-kalendarium .entry-content,
   .category-wrapper .category-kalendarium .entry-details,
-  .category-wrapper .category-kalendarium .entry-link,
+  .category-wrapper .category-kalendarium .entry-online,
+  .category-wrapper .category-kalendarium .entry-contact,
   .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-content,
   .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-link,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-contact,
   .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-content,
   .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-link {
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-contact {
     width: 83%;
     float: right;
     margin-right: 0; }
@@ -3193,16 +3210,20 @@ input:hover[type="submit"],
       margin-right: 0; }
   .category-wrapper .category-bidrag .entry-content,
   .category-wrapper .category-bidrag .entry-details,
-  .category-wrapper .category-bidrag .entry-link,
+  .category-wrapper .category-bidrag .entry-online,
+  .category-wrapper .category-bidrag .entry-contact,
   .category-wrapper .category-grants .entry-content,
   .category-wrapper .category-grants .entry-details,
-  .category-wrapper .category-grants .entry-link,
+  .category-wrapper .category-grants .entry-online,
+  .category-wrapper .category-grants .entry-contact,
   .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-content,
   .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-link,
+  .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-contact,
   .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-content,
   .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-link {
+  .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-contact {
     width: 80%;
     float: right;
     margin-right: 0; }
@@ -3228,10 +3249,10 @@ input:hover[type="submit"],
   float: left; }
 .category-wrapper-bidrag .loop-2 .entry-content,
 .category-wrapper-bidrag .loop-2 .entry-details,
-.category-wrapper-bidrag .loop-2 .entry-link,
+.category-wrapper-bidrag .loop-2 .entry-contact,
 .category-wrapper-grants .loop-2 .entry-content,
 .category-wrapper-grants .loop-2 .entry-details,
-.category-wrapper-grants .loop-2 .entry-link {
+.category-wrapper-grants .loop-2 .entry-contact {
   width: 100%;
   float: right;
   margin-right: 0; }
