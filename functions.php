@@ -28,8 +28,8 @@ include_once( get_stylesheet_directory() . '/includes/al15-init-helpers.php' ); 
 /// Theme specific layouts, category pages, archive page and single post page
 include_once( get_stylesheet_directory() . '/includes/al15-mag-layout.php'); // layout changes mostly related to Genesis theme
 include_once( get_stylesheet_directory() . '/includes/al15-mag-categories.php'); // category pages functions
-include_once( get_stylesheet_directory() . '/includes/al15-mag-singlepost.php'); // single post page functions
-include_once( get_stylesheet_directory() . '/includes/al15-mag-archive.php'); // archive page functions
+include_once( get_stylesheet_directory() . '/includes/al15-mag-calendar-grants.php'); // grants and calendar functions
+include_once( get_stylesheet_directory() . '/includes/al15-mag-newsarchive.php'); // news archive page functions
 
 /// Changes to Worpress and Genesis functionality
 include_once( get_stylesheet_directory() . '/includes/al15-wp-shortcodes.php' ); // wordpress goes here shortcodes

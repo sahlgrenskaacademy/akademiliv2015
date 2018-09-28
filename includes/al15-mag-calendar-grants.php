@@ -1,7 +1,7 @@
 <?php
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
-## SINGLE POST LAYOUT ##
+## CALENDAR AND GRANTS FUNCTIONS ##
 // ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -179,6 +179,7 @@ function psu_calendar_custom_fields_aftercontent() {
 	$cf_tid 					= trim( genesis_get_custom_field('tid') );
 	$cf_organizer 		= trim( genesis_get_custom_field('organizer') );
 	$cf_webb 					= trim( genesis_get_custom_field('webb') );
+	$cf_email 				= trim( genesis_get_custom_field('email') );
 	$cf_onlinemeeting = trim( genesis_get_custom_field('onlinemeeting') );
 
 	// "lokal och adress"
@@ -211,6 +212,7 @@ function psu_calendar_custom_fields_aftercontent() {
 	printf ('<div class="entry-link">');
 		if ($cf_onlinemeeting == 'yes')	printf('<div class="online">%s</div>', __('This meeting will be held online.', 'magazine') );
 		if ($cf_webb != '') 						printf('<div class="more">%s <a href="%s">%s</a></div>', __('More information on', 'magazine'), $cf_webb, $domain );
+		if ($cf_email != '') 						printf('<div class="email">%s <a href="mailto:%s">%s</a></div>', __('Contact by mail', 'magazine'), $cf_email, $cf_email );
 	printf ('</div>');
 
 }
