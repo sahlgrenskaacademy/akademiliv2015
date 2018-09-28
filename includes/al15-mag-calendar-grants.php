@@ -212,9 +212,8 @@ function psu_calendar_custom_fields_aftercontent() {
 	printf ('</div>');
 
 	printf('<div class="entry-details">');
-	if ($cf_tid != '')				printf('<div class="tid"><div class="label">%s</div>%s</div>', __('When and where?', 'magazine'), $cf_tid );
-	if ($venue != '')					printf('<div class="plats">%s</div>', __('Venue', 'magazine'), $venue);
-	if ($cf_language != '')		printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
+	if ($cf_tid != '' || $venue != '')	printf('<div class="tid"><div class="label">%s</div>%s<br />%s</div>', __('When and where?', 'magazine'), $cf_tid, $venue );
+	if ($cf_language != '')							printf('<div class="sprak"><div class="label">%s</div>%s</div>', __('Language', 'magazine'), __($lang, 'magazine') );
 	printf('</div>');
 
 }
