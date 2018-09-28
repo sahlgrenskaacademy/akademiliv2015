@@ -88,16 +88,10 @@ function psu_calendar_query_string($atts=[]) {
 			$input_name = ( $field['inputName'] != '')? $field['inputName']: 'field_'.$i;
 			$querystring[ $input_name ] = $field_content;
 		}
-		$url = $callback_url .'?'. http_build_query($querystring);
-		$text = __('Skapa en kopia av ditt arrangemang', 'magazine');
-		return sprintf('<a href="%s">%s</a>', $url, $text);
+		return $callback_url .'?'. http_build_query($querystring);
 
 	} elseif ( $atts[0] == 'view' ) {
-
-		$url = get_permalink($event_id);
-		$text = __('Länk till ditt nya arrangemang', 'magazine');
-		return sprintf('<a href="%s">%s</a>', $url, $text);
-
+		return get_permalink($event_id);
 	}
 
 }
