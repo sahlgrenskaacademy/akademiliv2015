@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 
@@ -41,7 +41,7 @@ genesis_register_sidebar( array(
 genesis_register_sidebar( array(
 	'id'          => 'home-middle',
 	'name'        => __( 'Home - Middle', 'magazine' ),
-	'description' => __( 'The middle section of the homepage, intended for list with "Seminarier", "Utbildning" och "Bidrag"', 'magazine' ),
+	'description' => __( 'The middle section of the homepage, intended for list with "Kalendarium", "Utbildning" och "Bidrag"', 'magazine' ),
 	'before_title'=> '<h2 class="widget-title widgettitle">',
 	'after_title' => "</h2>\n",
 ) );
@@ -89,6 +89,22 @@ genesis_register_sidebar( array(
 //	'description' => __( 'This is the bottom section of the homepage.', 'magazine' ),
 //) );
 
+
+/// Remove Genesis Layout Settings ///////////////////////////////////////////////////////////////
+remove_theme_support( 'genesis-inpost-layouts' );
+
+/// Unregister primary and secondary sidebar ///////////////////////////////////////////////////////////////
+unregister_sidebar( 'sidebar' );
+unregister_sidebar( 'sidebar-alt' );
+
+/// Remove default sidebar text ///////////////////////////////////////////////////////////////
+remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
+add_action( 'genesis_sidebar', 'psu_do_default_sidebar' );
+function psu_do_default_sidebar() {
+	if ( ! dynamic_sidebar( 'primary-sidebar' ) ) {
+		echo '';
+	}
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -167,12 +183,12 @@ function psu_menu_extras( $menu, $args ) {
 	if ( 'primary' !== $args->theme_location )
 		return $menu;
 	//* Uncomment this block to add a search form to the navigation menu
-	
+
 	ob_start();
 	get_search_form();
 	$search = ob_get_clean();
 	$menu  .= '<li class="right search">' . $search . '</li>';
-	
+
 	return $menu;
 }
 
@@ -180,9 +196,9 @@ function psu_menu_extras( $menu, $args ) {
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //* Hooks after-entry widget area to single posts, category pages and the news archive page
-add_action( 'genesis_after_content', 'psu_news_area_logic'  ); 
+add_action( 'genesis_after_content', 'psu_news_area_logic'  );
 function psu_news_area_logic() {
-	if ( is_akademiliv_category_page() || is_single() || is_akademiliv_default() ) { 
+	if ( is_akademiliv_category_page() || is_single() || is_akademiliv_default() ) {
 	  genesis_widget_area( 'news-area', array(
 			'before' => '<div class="news-area widget-area">',
 			'after'  => '</div>',
@@ -220,7 +236,7 @@ function psu_left_header_widget() {
 	 	genesis_widget_area( 'logo-area', array(
        'before' => '<div class="logo-area widget-area">',
        'after'	 => '</div>',
-		) ); 
+		) );
   }
 }
 

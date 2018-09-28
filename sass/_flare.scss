@@ -8,12 +8,12 @@
 .site-header {
 	.wrap {
 		border: 0;}}
-		
+
 .content .home-bottom .featured-content .entry {
 	border-bottom: 0; }
 
 .sidebar .featured-content .entry {
-	border-bottom: 0; }		
+	border-bottom: 0; }
 
 .archive .content .entry,
 .home .content .entry,
@@ -25,10 +25,10 @@
 
 .entry-header .entry-meta {
 	margin-bottom: 0; }
-	
+
 .home-top .entry-header .entry-meta {
 	margin-bottom: 0; }
-	
+
 .entry {
 	margin-bottom: 0;}
 
@@ -44,7 +44,7 @@
 	border: none;}
 
 
-.genesis-nav-menu .search input[type="submit"], 
+.genesis-nav-menu .search input[type="submit"],
 .widget_search input[type="submit"] {
 	clip: inherit;
 	position: inherit;
@@ -55,7 +55,7 @@
 	text-align: inherit;
 }
 
-.header-image .site-header .title-area, 
+.header-image .site-header .title-area,
 .header-image .site-header .widget-area {
 	padding: 0;
 }
@@ -80,12 +80,10 @@ li.comment {
 .category-intro-text,
 .archive-wrapper,
 .single-wrapper .entry,
-body.page .category-seminarier,
-body.page .category-utbildning,
+body.page .category-kalendarium,
 body.page .category-notiser,
 body.page .category-bidrag,
-body.page .category-seminars,
-body.page .category-education,
+body.page .category-calendar,
 body.page .category-notices,
 body.page .category-grants,
 .entry-comments,
@@ -94,16 +92,13 @@ body.page .category-grants,
 	background: $c-white;
 	border: 1px solid $box-border-color!important;
 	overflow: hidden;}
-	
+
 /*body.page .category-grants,
 body.page .category-bidrag {
 	background: rgb(255,248,250);}
+*/
 
-body.page .category-education,
-body.page .category-utbildning {
-	background: rgb(248,255,250);}*/
 
-	
 .home-middle {
 	margin-top: $box-gutter;}
 
@@ -119,16 +114,16 @@ body.page .category-utbildning {
 .home-notices,
 .home-middle .widget-wrap {
 	padding: $text-box-padding;}
-	
-	
+
+
 .single-wrapper .entry {
 	padding: $single-box-padding;
-	padding-top: $box-padding*1.5;}	
+	padding-top: $box-padding*1.5;}
 
 
 
 
-/* flare */ 
+/* flare */
 
 body {
 	background: $c-gray-2;}
@@ -167,14 +162,14 @@ body.page-template .sidebar {
 		padding-bottom: $box-padding;	}
 
 	.entry-header {
-	
+
 		&.category-details-box {
 			.box-inner {
 				background: $c-gray-2;
 				padding: $box-gutter $box-gutter $box-gutter 0;
 				margin-top: $box-gutter;
 				margin-bottom: $box-gutter*1.5;}}
-		
+
 		.featured-figure {
 			margin-bottom: $box-padding*.75;}
 		img.size-post-full {
@@ -188,31 +183,22 @@ body.page-template .sidebar {
 				bottom: 4px;
 				padding: 5px 8px;
 				background: rgba(0,0,0,.6);
-				color: $c-white;}}		
-			
-	}		
+				color: $c-white;}}
 
-	.category-education,
-	.category-utbildning {
-		.entry-header {
-		&.category-details-box {
-			.box-inner {
-				padding: $box-gutter;
-				.entry-deadline{
-					margin-bottom: .6em;}}}}}
+	}
 
 	.entry-content {
 
 		.single-wrapper .featured-figure {
 			margin: .4em auto $img-padding/2 auto;}
-		
+
 		img.featured-image {
 			max-width: (720px+$single-padding);
 			margin-left: $single-padding;}
 
     .featured-figure > .wp-caption-text {
     	margin: 0 0 1em $single-padding;}
-    
+
 		hr {
 			width: 70%;}
 
@@ -223,14 +209,14 @@ body.page-template .sidebar {
 		form,
 		.gform_confirmation_wrapper {
 			padding: $single-paragraph-padding;}
-			
+
 		blockquote p {
 			font-weight: 900;
 			line-height: 1.4em;
 			font-size: $base-font-size*1.3;
 			padding: 0;
 		}
-		
+
 	}
 
 }
@@ -245,15 +231,13 @@ body.page-template .sidebar {
 
 
 .category-wrapper {
-	.category-seminarier,
-	.category-utbildning,
+	.category-kalendarium,
 	.category-notiser,
 	.category-bidrag,
-	.category-seminars,
-	.category-education,
+	.category-calendar,
 	.category-notices,
 	.category-grants {
-		padding: $category-box-padding;	
+		padding: $category-box-padding;
 		.entry-content p,
 		.entry-title {
 			margin-bottom: .5em;}}
@@ -278,7 +262,7 @@ body.page-template .sidebar {
 		margin-bottom: 0;}}
 
 
-.home-featured, 
+.home-featured,
 .home-second-row {
 	.entry-header {
 		padding: $image-box-padding;}
@@ -294,35 +278,35 @@ body.page-template .sidebar {
 		height: 200px;
 		overflow: hidden;
     background-color: $image-overlay-color;}}
-    
+
 .home-middle {
 
 	.entry-header {
 		margin-bottom: $heading-margin*2; }
 
   section:nth-child(1) {
-		background: $c-primary-4; }   
-	
+		background: $c-primary-4; }
+
 	section:nth-child(2) {
-		background: $c-gray-1; }   
-	  
+		background: $c-gray-1; }
+
 	section:nth-child(3) {
-		background: $c-primary-1; 
+		background: $c-primary-1;
 	.widget-title {
 		color: $c-white;}
 	.entry-title a {
 		color:  $c-white;
 		&:hover {
 			color: $text-link-active-color;}}}
-			
-} 
+
+}
 
 .home-notices {
   background: $c-secondary-2-4;}
 
-			
-.home-news, 
-.news-area, 
+
+.home-news,
+.news-area,
 .archive-wrapper {
 	.post {
 		margin-bottom: $news-box-gutter;}
@@ -339,12 +323,12 @@ body.page-template .sidebar {
 		margin-bottom: 0;}
 	.entry-title {
 		margin-top: 4px;}}
-			
-			
-			
+
+
+
 .site-header,
 .header-image .site-header {
- 
+
 /*	background-color: $c-white;*/
 
 
@@ -354,11 +338,11 @@ body.page-template .sidebar {
 		img {
 			width: 127px;
 			height: 129px;
-		}	
+		}
 	}
 
 	#switch-language {
-		
+
 		padding-right: $box-gutter;
 		padding-top: $box-gutter;
 
@@ -369,17 +353,17 @@ body.page-template .sidebar {
 			font-family: $heading-font-family;
 			a {
 				text-decoration: none;
-				color: $c-black;	
+				color: $c-black;
 				&:hover{
 					text-decoration: underline;}}}
 
 /*		.widget_search {
 				margin-top: 10px;
-			
+
 				.search-form {
 					float: none;
 					margin-top: 0;}
-	
+
 				input[type="search"],
 				input[type="submit"] {
 			    height: 30px;
@@ -387,13 +371,13 @@ body.page-template .sidebar {
 					box-shadow: none;
 			    box-sizing: border-box;
 			    color: $text-color;}
-	
+
 				input[type="search"] {
 					@include border-radius(3px 0 0 3px);
 			    width: 200px;
 			    border: 1px solid $c-gray-4;
 			    -moz-box-sizing: border-box;}
-			    
+
 				input[type="submit"] {
 					@include border-radius(0 5px 5px 0);
 					font-family: $heading-font-family;
@@ -408,12 +392,12 @@ body.page-template .sidebar {
 					&:hover {
 						background-color: $c-gray-4;
 						color: $c-black;}}}
-*/					
-				
+*/
+
 
 	}
 }
-   
+
 .header-image .site-title a {
 	background-position: left!important;
 }
@@ -449,7 +433,7 @@ body.page-template .sidebar {
 	    border-width: 8px;
 	    margin-left: -8px;
 	    bottom: -2px;}}
-	    
+
 	.genesis-nav-menu li.search {
 		padding: 0;
 		padding-top: 4px;
@@ -461,9 +445,9 @@ body.page-template .sidebar {
 			background-color: $c-gray-2;
 			border: none;
 			color: $text-color;
-			text-transform: none;	
+			text-transform: none;
 		  @include input-placeholder {
-		    color: $text-color}			
+		    color: $text-color}
 			&:focus {
 				color: $c-black;
 				background-color: $c-secondary-1-4;}}
@@ -541,7 +525,7 @@ img.aligncenter,
   font-weight: 900;
   margin: 0;
   font-size: .9em;
-  line-height: 1.2em;	
+  line-height: 1.2em;
 }
 
 .single-wrapper {
@@ -549,15 +533,15 @@ img.aligncenter,
 	img.alignnone {
 		display: block;
 		margin: 0;}
-		
+
 	a.alignleft,
 	img.alignleft {
 		margin-left: -$single-padding;}
-	
+
 	a.alignright,
 	img.alignright {
 		margin-right: -$single-padding;}
-	
+
 	a.aligncenter,
 	img.aligncenter {
 		display: block;}}
@@ -624,7 +608,7 @@ input:hover[type="submit"],
 .entry-content .button:hover {
 	color: $c-white;
 }
-  
+
 .newsletter-form {
   input[type="email"] {
   	@include border-radius(3px 0 0 3px);
@@ -632,9 +616,9 @@ input:hover[type="submit"],
   	background-color: $c-gray-2;
   	border: none;
   	color: $text-color;
-  	text-transform: none;	
+  	text-transform: none;
     @include input-placeholder {
-      color: $text-color}			
+      color: $text-color}
   	&:focus {
   		color: $c-black;
   		background-color: $c-secondary-1-4;}}
@@ -651,24 +635,24 @@ input:hover[type="submit"],
   	&:focus {
   	  color: $c-white;
   		background-color: $c-black;}}
-  		
+
   .footer-widgets & {
     margin-top: .5em;
     input[type="email"] {
       width: 60%;}
     input[type="submit"] {
-      width: 20%;}}      
-      
+      width: 20%;}}
+
   .entry & {
     input[type="email"] {
       width: 60%;}
     input[type="submit"] {
       width: 20%;}}
-    
+
 }
 
  /* gravity forms overrides */
- 
+
 .gform_wrapper {
 
   h3.gform_title {
@@ -678,7 +662,7 @@ input:hover[type="submit"],
     margin: 1em 0 0 0 !important;
     line-height: normal !important;
     font-size: .9em !important;}
-  
+
   label.gfield_label+div.ginput_container {
     margin-top: .2em !important;}
 
@@ -687,27 +671,27 @@ input:hover[type="submit"],
 
   .gfield_description {
     font-size: .8em;}
-    
-  .gform_footer input.button, 
+
+  .gform_footer input.button,
   .gform_wrapper .gform_footer input[type=submit] {
     font-weight: 900;}
 
-  input[type=email], 
-  input[type=number], 
-  input[type=password], 
-  input[type=tel], 
-  input[type=text], 
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text],
   input[type=url],
   textarea {
 	  @include input-placeholder {
-	    color: $c-gray-0;}			
-		@include border-radius(3px);	    
+	    color: $c-gray-0;}
+		@include border-radius(3px);
     font-size: $base-font-size !important;
     padding: .5em !important;}
 
   input[type=submit] {
   	@include border-radius(3px);}
-    
+
 }
 
 
@@ -715,11 +699,10 @@ input:hover[type="submit"],
 
 .page-404 {
   h1.entry-title{
-    margin-bottom: .5em;} 
+    margin-bottom: .5em;}
 
   input[type="search"] {
     width: 60%;}
   input[type="submit"] {
     width: 20%;}
 }
-    

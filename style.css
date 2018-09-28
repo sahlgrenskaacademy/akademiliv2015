@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*
-	Theme Name: AL Mag 2015
-	Theme URI: http://www.akademiliv.se
-	Description: Akademiliv adaptation of Magazine Pro: A mobile responsive and HTML5 theme built for the Genesis Framework.
-	Author: Pontus Sundén
-	Author URI: http://www.psu.se
+  Theme Name: AL Mag 2015v18
+  Theme URI: http://www.akademiliv.se
+  Description: Akademiliv adaptation of Magazine Pro: A mobile responsive and HTML5 theme built for the Genesis Framework.
+  Author: Pontus Sundén/GU
+  Author URI: http://www.gu.se
 
-	Version: 0.1
+  Version: 1.5
 
 	Tags: black, white, one-column, responsive-layout, custom-background, custom-header, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
 
@@ -14,7 +14,7 @@
 	Template Version: 2.1
 
 	License: GPL-2.0+
-	License URI: http://www.opensource.org/licenses/gpl-license.php 
+	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 /* Table of Contents
 	- HTML5 Reset
@@ -1764,20 +1764,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #a09f9b;
   margin-bottom: 1em; }
 
-.category-wrapper .category-seminarier,
-.category-wrapper .category-seminars,
-.category-wrapper .category-utbildning,
-.category-wrapper .category-education,
+.category-wrapper .category-kalendarium,
+.category-wrapper .category-calendar,
 .category-wrapper .category-notiser,
 .category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
 .single-wrapper .entry-header.category-details-box .box-inner {
   padding: 20px; }
-  .category-wrapper .category-seminarier .entry-title a,
-  .category-wrapper .category-seminars .entry-title a,
-  .category-wrapper .category-utbildning .entry-title a,
-  .category-wrapper .category-education .entry-title a,
+  .category-wrapper .category-kalendarium .entry-title a,
+  .category-wrapper .category-calendar .entry-title a,
   .category-wrapper .category-notiser .entry-title a,
   .category-wrapper .category-notices .entry-title a,
   .category-wrapper .category-bidrag .entry-title a,
@@ -1786,60 +1782,54 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2em;
     font-size: 1.5em;
     margin-bottom: .5em; }
-  .category-wrapper .category-seminarier .entry-content,
-  .category-wrapper .category-seminars .entry-content,
-  .category-wrapper .category-utbildning .entry-content,
-  .category-wrapper .category-education .entry-content,
+  .category-wrapper .category-kalendarium .entry-content,
+  .category-wrapper .category-calendar .entry-content,
   .category-wrapper .category-notiser .entry-content,
   .category-wrapper .category-notices .entry-content,
   .category-wrapper .category-bidrag .entry-content,
   .category-wrapper .category-grants .entry-content,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-content {
     font-size: .9em; }
-  .category-wrapper .category-seminarier .entry-details,
-  .category-wrapper .category-seminars .entry-details,
-  .category-wrapper .category-utbildning .entry-details,
-  .category-wrapper .category-education .entry-details,
+  .category-wrapper .category-kalendarium .entry-contact,
+  .category-wrapper .category-kalendarium .entry-details,
+  .category-wrapper .category-calendar .entry-contact,
+  .category-wrapper .category-calendar .entry-details,
+  .category-wrapper .category-notiser .entry-contact,
   .category-wrapper .category-notiser .entry-details,
+  .category-wrapper .category-notices .entry-contact,
   .category-wrapper .category-notices .entry-details,
+  .category-wrapper .category-bidrag .entry-contact,
   .category-wrapper .category-bidrag .entry-details,
+  .category-wrapper .category-grants .entry-contact,
   .category-wrapper .category-grants .entry-details,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-contact,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-details {
     line-height: 1.2em;
-    margin-bottom: .6em;
     font-size: .9em;
     font-weight: 900; }
-    .category-wrapper .category-seminarier .entry-details .plats .label,
-    .category-wrapper .category-seminars .entry-details .plats .label,
-    .category-wrapper .category-utbildning .entry-details .plats .label,
-    .category-wrapper .category-education .entry-details .plats .label,
-    .category-wrapper .category-notiser .entry-details .plats .label,
-    .category-wrapper .category-notices .entry-details .plats .label,
-    .category-wrapper .category-bidrag .entry-details .plats .label,
-    .category-wrapper .category-grants .entry-details .plats .label,
-    .single-wrapper .entry-header.category-details-box .box-inner .entry-details .plats .label {
-      margin-top: .7em; }
-  .category-wrapper .category-seminarier .entry-link,
-  .category-wrapper .category-seminars .entry-link,
-  .category-wrapper .category-utbildning .entry-link,
-  .category-wrapper .category-education .entry-link,
-  .category-wrapper .category-notiser .entry-link,
-  .category-wrapper .category-notices .entry-link,
-  .category-wrapper .category-bidrag .entry-link,
-  .category-wrapper .category-grants .entry-link,
-  .single-wrapper .entry-header.category-details-box .box-inner .entry-link {
-    line-height: 1em; }
-    .category-wrapper .category-seminarier .entry-link a,
-    .category-wrapper .category-seminars .entry-link a,
-    .category-wrapper .category-utbildning .entry-link a,
-    .category-wrapper .category-education .entry-link a,
-    .category-wrapper .category-notiser .entry-link a,
-    .category-wrapper .category-notices .entry-link a,
-    .category-wrapper .category-bidrag .entry-link a,
-    .category-wrapper .category-grants .entry-link a,
-    .single-wrapper .entry-header.category-details-box .box-inner .entry-link a {
-      font-size: .8em;
-      font-weight: bold; }
+  .category-wrapper .category-kalendarium .entry-contact .webb,
+  .category-wrapper .category-kalendarium .entry-contact .epost,
+  .category-wrapper .category-calendar .entry-contact .webb,
+  .category-wrapper .category-calendar .entry-contact .epost,
+  .category-wrapper .category-notiser .entry-contact .webb,
+  .category-wrapper .category-notiser .entry-contact .epost,
+  .category-wrapper .category-notices .entry-contact .webb,
+  .category-wrapper .category-notices .entry-contact .epost,
+  .category-wrapper .category-bidrag .entry-contact .webb,
+  .category-wrapper .category-bidrag .entry-contact .epost,
+  .category-wrapper .category-grants .entry-contact .webb,
+  .category-wrapper .category-grants .entry-contact .epost,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-contact .webb,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-contact .epost {
+    margin-top: .3em; }
+  .category-wrapper .category-kalendarium .entry-online,
+  .category-wrapper .category-calendar .entry-online,
+  .category-wrapper .category-notiser .entry-online,
+  .category-wrapper .category-notices .entry-online,
+  .category-wrapper .category-bidrag .entry-online,
+  .category-wrapper .category-grants .entry-online,
+  .single-wrapper .entry-header.category-details-box .box-inner .entry-online {
+    font-weight: 900; }
 
 .category-wrapper .category-notiser .entry-title a,
 .category-wrapper .category-notices .entry-title a {
@@ -1854,14 +1844,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-wrapper .category-bidrag .entry-title,
 .category-wrapper .category-grants .entry-title,
-.category-wrapper .category-seminarier .entry-title,
-.category-wrapper .category-seminars .entry-title,
+.category-wrapper .category-kalendarium .entry-title,
+.category-wrapper .category-calendar .entry-title,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-title {
   margin-bottom: 0 !important; }
 .category-wrapper .category-bidrag .entry-startdate,
 .category-wrapper .category-grants .entry-startdate,
-.category-wrapper .category-seminarier .entry-startdate,
-.category-wrapper .category-seminars .entry-startdate,
+.category-wrapper .category-kalendarium .entry-startdate,
+.category-wrapper .category-calendar .entry-startdate,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate {
   text-align: center;
   font-weight: 900;
@@ -1869,40 +1859,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Arial Narrow", "HelveticaNeue-CondensedBold", "HelveticaNeue-CondensedRegular", "HelveticaNeue", Helvetica, Arial, sans-serif; }
   .category-wrapper .category-bidrag .entry-startdate .day,
   .category-wrapper .category-grants .entry-startdate .day,
-  .category-wrapper .category-seminarier .entry-startdate .day,
-  .category-wrapper .category-seminars .entry-startdate .day,
+  .category-wrapper .category-kalendarium .entry-startdate .day,
+  .category-wrapper .category-calendar .entry-startdate .day,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate .day {
     margin-left: .05em;
     line-height: 1.2em;
     font-size: 2.325em; }
   .category-wrapper .category-bidrag .entry-startdate .month,
   .category-wrapper .category-grants .entry-startdate .month,
-  .category-wrapper .category-seminarier .entry-startdate .month,
-  .category-wrapper .category-seminars .entry-startdate .month,
+  .category-wrapper .category-kalendarium .entry-startdate .month,
+  .category-wrapper .category-calendar .entry-startdate .month,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate .month {
     font-size: 1.125em; }
   .category-wrapper .category-bidrag .entry-startdate .year,
   .category-wrapper .category-grants .entry-startdate .year,
-  .category-wrapper .category-seminarier .entry-startdate .year,
-  .category-wrapper .category-seminars .entry-startdate .year,
+  .category-wrapper .category-kalendarium .entry-startdate .year,
+  .category-wrapper .category-calendar .entry-startdate .year,
   .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate .year {
     font-size: 1.05em;
     font-weight: normal; }
 
-.category-wrapper .category-utbildning .entry-title,
-.category-wrapper .category-education .entry-title,
 .category-wrapper .category-notiser .entry-title,
 .category-wrapper .category-notices .entry-title {
   font-weight: 900;
   /*		margin-bottom: 0!important;*/ }
-.category-wrapper .category-utbildning .entry-deadline,
-.category-wrapper .category-education .entry-deadline,
 .category-wrapper .category-notiser .entry-deadline,
 .category-wrapper .category-notices .entry-deadline {
   font-weight: 900;
   margin-bottom: .5em; }
-  .category-wrapper .category-utbildning .entry-deadline .label,
-  .category-wrapper .category-education .entry-deadline .label,
   .category-wrapper .category-notiser .entry-deadline .label,
   .category-wrapper .category-notices .entry-deadline .label {
     font-weight: normal; }
@@ -1939,231 +1923,183 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar aside .sidebar-content p {
   margin-bottom: 1em; }
 
-.category-wrapper .category-utbildning .entry-startdate.month1,
-.category-wrapper .category-utbildning .entry-deadline.month1,
-.category-wrapper .category-education .entry-startdate.month1,
-.category-wrapper .category-education .entry-deadline.month1,
 .category-wrapper .category-notiser .entry-startdate.month1,
 .category-wrapper .category-notiser .entry-deadline.month1,
 .category-wrapper .category-notices .entry-startdate.month1,
 .category-wrapper .category-notices .entry-deadline.month1,
 .category-wrapper .category-bidrag .entry-startdate.month1,
 .category-wrapper .category-bidrag .entry-deadline.month1,
-.category-wrapper .category-seminarier .entry-startdate.month1,
-.category-wrapper .category-seminarier .entry-deadline.month1,
+.category-wrapper .category-kalendarium .entry-startdate.month1,
+.category-wrapper .category-kalendarium .entry-deadline.month1,
 .category-wrapper .category-grants .entry-startdate.month1,
 .category-wrapper .category-grants .entry-deadline.month1,
-.category-wrapper .category-seminars .entry-startdate.month1,
-.category-wrapper .category-seminars .entry-deadline.month1,
+.category-wrapper .category-calendar .entry-startdate.month1,
+.category-wrapper .category-calendar .entry-deadline.month1,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month1,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month1 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month2,
-.category-wrapper .category-utbildning .entry-deadline.month2,
-.category-wrapper .category-education .entry-startdate.month2,
-.category-wrapper .category-education .entry-deadline.month2,
 .category-wrapper .category-notiser .entry-startdate.month2,
 .category-wrapper .category-notiser .entry-deadline.month2,
 .category-wrapper .category-notices .entry-startdate.month2,
 .category-wrapper .category-notices .entry-deadline.month2,
 .category-wrapper .category-bidrag .entry-startdate.month2,
 .category-wrapper .category-bidrag .entry-deadline.month2,
-.category-wrapper .category-seminarier .entry-startdate.month2,
-.category-wrapper .category-seminarier .entry-deadline.month2,
+.category-wrapper .category-kalendarium .entry-startdate.month2,
+.category-wrapper .category-kalendarium .entry-deadline.month2,
 .category-wrapper .category-grants .entry-startdate.month2,
 .category-wrapper .category-grants .entry-deadline.month2,
-.category-wrapper .category-seminars .entry-startdate.month2,
-.category-wrapper .category-seminars .entry-deadline.month2,
+.category-wrapper .category-calendar .entry-startdate.month2,
+.category-wrapper .category-calendar .entry-deadline.month2,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month2,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month2 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month3,
-.category-wrapper .category-utbildning .entry-deadline.month3,
-.category-wrapper .category-education .entry-startdate.month3,
-.category-wrapper .category-education .entry-deadline.month3,
 .category-wrapper .category-notiser .entry-startdate.month3,
 .category-wrapper .category-notiser .entry-deadline.month3,
 .category-wrapper .category-notices .entry-startdate.month3,
 .category-wrapper .category-notices .entry-deadline.month3,
 .category-wrapper .category-bidrag .entry-startdate.month3,
 .category-wrapper .category-bidrag .entry-deadline.month3,
-.category-wrapper .category-seminarier .entry-startdate.month3,
-.category-wrapper .category-seminarier .entry-deadline.month3,
+.category-wrapper .category-kalendarium .entry-startdate.month3,
+.category-wrapper .category-kalendarium .entry-deadline.month3,
 .category-wrapper .category-grants .entry-startdate.month3,
 .category-wrapper .category-grants .entry-deadline.month3,
-.category-wrapper .category-seminars .entry-startdate.month3,
-.category-wrapper .category-seminars .entry-deadline.month3,
+.category-wrapper .category-calendar .entry-startdate.month3,
+.category-wrapper .category-calendar .entry-deadline.month3,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month3,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month3 {
   color: #fd7e81; }
-.category-wrapper .category-utbildning .entry-startdate.month4,
-.category-wrapper .category-utbildning .entry-deadline.month4,
-.category-wrapper .category-education .entry-startdate.month4,
-.category-wrapper .category-education .entry-deadline.month4,
 .category-wrapper .category-notiser .entry-startdate.month4,
 .category-wrapper .category-notiser .entry-deadline.month4,
 .category-wrapper .category-notices .entry-startdate.month4,
 .category-wrapper .category-notices .entry-deadline.month4,
 .category-wrapper .category-bidrag .entry-startdate.month4,
 .category-wrapper .category-bidrag .entry-deadline.month4,
-.category-wrapper .category-seminarier .entry-startdate.month4,
-.category-wrapper .category-seminarier .entry-deadline.month4,
+.category-wrapper .category-kalendarium .entry-startdate.month4,
+.category-wrapper .category-kalendarium .entry-deadline.month4,
 .category-wrapper .category-grants .entry-startdate.month4,
 .category-wrapper .category-grants .entry-deadline.month4,
-.category-wrapper .category-seminars .entry-startdate.month4,
-.category-wrapper .category-seminars .entry-deadline.month4,
+.category-wrapper .category-calendar .entry-startdate.month4,
+.category-wrapper .category-calendar .entry-deadline.month4,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month4,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month4 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month5,
-.category-wrapper .category-utbildning .entry-deadline.month5,
-.category-wrapper .category-education .entry-startdate.month5,
-.category-wrapper .category-education .entry-deadline.month5,
 .category-wrapper .category-notiser .entry-startdate.month5,
 .category-wrapper .category-notiser .entry-deadline.month5,
 .category-wrapper .category-notices .entry-startdate.month5,
 .category-wrapper .category-notices .entry-deadline.month5,
 .category-wrapper .category-bidrag .entry-startdate.month5,
 .category-wrapper .category-bidrag .entry-deadline.month5,
-.category-wrapper .category-seminarier .entry-startdate.month5,
-.category-wrapper .category-seminarier .entry-deadline.month5,
+.category-wrapper .category-kalendarium .entry-startdate.month5,
+.category-wrapper .category-kalendarium .entry-deadline.month5,
 .category-wrapper .category-grants .entry-startdate.month5,
 .category-wrapper .category-grants .entry-deadline.month5,
-.category-wrapper .category-seminars .entry-startdate.month5,
-.category-wrapper .category-seminars .entry-deadline.month5,
+.category-wrapper .category-calendar .entry-startdate.month5,
+.category-wrapper .category-calendar .entry-deadline.month5,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month5,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month5 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month6,
-.category-wrapper .category-utbildning .entry-deadline.month6,
-.category-wrapper .category-education .entry-startdate.month6,
-.category-wrapper .category-education .entry-deadline.month6,
 .category-wrapper .category-notiser .entry-startdate.month6,
 .category-wrapper .category-notiser .entry-deadline.month6,
 .category-wrapper .category-notices .entry-startdate.month6,
 .category-wrapper .category-notices .entry-deadline.month6,
 .category-wrapper .category-bidrag .entry-startdate.month6,
 .category-wrapper .category-bidrag .entry-deadline.month6,
-.category-wrapper .category-seminarier .entry-startdate.month6,
-.category-wrapper .category-seminarier .entry-deadline.month6,
+.category-wrapper .category-kalendarium .entry-startdate.month6,
+.category-wrapper .category-kalendarium .entry-deadline.month6,
 .category-wrapper .category-grants .entry-startdate.month6,
 .category-wrapper .category-grants .entry-deadline.month6,
-.category-wrapper .category-seminars .entry-startdate.month6,
-.category-wrapper .category-seminars .entry-deadline.month6,
+.category-wrapper .category-calendar .entry-startdate.month6,
+.category-wrapper .category-calendar .entry-deadline.month6,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month6,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month6 {
   color: #fd7e81; }
-.category-wrapper .category-utbildning .entry-startdate.month7,
-.category-wrapper .category-utbildning .entry-deadline.month7,
-.category-wrapper .category-education .entry-startdate.month7,
-.category-wrapper .category-education .entry-deadline.month7,
 .category-wrapper .category-notiser .entry-startdate.month7,
 .category-wrapper .category-notiser .entry-deadline.month7,
 .category-wrapper .category-notices .entry-startdate.month7,
 .category-wrapper .category-notices .entry-deadline.month7,
 .category-wrapper .category-bidrag .entry-startdate.month7,
 .category-wrapper .category-bidrag .entry-deadline.month7,
-.category-wrapper .category-seminarier .entry-startdate.month7,
-.category-wrapper .category-seminarier .entry-deadline.month7,
+.category-wrapper .category-kalendarium .entry-startdate.month7,
+.category-wrapper .category-kalendarium .entry-deadline.month7,
 .category-wrapper .category-grants .entry-startdate.month7,
 .category-wrapper .category-grants .entry-deadline.month7,
-.category-wrapper .category-seminars .entry-startdate.month7,
-.category-wrapper .category-seminars .entry-deadline.month7,
+.category-wrapper .category-calendar .entry-startdate.month7,
+.category-wrapper .category-calendar .entry-deadline.month7,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month7,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month7 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month8,
-.category-wrapper .category-utbildning .entry-deadline.month8,
-.category-wrapper .category-education .entry-startdate.month8,
-.category-wrapper .category-education .entry-deadline.month8,
 .category-wrapper .category-notiser .entry-startdate.month8,
 .category-wrapper .category-notiser .entry-deadline.month8,
 .category-wrapper .category-notices .entry-startdate.month8,
 .category-wrapper .category-notices .entry-deadline.month8,
 .category-wrapper .category-bidrag .entry-startdate.month8,
 .category-wrapper .category-bidrag .entry-deadline.month8,
-.category-wrapper .category-seminarier .entry-startdate.month8,
-.category-wrapper .category-seminarier .entry-deadline.month8,
+.category-wrapper .category-kalendarium .entry-startdate.month8,
+.category-wrapper .category-kalendarium .entry-deadline.month8,
 .category-wrapper .category-grants .entry-startdate.month8,
 .category-wrapper .category-grants .entry-deadline.month8,
-.category-wrapper .category-seminars .entry-startdate.month8,
-.category-wrapper .category-seminars .entry-deadline.month8,
+.category-wrapper .category-calendar .entry-startdate.month8,
+.category-wrapper .category-calendar .entry-deadline.month8,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month8,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month8 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month9,
-.category-wrapper .category-utbildning .entry-deadline.month9,
-.category-wrapper .category-education .entry-startdate.month9,
-.category-wrapper .category-education .entry-deadline.month9,
 .category-wrapper .category-notiser .entry-startdate.month9,
 .category-wrapper .category-notiser .entry-deadline.month9,
 .category-wrapper .category-notices .entry-startdate.month9,
 .category-wrapper .category-notices .entry-deadline.month9,
 .category-wrapper .category-bidrag .entry-startdate.month9,
 .category-wrapper .category-bidrag .entry-deadline.month9,
-.category-wrapper .category-seminarier .entry-startdate.month9,
-.category-wrapper .category-seminarier .entry-deadline.month9,
+.category-wrapper .category-kalendarium .entry-startdate.month9,
+.category-wrapper .category-kalendarium .entry-deadline.month9,
 .category-wrapper .category-grants .entry-startdate.month9,
 .category-wrapper .category-grants .entry-deadline.month9,
-.category-wrapper .category-seminars .entry-startdate.month9,
-.category-wrapper .category-seminars .entry-deadline.month9,
+.category-wrapper .category-calendar .entry-startdate.month9,
+.category-wrapper .category-calendar .entry-deadline.month9,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month9,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month9 {
   color: #fd7e81; }
-.category-wrapper .category-utbildning .entry-startdate.month10,
-.category-wrapper .category-utbildning .entry-deadline.month10,
-.category-wrapper .category-education .entry-startdate.month10,
-.category-wrapper .category-education .entry-deadline.month10,
 .category-wrapper .category-notiser .entry-startdate.month10,
 .category-wrapper .category-notiser .entry-deadline.month10,
 .category-wrapper .category-notices .entry-startdate.month10,
 .category-wrapper .category-notices .entry-deadline.month10,
 .category-wrapper .category-bidrag .entry-startdate.month10,
 .category-wrapper .category-bidrag .entry-deadline.month10,
-.category-wrapper .category-seminarier .entry-startdate.month10,
-.category-wrapper .category-seminarier .entry-deadline.month10,
+.category-wrapper .category-kalendarium .entry-startdate.month10,
+.category-wrapper .category-kalendarium .entry-deadline.month10,
 .category-wrapper .category-grants .entry-startdate.month10,
 .category-wrapper .category-grants .entry-deadline.month10,
-.category-wrapper .category-seminars .entry-startdate.month10,
-.category-wrapper .category-seminars .entry-deadline.month10,
+.category-wrapper .category-calendar .entry-startdate.month10,
+.category-wrapper .category-calendar .entry-deadline.month10,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month10,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month10 {
   color: #822124; }
-.category-wrapper .category-utbildning .entry-startdate.month11,
-.category-wrapper .category-utbildning .entry-deadline.month11,
-.category-wrapper .category-education .entry-startdate.month11,
-.category-wrapper .category-education .entry-deadline.month11,
 .category-wrapper .category-notiser .entry-startdate.month11,
 .category-wrapper .category-notiser .entry-deadline.month11,
 .category-wrapper .category-notices .entry-startdate.month11,
 .category-wrapper .category-notices .entry-deadline.month11,
 .category-wrapper .category-bidrag .entry-startdate.month11,
 .category-wrapper .category-bidrag .entry-deadline.month11,
-.category-wrapper .category-seminarier .entry-startdate.month11,
-.category-wrapper .category-seminarier .entry-deadline.month11,
+.category-wrapper .category-kalendarium .entry-startdate.month11,
+.category-wrapper .category-kalendarium .entry-deadline.month11,
 .category-wrapper .category-grants .entry-startdate.month11,
 .category-wrapper .category-grants .entry-deadline.month11,
-.category-wrapper .category-seminars .entry-startdate.month11,
-.category-wrapper .category-seminars .entry-deadline.month11,
+.category-wrapper .category-calendar .entry-startdate.month11,
+.category-wrapper .category-calendar .entry-deadline.month11,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month11,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month11 {
   color: #c54649; }
-.category-wrapper .category-utbildning .entry-startdate.month12,
-.category-wrapper .category-utbildning .entry-deadline.month12,
-.category-wrapper .category-education .entry-startdate.month12,
-.category-wrapper .category-education .entry-deadline.month12,
 .category-wrapper .category-notiser .entry-startdate.month12,
 .category-wrapper .category-notiser .entry-deadline.month12,
 .category-wrapper .category-notices .entry-startdate.month12,
 .category-wrapper .category-notices .entry-deadline.month12,
 .category-wrapper .category-bidrag .entry-startdate.month12,
 .category-wrapper .category-bidrag .entry-deadline.month12,
-.category-wrapper .category-seminarier .entry-startdate.month12,
-.category-wrapper .category-seminarier .entry-deadline.month12,
+.category-wrapper .category-kalendarium .entry-startdate.month12,
+.category-wrapper .category-kalendarium .entry-deadline.month12,
 .category-wrapper .category-grants .entry-startdate.month12,
 .category-wrapper .category-grants .entry-deadline.month12,
-.category-wrapper .category-seminars .entry-startdate.month12,
-.category-wrapper .category-seminars .entry-deadline.month12,
+.category-wrapper .category-calendar .entry-startdate.month12,
+.category-wrapper .category-calendar .entry-deadline.month12,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-startdate.month12,
 .single-wrapper .entry-header.category-details-box .box-inner .entry-deadline.month12 {
   color: #fd7e81; }
@@ -2171,36 +2107,45 @@ h1, h2, h3, h4, h5, h6 {
 /* Meta */
 .home-featured .entry-meta,
 .home-featured .entry-details .label,
+.home-featured .entry-contact .label,
 .home-featured .entry-time,
 .home-second-row .entry-meta,
 .home-second-row .entry-details .label,
+.home-second-row .entry-contact .label,
 .home-second-row .entry-time,
 .home-latest .entry-meta,
 .home-latest .entry-details .label,
+.home-latest .entry-contact .label,
 .home-latest .entry-time,
 .home-notices .entry-meta,
 .home-notices .entry-details .label,
+.home-notices .entry-contact .label,
 .home-notices .entry-time,
 .home-middle .entry-meta,
 .home-middle .entry-details .label,
+.home-middle .entry-contact .label,
 .home-middle .entry-time,
 .home-news .entry-meta,
 .home-news .entry-details .label,
+.home-news .entry-contact .label,
 .home-news .entry-time,
 .news-area .entry-meta,
 .news-area .entry-details .label,
+.news-area .entry-contact .label,
 .news-area .entry-time,
 .archive-wrapper .entry-meta,
 .archive-wrapper .entry-details .label,
+.archive-wrapper .entry-contact .label,
 .archive-wrapper .entry-time,
 .category-wrapper .entry-meta,
 .category-wrapper .entry-details .label,
+.category-wrapper .entry-contact .label,
 .category-wrapper .entry-time,
 .single-wrapper .entry-header .entry-meta,
 .single-wrapper .entry-header .entry-details .label,
+.single-wrapper .entry-header .entry-contact .label,
 .single-wrapper .entry-header .entry-time {
-  line-height: 1em;
-  margin-top: 3px;
+  margin-top: 1em;
   font-size: .9em;
   color: #a09f9b;
   text-transform: uppercase;
@@ -2281,12 +2226,10 @@ li.comment {
 .category-intro-text,
 .archive-wrapper,
 .single-wrapper .entry,
-body.page .category-seminarier,
-body.page .category-utbildning,
+body.page .category-kalendarium,
 body.page .category-notiser,
 body.page .category-bidrag,
-body.page .category-seminars,
-body.page .category-education,
+body.page .category-calendar,
 body.page .category-notices,
 body.page .category-grants,
 .entry-comments,
@@ -2299,10 +2242,7 @@ body.page .category-grants,
 /*body.page .category-grants,
 body.page .category-bidrag {
 	background: rgb(255,248,250);}
-
-body.page .category-education,
-body.page .category-utbildning {
-	background: rgb(248,255,250);}*/
+*/
 .home-middle {
   margin-top: 20px; }
 
@@ -2372,12 +2312,6 @@ body.page-template .sidebar {
     padding: 5px 8px;
     background: rgba(0, 0, 0, 0.6);
     color: white; }
-.single-wrapper .category-education .entry-header.category-details-box .box-inner,
-.single-wrapper .category-utbildning .entry-header.category-details-box .box-inner {
-  padding: 20px; }
-  .single-wrapper .category-education .entry-header.category-details-box .box-inner .entry-deadline,
-  .single-wrapper .category-utbildning .entry-header.category-details-box .box-inner .entry-deadline {
-    margin-bottom: .6em; }
 .single-wrapper .entry-content .single-wrapper .featured-figure {
   margin: 0.4em auto 0.45em auto; }
 .single-wrapper .entry-content img.featured-image {
@@ -2403,27 +2337,21 @@ body.page-template .sidebar {
 /*	img.featured-image {
 		margin: 0;}
 	}*/
-.category-wrapper .category-seminarier,
-.category-wrapper .category-utbildning,
+.category-wrapper .category-kalendarium,
 .category-wrapper .category-notiser,
 .category-wrapper .category-bidrag,
-.category-wrapper .category-seminars,
-.category-wrapper .category-education,
+.category-wrapper .category-calendar,
 .category-wrapper .category-notices,
 .category-wrapper .category-grants {
   padding: 20px; }
-  .category-wrapper .category-seminarier .entry-content p,
-  .category-wrapper .category-seminarier .entry-title,
-  .category-wrapper .category-utbildning .entry-content p,
-  .category-wrapper .category-utbildning .entry-title,
+  .category-wrapper .category-kalendarium .entry-content p,
+  .category-wrapper .category-kalendarium .entry-title,
   .category-wrapper .category-notiser .entry-content p,
   .category-wrapper .category-notiser .entry-title,
   .category-wrapper .category-bidrag .entry-content p,
   .category-wrapper .category-bidrag .entry-title,
-  .category-wrapper .category-seminars .entry-content p,
-  .category-wrapper .category-seminars .entry-title,
-  .category-wrapper .category-education .entry-content p,
-  .category-wrapper .category-education .entry-title,
+  .category-wrapper .category-calendar .entry-content p,
+  .category-wrapper .category-calendar .entry-title,
   .category-wrapper .category-notices .entry-content p,
   .category-wrapper .category-notices .entry-title,
   .category-wrapper .category-grants .entry-content p,
@@ -2527,11 +2455,11 @@ body.page-template .sidebar {
     padding-top: 20px;
     /*		.widget_search {
     				margin-top: 10px;
-    			
+    
     				.search-form {
     					float: none;
     					margin-top: 0;}
-    	
+    
     				input[type="search"],
     				input[type="submit"] {
     			    height: 30px;
@@ -2539,13 +2467,13 @@ body.page-template .sidebar {
     					box-shadow: none;
     			    box-sizing: border-box;
     			    color: $text-color;}
-    	
+    
     				input[type="search"] {
     					@include border-radius(3px 0 0 3px);
     			    width: 200px;
     			    border: 1px solid $c-gray-4;
     			    -moz-box-sizing: border-box;}
-    			    
+    
     				input[type="submit"] {
     					@include border-radius(0 5px 5px 0);
     					font-family: $heading-font-family;
@@ -2955,10 +2883,8 @@ input:hover[type="submit"],
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
-  .category-wrapper .category-utbildning,
   .category-wrapper .category-notiser,
   .category-wrapper .category-bidrag,
-  .category-wrapper .category-education,
   .category-wrapper .category-notices,
   .category-wrapper .category-grants {
     height: 400px; } }
@@ -2968,21 +2894,19 @@ input:hover[type="submit"],
   .home-featured .entry,
   .home-second-row .entry,
   .home-middle .widget,
-  .category-wrapper .category-utbildning,
   .category-wrapper .category-notiser,
   .category-wrapper .category-bidrag,
-  .category-wrapper .category-education,
   .category-wrapper .category-notices,
   .category-wrapper .category-grants {
     height: auto; } }
 
 @media only screen and (min-width: 640px) {
-  .category-wrapper .category-seminars,
-  .category-wrapper .category-seminarier {
+  .category-wrapper .category-calendar,
+  .category-wrapper .category-kalendarium {
     height: 325px; } }
 @media only screen and (max-width: 639px) {
-  .category-wrapper .category-seminars,
-  .category-wrapper .category-seminarier {
+  .category-wrapper .category-calendar,
+  .category-wrapper .category-kalendarium {
     height: auto; } }
 
 @media only screen and (max-width: 639px) {
@@ -2998,8 +2922,8 @@ input:hover[type="submit"],
 /************************************************************************************************/
 /* Content ie. not header, sidebar, footer */
 .content {
-  /*	@media only screen and (max-width: 1139px) { }	
-  	
+  /*	@media only screen and (max-width: 1139px) { }
+  
   	@media only screen and (max-width: 1023px) { }
   
   	@media only screen and (max-width: 768px) { }
@@ -3066,16 +2990,14 @@ input:hover[type="submit"],
       float: left;
       margin-left: 0;
       margin-right: 0; }
-      .content .category-wrapper .category-utbildning,
-      .content .category-wrapper .category-education,
       .content .category-wrapper .category-bidrag,
       .content .category-wrapper .category-grants {
         width: 33.33333%;
         float: left; }
-      .content .category-wrapper .category-seminars,
+      .content .category-wrapper .category-calendar,
       .content .category-wrapper .category-notiser,
       .content .category-wrapper .category-notices,
-      .content .category-wrapper .category-seminarier {
+      .content .category-wrapper .category-kalendarium {
         width: 50%;
         float: left; }
       .content .category-wrapper.category-wrapper-bidrag .category-subtitle, .content .category-wrapper.category-wrapper-grants .category-subtitle {
@@ -3222,43 +3144,47 @@ input:hover[type="submit"],
 
 /************************************************************************************************/
 /* Inside category boxes */
-.category-wrapper .category-seminars,
-.category-wrapper .category-seminarier,
-.single-wrapper .category-seminars .entry-header.category-details-box .box-inner,
-.single-wrapper .category-seminarier .entry-header.category-details-box .box-inner {
+.category-wrapper .category-calendar,
+.category-wrapper .category-kalendarium,
+.single-wrapper .category-calendar .entry-header.category-details-box .box-inner,
+.single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner {
   position: relative; }
-  .category-wrapper .category-seminars .entry-header,
-  .category-wrapper .category-seminarier .entry-header,
-  .single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-header,
-  .single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-header {
+  .category-wrapper .category-calendar .entry-header,
+  .category-wrapper .category-kalendarium .entry-header,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-header,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-header {
     width: 100%;
     float: left; }
-    .category-wrapper .category-seminars .entry-header .entry-title,
-    .category-wrapper .category-seminarier .entry-header .entry-title,
-    .single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-header .entry-title,
-    .single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-header .entry-title {
+    .category-wrapper .category-calendar .entry-header .entry-title,
+    .category-wrapper .category-kalendarium .entry-header .entry-title,
+    .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-header .entry-title,
+    .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-header .entry-title {
       width: 83%;
       float: right;
       margin-right: 0; }
-  .category-wrapper .category-seminars .entry-content,
-  .category-wrapper .category-seminars .entry-details,
-  .category-wrapper .category-seminars .entry-link,
-  .category-wrapper .category-seminarier .entry-content,
-  .category-wrapper .category-seminarier .entry-details,
-  .category-wrapper .category-seminarier .entry-link,
-  .single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-content,
-  .single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-link,
-  .single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-content,
-  .single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-link {
+  .category-wrapper .category-calendar .entry-content,
+  .category-wrapper .category-calendar .entry-details,
+  .category-wrapper .category-calendar .entry-online,
+  .category-wrapper .category-calendar .entry-contact,
+  .category-wrapper .category-kalendarium .entry-content,
+  .category-wrapper .category-kalendarium .entry-details,
+  .category-wrapper .category-kalendarium .entry-online,
+  .category-wrapper .category-kalendarium .entry-contact,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-content,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-details,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-contact,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-content,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-details,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-contact {
     width: 83%;
     float: right;
     margin-right: 0; }
-  .category-wrapper .category-seminars .entry-startdate,
-  .category-wrapper .category-seminarier .entry-startdate,
-  .single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-startdate,
-  .single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-startdate {
+  .category-wrapper .category-calendar .entry-startdate,
+  .category-wrapper .category-kalendarium .entry-startdate,
+  .single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-startdate,
+  .single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-startdate {
     width: 16%;
     float: left;
     position: absolute;
@@ -3284,16 +3210,20 @@ input:hover[type="submit"],
       margin-right: 0; }
   .category-wrapper .category-bidrag .entry-content,
   .category-wrapper .category-bidrag .entry-details,
-  .category-wrapper .category-bidrag .entry-link,
+  .category-wrapper .category-bidrag .entry-online,
+  .category-wrapper .category-bidrag .entry-contact,
   .category-wrapper .category-grants .entry-content,
   .category-wrapper .category-grants .entry-details,
-  .category-wrapper .category-grants .entry-link,
+  .category-wrapper .category-grants .entry-online,
+  .category-wrapper .category-grants .entry-contact,
   .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-content,
   .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-link,
+  .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-contact,
   .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-content,
   .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-details,
-  .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-link {
+  .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-online,
+  .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-contact {
     width: 80%;
     float: right;
     margin-right: 0; }
@@ -3306,8 +3236,8 @@ input:hover[type="submit"],
     position: absolute;
     left: 3%; }
 
-.single-wrapper .category-seminars .entry-header.category-details-box .box-inner .entry-startdate,
-.single-wrapper .category-seminarier .entry-header.category-details-box .box-inner .entry-startdate,
+.single-wrapper .category-calendar .entry-header.category-details-box .box-inner .entry-startdate,
+.single-wrapper .category-kalendarium .entry-header.category-details-box .box-inner .entry-startdate,
 .single-wrapper .category-bidrag .entry-header.category-details-box .box-inner .entry-startdate,
 .single-wrapper .category-grants .entry-header.category-details-box .box-inner .entry-startdate {
   position: inherit;
@@ -3319,10 +3249,10 @@ input:hover[type="submit"],
   float: left; }
 .category-wrapper-bidrag .loop-2 .entry-content,
 .category-wrapper-bidrag .loop-2 .entry-details,
-.category-wrapper-bidrag .loop-2 .entry-link,
+.category-wrapper-bidrag .loop-2 .entry-contact,
 .category-wrapper-grants .loop-2 .entry-content,
 .category-wrapper-grants .loop-2 .entry-details,
-.category-wrapper-grants .loop-2 .entry-link {
+.category-wrapper-grants .loop-2 .entry-contact {
   width: 100%;
   float: right;
   margin-right: 0; }

@@ -1,4 +1,4 @@
-// _typography.scss 
+// _typography.scss
 
 
 /* Overrides */
@@ -14,11 +14,11 @@ body {
 	color: $text-color;
 	font-size: $base-font-size;
 	font-family: $base-font-family;
-	font-weight: $base-font-weight; 
+	font-weight: $base-font-weight;
 	line-height: $base-font-line-height;}
-	
 
-/* Links */ 
+
+/* Links */
 
 a,
 .entry-content a {
@@ -35,7 +35,7 @@ a,
 .news-area,
 .archive-wrapper {
 	.post a {
-		text-decoration: none;	
+		text-decoration: none;
 		color: inherit; }
   a.featured-title {
     text-decoration: none;}}
@@ -56,7 +56,7 @@ input[type="submit"],
 textarea:focus,
 .button {
 	-webkit-transition: none; /* all 0.1s ease-in-out */
-	-moz-transition:    none; 
+	-moz-transition:    none;
 	-ms-transition:     none;
 	-o-transition:      none;
 	transition:         none;
@@ -72,7 +72,7 @@ textarea:focus,
 		font-family: $heading-font-family;
 		font-weight: normal;
 		font-size:  $base-font-size*1.2;
-		color:  $heading-color; 
+		color:  $heading-color;
 		text-decoration: none;
 		&:hover, &:focus, &:active {
 			text-decoration: underline;
@@ -84,12 +84,12 @@ textarea:focus,
 
 
 
-/* Titles */		
+/* Titles */
 
 .site-title,
 h1, h2, h3, h4, h5, h6 {
-	font-family: $heading-font-family;	
-	font-weight: $heading-font-weight; 
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
 	letter-spacing: $heading-tracking;
 	margin: 0; }
 
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: inherit;
 	color: $heading-color;
 	text-decoration: none;
-	font-weight: $heading-font-weight; 
+	font-weight: $heading-font-weight;
 	font-size: $heading-base-size;
 }
 
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: 1.4em;}
 	.wrap {
 		padding: 0; }}
-				
+
 .news-area,
 .content,
 .magazine-home .content {
@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 		color: $heading-color;
 		padding: 0;
 		margin-bottom: 15px;}}
- 
+
 .sidebar {
 	.widget-title {
 		text-transform: none;
@@ -141,14 +141,14 @@ h1, h2, h3, h4, h5, h6 {
 		font-weight: $list-heading-font-weight;}
 	.entry-title a {
 		line-height: $list-heading-line-height;
-		font-size: $list-heading-font-size; 
+		font-size: $list-heading-font-size;
 		font-family: $base-font-family;
 		font-weight: $list-heading-font-weight;}}
 
 #{$image-boxes} {
 	.entry-title a {
 		line-height: 1.2em;
-		font-size: 1.7em; 
+		font-size: 1.7em;
 		font-family: $heading-font-family;
 		font-weight: $heading-font-weight; }}
 
@@ -159,10 +159,10 @@ h1, h2, h3, h4, h5, h6 {
 		font-weight: 900;
 		font-size: $news-widget-font-size;
 		margin-bottom: $box-gutter/2;
-		color: $news-widget-color;}	
+		color: $news-widget-color;}
 	.entry-title a {
 		line-height: 1em;
-		font-size: $news-heading-font-size; 
+		font-size: $news-heading-font-size;
 		font-family: $heading-font-family; }}
 
 .archive-description, .author-box {
@@ -176,16 +176,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: $news-widget-font-size;
 	margin-bottom: $box-gutter/2;
 	color: $news-widget-color;}
-	
+
 .archive-pre-title {
 	color: $c-gray-0;
 	margin-bottom: 1em;}
 
 
-.category-wrapper .category-seminarier,
-.category-wrapper .category-seminars,
-.category-wrapper .category-utbildning,
-.category-wrapper .category-education,
+.category-wrapper .category-kalendarium,
+.category-wrapper .category-calendar,
 .category-wrapper .category-notiser,
 .category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
@@ -198,18 +196,16 @@ h1, h2, h3, h4, h5, h6 {
 		margin-bottom: .5em;}
 	.entry-content {
 		font-size: .9em;}
-	.entry-details {
+		.entry-contact,
+		.entry-details {
 		line-height: 1.2em;
-		margin-bottom: .6em;
 		font-size: .9em;
-		font-weight: 900;
-		.plats .label {
-			margin-top: .7em;}}
-	.entry-link {
-		line-height: 1em;
-		a {
-			font-size: .8em;
-			font-weight: bold;}}
+		font-weight: 900;}
+	.entry-contact .webb,
+	.entry-contact .epost{
+			margin-top: .3em;}
+	.entry-online {
+		font-weight: 900;}
 }
 
 
@@ -222,14 +218,14 @@ h1, h2, h3, h4, h5, h6 {
 		margin-bottom: .5em;}
 	.entry-content {
 		font-size: 1.1em;
-		line-height: 1.4em;}  
+		line-height: 1.4em;}
 }
 
 
 .category-wrapper .category-bidrag,
 .category-wrapper .category-grants,
-.category-wrapper .category-seminarier,
-.category-wrapper .category-seminars,
+.category-wrapper .category-kalendarium,
+.category-wrapper .category-calendar,
 .single-wrapper .entry-header.category-details-box .box-inner {
 	.entry-title {
 		margin-bottom: 0!important;}
@@ -250,8 +246,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.category-wrapper .category-utbildning,
-.category-wrapper .category-education,
 .category-wrapper .category-notiser,
 .category-wrapper .category-notices {
 	.entry-title {
@@ -293,25 +287,23 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar aside {
 	h2 {
 		line-height: 1.2em;
-		font-size: $list-widget-heading-font-size*1; 
+		font-size: $list-widget-heading-font-size*1;
 		font-family: $heading-font-family;
-		font-weight: normal; 
+		font-weight: normal;
 		margin-bottom: 1em;}
 	.widget-wrap,
 	.sidebar-content {
 		p {
 			margin-bottom: 1em;	}
 	}
-}		
+}
 
-.category-wrapper .category-utbildning,
-.category-wrapper .category-education,
 .category-wrapper .category-notiser,
 .category-wrapper .category-notices,
 .category-wrapper .category-bidrag,
-.category-wrapper .category-seminarier,
+.category-wrapper .category-kalendarium,
 .category-wrapper .category-grants,
-.category-wrapper .category-seminars,
+.category-wrapper .category-calendar,
 .single-wrapper .entry-header.category-details-box .box-inner {
 	.entry-startdate,
 	.entry-deadline {
@@ -333,34 +325,29 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Meta */
 
-.home-featured, 
+.home-featured,
 .home-second-row,
 .home-latest,
 .home-notices,
 .home-middle,
-.home-news, 
-.news-area, 
+.home-news,
+.news-area,
 .archive-wrapper,
 .category-wrapper,
 .single-wrapper .entry-header {
 	.entry-meta,
 	.entry-details .label,
+	.entry-contact .label,
 	.entry-time {
-		line-height: 1em;
-		margin-top: 3px;
+		margin-top: 1em;
 		font-size: .9em;
 		color: $c-gray-0;
 		text-transform: uppercase;
 		font-weight: normal; }}
-		
-		
-		
+
+
+
 .single-wrapper {
 	.entry-header .entry-meta {
 			margin-top: .7em;
 			margin-bottom: 2em;}}
-		
-		
-		
-		
-		

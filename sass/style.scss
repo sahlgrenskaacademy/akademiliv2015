@@ -1,11 +1,11 @@
 /*
-	Theme Name: AL Mag 2015
-	Theme URI: http://www.akademiliv.se
-	Description: Akademiliv adaptation of Magazine Pro: A mobile responsive and HTML5 theme built for the Genesis Framework.
-	Author: Pontus Sundén
-	Author URI: http://www.psu.se
+  Theme Name: AL Mag 2015v18
+  Theme URI: http://www.akademiliv.se
+  Description: Akademiliv adaptation of Magazine Pro: A mobile responsive and HTML5 theme built for the Genesis Framework.
+  Author: Pontus Sundén/GU
+  Author URI: http://www.gu.se
 
-	Version: 0.1
+  Version: 1.5
 
 	Tags: black, white, one-column, responsive-layout, custom-background, custom-header, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
 
@@ -13,7 +13,7 @@
 	Template Version: 2.1
 
 	License: GPL-2.0+
-	License URI: http://www.opensource.org/licenses/gpl-license.php 
+	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
 // susy
@@ -29,8 +29,7 @@
 @import "genesis-defaults-nav";
 @import "variables";
 @import "mixins";
-@import "typography"; 
+@import "typography";
 @import "flare";
 @import "layout";
 @import "mobile"
-
