@@ -245,16 +245,19 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 	// Change date format to unix timestamp
 	update_field('startdate', strtotime($cf_startdate)*1000, $post_id);
 
-	// Create duplicate in English
+	// Create duplicate in English and fetch new post id
 	$language_to = 'en';
 	do_action('wpml_admin_make_post_duplicates', $post_id);
 	$tr_post_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $language_to );
+
+	// set post content and category 
 	wp_update_post(array(
 	  'ID'           => $tr_post_id,
 	  'post_title'   => $cf_title_english,
 		'post_excerpt' => $cf_excerpt_english,
 	  'post_content' => $cf_desc_english,
   ));
+	wp_set_post_categories( $tr_post_id, array(12) ); // "Calendar" (English category) have tag_ID=12
 
 }
 
