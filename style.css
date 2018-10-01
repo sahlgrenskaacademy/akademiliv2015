@@ -2893,7 +2893,7 @@ input:hover[type="submit"],
   .category-wrapper .category-bidrag,
   .category-wrapper .category-notices,
   .category-wrapper .category-grants {
-    height: 400px; } }
+    height: 450px; } }
 @media only screen and (max-width: 639px) {
   .home-latest,
   .home-notices,
