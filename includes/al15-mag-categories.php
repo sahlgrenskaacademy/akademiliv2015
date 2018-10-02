@@ -97,7 +97,7 @@ function psu_child_read_more_link() {
 }
 
 
-/// Set archive excrept length based on category ///////////////////////////////////////////////////////////////
+/// Set archive excrept length in words based on category ///////////////////////////////////////////////////////////////
 function psu_category_excerpt_length($length) {
   global $cat_id;
   switch ( $cat_id ) {
@@ -116,7 +116,7 @@ function psu_category_excerpt_length($length) {
     // calendar
     case 7:
     case 12:
-      return 50;
+      return 30;
     // news
     default:
       return 70;
