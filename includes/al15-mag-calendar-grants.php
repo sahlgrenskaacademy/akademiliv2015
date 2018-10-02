@@ -262,7 +262,21 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 
 }
 
-
+/// Excerpt mandatory on calendar post
+// https://wordpress.stackexchange.com/questions/124422/mandatory-excerpt-for-custom-post-type#124427
+add_filter('wp_insert_post_data', 'psu_mandatory_excerpt');
+function psu_mandatory_excerpt($data) {
+	if ( is_akademiliv_category_page('calendar') ) {
+	  return $data;
+	} else {
+	  $excerpt = $data['post_excerpt'];
+	  if (empty($excerpt)) {
+	    if ( $data['post_status'] === 'publish' ) add_filter('redirect_post_location', 'excerpt_error_message_redirect', '99');
+	    $data['post_status'] = 'draft';
+	  }
+	}
+	return $data;
+}
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
 /// GRANTS
