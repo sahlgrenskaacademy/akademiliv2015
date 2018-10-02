@@ -263,20 +263,36 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 }
 
 /// Excerpt mandatory on calendar post
-// https://wordpress.stackexchange.com/questions/124422/mandatory-excerpt-for-custom-post-type#124427
-add_filter('wp_insert_post_data', 'psu_mandatory_excerpt');
-function psu_mandatory_excerpt($data) {
-	if ( is_akademiliv_category_page('calendar') ) {
-	  return $data;
+// https://www.wp-tweaks.com/display-custom-error-messages-in-wordpress-admin/
+add_action('post_updated_messages', 'psu_excerpt_error_message');
+function psu_excerpt_error_message($messages) {
+	global $post;
+	$cat = get_the_category();
+	$term_id = $cat[0]->term_id;
+	$is_calendar = ($term_id == 7 || $term_id == 12)? true: false; // 7 and 12 are calendar category ids
+
+	if (
+		$is_calendar &&
+		$post->post_excerpt == '' &&
+		$post->post_status == 'publish'
+	) {
+    add_settings_error(
+			'exerpt_missing_error',
+			'',
+			'Post not published. Please enter a short description in the excerpt box.',
+			'error'
+		);
+    settings_errors('exerpt_missing_error');
+    $post->post_status = 'draft';
+    wp_update_post($post);
+    return;
 	} else {
-	  $excerpt = $data['post_excerpt'];
-	  if (empty($excerpt)) {
-	    if ( $data['post_status'] === 'publish' ) add_filter('redirect_post_location', 'excerpt_error_message_redirect', '99');
-	    $data['post_status'] = 'draft';
-	  }
+		return $messages;
 	}
-	return $data;
+
 }
+
+
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
 /// GRANTS
