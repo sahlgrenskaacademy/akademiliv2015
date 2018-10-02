@@ -262,6 +262,36 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 
 }
 
+/// Excerpt mandatory on calendar post
+// https://www.wp-tweaks.com/display-custom-error-messages-in-wordpress-admin/
+add_action('post_updated_messages', 'psu_excerpt_error_message');
+function psu_excerpt_error_message($messages) {
+	global $post;
+	$cat = get_the_category();
+	$term_id = $cat[0]->term_id;
+	$is_calendar = ($term_id == 7 || $term_id == 12)? true: false; // 7 and 12 are calendar category ids
+
+	if (
+		$is_calendar &&
+		$post->post_excerpt == '' &&
+		$post->post_status == 'publish'
+	) {
+    add_settings_error(
+			'exerpt_missing_error',
+			'',
+			__('Post not published. Please enter a short description in the excerpt box.', 'magazine'),
+			'error'
+		);
+    settings_errors('exerpt_missing_error');
+    $post->post_status = 'draft';
+    wp_update_post($post);
+    return;
+	} else {
+		return $messages;
+	}
+
+}
+
 
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
