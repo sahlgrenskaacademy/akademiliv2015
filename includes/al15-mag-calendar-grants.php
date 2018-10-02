@@ -279,7 +279,7 @@ function psu_excerpt_error_message($messages) {
     add_settings_error(
 			'exerpt_missing_error',
 			'',
-			'Post not published. Please enter a short description in the excerpt box.',
+			__('Post not published. Please enter a short description in the excerpt box.', 'magazine'),
 			'error'
 		);
     settings_errors('exerpt_missing_error');
