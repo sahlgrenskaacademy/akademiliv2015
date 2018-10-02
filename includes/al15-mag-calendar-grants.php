@@ -129,12 +129,13 @@ function psu_single_cat_customization() {
 /// Add custom fields to the end of every post page. //////////////////////////////////////
 function psu_single_custom_fields( $content ) {
 	global $post;
+	$custom_conent = '';
 	echo '<header class="entry-header category-details-box"><div class="box-inner">';
 
   if ( in_category(12) || in_category(7) ){ // calendar: 12, 7
 		psu_calendar_custom_fields_header();
 		psu_calendar_custom_fields_aftercontent();
-		$custom_content = sprintf( '<p class="calendar-excerpt">%s</p>', get_the_excerpt() );
+		if (has_excerpt()) $custom_content = sprintf( '<p class="calendar-excerpt">%s</p>', get_the_excerpt() );
   } elseif ( in_category(14) || in_category(13) ) { // grants: 14, 13
 		psu_grants_custom_fields_header();
 		psu_grants_custom_fields_aftercontent();
@@ -250,7 +251,7 @@ function psu_form_post_create( $post_id, $entry, $form ) {
 	do_action('wpml_admin_make_post_duplicates', $post_id);
 	$tr_post_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $language_to );
 
-	// set post content and category 
+	// set post content and category
 	wp_update_post(array(
 	  'ID'           => $tr_post_id,
 	  'post_title'   => $cf_title_english,
