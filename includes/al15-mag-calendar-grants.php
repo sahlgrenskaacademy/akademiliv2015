@@ -210,7 +210,7 @@ function psu_calendar_custom_fields_aftercontent() {
 	printf('<div class="entry-contact">');
 	if ($cf_organizer != '')	printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
 	if ($cf_email != '') 			printf('<div class="epost"><a href="mailto:%s">%s</a></div>', $cf_email, $cf_email );
-	if ($cf_webb != '')				printf('<div class="webb"><a href="%s">%s</a></div>', $cf_webb, __('Information and registration page', 'magazine') );
+	if ($cf_webb != '')				printf('<div class="webb"><a href="%s">%s %s</a></div>', $cf_webb, __('Information and registration page', 'magazine') );
 	printf ('</div>');
 
 	printf('<div class="entry-details">');
