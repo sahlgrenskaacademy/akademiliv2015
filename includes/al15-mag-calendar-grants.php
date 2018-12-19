@@ -194,8 +194,6 @@ function psu_calendar_custom_fields_aftercontent() {
 		if ( strpos( $cf_webb, 'http' ) === false ) {
 	    $cf_webb = 'http://'.$cf_webb;
 	  }
-	  $url = parse_url($cf_webb);
-	  $domain = ltrim( $url['host'], 'www.' );
  	}
 
 	$lang = ( $cf_language == 'sve' )? 'Swedish': 'English';
@@ -212,7 +210,7 @@ function psu_calendar_custom_fields_aftercontent() {
 	printf('<div class="entry-contact">');
 	if ($cf_organizer != '')	printf('<div class="arrangor"><div class="label">%s</div>%s</div>', __('Organizer', 'magazine'), $cf_organizer );
 	if ($cf_email != '') 			printf('<div class="epost"><a href="mailto:%s">%s</a></div>', $cf_email, $cf_email );
-	if ($cf_webb != '')				printf('<div class="webb"><a href="%s">%s %s</a></div>', $cf_webb, __('Visit', 'magazine'), $domain );
+	if ($cf_webb != '')				printf('<div class="webb"><a href="%s">%s</a></div>', $cf_webb, __('Information and registration page', 'magazine') );
 	printf ('</div>');
 
 	printf('<div class="entry-details">');
@@ -327,12 +325,10 @@ function psu_grants_custom_fields_aftercontent() {
 		if ( strpos( $cf_webb, 'http' ) === false ) {
 	    $cf_webb = 'http://'.$cf_webb;
 	  }
-	  $cf_url = parse_url($cf_webb);
-	  $cf_domain = ltrim( $cf_url['host'], 'www.' );
  	}
 
 	if ( $cf_webb != '')
-		printf('<div class="entry-link"><a href="%s">%s %s</a></div>', $cf_webb, __('More information on', 'magazine'), $cf_domain );
+		printf('<div class="entry-link"><a href="%s">%s</a></div>', $cf_webb, __('External information page', 'magazine') );
 
 }
 
