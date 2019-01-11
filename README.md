@@ -6,5 +6,5 @@ http://www.akademiliv.se
 Pontus Sundén  
 pontus.sunden@gu.se
 
-Communications Officer
+Communications Officer /
 University of Gothenburg
