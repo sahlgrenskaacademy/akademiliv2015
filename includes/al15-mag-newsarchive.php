@@ -2,12 +2,12 @@
 
 
 
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 ## ARCHIVE LAYOUT ##
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 
 
-/// All category stuff inits here  ///////////////////////////////////////////////////////////////
+/// All category stuff inits here  ///
 add_action('genesis_before', 'psu_archive_customization');
 function psu_archive_customization() {
 
@@ -31,7 +31,7 @@ function psu_archive_customization() {
 
 }
 
-/// Extra wrapper around page loop ///////////////////////////////////////////////////////////////
+/// Extra wrapper around page loop ///
 function psu_loop_wrapper_archive_open() {
 	printf('<div class="archive-wrapper">');
 }
@@ -48,7 +48,7 @@ function psu_post_title_h2( $title ) {
 }
 
 
-/// Filter/remove post meta info ///////////////////////////////////////////////////////////////
+/// Filter/remove post meta info ///
 function psu_post_info_filter($post_info) {
 //	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
 	$post_info = '[post_date] [post_edit]';

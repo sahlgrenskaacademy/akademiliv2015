@@ -2,12 +2,12 @@
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* LAYOUT CHANGES
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Register widget areas
 
 genesis_register_sidebar( array(
@@ -90,14 +90,14 @@ genesis_register_sidebar( array(
 //) );
 
 
-/// Remove Genesis Layout Settings ///////////////////////////////////////////////////////////////
+/// Remove Genesis Layout Settings ///
 remove_theme_support( 'genesis-inpost-layouts' );
 
-/// Unregister primary and secondary sidebar ///////////////////////////////////////////////////////////////
+/// Unregister primary and secondary sidebar ///
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
 
-/// Remove default sidebar text ///////////////////////////////////////////////////////////////
+/// Remove default sidebar text ///
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_sidebar', 'psu_do_default_sidebar' );
 function psu_do_default_sidebar() {
@@ -107,21 +107,21 @@ function psu_do_default_sidebar() {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Add support for after entry widget
 add_theme_support( 'genesis-after-entry-widget-area' );
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Relocate after entry widget
 remove_action( 'genesis_after_entry', 'genesis_after_entry_widget_area' );
 add_action( 'genesis_entry_footer', 'genesis_after_entry_widget_area' );
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Reposition the primary navigation menu
 remove_action( 'genesis_before_header', 'genesis_do_nav' );
 add_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -129,7 +129,7 @@ add_action( 'genesis_after_header', 'genesis_do_nav' );
 //add_action( 'genesis_before_header', 'genesis_do_nav' );
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Customize the entire footer
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 /*
@@ -141,7 +141,7 @@ function sp_custom_footer() {
 }*/
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Remove entry meta in entry footer in all listings except single
 add_action( 'genesis_before_entry', 'magazine_remove_entry_meta' );
 function magazine_remove_entry_meta() {
@@ -155,7 +155,7 @@ function magazine_remove_entry_meta() {
 
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Add primary-nav class if primary navigation is used
 add_filter( 'body_class', 'backcountry_no_nav_class' );
 function backcountry_no_nav_class( $classes ) {
@@ -168,14 +168,14 @@ function backcountry_no_nav_class( $classes ) {
 	return $classes;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Customize search form input box text
 add_filter( 'genesis_search_text', 'magazine_search_text' );
 function magazine_search_text( $text ) {
 	return esc_attr( __( 'Search akademiliv.se', 'magazine' ) );
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Filter menu items, appending either a search form or today's date.
 add_filter( 'wp_nav_menu_items', 'psu_menu_extras', 10, 2 );
 function psu_menu_extras( $menu, $args ) {
@@ -194,7 +194,7 @@ function psu_menu_extras( $menu, $args ) {
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Hooks after-entry widget area to single posts, category pages and the news archive page
 add_action( 'genesis_after_content', 'psu_news_area_logic'  );
 function psu_news_area_logic() {
@@ -206,7 +206,7 @@ function psu_news_area_logic() {
 	}
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Default Category Title
 add_filter( 'genesis_term_meta_headline', 'psu_default_category_title', 10, 2 );
 function psu_default_category_title( $headline, $term ) {
@@ -217,7 +217,7 @@ function psu_default_category_title( $headline, $term ) {
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Prints a category's title and description
 remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
 add_action( 'genesis_before_content', 'psu_output_category_info' );
@@ -228,7 +228,7 @@ function psu_output_category_info() {
 	}
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Add the logo area sidebar
 add_action( 'genesis_header', 'psu_left_header_widget', 11 );
 function psu_left_header_widget() {
@@ -245,7 +245,7 @@ function psu_left_header_widget() {
 //	return esc_attr( '' );
 //}
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////
 //* Add site description
 //add_action( 'genesis_seo_description', 'psu_custom_seo_site_description' );
 function psu_custom_seo_site_description($description) {

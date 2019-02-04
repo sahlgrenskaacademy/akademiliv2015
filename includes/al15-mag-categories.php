@@ -1,12 +1,12 @@
 <?php
 
 
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 ## CATEGORY PAGES LAYOUT ##
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 
 
-/// All category stuff inits here  ///////////////////////////////////////////////////////////////
+/// All category stuff inits here  ///
 add_action('genesis_before', 'psu_category_customization');
 function psu_category_customization() {
 
@@ -54,7 +54,7 @@ function psu_do_taxonomy_title_description() {
 }
 
 
-/// Extra wrapper around category page loop ///////////////////////////////////////////////////////////////
+/// Extra wrapper around category page loop ///
 function psu_loop_wrapper_open() {
 	global $cat_id;
 	$term = get_term( $cat_id, 'category' );
@@ -75,7 +75,7 @@ function psu_custom_post_title( $title ) {
 }
 
 
-/// Filter/remove post meta info ///////////////////////////////////////////////////////////////
+/// Filter/remove post meta info ///
 function psu_category_info_filter($post_info) {
 //	$post_info = '[post_date] by [post_author_posts_link] [post_comments] [post_edit]';
 	$post_info = '';
@@ -91,13 +91,13 @@ function psu_category_notices_info_filter($post_info) {
 }
 
 
-/// Remove Read more link ///////////////////////////////////////////////////////////////
+/// Remove Read more link ///
 function psu_child_read_more_link() {
 	return '';
 }
 
 
-/// Set archive excrept length in words based on category ///////////////////////////////////////////////////////////////
+/// Set archive excrept length in words based on category ///
 function psu_category_excerpt_length($length) {
   global $cat_id;
   switch ( $cat_id ) {
@@ -124,13 +124,13 @@ function psu_category_excerpt_length($length) {
 }
 
 
-/// Adjust excerpt dots ///////////////////////////////////////////////////////////////
+/// Adjust excerpt dots ///
 function psu_excerpt_more( $more ) {
 	return '…';
 }
 
 
-/// Full article for 'notices' ///////////////////////////////////////////////////////////////
+/// Full article for 'notices' ///
 //  https://gist.github.com/About2git/b5d78dd2bce46bc152a6
 function psu_notices_entry_content() {
 	global $post;

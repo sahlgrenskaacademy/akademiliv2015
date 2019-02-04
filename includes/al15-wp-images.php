@@ -1,10 +1,8 @@
 <?php
 
-
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 ## IMAGE FUNCTIONS ##
-// ///////////////////////////////////////////////////////////////////////////////////////////
-
+// ///////////////////////////////
 
 
 /// Add new image sizes: width, height, crop(x_crop,y_crop)  x_crop: ‘left’ ‘center’, ‘right’ -- y_crop: ‘top’, ‘center’, ‘bottom’.
@@ -43,7 +41,6 @@ function psu_custom_sizes_admin( $sizes ) {
 }
 
 
-
 /// If no post thumbnail, get the old one from custom fields "thumbs"  ///////////////////////////
 add_filter ( 'genesis_pre_get_image', 'pontus_try_custom_thumb', 10, 3 );
 function pontus_try_custom_thumb( $output, $args, $post ) {
@@ -80,7 +77,7 @@ function pontus_try_custom_thumb( $output, $args, $post ) {
 	return $output;
 }
 
-/// Get sizes of custom image size definitions ///////////////////////////////////////////////////////////////
+/// Get sizes of custom image size definitions ///
 function psu_get_defined_sizes( $_size ) {
 	global $_wp_additional_image_sizes;
 	$sizes = array();
@@ -99,7 +96,6 @@ function psu_get_defined_sizes( $_size ) {
 }
 
 
-
 /// Changes the default embed sizes based on site layout /////////////////////////////////////////////////
 add_filter( 'embed_defaults', 'psu_embed_defaults' );
 function psu_embed_defaults( $defaults ) {
@@ -110,9 +106,6 @@ function psu_embed_defaults( $defaults ) {
 		return $defaults;
   }
 }
-
-
-
 
 
 ?>

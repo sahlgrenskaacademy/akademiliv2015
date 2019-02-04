@@ -1,10 +1,10 @@
 <?php
 
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 ## GENESIS MODIFICATIONS ##
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////
 
-/// Enqueue Google Fonts and JS script ///////////////////////////////////////////////////////////////
+/// Enqueue Google Fonts and JS script ///
 add_action( 'wp_enqueue_scripts', 'magazine_enqueue_scripts' );
 function magazine_enqueue_scripts() {
 	wp_enqueue_script( 'magazine-entry-date', get_bloginfo( 'stylesheet_directory' ) . '/js/entry-date.js', array( 'jquery' ), '1.0.0' );
@@ -13,13 +13,13 @@ function magazine_enqueue_scripts() {
 //	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400|Raleway:400,500,900', array(), CHILD_THEME_VERSION );
 }
 
-/// Add HTML5 markup structure ///////////////////////////////////////////////////////////////
+/// Add HTML5 markup structure ///
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 
-/// Add viewport meta tag for mobile browsers ///////////////////////////////////////////////////////////////
+/// Add viewport meta tag for mobile browsers ///
 add_theme_support( 'genesis-responsive-viewport' );
 
-/// Add support for custom header ///////////////////////////////////////////////////////////////
+/// Add support for custom header ///
 add_theme_support( 'custom-header', array(
 	'default-text-color'     => '000000',
 	'header-selector'        => '.site-title a',
@@ -29,7 +29,7 @@ add_theme_support( 'custom-header', array(
 ) );
 
 
-/// Set post type to "post" for search page and show 20 posts on each page ////////////////////////////////
+/// Set post type to "post" for search page and show 20 posts on each page ///
 add_filter('pre_get_posts','psu_search_filter');
 function psu_search_filter($query) {
 	if ($query->is_search) {
@@ -39,7 +39,7 @@ function psu_search_filter($query) {
 	return $query;
 }
 
-/// Redirect category archives to pages ///////////////////////////////////////////////////////////////
+/// Redirect category archives to pages ///
 add_action( 'template_redirect', 'psu_category_template_redirect' );
 function psu_category_template_redirect( $url ) {
   if( is_category() ) {
@@ -49,7 +49,7 @@ function psu_category_template_redirect( $url ) {
   }
 }
 
-/// Modify title tag ///////////////////////////////////////////////////////////////
+/// Modify title tag ///
 remove_filter( 'wp_title', 'genesis_default_title', 10, 3 ); //Default title
 add_filter( 'wp_title', 'psu_title_tag', 10, 3 );
 function psu_title_tag($title) {
@@ -60,11 +60,5 @@ function psu_title_tag($title) {
 		return get_the_title() .' - '. $standard;
 	}
 }
-
-/// Remove Genesis in-post SEO Settings /////////////////////////////////////////
-remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
-
-/// Remove Genesis Layout Settings /////////////////////////////////////////
-remove_theme_support( 'genesis-inpost-layouts' );
 
 ?>

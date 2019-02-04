@@ -1,12 +1,10 @@
 <?php
 
-
-// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////
 ## HELPER FUNCTIONS ##
-// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////
 
-
-/// Return month as text ///////////////////////////////////////////////////////////////
+/// Return month as text ///
 function psu_month_3l($m_n) {
 	$m_t = array(
 		'jan',
@@ -129,13 +127,11 @@ function is_akademiliv_single_cat() { // exclude "notices" to present it more li
 }
 
 
-/// Get and reformat date field value ///////////////////////////////////////////////////////////////
+/// Get and reformat date field value ///
 function psu_get_date_field( $field ) {
 	$date = genesis_get_custom_field( $field )/1000;
 	$date += 2 * 60*60; // compensate for timezone since jQuery datepicker seems to be unaware of that
 	return $date;
 }
-
-
 
 ?>
