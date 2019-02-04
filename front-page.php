@@ -35,7 +35,7 @@ function magazine_body_class( $classes ) {
 
 	$classes[] = 'magazine-home';
 	return $classes;
-	
+
 }
 
 function magazine_homepage_widgets() {
@@ -78,7 +78,7 @@ function magazine_homepage_widgets() {
 	genesis_widget_area( 'home-news', array(
 		'before' => '<div class="home-news widget-area">',
 		'after'  => '</div>',
-	) );	
+	) );
 
 }
 
