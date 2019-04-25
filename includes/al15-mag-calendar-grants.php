@@ -231,8 +231,8 @@ function psu_save_field_value( $value, $entry, $field, $form ) {
 // https://wpml.org/wpml-hook/wpml_admin_make_post_duplicates
 // https://docs.gravityforms.com/gform_after_create_post
 
-add_action( 'gform_after_create_post_2', 'psu_form_post_create' );
-add_action( 'gform_after_create_post_3', 'psu_form_post_create' );
+add_action( 'gform_after_create_post_2', 'psu_form_post_create', 10, 3 );
+add_action( 'gform_after_create_post_3', 'psu_form_post_create', 10, 3 );
 function psu_form_post_create( $post_id, $entry, $form ) {
 
 	// fetch custom fields
