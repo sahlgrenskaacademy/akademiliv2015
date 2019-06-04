@@ -3263,6 +3263,12 @@ input:hover[type="submit"],
   float: right;
   margin-right: 0; }
 
+  .category-wrapper-bidrag .loop-1 .entry-link,
+  .category-wrapper-grants .loop-1 .entry-link {
+  float: right;
+  margin: 1em 0.5em 0 0;
+}
+
 /************************************************************************************************/
 /* More layout */
 .home-featured .entry-header, .home-second-row .entry-header {
