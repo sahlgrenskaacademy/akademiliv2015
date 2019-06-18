@@ -2862,6 +2862,12 @@ input:hover[type="submit"],
 .featured-content .entry img {
   float: left; }
 
+/* Images left/right-margin Newsposts */
+.entry-content .wp-caption.alignright, 
+.entry-content .wp-caption.alignleft {
+  margin: 0em 2em 1em;
+}
+
 /************************************************************************************************/
 /* Susy */
 /* Makes border-box properties */
