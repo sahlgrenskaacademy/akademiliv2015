@@ -2862,25 +2862,6 @@ input:hover[type="submit"],
 .featured-content .entry img {
   float: left; }
 
-/* Images left/right-margin Newsposts */
-a.alignleft,
-img.alignleft,
-.wp-caption.alignleft {
-  margin: 0 2em 1em; }
-  a.alignleft .wp-caption-text,
-  img.alignleft .wp-caption-text,
-  .wp-caption.alignleft .wp-caption-text {
-    padding-left: 0em; }
-
-a.alignright,
-img.alignright,
-.wp-caption.alignright {
-  margin: 0 2em 1em; }
-  a.alignright .wp-caption-text,
-  img.alignright .wp-caption-text,
-  .wp-caption.alignright .wp-caption-text {
-    padding-right: 0em; }
-
 /************************************************************************************************/
 /* Susy */
 /* Makes border-box properties */
