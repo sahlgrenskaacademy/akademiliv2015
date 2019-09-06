@@ -26,13 +26,13 @@ function psu_logo_shortcode(){
 
 	$l = ICL_LANGUAGE_CODE == 'en'? 'en': 'sv';
 
-	$str['sv']['url'] = 		'http://gu.se';
+	$str['sv']['url'] = 		'https://www.gu.se';
 	$str['sv']['title'] = 	'Göteborgs universitet';
-	$str['sv']['img'] = 		'http://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
+	$str['sv']['img'] = 		'https://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
 	$str['sv']['alt'] = 		'Göteborgs universitets logotyp';
-	$str['en']['url'] = 		'http://gu.se/english';
+	$str['en']['url'] = 		'https://www.gu.se/english';
 	$str['en']['title'] = 	'University of Gothenburg';
-	$str['en']['img'] = 		'http://gu.se/digitalAssets/1498/1498144_ny_logo_en_normal.png';
+	$str['en']['img'] = 		'https://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
 	$str['en']['alt'] = 		'University of Gothenburg Logotype';
 
 	printf('<a href="%s" title="%s"><img src="%s" alt="%s"></a>', $str[$l]['url'], $str[$l]['title'], $str[$l]['img'], $str[$l]['alt'] );
