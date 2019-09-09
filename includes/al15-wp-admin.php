@@ -63,7 +63,7 @@ function psu_post_languages(){
 add_shortcode('newsletter-form', 'psu_gan_newsletter_form');
 function psu_gan_newsletter_form( $atts ) {
   return sprintf('
-		<form class="newsletter-form" method="POST" action="http://gansub.com/s/5rMKyY/">
+		<form class="newsletter-form" method="POST" action="https://gansub.com/s/5rMKyY/">
       <input type="hidden" name="gan_repeat_email" />
       <input type="email" id="email" name="email" required placeholder="%s" />
       <input type="submit" value=" %s " />
