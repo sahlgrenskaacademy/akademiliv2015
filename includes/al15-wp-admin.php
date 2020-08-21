@@ -62,9 +62,10 @@ function psu_post_languages(){
 /// Add shortcode for GAN form
 add_shortcode('newsletter-form', 'psu_gan_newsletter_form');
 function psu_gan_newsletter_form( $atts ) {
-  return sprintf('
-		<form class="newsletter-form" method="POST" action="https://gansub.com/s/5rMKyY/">
+	return sprintf('
+      <form class="newsletter-form" method="POST" action="https://gansub.com/s/5rMKyY/">
       <input type="hidden" name="gan_repeat_email" />
+      <div class="g-recaptcha" data-sitekey="6LeU9r8ZAAAAACM4A4UjAW-gnb6c-tDcrCf5gi3P"></div>
       <input type="email" id="email" name="email" required placeholder="%s" />
       <input type="submit" value=" %s " />
     </form>',
