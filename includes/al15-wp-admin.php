@@ -28,11 +28,11 @@ function psu_logo_shortcode(){
 
 	$str['sv']['url'] =             'https://www.gu.se';
 	$str['sv']['title'] =   		'Göteborgs universitet';
-	$str['sv']['img'] =             'https://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
+	$str['sv']['img'] =             'https://akademiliv.se/wp-content/uploads/2020/09/gu-logo-svart.png';
 	$str['sv']['alt'] =             'Göteborgs universitets logotyp';
-	$str['en']['url'] =             'https://www.gu.se/english';
+	$str['en']['url'] =             'https://www.gu.se/en';
 	$str['en']['title'] =   		'University of Gothenburg';
-	$str['en']['img'] =             'https://gu.se/digitalAssets/1498/1498146_ny_logo_sv_normal.png';
+	$str['en']['img'] =             'https://akademiliv.se/wp-content/uploads/2020/09/gu-logo-svart.png';
 	$str['en']['alt'] =             'University of Gothenburg Logotype';
 
 	printf('<a href="%s" title="%s"><img src="%s" alt="%s"></a>', $str[$l]['url'], $str[$l]['title'], $str[$l]['img'], $str[$l]['alt'] );
