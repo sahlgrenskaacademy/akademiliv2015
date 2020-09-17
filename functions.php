@@ -35,13 +35,3 @@ include_once( get_stylesheet_directory() . '/includes/al15-mag-newsarchive.php')
 include_once( get_stylesheet_directory() . '/includes/al15-wp-admin.php' ); // wordpress admin changes and shortcodes
 include_once( get_stylesheet_directory() . '/includes/al15-wp-images.php'); // image functions
 include_once( get_stylesheet_directory() . '/includes/al15-wp-comments.php'); // modification of comments
-
-// Adding recaptcha where users sign up for newsletter
-// Form elements in al15-wp-admin.php
-
-add_action('wp_head', 'recaptcha_newsletter');
-function recaptcha_newsletter(){
-?>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<?php
-};
